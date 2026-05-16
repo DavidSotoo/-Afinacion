@@ -1,6 +1,5 @@
-import React, { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, LogOut, Lock, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, LogOut, Lock, ChevronLeft, ChevronRight, Download } from 'lucide-react';
 import { CATALOG }                        from '../lib/catalog';
 import { ADMIN_PIN, ADMIN_PAGE_SIZE }      from '../lib/constants';
 import { filtroTieneSkuReal, FILTRO_KEYS } from '../lib/kitDefaults';
@@ -51,6 +50,60 @@ export default function AdminPage() {
 
   // Reset to page 1 on filter change
   useEffect(() => { setPage(1); }, [query, brand]);
+
+  // ── CSV EXPORT ──
+  const handleExportCSV = () => {
+    // Definimos las cabeceras
+    const headers = [
+      'Marca', 'Modelo', 'Anio_Inicio', 'Anio_Fin', 'Motor', 'Litros', 'Cilindros',
+      'Bujia_Stock', 'Bujia_Iridium', 'Calibracion_mm',
+      'Filtro_Aceite', 'Filtro_Aire', 'Filtro_Gasolina', 'Filtro_Cabina'
+    ];
+
+    // Procesamos cada fila usando la misma lógica visual de la tabla
+    const rows = filtered.map(r => {
+      // Helper para extraer SKU o estado del filtro
+      const getFilterText = (fKey) => {
+        const f = r.kit_afinacion?.[fKey];
+        if (filtroTieneSkuReal(f)) return `${f.marca ? f.marca + ' ' : ''}${f.sku}`;
+        if (f?.hasData) return 'CONSULTAR';
+        return '—';
+      };
+
+      return [
+        r.marca || '',
+        r.modelo || '',
+        r.anio_inicio || '',
+        r.anio_fin || '',
+        r.motor || '',
+        r.litros || '',
+        r.cilindros_config || '',
+        r.bujia_stock?.tipo || '',
+        r.bujia_iridium_ix?.tipo || '',
+        r.calibracion_mm || '',
+        getFilterText('filtro_aceite'),
+        getFilterText('filtro_aire'),
+        getFilterText('filtro_gasolina'),
+        getFilterText('filtro_cabina')
+      ];
+    });
+
+    // Unimos todo en formato CSV (usamos comillas para evitar problemas con comas en texto)
+    const csvContent = [
+      headers.join(','),
+      ...rows.map(row => row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(','))
+    ].join('\n');
+
+    // BOM para que Excel detecte UTF-8 correctamente
+    const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', `afinacion_catalogo_${new Date().toISOString().split('T')[0]}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   // ── LOGIN ──
   const handleLogin = (e) => {
@@ -156,6 +209,14 @@ export default function AdminPage() {
           <span className="admin-count">
             {filtered.length} resultado{filtered.length !== 1 ? 's' : ''}
           </span>
+
+          <button
+            className="admin-export-btn"
+            onClick={handleExportCSV}
+            title="Descargar catálogo filtrado a Excel (CSV)"
+          >
+            <Download size={14} /> Exportar
+          </button>
         </div>
 
         {/* Table */}
