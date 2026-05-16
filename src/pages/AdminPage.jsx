@@ -1,3 +1,4 @@
+import React, { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, LogOut, Lock, ChevronLeft, ChevronRight, Download } from 'lucide-react';
 import { CATALOG }                        from '../lib/catalog';
