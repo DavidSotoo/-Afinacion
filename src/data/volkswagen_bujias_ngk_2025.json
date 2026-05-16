@@ -1,0 +1,1894 @@
+{
+  "fuente": "NGK Catálogo Máster 2025 - 1ra Edición",
+  "marca": "Volkswagen",
+  "total_registros": 0,
+  "registros": [
+    {
+      "id": 1, "marca": "Volkswagen", "modelo": "Amarok", "origen": "Nac.",
+      "anio_inicio": 2012, "anio_fin": 2015, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CFPA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 2, "marca": "Volkswagen", "modelo": "Atlantic", "origen": "Nac.",
+      "anio_inicio": 1981, "anio_fin": 1981, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 3, "marca": "Volkswagen", "modelo": "Atlantic", "origen": "Nac.",
+      "anio_inicio": 1982, "anio_fin": 1984, "cilindros_config": "L4", "litros": 1.7,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 4, "marca": "Volkswagen", "modelo": "Atlantic", "origen": "Nac.",
+      "anio_inicio": 1984, "anio_fin": 1987, "cilindros_config": "L4", "litros": 1.7,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 5, "marca": "Volkswagen", "modelo": "Atlantic", "origen": "Nac.",
+      "anio_inicio": 1984, "anio_fin": 1987, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 6, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Imp.",
+      "anio_inicio": 2014, "anio_fin": 2014, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": "CPKA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 7, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2005, "anio_fin": 2006, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": "BKF",
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 8, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2002, "anio_fin": 2004, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": "AWV",
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 9, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2000, "anio_fin": 2001, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": "APH",
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 10, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2018, "anio_fin": 2018, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "DDSA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 11, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2014, "anio_fin": 2017, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CPLA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 12, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Imp.",
+      "anio_inicio": 2014, "anio_fin": 2014, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CPLA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 13, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2012, "anio_fin": 2013, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CBFA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 14, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Imp.",
+      "anio_inicio": 2013, "anio_fin": 2013, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CCTA",
+      "bujia_stock": null,
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 15, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Imp.",
+      "anio_inicio": 2012, "anio_fin": 2012, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CCTA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 16, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2011, "anio_fin": 2011, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "AZJ",
+      "bujia_stock": { "tipo": "PZFR5D-11", "codigo": 7968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 17, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2006, "anio_fin": 2010, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "PZFR5D-11", "codigo": 7968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 18, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2005, "anio_fin": 2005, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "BEV",
+      "bujia_stock": { "tipo": "PZFR5D-11", "codigo": 7968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 19, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2004, "anio_fin": 2004, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "BGD",
+      "bujia_stock": { "tipo": "PZFR5D-11", "codigo": 7968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 20, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2003, "anio_fin": 2003, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "AVH",
+      "bujia_stock": { "tipo": "PZFR5D-11", "codigo": 7968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 21, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 1998, "anio_fin": 2002, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "AEG",
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 22, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2019, "anio_fin": 2019, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "CCCA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 23, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2015, "anio_fin": 2018, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "C8UA, CBTA, CCTA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": { "tipo": "ZFR6FIX-11", "codigo": 6441 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 24, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2012, "anio_fin": 2014, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "CBUA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 25, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Imp.",
+      "anio_inicio": 2012, "anio_fin": 2014, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "CBUA, CBTA",
+      "bujia_stock": { "tipo": "PZFR5Q-11", "codigo": 6737 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 26, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2006, "anio_fin": 2011, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "BPR",
+      "bujia_stock": { "tipo": "PZFR5Q-11", "codigo": 6737 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 27, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Imp.",
+      "anio_inicio": 2009, "anio_fin": 2010, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "BPS, BPR",
+      "bujia_stock": { "tipo": "PZFR5Q-11", "codigo": 6737 },
+      "bujia_iridium_ix": { "tipo": "ZFR5AIX-11", "codigo": 94553 },
+      "bujia_g_power": { "tipo": "ZFR5BGP", "codigo": 90804 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 28, "marca": "Volkswagen", "modelo": "Beetle", "origen": "Nac.",
+      "anio_inicio": 2005, "anio_fin": 2011, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "BGP",
+      "bujia_stock": { "tipo": "PZFR5Q-11", "codigo": 6737 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 29, "marca": "Volkswagen", "modelo": "Bora", "origen": "Nac.",
+      "anio_inicio": 2005, "anio_fin": 2011, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "BGP",
+      "bujia_stock": { "tipo": "PZFR5Q-11", "codigo": 6737 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 30, "marca": "Volkswagen", "modelo": "Bora GLI", "origen": "Nac.",
+      "anio_inicio": 2005, "anio_fin": 2010, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 31, "marca": "Volkswagen", "modelo": "Brasilia", "origen": "Nac.",
+      "anio_inicio": 1974, "anio_fin": 1982, "cilindros_config": "H4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5HS", "codigo": 2595 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 32, "marca": "Volkswagen", "modelo": "Cabrio", "origen": "Nac.",
+      "anio_inicio": 2001, "anio_fin": 2002, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "ABA",
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 33, "marca": "Volkswagen", "modelo": "Cabrio", "origen": "Nac.",
+      "anio_inicio": 1996, "anio_fin": 2000, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "ABA",
+      "bujia_stock": { "tipo": "BKR5EKU", "codigo": 3964 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 34, "marca": "Volkswagen", "modelo": "Caddy", "origen": "Nac.",
+      "anio_inicio": 2014, "anio_fin": 2015, "cilindros_config": "L4", "litros": 1.2,
+      "aspiracion": "T", "motor": "CBZB",
+      "bujia_stock": { "tipo": "IZFR6P7", "codigo": 97153 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 35, "marca": "Volkswagen", "modelo": "Caddy", "origen": "Nac.",
+      "anio_inicio": 2020, "anio_fin": 2024, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "PZKER7B8EGS", "codigo": 93231 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 36, "marca": "Volkswagen", "modelo": "Caddy", "origen": "Nac.",
+      "anio_inicio": 2019, "anio_fin": 2019, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "ZKER6A-10EG", "codigo": 96596 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 37, "marca": "Volkswagen", "modelo": "Caddy", "origen": "Nac.",
+      "anio_inicio": 1995, "anio_fin": 1998, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 38, "marca": "Volkswagen", "modelo": "Caravelle", "origen": "Nac.",
+      "anio_inicio": 1995, "anio_fin": 1996, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 39, "marca": "Volkswagen", "modelo": "Caribe", "origen": "Nac.",
+      "anio_inicio": 1977, "anio_fin": 1981, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 40, "marca": "Volkswagen", "modelo": "Caribe", "origen": "Nac.",
+      "anio_inicio": 1981, "anio_fin": 1987, "cilindros_config": "L4", "litros": 1.7,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 41, "marca": "Volkswagen", "modelo": "Caribe", "origen": "Nac.",
+      "anio_inicio": 1984, "anio_fin": 1987, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 42, "marca": "Volkswagen", "modelo": "CC", "origen": "Nac.",
+      "anio_inicio": 2013, "anio_fin": 2017, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CBFA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 43, "marca": "Volkswagen", "modelo": "CC", "origen": "Imp.",
+      "anio_inicio": 2012, "anio_fin": 2014, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CCTA, CBFA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 44, "marca": "Volkswagen", "modelo": "CC", "origen": "Nac.",
+      "anio_inicio": 2013, "anio_fin": 2017, "cilindros_config": "V6", "litros": 3.6,
+      "aspiracion": "NA", "motor": "CNNA",
+      "bujia_stock": { "tipo": "ILZKR7A", "codigo": 1961 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 45, "marca": "Volkswagen", "modelo": "Clasico", "origen": "Nac.",
+      "anio_inicio": 2010, "anio_fin": 2015, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "EA827 (APK)",
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 46, "marca": "Volkswagen", "modelo": "Clasico GLI", "origen": "Nac.",
+      "anio_inicio": 2011, "anio_fin": 2012, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": "EA188",
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 47, "marca": "Volkswagen", "modelo": "Combi", "origen": "Nac.",
+      "anio_inicio": 1972, "anio_fin": 1973, "cilindros_config": "H4", "litros": 1.5,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5HS", "codigo": 2595 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.024, "calibracion_mm": 0.6
+    },
+    {
+      "id": 48, "marca": "Volkswagen", "modelo": "Combi", "origen": "Nac.",
+      "anio_inicio": 1974, "anio_fin": 1980, "cilindros_config": "H4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5HS", "codigo": 2595 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 49, "marca": "Volkswagen", "modelo": "Combi", "origen": "Nac.",
+      "anio_inicio": 1993, "anio_fin": 2001, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 50, "marca": "Volkswagen", "modelo": "Combi", "origen": "Nac.",
+      "anio_inicio": 1988, "anio_fin": 1992, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "SILZKGR8E8S", "codigo": 96206 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 51, "marca": "Volkswagen", "modelo": "Combi", "origen": "Nac.",
+      "anio_inicio": 1989, "anio_fin": 1991, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "SILZKGR8B8S", "codigo": 94201 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 52, "marca": "Volkswagen", "modelo": "Combi", "origen": "Nac.",
+      "anio_inicio": 1984, "anio_fin": 1988, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 53, "marca": "Volkswagen", "modelo": "Corsar", "origen": "Nac.",
+      "anio_inicio": 2002, "anio_fin": 2008, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 54, "marca": "Volkswagen", "modelo": "Cross Sport", "origen": "Nac.",
+      "anio_inicio": 2024, "anio_fin": 2024, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "DRKB",
+      "bujia_stock": { "tipo": "ILZKR8H8E", "codigo": 92005 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 55, "marca": "Volkswagen", "modelo": "Cross Sport", "origen": "Nac.",
+      "anio_inicio": 2023, "anio_fin": 2023, "cilindros_config": "V6", "litros": 3.6,
+      "aspiracion": "NA", "motor": "CDVC",
+      "bujia_stock": { "tipo": "ILZKR8H8E", "codigo": 92005 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 56, "marca": "Volkswagen", "modelo": "Cross Sport", "origen": "Nac.",
+      "anio_inicio": 2022, "anio_fin": 2022, "cilindros_config": "V6", "litros": 3.6,
+      "aspiracion": "NA", "motor": "CDVD",
+      "bujia_stock": { "tipo": "ILZKR8H8E", "codigo": 92005 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 57, "marca": "Volkswagen", "modelo": "Cross Sport", "origen": "Nac.",
+      "anio_inicio": 2021, "anio_fin": 2021, "cilindros_config": "V6", "litros": 3.6,
+      "aspiracion": "NA", "motor": "CDVC",
+      "bujia_stock": { "tipo": "ILZKR7A", "codigo": 1961 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 58, "marca": "Volkswagen", "modelo": "Crossfox", "origen": "Nac.",
+      "anio_inicio": 2016, "anio_fin": 2018, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": "CWSA, EA211",
+      "bujia_stock": { "tipo": "KER7A-8DEG", "codigo": null },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 59, "marca": "Volkswagen", "modelo": "Crossfox", "origen": "Nac.",
+      "anio_inicio": 2017, "anio_fin": 2017, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": "BKR, CCRA",
+      "bujia_stock": { "tipo": "PZFR5D-11", "codigo": 7968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 60, "marca": "Volkswagen", "modelo": "Crossfox", "origen": "Nac.",
+      "anio_inicio": 2007, "anio_fin": 2013, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": "CCRA",
+      "bujia_stock": { "tipo": "BKUR5ETC-10", "codigo": 6089 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 61, "marca": "Volkswagen", "modelo": "CrossGolf", "origen": "Nac.",
+      "anio_inicio": 2017, "anio_fin": 2017, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "PZKER7A8EGS", "codigo": 94968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 62, "marca": "Volkswagen", "modelo": "Derby", "origen": "Nac.",
+      "anio_inicio": 2007, "anio_fin": 2009, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 63, "marca": "Volkswagen", "modelo": "Derby", "origen": "Nac.",
+      "anio_inicio": 1995, "anio_fin": 2006, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ET", "codigo": 2600 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 64, "marca": "Volkswagen", "modelo": "Derby", "origen": "Nac.",
+      "anio_inicio": 2001, "anio_fin": 2004, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "EA827 (APK)",
+      "bujia_stock": { "tipo": "BUR6ET", "codigo": 3172 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 65, "marca": "Volkswagen", "modelo": "EOS", "origen": "Imp.",
+      "anio_inicio": 2012, "anio_fin": 2013, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CBFA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 66, "marca": "Volkswagen", "modelo": "EOS", "origen": "Nac.",
+      "anio_inicio": 2010, "anio_fin": 2011, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CBFA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 67, "marca": "Volkswagen", "modelo": "Eurovan", "origen": "Nac.",
+      "anio_inicio": 2001, "anio_fin": 2004, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BKR5ET", "codigo": 2789 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 68, "marca": "Volkswagen", "modelo": "Eurovan", "origen": "Nac.",
+      "anio_inicio": 2000, "anio_fin": 2000, "cilindros_config": "V6", "litros": 2.8,
+      "aspiracion": "NA", "motor": "AES",
+      "bujia_stock": { "tipo": "BKR5EKUP", "codigo": 2890 },
+      "bujia_iridium_ix": { "tipo": "BKR5EIX", "codigo": 6341 },
+      "bujia_g_power": { "tipo": "BKR5EGP", "codigo": 7090 },
+      "bujia_v_power": { "tipo": "BKR5E-11", "codigo": 5101 },
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 69, "marca": "Volkswagen", "modelo": "Gol", "origen": "Nac.",
+      "anio_inicio": 2014, "anio_fin": 2020, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": "CCRA, CFZA",
+      "bujia_stock": { "tipo": "PZFR5D-11", "codigo": 7968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 70, "marca": "Volkswagen", "modelo": "Gol", "origen": "Nac.",
+      "anio_inicio": 2009, "anio_fin": 2013, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": "CCRA, CFZA",
+      "bujia_stock": { "tipo": "BKUR5ETC-10", "codigo": 6089 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 71, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 2020, "anio_fin": 2024, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": "DGXA",
+      "bujia_stock": { "tipo": "PZKER7A8EGS", "codigo": 94968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 72, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 2020, "anio_fin": 2024, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": "CZTA",
+      "bujia_stock": { "tipo": "PZKER7A8EGS", "codigo": 94968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 73, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 2014, "anio_fin": 2017, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "PZKER7A8EGS", "codigo": 94968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 74, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 2015, "anio_fin": 2016, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": "EA211",
+      "bujia_stock": { "tipo": "PZKER7A8EGS", "codigo": 94968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 75, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 2013, "anio_fin": 2013, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "SIZFR6B8EG", "codigo": 96209 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 76, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 2006, "anio_fin": 2009, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 77, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 2007, "anio_fin": 2008, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 78, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 2003, "anio_fin": 2005, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "BP5ET", "codigo": 2600 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 79, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 1987, "anio_fin": 2002, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 80, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 2004, "anio_fin": 2009, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "BEV",
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 81, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 2002, "anio_fin": 2003, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "AVH",
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 82, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 1999, "anio_fin": 2001, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "AEG",
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 83, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 1993, "anio_fin": 1998, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "ABA",
+      "bujia_stock": { "tipo": "BKR5EKUP", "codigo": 2890 },
+      "bujia_iridium_ix": { "tipo": "BKR5EIX", "codigo": 6341 },
+      "bujia_g_power": { "tipo": "BKR5EGP", "codigo": 7090 },
+      "bujia_v_power": { "tipo": "BKR5E-11", "codigo": 5101 },
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 84, "marca": "Volkswagen", "modelo": "Golf", "origen": "Imp.",
+      "anio_inicio": 2012, "anio_fin": 2013, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "CBUA, CBTA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": { "tipo": "ZFR6FIX-11", "codigo": 6441 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 85, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 1999, "anio_fin": 2002, "cilindros_config": "V6", "litros": 2.8,
+      "aspiracion": "NA", "motor": "AFP",
+      "bujia_stock": { "tipo": "BKR5EKUP", "codigo": 2890 },
+      "bujia_iridium_ix": { "tipo": "BKR5EIX", "codigo": 6341 },
+      "bujia_g_power": { "tipo": "BKR5EGP", "codigo": 7090 },
+      "bujia_v_power": { "tipo": "BKR5E-11", "codigo": 5101 },
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 86, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 1999, "anio_fin": 1999, "cilindros_config": "V6", "litros": 2.8,
+      "aspiracion": "NA", "motor": "AAA",
+      "bujia_stock": { "tipo": "BKR5EKUP", "codigo": 2890 },
+      "bujia_iridium_ix": { "tipo": "BKR5EIX", "codigo": 6341 },
+      "bujia_g_power": { "tipo": "BKR5EGP", "codigo": 7090 },
+      "bujia_v_power": { "tipo": "BKR5E-11", "codigo": 5101 },
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 87, "marca": "Volkswagen", "modelo": "Golf", "origen": "Imp.",
+      "anio_inicio": 1995, "anio_fin": 1995, "cilindros_config": "V6", "litros": 2.8,
+      "aspiracion": "NA", "motor": "AAA",
+      "bujia_stock": { "tipo": "BKR5EKUP", "codigo": 2890 },
+      "bujia_iridium_ix": { "tipo": "BKR5EIX", "codigo": 6341 },
+      "bujia_g_power": { "tipo": "BKR5EGP", "codigo": 7090 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 88, "marca": "Volkswagen", "modelo": "Golf", "origen": "Nac.",
+      "anio_inicio": 2003, "anio_fin": 2004, "cilindros_config": "V6", "litros": 3.2,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "IZKR7B", "codigo": 7563 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 89, "marca": "Volkswagen", "modelo": "Golf GTI", "origen": "Nac.",
+      "anio_inicio": 2003, "anio_fin": 2005, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 90, "marca": "Volkswagen", "modelo": "Golf GTI", "origen": "Nac.",
+      "anio_inicio": 2000, "anio_fin": 2000, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 91, "marca": "Volkswagen", "modelo": "Golf GTI", "origen": "Nac.",
+      "anio_inicio": 1989, "anio_fin": 1993, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": "PF",
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 92, "marca": "Volkswagen", "modelo": "Golf GTI", "origen": "Imp.",
+      "anio_inicio": 1988, "anio_fin": 1988, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": "PL",
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 93, "marca": "Volkswagen", "modelo": "Golf GTI", "origen": "Nac.",
+      "anio_inicio": 2019, "anio_fin": 2021, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "DKFA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 94, "marca": "Volkswagen", "modelo": "Golf R", "origen": "Nac.",
+      "anio_inicio": 2017, "anio_fin": 2018, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "DJJA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 95, "marca": "Volkswagen", "modelo": "Golf SportWagen", "origen": "Nac.",
+      "anio_inicio": 2010, "anio_fin": 2013, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "CBUA",
+      "bujia_stock": { "tipo": "PZFR5Q-11", "codigo": 6737 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 96, "marca": "Volkswagen", "modelo": "GTI", "origen": "Nac.",
+      "anio_inicio": 2024, "anio_fin": 2024, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "DNPA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 97, "marca": "Volkswagen", "modelo": "GTI", "origen": "Nac.",
+      "anio_inicio": 2017, "anio_fin": 2018, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CXCB",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 98, "marca": "Volkswagen", "modelo": "GTI", "origen": "Nac.",
+      "anio_inicio": 2014, "anio_fin": 2016, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CXCA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 99, "marca": "Volkswagen", "modelo": "GTI", "origen": "Nac.",
+      "anio_inicio": 2015, "anio_fin": 2015, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CXCA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 100, "marca": "Volkswagen", "modelo": "GTI", "origen": "Imp.",
+      "anio_inicio": 2012, "anio_fin": 2014, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CCTA, CBFA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 101, "marca": "Volkswagen", "modelo": "GTI", "origen": "Nac.",
+      "anio_inicio": 2009, "anio_fin": 2013, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CBFA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 102, "marca": "Volkswagen", "modelo": "GTI", "origen": "Nac.",
+      "anio_inicio": 2007, "anio_fin": 2008, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "BPY",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 103, "marca": "Volkswagen", "modelo": "Hormiga", "origen": "Nac.",
+      "anio_inicio": 1977, "anio_fin": 1978, "cilindros_config": "H4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5HS", "codigo": 2595 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.024, "calibracion_mm": 0.6
+    },
+    {
+      "id": 104, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2024, "anio_fin": 2024, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": "DSJA",
+      "bujia_stock": { "tipo": "PZKER7A8EGS", "codigo": 94968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 105, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2022, "anio_fin": 2023, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": "DSJA",
+      "bujia_stock": { "tipo": "PKER7A8DES", "codigo": 97861 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 106, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2019, "anio_fin": 2021, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": "CZTA",
+      "bujia_stock": { "tipo": "PZKER7B8EGS", "codigo": 93231 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 107, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Imp.",
+      "anio_inicio": 2013, "anio_fin": 2014, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": "CNLA",
+      "bujia_stock": { "tipo": "PKER7A8EGS", "codigo": 95463 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.030, "calibracion_mm": 0.7
+    },
+    {
+      "id": 108, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Imp.",
+      "anio_inicio": 2014, "anio_fin": 2014, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": "CPRA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 109, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2009, "anio_fin": 2010, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": "EA188",
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 110, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2000, "anio_fin": 2000, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": "AWP",
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 111, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 1993, "anio_fin": 1999, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 112, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 1999, "anio_fin": 1999, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 113, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 1987, "anio_fin": 1992, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 114, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2024, "anio_fin": 2024, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "DXSA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 115, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2013, "anio_fin": 2018, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "CBPA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 116, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Imp.",
+      "anio_inicio": 2011, "anio_fin": 2014, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "CBPA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": { "tipo": "ZFR6FIX-11", "codigo": 6441 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 117, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Imp.",
+      "anio_inicio": 2014, "anio_fin": 2014, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CPLA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 118, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Imp.",
+      "anio_inicio": 2012, "anio_fin": 2013, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CCTA, CBFA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 119, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Imp.",
+      "anio_inicio": 2013, "anio_fin": 2013, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CPLA",
+      "bujia_stock": null,
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 120, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2011, "anio_fin": 2012, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "EA827 (APK)",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 121, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Imp.",
+      "anio_inicio": 2008, "anio_fin": 2010, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 122, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2010, "anio_fin": 2010, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 123, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2006, "anio_fin": 2009, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "BEV",
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 124, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2002, "anio_fin": 2004, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "AVH",
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 125, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2001, "anio_fin": 2001, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "AEG",
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 126, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 1993, "anio_fin": 1998, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "ABA",
+      "bujia_stock": { "tipo": "BKR5EKU", "codigo": 3964 },
+      "bujia_iridium_ix": { "tipo": "BKR5EIX", "codigo": 6341 },
+      "bujia_g_power": { "tipo": "BKR5EGP", "codigo": 7090 },
+      "bujia_v_power": { "tipo": "BKR5E-11", "codigo": 5101 },
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 127, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2015, "anio_fin": 2018, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "CBUA, CBTA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": { "tipo": "ZFR6FIX-11", "codigo": 6441 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 128, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 2012, "anio_fin": 2014, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "CBUA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 129, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Imp.",
+      "anio_inicio": 2014, "anio_fin": 2014, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "CBUA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": { "tipo": "ZFR6FIX-11", "codigo": 6441 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 130, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Imp.",
+      "anio_inicio": 2008, "anio_fin": 2013, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "CBUA, CBTA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": { "tipo": "ZFR6FIX-11", "codigo": 6441 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 131, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 1999, "anio_fin": 2005, "cilindros_config": "V6", "litros": 2.8,
+      "aspiracion": "NA", "motor": "AFP",
+      "bujia_stock": { "tipo": "BKR5EKUP", "codigo": 2890 },
+      "bujia_iridium_ix": { "tipo": "BKR5EIX", "codigo": 6341 },
+      "bujia_g_power": { "tipo": "BKR5EGP", "codigo": 7090 },
+      "bujia_v_power": { "tipo": "BKR5E-11", "codigo": 5101 },
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 132, "marca": "Volkswagen", "modelo": "Jetta", "origen": "Nac.",
+      "anio_inicio": 1995, "anio_fin": 1998, "cilindros_config": "V6", "litros": 2.8,
+      "aspiracion": "NA", "motor": "AAA",
+      "bujia_stock": { "tipo": "BKR5EKUP", "codigo": 2890 },
+      "bujia_iridium_ix": { "tipo": "BKR5EIX", "codigo": 6341 },
+      "bujia_g_power": { "tipo": "BKR5EGP", "codigo": 7090 },
+      "bujia_v_power": { "tipo": "BKR5E-11", "codigo": 5101 },
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 133, "marca": "Volkswagen", "modelo": "Jetta GLI", "origen": "Nac.",
+      "anio_inicio": 2022, "anio_fin": 2023, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "DKFA",
+      "bujia_stock": { "tipo": "ILFER7B8EG", "codigo": 95749 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 134, "marca": "Volkswagen", "modelo": "Jetta GLI", "origen": "Nac.",
+      "anio_inicio": 2019, "anio_fin": 2021, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "DKFA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 135, "marca": "Volkswagen", "modelo": "Jetta GLI", "origen": "Nac.",
+      "anio_inicio": 2014, "anio_fin": 2017, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CPLA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 136, "marca": "Volkswagen", "modelo": "Jetta GLI", "origen": "Nac.",
+      "anio_inicio": 2012, "anio_fin": 2014, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CBFA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 137, "marca": "Volkswagen", "modelo": "Jetta GLI", "origen": "Nac.",
+      "anio_inicio": 2011, "anio_fin": 2011, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 138, "marca": "Volkswagen", "modelo": "Lupo", "origen": "Nac.",
+      "anio_inicio": 2005, "anio_fin": 2009, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": "AVY",
+      "bujia_stock": { "tipo": "BKUR5ETC-10", "codigo": 6089 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 139, "marca": "Volkswagen", "modelo": "Nivus", "origen": "Nac.",
+      "anio_inicio": 2022, "anio_fin": 2024, "cilindros_config": "L3", "litros": 1.0,
+      "aspiracion": "T", "motor": "DHSC",
+      "bujia_stock": { "tipo": "IKER7A8EGS", "codigo": 94224 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 140, "marca": "Volkswagen", "modelo": "Panel", "origen": "Nac.",
+      "anio_inicio": 1973, "anio_fin": 1973, "cilindros_config": "H4", "litros": 1.5,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "B5HS", "codigo": 4210 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.024, "calibracion_mm": 0.6
+    },
+    {
+      "id": 141, "marca": "Volkswagen", "modelo": "Panel", "origen": "Nac.",
+      "anio_inicio": 1980, "anio_fin": 1988, "cilindros_config": "H4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES", "codigo": 2601 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 142, "marca": "Volkswagen", "modelo": "Panel", "origen": "Nac.",
+      "anio_inicio": 1974, "anio_fin": 1979, "cilindros_config": "H4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "B5HS", "codigo": 4210 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.024, "calibracion_mm": 0.6
+    },
+    {
+      "id": 143, "marca": "Volkswagen", "modelo": "Panel", "origen": "Nac.",
+      "anio_inicio": 1988, "anio_fin": 1999, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 144, "marca": "Volkswagen", "modelo": "Passat", "origen": "Imp.",
+      "anio_inicio": 2014, "anio_fin": 2014, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": "CPRA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 145, "marca": "Volkswagen", "modelo": "Passat", "origen": "Nac.",
+      "anio_inicio": 2005, "anio_fin": 2006, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": "AWM",
+      "bujia_stock": { "tipo": "BKR6EKUB", "codigo": 3584 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 146, "marca": "Volkswagen", "modelo": "Passat", "origen": "Nac.",
+      "anio_inicio": 2001, "anio_fin": 2004, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": "AWM",
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 147, "marca": "Volkswagen", "modelo": "Passat", "origen": "Nac.",
+      "anio_inicio": 2000, "anio_fin": 2000, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": "ATW",
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 148, "marca": "Volkswagen", "modelo": "Passat", "origen": "Nac.",
+      "anio_inicio": 1999, "anio_fin": 1999, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": "AEB",
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 149, "marca": "Volkswagen", "modelo": "Passat", "origen": "Nac.",
+      "anio_inicio": 1994, "anio_fin": 1995, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "9A",
+      "bujia_stock": { "tipo": "BKR6ET", "codigo": 6437 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 150, "marca": "Volkswagen", "modelo": "Passat", "origen": "Nac.",
+      "anio_inicio": 1991, "anio_fin": 1993, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": null,
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 151, "marca": "Volkswagen", "modelo": "Passat", "origen": "Nac.",
+      "anio_inicio": 2013, "anio_fin": 2018, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "CCCA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 152, "marca": "Volkswagen", "modelo": "Passat", "origen": "Imp.",
+      "anio_inicio": 2012, "anio_fin": 2014, "cilindros_config": "L5", "litros": 2.5,
+      "aspiracion": "NA", "motor": "CBUA, CBTA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": { "tipo": "ZFR6FIX-11", "codigo": 6441 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 153, "marca": "Volkswagen", "modelo": "Passat", "origen": "Nac.",
+      "anio_inicio": 2001, "anio_fin": 2004, "cilindros_config": "V6", "litros": 2.8,
+      "aspiracion": "NA", "motor": "ATQ",
+      "bujia_stock": { "tipo": "BKR5EKUP", "codigo": 2890 },
+      "bujia_iridium_ix": { "tipo": "BKR5EIX", "codigo": 6341 },
+      "bujia_g_power": { "tipo": "BKR5EGP", "codigo": 7090 },
+      "bujia_v_power": { "tipo": "BKR5E-11", "codigo": 5101 },
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 154, "marca": "Volkswagen", "modelo": "Passat", "origen": "Nac.",
+      "anio_inicio": 1999, "anio_fin": 2000, "cilindros_config": "V6", "litros": 2.8,
+      "aspiracion": "NA", "motor": "AHA",
+      "bujia_stock": { "tipo": "BKR5EKUP", "codigo": 2890 },
+      "bujia_iridium_ix": { "tipo": "BKR5EIX", "codigo": 6341 },
+      "bujia_g_power": { "tipo": "BKR5EGP", "codigo": 7090 },
+      "bujia_v_power": { "tipo": "BKR5E-11", "codigo": 5101 },
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 155, "marca": "Volkswagen", "modelo": "Passat", "origen": "Nac.",
+      "anio_inicio": 1996, "anio_fin": 1997, "cilindros_config": "V6", "litros": 2.8,
+      "aspiracion": "NA", "motor": "AAA",
+      "bujia_stock": { "tipo": "BKR5EKUP", "codigo": 2890 },
+      "bujia_iridium_ix": { "tipo": "BKR5EIX", "codigo": 6341 },
+      "bujia_g_power": { "tipo": "BKR5EGP", "codigo": 7090 },
+      "bujia_v_power": { "tipo": "BKR5E-11", "codigo": 5101 },
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 156, "marca": "Volkswagen", "modelo": "Passat", "origen": "Imp.",
+      "anio_inicio": 2012, "anio_fin": 2012, "cilindros_config": "V6", "litros": 3.6,
+      "aspiracion": "NA", "motor": "CDVB",
+      "bujia_stock": { "tipo": "ILZKR7A", "codigo": 1961 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 157, "marca": "Volkswagen", "modelo": "Passat", "origen": "Imp.",
+      "anio_inicio": 2012, "anio_fin": 2012, "cilindros_config": "V6", "litros": 3.6,
+      "aspiracion": "NA", "motor": "BLV",
+      "bujia_stock": { "tipo": "ILZKR7A", "codigo": 1961 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 158, "marca": "Volkswagen", "modelo": "Passat CC", "origen": "Nac.",
+      "anio_inicio": 2009, "anio_fin": 2016, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CBFA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 159, "marca": "Volkswagen", "modelo": "Passat CC", "origen": "Nac.",
+      "anio_inicio": 2012, "anio_fin": 2016, "cilindros_config": "V6", "litros": 3.6,
+      "aspiracion": "NA", "motor": "CDVB",
+      "bujia_stock": { "tipo": "ILZKR7A", "codigo": 1961 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 160, "marca": "Volkswagen", "modelo": "Pointer", "origen": "Nac.",
+      "anio_inicio": 2000, "anio_fin": 2004, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BUR5ETB-10", "codigo": 3447 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 161, "marca": "Volkswagen", "modelo": "Pointer Truck", "origen": "Nac.",
+      "anio_inicio": 2005, "anio_fin": 2009, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": "EA827",
+      "bujia_stock": { "tipo": "BKUR5ETC-10", "codigo": 6089 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 162, "marca": "Volkswagen", "modelo": "Pointer Truck", "origen": "Nac.",
+      "anio_inicio": 2001, "anio_fin": 2004, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": "EA827",
+      "bujia_stock": { "tipo": "BUR5ETB-10", "codigo": 3447 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 163, "marca": "Volkswagen", "modelo": "Pointer Truck", "origen": "Nac.",
+      "anio_inicio": 1998, "anio_fin": 2000, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": "EA827",
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 164, "marca": "Volkswagen", "modelo": "Polo", "origen": "Nac.",
+      "anio_inicio": 2024, "anio_fin": 2024, "cilindros_config": "L4", "litros": 1.0,
+      "aspiracion": "NA", "motor": "DNBA",
+      "bujia_stock": { "tipo": "ZKER6A-10EG", "codigo": 96596 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 165, "marca": "Volkswagen", "modelo": "Polo", "origen": "Nac.",
+      "anio_inicio": 2013, "anio_fin": 2014, "cilindros_config": "L4", "litros": 1.2,
+      "aspiracion": "T", "motor": "CBZB",
+      "bujia_stock": { "tipo": "IZFR6P7", "codigo": 97153 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 166, "marca": "Volkswagen", "modelo": "Polo", "origen": "Nac.",
+      "anio_inicio": 2013, "anio_fin": 2014, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T/SC", "motor": "CAVE, CTHE",
+      "bujia_stock": { "tipo": "SIZFR6B8EG", "codigo": 96209 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 167, "marca": "Volkswagen", "modelo": "Polo", "origen": "Nac.",
+      "anio_inicio": 2013, "anio_fin": 2014, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "NA", "motor": "CLSA, CLPA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 168, "marca": "Volkswagen", "modelo": "Polo", "origen": "Nac.",
+      "anio_inicio": 2024, "anio_fin": 2024, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": "CFNA, CLSA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 169, "marca": "Volkswagen", "modelo": "Polo", "origen": "Nac.",
+      "anio_inicio": 2021, "anio_fin": 2021, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": "BAH",
+      "bujia_stock": { "tipo": "BKUR5ETC-10", "codigo": 6089 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 170, "marca": "Volkswagen", "modelo": "Polo", "origen": "Nac.",
+      "anio_inicio": 2003, "anio_fin": 2006, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "NA", "motor": "ADC",
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 171, "marca": "Volkswagen", "modelo": "Polo GTI", "origen": "Nac.",
+      "anio_inicio": 2017, "anio_fin": 2017, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 172, "marca": "Volkswagen", "modelo": "Routan", "origen": "Imp.",
+      "anio_inicio": 2011, "anio_fin": 2014, "cilindros_config": "V6", "litros": 3.6,
+      "aspiracion": "NA", "motor": "CJRA",
+      "bujia_stock": { "tipo": "SILZKR7B11", "codigo": 9723 },
+      "bujia_iridium_ix": { "tipo": "LKR7DIX-11S", "codigo": 93175 },
+      "bujia_g_power": { "tipo": "LKR7BGP-S", "codigo": 97390 },
+      "bujia_v_power": { "tipo": "LZTR5A-13", "codigo": 4306 },
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 173, "marca": "Volkswagen", "modelo": "Routan", "origen": "Nac.",
+      "anio_inicio": 2009, "anio_fin": 2011, "cilindros_config": "V6", "litros": 3.8,
+      "aspiracion": "NA", "motor": "CGUA",
+      "bujia_stock": { "tipo": "PLZTR5A-13", "codigo": 4998 },
+      "bujia_iridium_ix": { "tipo": "LZTR5AIX-13", "codigo": 2314 },
+      "bujia_g_power": { "tipo": "LZTR5AGP", "codigo": 3381 },
+      "bujia_v_power": { "tipo": "LZTR5A-13", "codigo": 4306 },
+      "calibracion_pulgadas": 0.052, "calibracion_mm": 1.3
+    },
+    {
+      "id": 174, "marca": "Volkswagen", "modelo": "Routan", "origen": "Imp.",
+      "anio_inicio": 2009, "anio_fin": 2010, "cilindros_config": "V6", "litros": 3.8,
+      "aspiracion": "NA", "motor": "CGUA",
+      "bujia_stock": { "tipo": "PLZTR5A-13", "codigo": 4998 },
+      "bujia_iridium_ix": { "tipo": "LZTR5AIX-13", "codigo": 2314 },
+      "bujia_g_power": { "tipo": "LZTR5AGP", "codigo": 3381 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.048, "calibracion_mm": 1.2
+    },
+    {
+      "id": 175, "marca": "Volkswagen", "modelo": "Routan", "origen": "Imp.",
+      "anio_inicio": 2009, "anio_fin": 2010, "cilindros_config": "V6", "litros": 4.0,
+      "aspiracion": "NA", "motor": "CGVA",
+      "bujia_stock": { "tipo": "ZFR5LP-13G", "codigo": 7781 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052, "calibracion_mm": 1.3
+    },
+    {
+      "id": 176, "marca": "Volkswagen", "modelo": "Safari", "origen": "Nac.",
+      "anio_inicio": 1974, "anio_fin": 1979, "cilindros_config": "H4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5HS", "codigo": 2595 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.024, "calibracion_mm": 0.6
+    },
+    {
+      "id": 177, "marca": "Volkswagen", "modelo": "Saveiro", "origen": "Nac.",
+      "anio_inicio": 2016, "anio_fin": 2023, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": "CFZA",
+      "bujia_stock": { "tipo": "PZFR5D-11", "codigo": 7968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 178, "marca": "Volkswagen", "modelo": "Saveiro", "origen": "Nac.",
+      "anio_inicio": 2010, "anio_fin": 2015, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": "CFZA",
+      "bujia_stock": { "tipo": "PZFR5D-11", "codigo": 7968 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 179, "marca": "Volkswagen", "modelo": "Sedan", "origen": "Nac.",
+      "anio_inicio": 1961, "anio_fin": 1967, "cilindros_config": "H4", "litros": 1.2,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BR6HS", "codigo": 3922 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.024, "calibracion_mm": 0.6
+    },
+    {
+      "id": 180, "marca": "Volkswagen", "modelo": "Sedan", "origen": "Nac.",
+      "anio_inicio": 1968, "anio_fin": 1972, "cilindros_config": "H4", "litros": 1.5,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5HS", "codigo": 2595 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.024, "calibracion_mm": 0.6
+    },
+    {
+      "id": 181, "marca": "Volkswagen", "modelo": "Sedan", "origen": "Nac.",
+      "anio_inicio": 1993, "anio_fin": 2004, "cilindros_config": "H4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 182, "marca": "Volkswagen", "modelo": "Sedan", "origen": "Nac.",
+      "anio_inicio": 1974, "anio_fin": 1992, "cilindros_config": "H4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5HS", "codigo": 2595 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 183, "marca": "Volkswagen", "modelo": "Sedan", "origen": "Nac.",
+      "anio_inicio": 1974, "anio_fin": 1992, "cilindros_config": "H4", "litros": 1.8,
+      "aspiracion": "NA", "motor": "B4",
+      "bujia_stock": { "tipo": "BP5ES-A", "codigo": 2592 },
+      "bujia_iridium_ix": { "tipo": "BPR5EIX", "codigo": 6597 },
+      "bujia_g_power": { "tipo": "BPR5EGP", "codigo": 7082 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 184, "marca": "Volkswagen", "modelo": "Sedan", "origen": "Nac.",
+      "anio_inicio": 1973, "anio_fin": 1973, "cilindros_config": "H4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BP5HS", "codigo": 2595 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028, "calibracion_mm": 0.7
+    },
+    {
+      "id": 185, "marca": "Volkswagen", "modelo": "Sharan", "origen": "Nac.",
+      "anio_inicio": 2002, "anio_fin": 2008, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "PFR6Q", "codigo": 6458 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 186, "marca": "Volkswagen", "modelo": "Sportvan", "origen": "Nac.",
+      "anio_inicio": 2007, "anio_fin": 2010, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": "CFZA",
+      "bujia_stock": { "tipo": "BKUR5ETC-10", "codigo": 6089 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 187, "marca": "Volkswagen", "modelo": "Taigun", "origen": "Nac.",
+      "anio_inicio": 2023, "anio_fin": 2024, "cilindros_config": "L3", "litros": 1.0,
+      "aspiracion": "T", "motor": "DTBB",
+      "bujia_stock": { "tipo": "IKER7A8EGS", "codigo": 94224 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 188, "marca": "Volkswagen", "modelo": "Taos", "origen": "Nac.",
+      "anio_inicio": 2024, "anio_fin": 2024, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": "CWLA",
+      "bujia_stock": { "tipo": "PKER7A8EGS", "codigo": 95463 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 189, "marca": "Volkswagen", "modelo": "Taos", "origen": "Nac.",
+      "anio_inicio": 2022, "anio_fin": 2023, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": "CZTA",
+      "bujia_stock": { "tipo": "PKER7A8DES", "codigo": 97861 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 190, "marca": "Volkswagen", "modelo": "Taos", "origen": "Nac.",
+      "anio_inicio": 2021, "anio_fin": 2021, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": "DKNA",
+      "bujia_stock": { "tipo": "ILKER7B8EGS", "codigo": 91512 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 191, "marca": "Volkswagen", "modelo": "Taos", "origen": "Nac.",
+      "anio_inicio": 2021, "anio_fin": 2021, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": "DSJA",
+      "bujia_stock": { "tipo": "PKER7A8DES", "codigo": 97861 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 192, "marca": "Volkswagen", "modelo": "Taos", "origen": "Nac.",
+      "anio_inicio": 2021, "anio_fin": 2021, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "KER7A-8DEG", "codigo": null },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 193, "marca": "Volkswagen", "modelo": "T-Cross", "origen": "Nac.",
+      "anio_inicio": 2021, "anio_fin": 2021, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "KER7A-8DEG", "codigo": null },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 194, "marca": "Volkswagen", "modelo": "Teramont", "origen": "Nac.",
+      "anio_inicio": 2022, "anio_fin": 2023, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "DTFA",
+      "bujia_stock": { "tipo": "ILFER7B8EG", "codigo": 95749 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 195, "marca": "Volkswagen", "modelo": "Teramont", "origen": "Nac.",
+      "anio_inicio": 2019, "anio_fin": 2021, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "DCGA",
+      "bujia_stock": { "tipo": "ILFER7B8EG", "codigo": 95749 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 196, "marca": "Volkswagen", "modelo": "Teramont", "origen": "Nac.",
+      "anio_inicio": 2019, "anio_fin": 2023, "cilindros_config": "V6", "litros": 3.6,
+      "aspiracion": "NA", "motor": "CDVC",
+      "bujia_stock": { "tipo": "ILZKR8H8E", "codigo": 92005 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 197, "marca": "Volkswagen", "modelo": "Tiguan", "origen": "Nac.",
+      "anio_inicio": 2023, "anio_fin": 2023, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": "CZDA",
+      "bujia_stock": { "tipo": "PKER7A8EGS", "codigo": 95463 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 198, "marca": "Volkswagen", "modelo": "Tiguan", "origen": "Nac.",
+      "anio_inicio": 2022, "anio_fin": 2022, "cilindros_config": "L4", "litros": 1.4,
+      "aspiracion": "T", "motor": "CWLA",
+      "bujia_stock": { "tipo": "PKER7A8DES", "codigo": 97861 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 199, "marca": "Volkswagen", "modelo": "Tiguan", "origen": "Nac.",
+      "anio_inicio": 2018, "anio_fin": 2023, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": null,
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 200, "marca": "Volkswagen", "modelo": "Tiguan", "origen": "Nac.",
+      "anio_inicio": 2018, "anio_fin": 2020, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "DGUA",
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 201, "marca": "Volkswagen", "modelo": "Tiguan", "origen": "Nac.",
+      "anio_inicio": 2018, "anio_fin": 2018, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "PLFER7A8EG", "codigo": 94833 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 202, "marca": "Volkswagen", "modelo": "Tiguan", "origen": "Imp.",
+      "anio_inicio": 2012, "anio_fin": 2014, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CCTA",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 203, "marca": "Volkswagen", "modelo": "Tiguan", "origen": "Nac.",
+      "anio_inicio": 2009, "anio_fin": 2017, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": null,
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 204, "marca": "Volkswagen", "modelo": "Touareg", "origen": "Nac.",
+      "anio_inicio": 2005, "anio_fin": 2007, "cilindros_config": "V6", "litros": 3.2,
+      "aspiracion": "NA", "motor": "BMX",
+      "bujia_stock": { "tipo": "IZKR7B", "codigo": 7563 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 205, "marca": "Volkswagen", "modelo": "Touareg", "origen": "Nac.",
+      "anio_inicio": 2003, "anio_fin": 2004, "cilindros_config": "V6", "litros": 3.2,
+      "aspiracion": "NA", "motor": "BAA",
+      "bujia_stock": { "tipo": "IZKR7B", "codigo": 7563 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 206, "marca": "Volkswagen", "modelo": "Touareg", "origen": "Nac.",
+      "anio_inicio": 2010, "anio_fin": 2017, "cilindros_config": "V6", "litros": 3.6,
+      "aspiracion": "NA", "motor": "CGRA",
+      "bujia_stock": { "tipo": "ILZKR7A", "codigo": 1961 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 207, "marca": "Volkswagen", "modelo": "Touareg", "origen": "Imp.",
+      "anio_inicio": 2012, "anio_fin": 2013, "cilindros_config": "V6", "litros": 3.6,
+      "aspiracion": "NA", "motor": "CGRA",
+      "bujia_stock": { "tipo": "ILZKR7A", "codigo": 1961 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 208, "marca": "Volkswagen", "modelo": "Touareg", "origen": "Nac.",
+      "anio_inicio": 2008, "anio_fin": 2009, "cilindros_config": "V6", "litros": 3.6,
+      "aspiracion": "NA", "motor": "BHK",
+      "bujia_stock": { "tipo": "ILZKR7A", "codigo": 1961 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 209, "marca": "Volkswagen", "modelo": "Touareg", "origen": "Nac.",
+      "anio_inicio": 2009, "anio_fin": 2017, "cilindros_config": "V8", "litros": 4.2,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "PFR6W-TG", "codigo": 5547 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 210, "marca": "Volkswagen", "modelo": "Touareg", "origen": "Nac.",
+      "anio_inicio": 2008, "anio_fin": 2009, "cilindros_config": "V8", "litros": 4.2,
+      "aspiracion": "NA", "motor": "BAR",
+      "bujia_stock": { "tipo": "PFR6W-TG", "codigo": 5547 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036, "calibracion_mm": 0.9
+    },
+    {
+      "id": 211, "marca": "Volkswagen", "modelo": "Touareg", "origen": "Nac.",
+      "anio_inicio": 2003, "anio_fin": 2007, "cilindros_config": "V8", "litros": 4.2,
+      "aspiracion": "NA", "motor": "AXQ",
+      "bujia_stock": { "tipo": "BKR6EQUA", "codigo": 6872 },
+      "bujia_iridium_ix": { "tipo": "BKR6EIX", "codigo": 6418 },
+      "bujia_g_power": { "tipo": "BKR6EGP", "codigo": 7092 },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 212, "marca": "Volkswagen", "modelo": "Touareg Hybrid", "origen": "Nac.",
+      "anio_inicio": 2013, "anio_fin": 2017, "cilindros_config": "V6", "litros": 3.0,
+      "aspiracion": "SC", "motor": null,
+      "bujia_stock": { "tipo": "PFR8S8EG", "codigo": 94460 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 213, "marca": "Volkswagen", "modelo": "Transporter", "origen": "Nac.",
+      "anio_inicio": 2012, "anio_fin": 2015, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "AXA",
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 214, "marca": "Volkswagen", "modelo": "Transporter", "origen": "Nac.",
+      "anio_inicio": 2014, "anio_fin": 2014, "cilindros_config": "L4", "litros": 2.0,
+      "aspiracion": "T", "motor": "CJKB",
+      "bujia_stock": { "tipo": "PFR7S8EG", "codigo": 1675 },
+      "bujia_iridium_ix": { "tipo": "BKR7EIX", "codigo": 2667 },
+      "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 215, "marca": "Volkswagen", "modelo": "Up!", "origen": "Nac.",
+      "anio_inicio": 2016, "anio_fin": 2018, "cilindros_config": "L3", "litros": 1.0,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "ZKER6A-10EG", "codigo": 96596 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 216, "marca": "Volkswagen", "modelo": "Van", "origen": "Nac.",
+      "anio_inicio": 2002, "anio_fin": 2003, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BUR5ETB-10", "codigo": 3447 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 217, "marca": "Volkswagen", "modelo": "Van", "origen": "Nac.",
+      "anio_inicio": 2004, "anio_fin": 2009, "cilindros_config": "L4", "litros": 1.8,
+      "aspiracion": "NA", "motor": null,
+      "bujia_stock": { "tipo": "BKUR6ET-10", "codigo": 4295 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    },
+    {
+      "id": 218, "marca": "Volkswagen", "modelo": "Vento", "origen": "Nac.",
+      "anio_inicio": 2014, "anio_fin": 2022, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": "CLSA, CLPA",
+      "bujia_stock": { "tipo": "ZFR6T-11G", "codigo": 5960 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044, "calibracion_mm": 1.1
+    },
+    {
+      "id": 219, "marca": "Volkswagen", "modelo": "Virtus", "origen": "Nac.",
+      "anio_inicio": 2023, "anio_fin": 2023, "cilindros_config": "L3", "litros": 1.0,
+      "aspiracion": "T", "motor": "DTBB",
+      "bujia_stock": { "tipo": "IKER7A8EGS", "codigo": 94224 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032, "calibracion_mm": 0.8
+    },
+    {
+      "id": 220, "marca": "Volkswagen", "modelo": "Virtus", "origen": "Nac.",
+      "anio_inicio": 2020, "anio_fin": 2022, "cilindros_config": "L4", "litros": 1.6,
+      "aspiracion": "NA", "motor": "CWSA",
+      "bujia_stock": { "tipo": "ZKER6A-10EG", "codigo": 96596 },
+      "bujia_iridium_ix": null, "bujia_g_power": null, "bujia_v_power": null,
+      "calibracion_pulgadas": 0.040, "calibracion_mm": 1.0
+    }
+  ]
+}

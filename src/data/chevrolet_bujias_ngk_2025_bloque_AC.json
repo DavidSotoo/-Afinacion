@@ -1,0 +1,5829 @@
+{
+  "fuente": "NGK Catálogo Máster 2025 - 1ra Edición",
+  "marca": "Chevrolet",
+  "bloque": "A-C",
+  "total_registros": 226,
+  "registros": [
+    {
+      "id": 1,
+      "marca": "Chevrolet",
+      "modelo": "Astra",
+      "origen": "Nac.",
+      "anio_inicio": 2008,
+      "anio_fin": 2008,
+      "litros": 1.8,
+      "motor": "2H0",
+      "bujia_stock": {
+        "tipo": "ZFR5F-11",
+        "codigo": 3886
+      },
+      "bujia_iridium_ix": {
+        "tipo": "ZFR5FIX-11",
+        "codigo": 2477
+      },
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 2,
+      "marca": "Chevrolet",
+      "modelo": "Astra",
+      "origen": "Nac.",
+      "anio_inicio": 2007,
+      "anio_fin": 2007,
+      "litros": 1.8,
+      "motor": "2H0",
+      "bujia_stock": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 3,
+      "marca": "Chevrolet",
+      "modelo": "Astra",
+      "origen": "Nac.",
+      "anio_inicio": 2006,
+      "anio_fin": 2006,
+      "litros": 1.8,
+      "motor": "Z18XE, G",
+      "bujia_stock": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 4,
+      "marca": "Chevrolet",
+      "modelo": "Astra",
+      "origen": "Nac.",
+      "anio_inicio": 2000,
+      "anio_fin": 2003,
+      "litros": 1.8,
+      "motor": "Z18XE, G",
+      "bujia_stock": {
+        "tipo": "BKR5EK",
+        "codigo": 7956
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX",
+        "codigo": 6341
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 5,
+      "marca": "Chevrolet",
+      "modelo": "Astra",
+      "origen": "Nac.",
+      "anio_inicio": 2004,
+      "anio_fin": 2008,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "BPR5EY",
+        "codigo": 5057
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BPR5EIX",
+        "codigo": 6597
+      },
+      "bujia_g_power": {
+        "tipo": "BPR5EGP",
+        "codigo": 7082
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 6,
+      "marca": "Chevrolet",
+      "modelo": "Astra",
+      "origen": "Nac.",
+      "anio_inicio": 2007,
+      "anio_fin": 2008,
+      "litros": 2.0,
+      "motor": "LU2",
+      "bujia_stock": {
+        "tipo": "PFR6T-10G",
+        "codigo": 5542
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX",
+        "codigo": 6418
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 7,
+      "marca": "Chevrolet",
+      "modelo": "Astra",
+      "origen": "Nac.",
+      "anio_inicio": 2006,
+      "anio_fin": 2006,
+      "litros": 2.0,
+      "motor": "LER",
+      "bujia_stock": {
+        "tipo": "PFR6T-10G",
+        "codigo": 5542
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX",
+        "codigo": 6418
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 8,
+      "marca": "Chevrolet",
+      "modelo": "Astra",
+      "origen": "Nac.",
+      "anio_inicio": 2001,
+      "anio_fin": 2003,
+      "litros": 2.2,
+      "motor": "L61",
+      "bujia_stock": {
+        "tipo": "LTR6B-10T",
+        "codigo": 5948
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 9,
+      "marca": "Chevrolet",
+      "modelo": "Astra",
+      "origen": "Nac.",
+      "anio_inicio": 2004,
+      "anio_fin": 2006,
+      "litros": 2.4,
+      "motor": "Z18XE, H",
+      "bujia_stock": {
+        "tipo": "BKR6EKC",
+        "codigo": 2848
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX",
+        "codigo": 6418
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 10,
+      "marca": "Chevrolet",
+      "modelo": "Astro",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2005,
+      "litros": 4.3,
+      "motor": "LU3",
+      "bujia_stock": null,
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 11,
+      "marca": "Chevrolet",
+      "modelo": "Astro",
+      "origen": "Imp.",
+      "anio_inicio": 2002,
+      "anio_fin": 2004,
+      "litros": 4.3,
+      "motor": "LU3",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 12,
+      "marca": "Chevrolet",
+      "modelo": "Astro",
+      "origen": "Imp.",
+      "anio_inicio": 1998,
+      "anio_fin": 2001,
+      "litros": 4.3,
+      "motor": "L35",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 13,
+      "marca": "Chevrolet",
+      "modelo": "Astro",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1997,
+      "litros": 4.3,
+      "motor": "L35",
+      "bujia_stock": {
+        "tipo": "PTR4B-15",
+        "codigo": 5146
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 14,
+      "marca": "Chevrolet",
+      "modelo": "Astro",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1995,
+      "litros": 4.3,
+      "motor": "L35",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 15,
+      "marca": "Chevrolet",
+      "modelo": "Astro",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1994,
+      "litros": 4.3,
+      "motor": "LB4",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 16,
+      "marca": "Chevrolet",
+      "modelo": "Avalanche",
+      "origen": "Nac.",
+      "anio_inicio": 2007,
+      "anio_fin": 2013,
+      "litros": 5.3,
+      "motor": "LC9",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 17,
+      "marca": "Chevrolet",
+      "modelo": "Avalanche",
+      "origen": "Imp.",
+      "anio_inicio": 2007,
+      "anio_fin": 2013,
+      "litros": 5.3,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 18,
+      "marca": "Chevrolet",
+      "modelo": "Avalanche",
+      "origen": "Imp.",
+      "anio_inicio": 2007,
+      "anio_fin": 2009,
+      "litros": 6.0,
+      "motor": "L76",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 19,
+      "marca": "Chevrolet",
+      "modelo": "Avalanche",
+      "origen": "Nac.",
+      "anio_inicio": 2010,
+      "anio_fin": 2010,
+      "litros": 6.2,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 20,
+      "marca": "Chevrolet",
+      "modelo": "Avalanche",
+      "origen": "Nac.",
+      "anio_inicio": 2002,
+      "anio_fin": 2006,
+      "litros": 8.1,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PZTR5A-15",
+        "codigo": 7862
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 21,
+      "marca": "Chevrolet",
+      "modelo": "Avalanche 1500",
+      "origen": "Nac.",
+      "anio_inicio": 2004,
+      "anio_fin": 2006,
+      "litros": 5.3,
+      "motor": "L59",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 22,
+      "marca": "Chevrolet",
+      "modelo": "Avalanche 1500",
+      "origen": "Imp.",
+      "anio_inicio": 2006,
+      "anio_fin": 2006,
+      "litros": 5.3,
+      "motor": "L59",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 23,
+      "marca": "Chevrolet",
+      "modelo": "Avalanche 1500",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2005,
+      "litros": 5.3,
+      "motor": "L59",
+      "bujia_stock": {
+        "tipo": "PTR5D-10",
+        "codigo": 3784
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 24,
+      "marca": "Chevrolet",
+      "modelo": "Avalanche 1500",
+      "origen": "Imp.",
+      "anio_inicio": 2002,
+      "anio_fin": 2004,
+      "litros": 5.3,
+      "motor": "LM7",
+      "bujia_stock": {
+        "tipo": "PTR5D-10",
+        "codigo": 3784
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 25,
+      "marca": "Chevrolet",
+      "modelo": "Avalanche 1500",
+      "origen": "Nac.",
+      "anio_inicio": 2002,
+      "anio_fin": 2003,
+      "litros": 5.3,
+      "motor": "L59",
+      "bujia_stock": {
+        "tipo": "PTR5D-10",
+        "codigo": 3784
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 26,
+      "marca": "Chevrolet",
+      "modelo": "Avalanche 2500",
+      "origen": "Imp.",
+      "anio_inicio": 2002,
+      "anio_fin": 2006,
+      "litros": 8.1,
+      "motor": "L18",
+      "bujia_stock": {
+        "tipo": "PZTR5A-15",
+        "codigo": 7862
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 27,
+      "marca": "Chevrolet",
+      "modelo": "Aveo",
+      "origen": "Nac.",
+      "anio_inicio": 2024,
+      "anio_fin": 2024,
+      "litros": 1.5,
+      "motor": "LAR",
+      "bujia_stock": {
+        "tipo": "DCPR7E",
+        "codigo": 3932
+      },
+      "bujia_iridium_ix": {
+        "tipo": "DCPR7EIX",
+        "codigo": 6046
+      },
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 28,
+      "marca": "Chevrolet",
+      "modelo": "Aveo",
+      "origen": "Nac.",
+      "anio_inicio": 2018,
+      "anio_fin": 2023,
+      "litros": 1.5,
+      "motor": "L2B",
+      "bujia_stock": {
+        "tipo": "LKR6F-10",
+        "codigo": 91230
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 29,
+      "marca": "Chevrolet",
+      "modelo": "Aveo",
+      "origen": "Nac.",
+      "anio_inicio": 2008,
+      "anio_fin": 2018,
+      "litros": 1.6,
+      "motor": "LXT",
+      "bujia_stock": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 30,
+      "marca": "Chevrolet",
+      "modelo": "Aveo",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2010,
+      "litros": 1.6,
+      "motor": "LXV",
+      "bujia_stock": {
+        "tipo": "ZFR6U-9",
+        "codigo": 96236
+      },
+      "bujia_iridium_ix": {
+        "tipo": "ZFR6FIX-11",
+        "codigo": 6441
+      },
+      "bujia_g_power": {
+        "tipo": "ZFR6FGP",
+        "codigo": 7100
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 31,
+      "marca": "Chevrolet",
+      "modelo": "Aveo",
+      "origen": "Nac.",
+      "anio_inicio": 2008,
+      "anio_fin": 2008,
+      "litros": 1.6,
+      "motor": "LXT",
+      "bujia_stock": {
+        "tipo": "ZFR6F-11",
+        "codigo": 4291
+      },
+      "bujia_iridium_ix": {
+        "tipo": "ZFR6FIX-11",
+        "codigo": 6441
+      },
+      "bujia_g_power": {
+        "tipo": "ZFR6FGP",
+        "codigo": 7100
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 32,
+      "marca": "Chevrolet",
+      "modelo": "Aveo5",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2010,
+      "litros": 1.6,
+      "motor": "LXV",
+      "bujia_stock": {
+        "tipo": "ZFR6U-9",
+        "codigo": 96236
+      },
+      "bujia_iridium_ix": {
+        "tipo": "ZFR6FIX-11",
+        "codigo": 6441
+      },
+      "bujia_g_power": {
+        "tipo": "ZFR6FGP",
+        "codigo": 7100
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 33,
+      "marca": "Chevrolet",
+      "modelo": "Beat",
+      "origen": "Nac.",
+      "anio_inicio": 2018,
+      "anio_fin": 2021,
+      "litros": 1.2,
+      "motor": "B12D1",
+      "bujia_stock": {
+        "tipo": "DCPR7E",
+        "codigo": 3932
+      },
+      "bujia_iridium_ix": {
+        "tipo": "DCPR7EIX",
+        "codigo": 6046
+      },
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 34,
+      "marca": "Chevrolet",
+      "modelo": "Beretta",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1996,
+      "litros": 2.2,
+      "motor": "LN2",
+      "bujia_stock": null,
+      "bujia_iridium_ix": {
+        "tipo": "TR55-1IX",
+        "codigo": 7316
+      },
+      "bujia_g_power": {
+        "tipo": "TR55-1GP",
+        "codigo": 7159
+      },
+      "bujia_v_power": {
+        "tipo": "TR55-1",
+        "codigo": 2683
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 35,
+      "marca": "Chevrolet",
+      "modelo": "Beretta",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1993,
+      "litros": 2.2,
+      "motor": "LN2",
+      "bujia_stock": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR4IX",
+        "codigo": 7300
+      },
+      "bujia_g_power": {
+        "tipo": "TR4GP",
+        "codigo": 2815
+      },
+      "bujia_v_power": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 36,
+      "marca": "Chevrolet",
+      "modelo": "Beretta",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1994,
+      "litros": 2.3,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "BKR5ES",
+        "codigo": 2460
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX",
+        "codigo": 6341
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E",
+        "codigo": 7938
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 37,
+      "marca": "Chevrolet",
+      "modelo": "Beretta",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1996,
+      "litros": 3.1,
+      "motor": "L82",
+      "bujia_stock": {
+        "tipo": "PTR4B-15",
+        "codigo": 5146
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 38,
+      "marca": "Chevrolet",
+      "modelo": "Beretta",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1993,
+      "litros": 3.1,
+      "motor": "LHO",
+      "bujia_stock": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR4IX",
+        "codigo": 7300
+      },
+      "bujia_g_power": {
+        "tipo": "TR4GP",
+        "codigo": 2815
+      },
+      "bujia_v_power": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 39,
+      "marca": "Chevrolet",
+      "modelo": "Blazer",
+      "origen": "Nac.",
+      "anio_inicio": 2019,
+      "anio_fin": 2024,
+      "litros": 3.6,
+      "motor": "LGX",
+      "bujia_stock": {
+        "tipo": "ILNAR7A9",
+        "codigo": 92176
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 40,
+      "marca": "Chevrolet",
+      "modelo": "Blazer",
+      "origen": "Imp.",
+      "anio_inicio": 2003,
+      "anio_fin": 2005,
+      "litros": 4.3,
+      "motor": "LU3",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 41,
+      "marca": "Chevrolet",
+      "modelo": "Blazer",
+      "origen": "Nac.",
+      "anio_inicio": 1996,
+      "anio_fin": 2001,
+      "litros": 4.3,
+      "motor": "L35",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 42,
+      "marca": "Chevrolet",
+      "modelo": "Blazer",
+      "origen": "Imp.",
+      "anio_inicio": 1998,
+      "anio_fin": 2002,
+      "litros": 4.3,
+      "motor": "L35",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 43,
+      "marca": "Chevrolet",
+      "modelo": "Blazer",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1997,
+      "litros": 4.3,
+      "motor": "L35",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 44,
+      "marca": "Chevrolet",
+      "modelo": "Blazer",
+      "origen": "Nac.",
+      "anio_inicio": 1995,
+      "anio_fin": 1995,
+      "litros": 4.3,
+      "motor": "L35",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 45,
+      "marca": "Chevrolet",
+      "modelo": "Blazer",
+      "origen": "Imp.",
+      "anio_inicio": 1995,
+      "anio_fin": 1995,
+      "litros": 4.3,
+      "motor": "L35",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 46,
+      "marca": "Chevrolet",
+      "modelo": "Blazer",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1994,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 47,
+      "marca": "Chevrolet",
+      "modelo": "C10",
+      "origen": "Nac.",
+      "anio_inicio": 1979,
+      "anio_fin": 1980,
+      "litros": 4.8,
+      "motor": "-",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": {
+        "tipo": "YR5GP",
+        "codigo": 2953
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 48,
+      "marca": "Chevrolet",
+      "modelo": "C1500",
+      "origen": "Nac.",
+      "anio_inicio": 1995,
+      "anio_fin": 1998,
+      "litros": 4.1,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "UR4",
+        "codigo": 4162
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR4IX",
+        "codigo": 7401
+      },
+      "bujia_g_power": {
+        "tipo": "UR4GP",
+        "codigo": 2869
+      },
+      "bujia_v_power": {
+        "tipo": "UR4",
+        "codigo": 4162
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 49,
+      "marca": "Chevrolet",
+      "modelo": "C1500",
+      "origen": "Imp.",
+      "anio_inicio": 1979,
+      "anio_fin": 1980,
+      "litros": 4.8,
+      "motor": "-",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": {
+        "tipo": "YR5GP",
+        "codigo": 2953
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 50,
+      "marca": "Chevrolet",
+      "modelo": "C1500",
+      "origen": "Nac.",
+      "anio_inicio": 1999,
+      "anio_fin": 2001,
+      "litros": 4.3,
+      "motor": "L35",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 51,
+      "marca": "Chevrolet",
+      "modelo": "C1500",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1998,
+      "litros": 4.3,
+      "motor": "L35",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 52,
+      "marca": "Chevrolet",
+      "modelo": "C1500",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1995,
+      "litros": 4.3,
+      "motor": "L35",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 53,
+      "marca": "Chevrolet",
+      "modelo": "C1500",
+      "origen": "Imp.",
+      "anio_inicio": 1999,
+      "anio_fin": 1999,
+      "litros": 5.0,
+      "motor": "L30",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 54,
+      "marca": "Chevrolet",
+      "modelo": "C1500",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1998,
+      "litros": 5.0,
+      "motor": "L30",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 55,
+      "marca": "Chevrolet",
+      "modelo": "C1500",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1995,
+      "litros": 5.0,
+      "motor": "L03",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 56,
+      "marca": "Chevrolet",
+      "modelo": "C1500",
+      "origen": "Imp.",
+      "anio_inicio": 1999,
+      "anio_fin": 1999,
+      "litros": 5.7,
+      "motor": "L31",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 57,
+      "marca": "Chevrolet",
+      "modelo": "C1500",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1998,
+      "litros": 5.7,
+      "motor": "L31",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 58,
+      "marca": "Chevrolet",
+      "modelo": "C1500",
+      "origen": "Imp.",
+      "anio_inicio": 1988,
+      "anio_fin": 1995,
+      "litros": 5.7,
+      "motor": "L05",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 59,
+      "marca": "Chevrolet",
+      "modelo": "C1500",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1993,
+      "litros": 7.4,
+      "motor": "L19",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 60,
+      "marca": "Chevrolet",
+      "modelo": "C1500 Suburban",
+      "origen": "Imp.",
+      "anio_inicio": 1998,
+      "anio_fin": 1999,
+      "litros": 5.7,
+      "motor": "L31",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 61,
+      "marca": "Chevrolet",
+      "modelo": "C1500 Suburban",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1997,
+      "litros": 5.7,
+      "motor": "L31",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 62,
+      "marca": "Chevrolet",
+      "modelo": "C1500 Suburban",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1995,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": null,
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 63,
+      "marca": "Chevrolet",
+      "modelo": "C1500 Suburban",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1993,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 64,
+      "marca": "Chevrolet",
+      "modelo": "C2500",
+      "origen": "Imp.",
+      "anio_inicio": 1979,
+      "anio_fin": 1981,
+      "litros": 4.8,
+      "motor": "-",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": {
+        "tipo": "YR5GP",
+        "codigo": 2953
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 65,
+      "marca": "Chevrolet",
+      "modelo": "C2500",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1995,
+      "litros": 4.3,
+      "motor": "LB4",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 66,
+      "marca": "Chevrolet",
+      "modelo": "C2500",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1998,
+      "litros": 5.0,
+      "motor": "L30",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 67,
+      "marca": "Chevrolet",
+      "modelo": "C2500",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1995,
+      "litros": 5.0,
+      "motor": "L03",
+      "bujia_stock": null,
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 68,
+      "marca": "Chevrolet",
+      "modelo": "C2500",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1993,
+      "litros": 5.0,
+      "motor": "L03",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 69,
+      "marca": "Chevrolet",
+      "modelo": "C2500",
+      "origen": "Imp.",
+      "anio_inicio": 1998,
+      "anio_fin": 2000,
+      "litros": 5.7,
+      "motor": "L31",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 70,
+      "marca": "Chevrolet",
+      "modelo": "C2500",
+      "origen": "Nac.",
+      "anio_inicio": 1995,
+      "anio_fin": 1999,
+      "litros": 5.7,
+      "motor": "L31",
+      "bujia_stock": null,
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 71,
+      "marca": "Chevrolet",
+      "modelo": "C2500",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1997,
+      "litros": 5.7,
+      "motor": "L31",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 72,
+      "marca": "Chevrolet",
+      "modelo": "C2500",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1995,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": null,
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 73,
+      "marca": "Chevrolet",
+      "modelo": "C2500",
+      "origen": "Nac.",
+      "anio_inicio": 1988,
+      "anio_fin": 1994,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 74,
+      "marca": "Chevrolet",
+      "modelo": "C2500",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1993,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 75,
+      "marca": "Chevrolet",
+      "modelo": "C2500",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 2000,
+      "litros": 7.4,
+      "motor": "L29",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 76,
+      "marca": "Chevrolet",
+      "modelo": "C2500",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1995,
+      "litros": 7.4,
+      "motor": "L19",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 77,
+      "marca": "Chevrolet",
+      "modelo": "C2500 Suburban",
+      "origen": "Imp.",
+      "anio_inicio": 1998,
+      "anio_fin": 1999,
+      "litros": 5.7,
+      "motor": "L31",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 78,
+      "marca": "Chevrolet",
+      "modelo": "C2500 Suburban",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1997,
+      "litros": 5.7,
+      "motor": "L31",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 79,
+      "marca": "Chevrolet",
+      "modelo": "C2500 Suburban",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1995,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": null,
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 80,
+      "marca": "Chevrolet",
+      "modelo": "C2500 Suburban",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1993,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 81,
+      "marca": "Chevrolet",
+      "modelo": "C2500 Suburban",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1999,
+      "litros": 7.4,
+      "motor": "L29",
+      "bujia_stock": {
+        "tipo": "PTR4B-15",
+        "codigo": 5146
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 82,
+      "marca": "Chevrolet",
+      "modelo": "C2500 Suburban",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1995,
+      "litros": 7.4,
+      "motor": "L19",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 83,
+      "marca": "Chevrolet",
+      "modelo": "C35",
+      "origen": "Nac.",
+      "anio_inicio": 1996,
+      "anio_fin": 1998,
+      "litros": 5.7,
+      "motor": "L31",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 84,
+      "marca": "Chevrolet",
+      "modelo": "C35",
+      "origen": "Nac.",
+      "anio_inicio": 1995,
+      "anio_fin": 1995,
+      "litros": 5.7,
+      "motor": "L31",
+      "bujia_stock": null,
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 85,
+      "marca": "Chevrolet",
+      "modelo": "C35",
+      "origen": "Nac.",
+      "anio_inicio": 1994,
+      "anio_fin": 1994,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 86,
+      "marca": "Chevrolet",
+      "modelo": "C3500",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 2000,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 87,
+      "marca": "Chevrolet",
+      "modelo": "C3500",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1995,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 88,
+      "marca": "Chevrolet",
+      "modelo": "C3500",
+      "origen": "Imp.",
+      "anio_inicio": 1995,
+      "anio_fin": 2000,
+      "litros": 7.4,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 89,
+      "marca": "Chevrolet",
+      "modelo": "C3500",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1994,
+      "litros": 7.4,
+      "motor": "L19",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 90,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2018,
+      "litros": 2.0,
+      "motor": "LTG",
+      "bujia_stock": {
+        "tipo": "ILTR6M9G",
+        "codigo": 94489
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX",
+        "codigo": 94374
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP-8",
+        "codigo": 94372
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 91,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1995,
+      "litros": 3.4,
+      "motor": "L32",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 92,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2019,
+      "litros": 3.6,
+      "motor": "LGX",
+      "bujia_stock": {
+        "tipo": "ILNAR7A9",
+        "codigo": 92176
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 93,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Nac.",
+      "anio_inicio": 2012,
+      "anio_fin": 2015,
+      "litros": 3.6,
+      "motor": "LFX",
+      "bujia_stock": {
+        "tipo": "ILTR6E11",
+        "codigo": 90117
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 94,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 3.6,
+      "motor": "LFX",
+      "bujia_stock": {
+        "tipo": "ILTR6E11",
+        "codigo": 90117
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 95,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2013,
+      "litros": 3.6,
+      "motor": "LFX",
+      "bujia_stock": {
+        "tipo": "ILTR6E11",
+        "codigo": 90117
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 96,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Nac.",
+      "anio_inicio": 2010,
+      "anio_fin": 2011,
+      "litros": 3.6,
+      "motor": "LLT",
+      "bujia_stock": {
+        "tipo": "ILTR6E11",
+        "codigo": 90117
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 97,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 2011,
+      "anio_fin": 2011,
+      "litros": 3.6,
+      "motor": "LLT",
+      "bujia_stock": {
+        "tipo": "ILTR6E11",
+        "codigo": 90117
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 98,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2010,
+      "litros": 3.6,
+      "motor": "LLT",
+      "bujia_stock": {
+        "tipo": "PLTR6A-10G",
+        "codigo": 3587
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 99,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 2002,
+      "anio_fin": 2002,
+      "litros": 3.8,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 100,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 1995,
+      "anio_fin": 2001,
+      "litros": 3.8,
+      "motor": "L36",
+      "bujia_stock": {
+        "tipo": "ITR4A15",
+        "codigo": 5599
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 101,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 1998,
+      "anio_fin": 2002,
+      "litros": 5.7,
+      "motor": "LS1",
+      "bujia_stock": {
+        "tipo": "PTR5D-10",
+        "codigo": 3784
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 102,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Nac.",
+      "anio_inicio": 1999,
+      "anio_fin": 2002,
+      "litros": 5.7,
+      "motor": "LS1",
+      "bujia_stock": {
+        "tipo": "PTR5D-10",
+        "codigo": 3784
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 103,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Nac.",
+      "anio_inicio": 1998,
+      "anio_fin": 1998,
+      "litros": 5.7,
+      "motor": "LT1",
+      "bujia_stock": {
+        "tipo": "PTR5D-10",
+        "codigo": 3784
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 104,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Nac.",
+      "anio_inicio": 1995,
+      "anio_fin": 1997,
+      "litros": 5.7,
+      "motor": "LT1",
+      "bujia_stock": {
+        "tipo": "PTR5C-13",
+        "codigo": 7740
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 105,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 1997,
+      "anio_fin": 1997,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR5F-11",
+        "codigo": 6579
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.048,
+      "calibracion_mm": 1.2
+    },
+    {
+      "id": 106,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1996,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.048,
+      "calibracion_mm": 1.2
+    },
+    {
+      "id": 107,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 1995,
+      "anio_fin": 1995,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR5C-13",
+        "codigo": 7740
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.048,
+      "calibracion_mm": 1.2
+    },
+    {
+      "id": 108,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1994,
+      "litros": 5.7,
+      "motor": "LT1",
+      "bujia_stock": {
+        "tipo": "PTR5C-13",
+        "codigo": 7740
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 109,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2024,
+      "litros": 6.2,
+      "motor": "LT1",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 110,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Nac.",
+      "anio_inicio": 2022,
+      "anio_fin": 2024,
+      "litros": 6.2,
+      "motor": "LT4",
+      "bujia_stock": {
+        "tipo": "ILTR5D",
+        "codigo": 5476
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 111,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Nac.",
+      "anio_inicio": 2017,
+      "anio_fin": 2021,
+      "litros": 6.2,
+      "motor": "LT4",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 112,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Nac.",
+      "anio_inicio": 2010,
+      "anio_fin": 2015,
+      "litros": 6.2,
+      "motor": "LS3, L99",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 113,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Nac.",
+      "anio_inicio": 2014,
+      "anio_fin": 2015,
+      "litros": 6.2,
+      "motor": "LSA",
+      "bujia_stock": {
+        "tipo": "ITR6G9",
+        "codigo": 90156
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR6IX",
+        "codigo": 3689
+      },
+      "bujia_g_power": {
+        "tipo": "TR6GP",
+        "codigo": 5141
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 114,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2014,
+      "litros": 6.2,
+      "motor": "LSA",
+      "bujia_stock": {
+        "tipo": "ITR6G9",
+        "codigo": 90156
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR6IX",
+        "codigo": 3689
+      },
+      "bujia_g_power": {
+        "tipo": "TR6GP",
+        "codigo": 5141
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 115,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 6.2,
+      "motor": "LS3",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 116,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2013,
+      "litros": 6.2,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 117,
+      "marca": "Chevrolet",
+      "modelo": "Camaro",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 7.0,
+      "motor": "LS7",
+      "bujia_stock": {
+        "tipo": "ITR6G9",
+        "codigo": 90156
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR6IX",
+        "codigo": 3689
+      },
+      "bujia_g_power": {
+        "tipo": "TR6GP",
+        "codigo": 5141
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 118,
+      "marca": "Chevrolet",
+      "modelo": "Caprice",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1993,
+      "litros": 4.3,
+      "motor": "LB4",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 119,
+      "marca": "Chevrolet",
+      "modelo": "Caprice",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1996,
+      "litros": 4.3,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PZTR5A-15",
+        "codigo": 7862
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.048,
+      "calibracion_mm": 1.2
+    },
+    {
+      "id": 120,
+      "marca": "Chevrolet",
+      "modelo": "Caprice",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1993,
+      "litros": 5.0,
+      "motor": "L03",
+      "bujia_stock": {
+        "tipo": "UR4",
+        "codigo": 4162
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR4IX",
+        "codigo": 7401
+      },
+      "bujia_g_power": {
+        "tipo": "UR4GP",
+        "codigo": 2869
+      },
+      "bujia_v_power": {
+        "tipo": "UR4",
+        "codigo": 4162
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 121,
+      "marca": "Chevrolet",
+      "modelo": "Caprice",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1996,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR5F-11",
+        "codigo": 6579
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.048,
+      "calibracion_mm": 1.2
+    },
+    {
+      "id": 122,
+      "marca": "Chevrolet",
+      "modelo": "Caprice",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1993,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR5IX",
+        "codigo": 7177
+      },
+      "bujia_g_power": {
+        "tipo": "UR5GP",
+        "codigo": 3547
+      },
+      "bujia_v_power": {
+        "tipo": "UR5",
+        "codigo": 2771
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 123,
+      "marca": "Chevrolet",
+      "modelo": "Caprice",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 6.0,
+      "motor": "L77",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 124,
+      "marca": "Chevrolet",
+      "modelo": "Captiva",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2023,
+      "litros": 1.5,
+      "motor": "LJ0",
+      "bujia_stock": {
+        "tipo": "LKR8HI-8",
+        "codigo": 93720
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 125,
+      "marca": "Chevrolet",
+      "modelo": "Captiva",
+      "origen": "Nac.",
+      "anio_inicio": 2022,
+      "anio_fin": 2022,
+      "litros": 1.5,
+      "motor": "LJ0",
+      "bujia_stock": {
+        "tipo": "ILKR7D8",
+        "codigo": 92365
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 126,
+      "marca": "Chevrolet",
+      "modelo": "Captiva Sport",
+      "origen": "Nac.",
+      "anio_inicio": 2014,
+      "anio_fin": 2015,
+      "litros": 2.4,
+      "motor": "LEA",
+      "bujia_stock": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 127,
+      "marca": "Chevrolet",
+      "modelo": "Captiva Sport",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 2.4,
+      "motor": "LEA",
+      "bujia_stock": {
+        "tipo": "ILTR5D",
+        "codigo": 5476
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 128,
+      "marca": "Chevrolet",
+      "modelo": "Captiva Sport",
+      "origen": "Nac.",
+      "anio_inicio": 2008,
+      "anio_fin": 2013,
+      "litros": 2.4,
+      "motor": "LEA",
+      "bujia_stock": null,
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 129,
+      "marca": "Chevrolet",
+      "modelo": "Captiva Sport",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2013,
+      "litros": 2.4,
+      "motor": "LEA",
+      "bujia_stock": {
+        "tipo": "ILTR5D",
+        "codigo": 5476
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 130,
+      "marca": "Chevrolet",
+      "modelo": "Captiva Sport",
+      "origen": "Nac.",
+      "anio_inicio": 2012,
+      "anio_fin": 2015,
+      "litros": 3.0,
+      "motor": "LFW",
+      "bujia_stock": {
+        "tipo": "ILTR6E11",
+        "codigo": 90117
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 131,
+      "marca": "Chevrolet",
+      "modelo": "Captiva Sport",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2012,
+      "litros": 3.0,
+      "motor": "LFW",
+      "bujia_stock": {
+        "tipo": "ILTR6E11",
+        "codigo": 90117
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 132,
+      "marca": "Chevrolet",
+      "modelo": "Captiva Sport",
+      "origen": "Nac.",
+      "anio_inicio": 2011,
+      "anio_fin": 2011,
+      "litros": 3.0,
+      "motor": "LF1",
+      "bujia_stock": {
+        "tipo": "ILTR6E11",
+        "codigo": 90117
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 133,
+      "marca": "Chevrolet",
+      "modelo": "Captiva Sport",
+      "origen": "Nac.",
+      "anio_inicio": 2008,
+      "anio_fin": 2010,
+      "litros": 3.6,
+      "motor": "LY7",
+      "bujia_stock": {
+        "tipo": "ILTR6E11",
+        "codigo": 90117
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 134,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2023,
+      "litros": 1.3,
+      "motor": "LIY",
+      "bujia_stock": {
+        "tipo": "ILKAR7G7",
+        "codigo": 92639
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 135,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Nac.",
+      "anio_inicio": 2022,
+      "anio_fin": 2022,
+      "litros": 1.3,
+      "motor": "LIY",
+      "bujia_stock": {
+        "tipo": "ILNFR9B7G",
+        "codigo": 94956
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 136,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Nac.",
+      "anio_inicio": 2018,
+      "anio_fin": 2021,
+      "litros": 1.5,
+      "motor": "L2B",
+      "bujia_stock": {
+        "tipo": "LKR6F-10",
+        "codigo": 91230
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 137,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Nac.",
+      "anio_inicio": 2003,
+      "anio_fin": 2005,
+      "litros": 2.2,
+      "motor": "LN2",
+      "bujia_stock": {
+        "tipo": "PTR5A-13",
+        "codigo": 2467
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 138,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Imp.",
+      "anio_inicio": 2003,
+      "anio_fin": 2005,
+      "litros": 2.2,
+      "motor": "L61",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 139,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Nac.",
+      "anio_inicio": 1995,
+      "anio_fin": 2002,
+      "litros": 2.2,
+      "motor": "LN2",
+      "bujia_stock": {
+        "tipo": "TR55-1",
+        "codigo": 2683
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55-1IX",
+        "codigo": 7316
+      },
+      "bujia_g_power": {
+        "tipo": "TR55-1GP",
+        "codigo": 7159
+      },
+      "bujia_v_power": {
+        "tipo": "TR55-1",
+        "codigo": 2683
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 140,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Imp.",
+      "anio_inicio": 1998,
+      "anio_fin": 2002,
+      "litros": 2.2,
+      "motor": "LN2",
+      "bujia_stock": {
+        "tipo": "PTR5D-10",
+        "codigo": 3784
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 141,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1997,
+      "litros": 2.2,
+      "motor": "LN2",
+      "bujia_stock": null,
+      "bujia_iridium_ix": {
+        "tipo": "TR55-1IX",
+        "codigo": 7316
+      },
+      "bujia_g_power": {
+        "tipo": "TR55-1GP",
+        "codigo": 7159
+      },
+      "bujia_v_power": {
+        "tipo": "TR55-1",
+        "codigo": 2683
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 142,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1993,
+      "litros": 2.2,
+      "motor": "LN2",
+      "bujia_stock": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR4IX",
+        "codigo": 7300
+      },
+      "bujia_g_power": {
+        "tipo": "TR4GP",
+        "codigo": 2815
+      },
+      "bujia_v_power": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 143,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Imp.",
+      "anio_inicio": 1995,
+      "anio_fin": 1995,
+      "litros": 2.3,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR5C-13",
+        "codigo": 7740
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.048,
+      "calibracion_mm": 1.2
+    },
+    {
+      "id": 144,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 2002,
+      "litros": 2.4,
+      "motor": "LD9",
+      "bujia_stock": {
+        "tipo": "PTR5C-13",
+        "codigo": 7740
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 145,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Nac.",
+      "anio_inicio": 1996,
+      "anio_fin": 1996,
+      "litros": 2.4,
+      "motor": "LD9",
+      "bujia_stock": {
+        "tipo": "PTR5C-13",
+        "codigo": 7740
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 146,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Nac.",
+      "anio_inicio": 1990,
+      "anio_fin": 1994,
+      "litros": 2.8,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR4IX",
+        "codigo": 7300
+      },
+      "bujia_g_power": {
+        "tipo": "TR4GP",
+        "codigo": 2815
+      },
+      "bujia_v_power": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 147,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Nac.",
+      "anio_inicio": 1991,
+      "anio_fin": 1994,
+      "litros": 3.1,
+      "motor": "LHO",
+      "bujia_stock": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR4IX",
+        "codigo": 7300
+      },
+      "bujia_g_power": {
+        "tipo": "TR4GP",
+        "codigo": 2815
+      },
+      "bujia_v_power": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 148,
+      "marca": "Chevrolet",
+      "modelo": "Cavalier",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1994,
+      "litros": 3.1,
+      "motor": "LHO",
+      "bujia_stock": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR4IX",
+        "codigo": 7300
+      },
+      "bujia_g_power": {
+        "tipo": "TR4GP",
+        "codigo": 2815
+      },
+      "bujia_v_power": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 149,
+      "marca": "Chevrolet",
+      "modelo": "Celebrity",
+      "origen": "Nac.",
+      "anio_inicio": 1987,
+      "anio_fin": 1989,
+      "litros": 2.8,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 150,
+      "marca": "Chevrolet",
+      "modelo": "Celebrity",
+      "origen": "Nac.",
+      "anio_inicio": 1982,
+      "anio_fin": 1986,
+      "litros": 2.8,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "BP4FS",
+        "codigo": 2594
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR4IX",
+        "codigo": 7401
+      },
+      "bujia_g_power": {
+        "tipo": "UR4GP",
+        "codigo": 2869
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 151,
+      "marca": "Chevrolet",
+      "modelo": "Century",
+      "origen": "Nac.",
+      "anio_inicio": 1986,
+      "anio_fin": 1988,
+      "litros": 2.8,
+      "motor": "LB6 9",
+      "bujia_stock": {
+        "tipo": "UR4",
+        "codigo": 4162
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR4IX",
+        "codigo": 7401
+      },
+      "bujia_g_power": {
+        "tipo": "UR4GP",
+        "codigo": 2869
+      },
+      "bujia_v_power": {
+        "tipo": "UR4",
+        "codigo": 4162
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 152,
+      "marca": "Chevrolet",
+      "modelo": "Chevy",
+      "origen": "Nac.",
+      "anio_inicio": 1994,
+      "anio_fin": 2002,
+      "litros": 1.4,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "BPR6EY",
+        "codigo": 2602
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BPR6EIX",
+        "codigo": 6637
+      },
+      "bujia_g_power": {
+        "tipo": "BPR6EGP",
+        "codigo": 7084
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 153,
+      "marca": "Chevrolet",
+      "modelo": "Chevy",
+      "origen": "Nac.",
+      "anio_inicio": 2005,
+      "anio_fin": 2012,
+      "litros": 1.6,
+      "motor": "LLQ",
+      "bujia_stock": {
+        "tipo": "BPR6EY",
+        "codigo": 2602
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BPR6EIX",
+        "codigo": 6637
+      },
+      "bujia_g_power": {
+        "tipo": "BPR6EGP",
+        "codigo": 7084
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 154,
+      "marca": "Chevrolet",
+      "modelo": "Chevy",
+      "origen": "Nac.",
+      "anio_inicio": 1995,
+      "anio_fin": 2004,
+      "litros": 1.6,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "BPR6EY",
+        "codigo": 2602
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BPR6EIX",
+        "codigo": 6637
+      },
+      "bujia_g_power": {
+        "tipo": "BPR6EGP",
+        "codigo": 7084
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 155,
+      "marca": "Chevrolet",
+      "modelo": "Cheyenne",
+      "origen": "Nac.",
+      "anio_inicio": 2019,
+      "anio_fin": 2024,
+      "litros": 5.3,
+      "motor": "L84",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 156,
+      "marca": "Chevrolet",
+      "modelo": "Cheyenne",
+      "origen": "Nac.",
+      "anio_inicio": 2019,
+      "anio_fin": 2021,
+      "litros": 5.3,
+      "motor": "L82",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 157,
+      "marca": "Chevrolet",
+      "modelo": "Cheyenne",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2018,
+      "litros": 5.3,
+      "motor": "L83",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 158,
+      "marca": "Chevrolet",
+      "modelo": "Cheyenne",
+      "origen": "Nac.",
+      "anio_inicio": 2014,
+      "anio_fin": 2015,
+      "litros": 5.3,
+      "motor": "L83",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 159,
+      "marca": "Chevrolet",
+      "modelo": "Cheyenne",
+      "origen": "Nac.",
+      "anio_inicio": 2011,
+      "anio_fin": 2013,
+      "litros": 5.3,
+      "motor": "LC9",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 160,
+      "marca": "Chevrolet",
+      "modelo": "Cheyenne",
+      "origen": "Nac.",
+      "anio_inicio": 2007,
+      "anio_fin": 2010,
+      "litros": 5.3,
+      "motor": "LY5",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 161,
+      "marca": "Chevrolet",
+      "modelo": "Cheyenne",
+      "origen": "Nac.",
+      "anio_inicio": 2003,
+      "anio_fin": 2006,
+      "litros": 5.3,
+      "motor": "LM7",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 162,
+      "marca": "Chevrolet",
+      "modelo": "Cheyenne",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2024,
+      "litros": 6.2,
+      "motor": "L84",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 163,
+      "marca": "Chevrolet",
+      "modelo": "Cheyenne",
+      "origen": "Nac.",
+      "anio_inicio": 2019,
+      "anio_fin": 2022,
+      "litros": 6.2,
+      "motor": "L87",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 164,
+      "marca": "Chevrolet",
+      "modelo": "Cheyenne",
+      "origen": "Nac.",
+      "anio_inicio": 2014,
+      "anio_fin": 2018,
+      "litros": 6.2,
+      "motor": "L86",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 165,
+      "marca": "Chevrolet",
+      "modelo": "Citation",
+      "origen": "Nac.",
+      "anio_inicio": 1982,
+      "anio_fin": 1985,
+      "litros": 2.8,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "BP4FS",
+        "codigo": 2594
+      },
+      "bujia_iridium_ix": {
+        "tipo": "UR4IX",
+        "codigo": 7401
+      },
+      "bujia_g_power": {
+        "tipo": "UR4GP",
+        "codigo": 2869
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 166,
+      "marca": "Chevrolet",
+      "modelo": "Classic",
+      "origen": "Imp.",
+      "anio_inicio": 2004,
+      "anio_fin": 2005,
+      "litros": 2.2,
+      "motor": "L61",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 167,
+      "marca": "Chevrolet",
+      "modelo": "Cobalt",
+      "origen": "Imp.",
+      "anio_inicio": 2008,
+      "anio_fin": 2009,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILTR5D",
+        "codigo": 5476
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 168,
+      "marca": "Chevrolet",
+      "modelo": "Cobalt",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2007,
+      "litros": 2.0,
+      "motor": "LSJ",
+      "bujia_stock": {
+        "tipo": "IFR6V-10G",
+        "codigo": 92085
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX",
+        "codigo": 6418
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 169,
+      "marca": "Chevrolet",
+      "modelo": "Cobalt",
+      "origen": "Imp.",
+      "anio_inicio": 2009,
+      "anio_fin": 2010,
+      "litros": 2.2,
+      "motor": "LAP",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 170,
+      "marca": "Chevrolet",
+      "modelo": "Cobalt",
+      "origen": "Imp.",
+      "anio_inicio": 2006,
+      "anio_fin": 2006,
+      "litros": 2.2,
+      "motor": "L61",
+      "bujia_stock": null,
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 171,
+      "marca": "Chevrolet",
+      "modelo": "Cobalt",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2008,
+      "litros": 2.2,
+      "motor": "L61",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 172,
+      "marca": "Chevrolet",
+      "modelo": "Cobalt",
+      "origen": "Imp.",
+      "anio_inicio": 2006,
+      "anio_fin": 2008,
+      "litros": 2.4,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 173,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Nac.",
+      "anio_inicio": 2015,
+      "anio_fin": 2022,
+      "litros": 2.5,
+      "motor": "LCV",
+      "bujia_stock": {
+        "tipo": "ILTR5L11",
+        "codigo": 96329
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 174,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2024,
+      "litros": 2.7,
+      "motor": "L3B",
+      "bujia_stock": {
+        "tipo": "ILNFR9B7G",
+        "codigo": 94956
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 175,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2023,
+      "litros": 2.7,
+      "motor": "W7X",
+      "bujia_stock": {
+        "tipo": "ILNFR9B7G",
+        "codigo": 94956
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 176,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Imp.",
+      "anio_inicio": 2004,
+      "anio_fin": 2006,
+      "litros": 2.8,
+      "motor": "LK5",
+      "bujia_stock": {
+        "tipo": "PTR5A-13",
+        "codigo": 2467
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 177,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Imp.",
+      "anio_inicio": 2007,
+      "anio_fin": 2012,
+      "litros": 2.9,
+      "motor": "LLV",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 178,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Nac.",
+      "anio_inicio": 2011,
+      "anio_fin": 2012,
+      "litros": 2.9,
+      "motor": "LLV",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 179,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Nac.",
+      "anio_inicio": 2004,
+      "anio_fin": 2006,
+      "litros": 3.5,
+      "motor": "L52",
+      "bujia_stock": {
+        "tipo": "PTR5A-13",
+        "codigo": 2467
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 180,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Imp.",
+      "anio_inicio": 2004,
+      "anio_fin": 2006,
+      "litros": 3.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR5A-13",
+        "codigo": 2467
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 181,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Nac.",
+      "anio_inicio": 2007,
+      "anio_fin": 2012,
+      "litros": 3.7,
+      "motor": "LLR",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 182,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Imp.",
+      "anio_inicio": 2007,
+      "anio_fin": 2012,
+      "litros": 3.7,
+      "motor": "LLR",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 183,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Nac.",
+      "anio_inicio": 2018,
+      "anio_fin": 2022,
+      "litros": 3.6,
+      "motor": "LGZ",
+      "bujia_stock": {
+        "tipo": "ILNAR7A9",
+        "codigo": 92176
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 184,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Nac.",
+      "anio_inicio": 2017,
+      "anio_fin": 2017,
+      "litros": 3.6,
+      "motor": "LGZ",
+      "bujia_stock": {
+        "tipo": "ILTR6E11",
+        "codigo": 90117
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 185,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Nac.",
+      "anio_inicio": 2013,
+      "anio_fin": 2016,
+      "litros": 3.6,
+      "motor": "LFX",
+      "bujia_stock": {
+        "tipo": "ILTR6E11",
+        "codigo": 90117
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 186,
+      "marca": "Chevrolet",
+      "modelo": "Colorado",
+      "origen": "Imp.",
+      "anio_inicio": 2011,
+      "anio_fin": 2011,
+      "litros": 5.3,
+      "motor": "LH9",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 187,
+      "marca": "Chevrolet",
+      "modelo": "Corsa",
+      "origen": "Nac.",
+      "anio_inicio": 2002,
+      "anio_fin": 2002,
+      "litros": 1.4,
+      "motor": "LJ1",
+      "bujia_stock": {
+        "tipo": "BKR5EK",
+        "codigo": 7956
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX",
+        "codigo": 6341
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 188,
+      "marca": "Chevrolet",
+      "modelo": "Corsa",
+      "origen": "Nac.",
+      "anio_inicio": 2003,
+      "anio_fin": 2008,
+      "litros": 1.8,
+      "motor": "LJ1",
+      "bujia_stock": {
+        "tipo": "BPR6EY",
+        "codigo": 2602
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BPR6EIX",
+        "codigo": 6637
+      },
+      "bujia_g_power": {
+        "tipo": "BPR6EGP",
+        "codigo": 7084
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 189,
+      "marca": "Chevrolet",
+      "modelo": "Corsica",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1996,
+      "litros": 2.2,
+      "motor": "LN2",
+      "bujia_stock": null,
+      "bujia_iridium_ix": {
+        "tipo": "TR55-1IX",
+        "codigo": 7316
+      },
+      "bujia_g_power": {
+        "tipo": "TR55-1GP",
+        "codigo": 7159
+      },
+      "bujia_v_power": {
+        "tipo": "TR55-1",
+        "codigo": 2683
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 190,
+      "marca": "Chevrolet",
+      "modelo": "Corsica",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1993,
+      "litros": 2.2,
+      "motor": "LN2",
+      "bujia_stock": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR4IX",
+        "codigo": 7300
+      },
+      "bujia_g_power": {
+        "tipo": "TR4GP",
+        "codigo": 2815
+      },
+      "bujia_v_power": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 191,
+      "marca": "Chevrolet",
+      "modelo": "Corsica",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1996,
+      "litros": 3.1,
+      "motor": "L82",
+      "bujia_stock": {
+        "tipo": "PTR4B-15",
+        "codigo": 5146
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 192,
+      "marca": "Chevrolet",
+      "modelo": "Corsica",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1993,
+      "litros": 3.1,
+      "motor": "LHO",
+      "bujia_stock": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR4IX",
+        "codigo": 7300
+      },
+      "bujia_g_power": {
+        "tipo": "TR4GP",
+        "codigo": 2815
+      },
+      "bujia_v_power": {
+        "tipo": "TR4",
+        "codigo": 4164
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 193,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 2024,
+      "anio_fin": 2024,
+      "litros": 5.5,
+      "motor": "LT6",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 194,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2023,
+      "litros": 5.5,
+      "motor": "LT6",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 195,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 2001,
+      "anio_fin": 2004,
+      "litros": 5.7,
+      "motor": "LS1",
+      "bujia_stock": {
+        "tipo": "PTR5D-10",
+        "codigo": 3784
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 196,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Imp.",
+      "anio_inicio": 2004,
+      "anio_fin": 2004,
+      "litros": 5.7,
+      "motor": "LS1",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 197,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Imp.",
+      "anio_inicio": 1997,
+      "anio_fin": 2003,
+      "litros": 5.7,
+      "motor": "LS1",
+      "bujia_stock": {
+        "tipo": "PTR5D-10",
+        "codigo": 3784
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 198,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 1997,
+      "anio_fin": 2000,
+      "litros": 5.7,
+      "motor": "LS1",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 199,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1996,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.048,
+      "calibracion_mm": 1.2
+    },
+    {
+      "id": 200,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1996,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.048,
+      "calibracion_mm": 1.2
+    },
+    {
+      "id": 201,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1995,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.048,
+      "calibracion_mm": 1.2
+    },
+    {
+      "id": 202,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 1991,
+      "anio_fin": 1996,
+      "litros": 5.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.06,
+      "calibracion_mm": 1.5
+    },
+    {
+      "id": 203,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 2005,
+      "anio_fin": 2007,
+      "litros": 6.0,
+      "motor": "LS2",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 204,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2007,
+      "litros": 6.0,
+      "motor": "LS2",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 205,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 2020,
+      "anio_fin": 2023,
+      "litros": 6.2,
+      "motor": "LT2",
+      "bujia_stock": {
+        "tipo": "ILTR5D",
+        "codigo": 5476
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 206,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 2021,
+      "anio_fin": 2021,
+      "litros": 6.2,
+      "motor": "LT2",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 207,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 2014,
+      "anio_fin": 2019,
+      "litros": 6.2,
+      "motor": "LT1",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 208,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 2019,
+      "anio_fin": 2019,
+      "litros": 6.2,
+      "motor": "LT5",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 209,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2018,
+      "litros": 6.2,
+      "motor": "LT4",
+      "bujia_stock": {
+        "tipo": "ILTR5D",
+        "codigo": 5476
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 210,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 6.2,
+      "motor": "LT1",
+      "bujia_stock": {
+        "tipo": "ILTR5E11",
+        "codigo": 93330
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 211,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 2008,
+      "anio_fin": 2013,
+      "litros": 6.2,
+      "motor": "LS3",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 212,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 2012,
+      "anio_fin": 2013,
+      "litros": 6.2,
+      "motor": "LS9",
+      "bujia_stock": {
+        "tipo": "ITR6G9",
+        "codigo": 90156
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR6IX",
+        "codigo": 3689
+      },
+      "bujia_g_power": {
+        "tipo": "TR6GP",
+        "codigo": 5141
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 213,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Imp.",
+      "anio_inicio": 2009,
+      "anio_fin": 2011,
+      "litros": 6.2,
+      "motor": "LS9",
+      "bujia_stock": {
+        "tipo": "ITR6G9",
+        "codigo": 90156
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR6IX",
+        "codigo": 3689
+      },
+      "bujia_g_power": {
+        "tipo": "TR6GP",
+        "codigo": 5141
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 214,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Nac.",
+      "anio_inicio": 2009,
+      "anio_fin": 2009,
+      "litros": 6.2,
+      "motor": "LS3",
+      "bujia_stock": {
+        "tipo": "IZTR5B11",
+        "codigo": 1465
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 215,
+      "marca": "Chevrolet",
+      "modelo": "Corvette",
+      "origen": "Imp.",
+      "anio_inicio": 2006,
+      "anio_fin": 2011,
+      "litros": 7.0,
+      "motor": "LS7",
+      "bujia_stock": {
+        "tipo": "ITR6G9",
+        "codigo": 90156
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR6IX",
+        "codigo": 3689
+      },
+      "bujia_g_power": {
+        "tipo": "TR6GP",
+        "codigo": 5141
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 216,
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "origen": "Nac.",
+      "anio_inicio": 2017,
+      "anio_fin": 2018,
+      "litros": 1.4,
+      "motor": "LE2",
+      "bujia_stock": {
+        "tipo": "ILNAR8B7G",
+        "codigo": 91970
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 217,
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2016,
+      "litros": 1.4,
+      "motor": "LUJ",
+      "bujia_stock": {
+        "tipo": "IFR7X7G",
+        "codigo": 91039
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 218,
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "origen": "Nac.",
+      "anio_inicio": 2015,
+      "anio_fin": 2015,
+      "litros": 1.4,
+      "motor": "LUV",
+      "bujia_stock": {
+        "tipo": "IFR7X7G",
+        "codigo": 91039
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 219,
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 1.4,
+      "motor": "LUV",
+      "bujia_stock": {
+        "tipo": "IFR7X7G",
+        "codigo": 91039
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR7EIX",
+        "codigo": 2667
+      },
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 220,
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "origen": "Imp.",
+      "anio_inicio": 2013,
+      "anio_fin": 2013,
+      "litros": 1.4,
+      "motor": "LUV",
+      "bujia_stock": {
+        "tipo": "IFR7X7G",
+        "codigo": 91039
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 221,
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "origen": "Imp.",
+      "anio_inicio": 2011,
+      "anio_fin": 2012,
+      "litros": 1.4,
+      "motor": "LUJ",
+      "bujia_stock": {
+        "tipo": "IFR7X7G",
+        "codigo": 91039
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 222,
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "origen": "Nac.",
+      "anio_inicio": 2010,
+      "anio_fin": 2016,
+      "litros": 1.8,
+      "motor": "LUW",
+      "bujia_stock": {
+        "tipo": "IFR6Z7G",
+        "codigo": 95609
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 223,
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 1.8,
+      "motor": "LUW",
+      "bujia_stock": {
+        "tipo": "IFR6Z7G",
+        "codigo": 95609
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX",
+        "codigo": 6418
+      },
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 224,
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 1.8,
+      "motor": "LWE",
+      "bujia_stock": {
+        "tipo": "IFR6Z7G",
+        "codigo": 95609
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX",
+        "codigo": 6418
+      },
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 225,
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "origen": "Imp.",
+      "anio_inicio": 2011,
+      "anio_fin": 2013,
+      "litros": 1.8,
+      "motor": "LUW",
+      "bujia_stock": {
+        "tipo": "IFR6Z7G",
+        "codigo": 95609
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX",
+        "codigo": 6418
+      },
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 226,
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "origen": "Imp.",
+      "anio_inicio": 2013,
+      "anio_fin": 2013,
+      "litros": 1.8,
+      "motor": "LWE",
+      "bujia_stock": {
+        "tipo": "IFR6Z7G",
+        "codigo": 95609
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX",
+        "codigo": 6418
+      },
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    }
+  ]
+}
