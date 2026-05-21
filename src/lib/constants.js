@@ -7,7 +7,16 @@
  */
 
 /** WhatsApp number for +AFINACIÓN (52 = MX country code, no spaces/dashes) */
-export const WHATSAPP_NUMBER = '523312345678';
+export const WHATSAPP_NUMBER = '523329245277';
+
+/** Fixed phone number for visual display and direct calls */
+export const STORE_FIXED_PHONE = '3347499638';
+
+/** Public email for customer support */
+export const STORE_PUBLIC_EMAIL = 'contacto@masafinaciones.com';
+
+/** Private/Admin email for billing, providers, and finance */
+export const STORE_ADMIN_EMAIL = 'administracion@masafinaciones.com';
 
 /** Admin PIN — change before going to production */
 export const ADMIN_PIN = '1234';
@@ -34,3 +43,19 @@ export const STORE_INFO = {
     { days: 'Domingo',         hours: 'Cerrado' },
   ],
 };
+
+/** Motor Oil Configuration Constants for tune-up kits */
+export const MOTOR_OIL_BRANDS = [
+  { id: 'mobil',        label: 'Mobil Super' },
+  { id: 'castrol',      label: 'Castrol GTX' },
+  { id: 'quaker_state', label: 'Quaker State' },
+  { id: 'roshfrans',    label: 'Roshfrans' }
+];
+
+export const MOTOR_OIL_VISCOSITIES = ['0W-20', '5W-30', '5W-20', '10W-30', '15W-40', '20W-50'];
+
+export const MOTOR_OIL_TECHNOLOGIES = [
+  { id: 'sintetico',     label: 'Sintético' },
+  { id: 'semisintetico', label: 'Semisintético' },
+  { id: 'mineral',       label: 'Mineral' }
+];

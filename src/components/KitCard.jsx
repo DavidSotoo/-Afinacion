@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
 import {
   ShoppingBag,
   Zap,
@@ -12,8 +13,8 @@ import {
   MessageCircle,
 } from 'lucide-react';
 import { useCart }             from '../context/CartContext';
-import { WHATSAPP_NUMBER }     from '../lib/constants';
-import { filtroTieneSkuReal }  from '../lib/kitDefaults';
+import { WHATSAPP_NUMBER, MOTOR_OIL_BRANDS, MOTOR_OIL_VISCOSITIES } from '../lib/constants';
+import { filtroTieneSkuReal, recomendarAceiteDefault }  from '../lib/kitDefaults';
 
 /* ─── Static config ───────────────────────────────────────────────────────── */
 
@@ -74,6 +75,14 @@ export default function KitCard({ bujia }) {
   const [lineDropOpen,  setLineDropOpen]  = useState(false);
   const [justAdded,     setJustAdded]     = useState(false);
 
+  // ── Motor Oil state ───────────────────────────────────────────────────────
+  const recomendacionAceite = useMemo(() => recomendarAceiteDefault(bujia), [bujia]);
+  const [aceiteSelected, setAceiteSelected] = useState(recomendacionAceite);
+
+  React.useEffect(() => {
+    setAceiteSelected(recomendacionAceite);
+  }, [recomendacionAceite]);
+
   // ── Derived values (memoized) ─────────────────────────────────────────────
   const availableLines = useMemo(
     () => ALL_LINES.filter(l => bujia[LINE_CONFIG[l].field]?.tipo),
@@ -87,12 +96,15 @@ export default function KitCard({ bujia }) {
   const kitCartId   = useMemo(() => `kit-${bujia.id}-${selectedLine}`, [bujia.id, selectedLine]);
   const piezaCartId = useMemo(() => `pieza-${bujia.id}-${selectedLine}`, [bujia.id, selectedLine]);
 
-  const kitInCart   = useMemo(() => items.some(i => i.id === kitCartId),   [items, kitCartId]);
+  const kitItemInCart = useMemo(() => items.find(i => i.id === kitCartId), [items, kitCartId]);
+  const kitInCart   = !!kitItemInCart;
   const piezaInCart = useMemo(() => items.some(i => i.id === piezaCartId), [items, piezaCartId]);
+
+  const noBujias = availableLines.length === 0;
 
   // WhatsApp — bujías individuales only
   const whatsappBujiasUrl = useMemo(() => {
-    if (!bujiaData?.tipo) return '#';
+    if (noBujias || !bujiaData?.tipo) return '#';
     const msg = [
       `🔧 *Cotización de Bujías +AFINACIÓN*`,
       ``,
@@ -110,11 +122,11 @@ export default function KitCard({ bujia }) {
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
   }, [bujia, lineConfig, bujiaData]);
 
-  if (!kit || !bujiaData?.tipo) return null;
+  if (!kit) return null;
 
   // ── Handlers ──────────────────────────────────────────────────────────────
   const handleAddKit = () => {
-    addKit(bujia, selectedLine);
+    addKit(bujia, selectedLine, [], aceiteSelected);
     setJustAdded(true);
     setTimeout(() => setJustAdded(false), 2500);
   };
@@ -125,7 +137,13 @@ export default function KitCard({ bujia }) {
   const motorLabel   = `${bujia.litros}L ${bujia.cilindros_config}${bujia.motor ? ` (${bujia.motor})` : ''}`;
 
   return (
-    <article
+    <motion.article
+      layout
+      initial={{ opacity: 0, scale: 0.95, y: 20 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
+      transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+      whileHover={{ y: -4 }}
       className={`kit-card${kitInCart ? ' kit-card--in-cart' : ''}`}
       role="article"
       aria-label={`Kit de afinación: ${vehicleLabel}`}
@@ -162,18 +180,26 @@ export default function KitCard({ bujia }) {
             <span className="kit-section-number">①</span>
           </header>
 
-          <div className="kit-spark-row">
-            <span className="kit-sku-chip kit-sku-chip--main">{bujiaData.tipo}</span>
-            <span className="kit-cal-badge">{bujia.calibracion_mm}mm</span>
-            {bujiaData.codigo && (
-              <span className="kit-code-badge">#{bujiaData.codigo}</span>
-            )}
-          </div>
+          {noBujias ? (
+            <div className="kit-alert-oem" style={{ padding: '0.75rem', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '4px', borderLeft: '3px solid var(--text-3)', marginBottom: '0.5rem' }}>
+              <span className="kit-alert-text" style={{ fontSize: '0.75rem', color: 'var(--text-2)', lineHeight: '1.4', display: 'block' }}>
+                Bujías exclusivas de equipo original (Agencia) · Filtros disponibles para cotizar
+              </span>
+            </div>
+          ) : (
+            <>
+              <div className="kit-spark-row">
+                <span className="kit-sku-chip kit-sku-chip--main">{bujiaData?.tipo}</span>
+                <span className="kit-cal-badge">{bujia.calibracion_mm}mm</span>
+                {bujiaData?.codigo && (
+                  <span className="kit-code-badge">#{bujiaData.codigo}</span>
+                )}
+              </div>
 
-          {/* NGK line selector */}
-          {availableLines.length > 1 && (
-            <div className="kit-selector-wrap">
-              <button
+              {/* NGK line selector */}
+              {availableLines.length > 1 && (
+                <div className="kit-selector-wrap">
+                  <button
                 className={`kit-selector-btn card-badge ${lineConfig.badge}`}
                 onClick={() => setLineDropOpen(o => !o)}
                 aria-haspopup="listbox"
@@ -208,7 +234,9 @@ export default function KitCard({ bujia }) {
                   ))}
                 </ul>
               )}
-            </div>
+                </div>
+              )}
+            </>
           )}
         </section>
 
@@ -237,7 +265,15 @@ export default function KitCard({ bujia }) {
                   </div>
                   <span className="kit-filter-tipo">{filtro?.tipo}</span>
 
-                  {tienesku ? (
+                  {filtro?.sku === 'SELLADO' ? (
+                    /* ── FILTRO SELLADO (IN-TANK) ── */
+                    <span
+                      className="kit-filter-sku-tag kit-filter-sku-tag--pending"
+                      style={{ color: 'var(--primary)', borderColor: 'var(--border-primary)', background: 'var(--primary-glow-sm)' }}
+                    >
+                      Filtro sellado (In-Tank) · No requiere cambio periódico
+                    </span>
+                  ) : tienesku ? (
                     /* ── SKU REAL ASIGNADO ── */
                     <div className="kit-filter-sku-real">
                       {filtro.marca && (
@@ -253,12 +289,90 @@ export default function KitCard({ bujia }) {
                     >
                       {filtro?.hasData
                         ? '📋 Consultar SKU con mostrador'
-                        : '✦ Asignado automáticamente por motor'}
+                        : 'Código en verificación · Cotizar por WhatsApp'}
                     </span>
                   )}
                 </div>
               );
             })}
+          </div>
+        </section>
+
+        {/* ▸ BLOQUE 3 — Aceite de Motor (6ta pieza) ─────────────────────── */}
+        <section className="kit-section-block kit-section-block--oil" aria-label="Aceite de motor recomendado">
+          <header className="kit-section-label">
+            <Droplet size={13} aria-hidden="true" className="kit-section-icon kit-section-icon--oil" style={{ color: 'var(--primary)' }} />
+            <span>⑥ Aceite de Motor</span>
+            <span className="kit-section-numbers">Recomendado</span>
+          </header>
+
+          <div className="kit-oil-card">
+            <div className="kit-oil-fields-grid">
+              {/* Marca */}
+              <div className="oil-field-group">
+                <label className="oil-field-label">Marca</label>
+                <select
+                  className="oil-field-select"
+                  value={aceiteSelected?.marca || ''}
+                  onChange={(e) => setAceiteSelected(prev => ({ ...prev, marca: e.target.value }))}
+                >
+                  {MOTOR_OIL_BRANDS.map(brand => (
+                    <option key={brand.id} value={brand.label}>{brand.label}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Viscosidad */}
+              <div className="oil-field-group">
+                <label className="oil-field-label">Viscosidad</label>
+                <select
+                  className="oil-field-select"
+                  value={aceiteSelected?.viscosidad || ''}
+                  onChange={(e) => {
+                    const newVisc = e.target.value;
+                    let newTec = 'Sintético';
+                    if (newVisc === '10W-30' || newVisc === '5W-20') newTec = 'Semisintético';
+                    else if (newVisc === '15W-40' || newVisc === '20W-50') newTec = 'Mineral';
+                    setAceiteSelected(prev => ({ ...prev, viscosidad: newVisc, tecnologia: newTec }));
+                  }}
+                >
+                  {MOTOR_OIL_VISCOSITIES.map(v => (
+                    <option key={v} value={v}>{v}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Litros */}
+              <div className="oil-field-group">
+                <label className="oil-field-label">Cantidad</label>
+                <select
+                  className="oil-field-select"
+                  value={aceiteSelected?.litros || 4}
+                  onChange={(e) => {
+                    const l = parseInt(e.target.value, 10);
+                    let pres = 'Garrafa (4 Litros)';
+                    if (l === 5) pres = 'Garrafa (5 Litros)';
+                    else if (l > 5) pres = `Garrafa (4L) + ${l - 4} Botella(s) (1L)`;
+                    setAceiteSelected(prev => ({ ...prev, litros: l, presentacion: pres }));
+                  }}
+                >
+                  <option value={4}>4 Litros (Estándar)</option>
+                  <option value={5}>5 Litros</option>
+                  <option value={6}>6 Litros</option>
+                  <option value={7}>7 Litros</option>
+                  <option value={8}>8 Litros</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="kit-oil-summary-row">
+              <span className="oil-summary-tech-badge">
+                Tecnología: {aceiteSelected?.tecnologia}
+              </span>
+              <span className="oil-summary-pres">
+                {aceiteSelected?.presentacion}
+              </span>
+            </div>
           </div>
         </section>
 
@@ -268,44 +382,59 @@ export default function KitCard({ bujia }) {
       <div className="kit-card-footer">
 
         {/* Individual bujías — cotizar via WhatsApp */}
-        <div className="kit-footer-row kit-footer-row--secondary">
-          <a
-            className="btn-cotizar-bujias"
-            href={whatsappBujiasUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Cotizar bujías ${lineConfig.label} por WhatsApp`}
-          >
-            <MessageCircle size={13} aria-hidden="true" />
-            Cotizar Bujías
-          </a>
-          <button
-            className={`btn-cart-pieza${piezaInCart ? ' btn-cart-pieza--added' : ''}`}
-            onClick={handleAddBujia}
-            disabled={piezaInCart}
-            aria-label={piezaInCart ? 'Bujías ya en carrito' : `Agregar bujías ${lineConfig.label} al carrito`}
-            aria-pressed={piezaInCart}
-          >
-            {piezaInCart ? '✓ En carrito' : '+ Solo Bujías'}
-          </button>
-        </div>
+        {!noBujias && (
+          <div className="kit-footer-row kit-footer-row--secondary">
+            <a
+              className="btn-cotizar-bujias"
+              href={whatsappBujiasUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Cotizar bujías ${lineConfig.label} por WhatsApp`}
+            >
+              <MessageCircle size={13} aria-hidden="true" />
+              Cotizar Bujías
+            </a>
+            <div style={{ display: 'flex', gap: '0.4rem', marginLeft: 'auto' }}>
+              <button
+                className={`btn-cart-pieza${piezaInCart ? ' btn-cart-pieza--added' : ''}`}
+                style={{ marginLeft: 0 }}
+                onClick={handleAddBujia}
+                disabled={piezaInCart}
+                aria-label={piezaInCart ? 'Bujías ya en carrito' : `Agregar bujías ${lineConfig.label} al carrito`}
+                aria-pressed={piezaInCart}
+              >
+                {piezaInCart ? '✓ Bujías' : '+ Solo Bujías'}
+              </button>
+              <button
+                className={`btn-cart-pieza${kitInCart ? ' btn-cart-pieza--added' : ''}`}
+                style={{ marginLeft: 0 }}
+                onClick={() => !kitInCart && addKit(bujia, selectedLine, ['bujias'])}
+                disabled={kitInCart}
+                aria-label={kitInCart ? 'Filtros ya en carrito' : 'Agregar solo filtros al carrito'}
+                aria-pressed={kitInCart}
+              >
+                <Filter size={13} /> {kitInCart ? 'Agregados' : '+ Solo Filtros'}
+              </button>
+            </div>
+          </div>
+        )}
 
-        {/* PRIMARY — Agregar Kit Completo 5 Piezas */}
+        {/* PRIMARY — Agregar Kit Completo 6 Piezas */}
         <button
           className={`btn-add-kit-full${kitInCart || justAdded ? ' btn-add-kit-full--done' : ''}`}
           onClick={handleAddKit}
           disabled={kitInCart}
-          aria-label={kitInCart ? 'Kit completo ya en carrito' : 'Agregar Kit de Afinación Completo (5 Piezas) al carrito'}
+          aria-label={kitInCart ? 'Kit completo ya en carrito' : 'Agregar Kit de Afinación Completo (6 Piezas) al carrito'}
         >
           <ShoppingBag size={17} aria-hidden="true" />
           {justAdded
             ? '¡Kit Agregado! ✓'
             : kitInCart
             ? 'Kit en Carrito ✓'
-            : 'Agregar Kit de Afinación Completo (5 Piezas)'}
+            : 'Agregar Kit de Afinación Completo (6 Piezas)'}
         </button>
 
       </div>
-    </article>
+    </motion.article>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Search, RefreshCw } from 'lucide-react';
 
-export default function YMMSearch({ catalog, onSearch, onReset }) {
+export default function YMMSearch({ onSearch, onReset }) {
   const [marcas, setMarcas] = useState([]);
   const [selectedMarca, setSelectedMarca] = useState('');
   const [modelos, setModelos] = useState([]);
@@ -9,13 +9,19 @@ export default function YMMSearch({ catalog, onSearch, onReset }) {
   const [anios, setAnios] = useState([]);
   const [selectedAnio, setSelectedAnio] = useState('');
   const [selectedLinea, setSelectedLinea] = useState('');
-  const resultsRef = React.useRef(null);
+  const [loadingBrand, setLoadingBrand] = useState(false);
+  const [brandRecords, setBrandRecords] = useState([]);
 
-  // Extract unique brands from catalog
+  // Fetch unique brands on mount
   useEffect(() => {
-    const uniqueBrands = [...new Set(catalog.map(item => item.marca).filter(Boolean))].sort();
-    setMarcas(uniqueBrands);
-  }, [catalog]);
+    fetch('http://localhost:5000/api/vehiculos/brands')
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load brands');
+        return res.json();
+      })
+      .then(data => setMarcas(data))
+      .catch(err => console.error("Error loading brands:", err));
+  }, []);
 
   // Filter models by selected brand — also clears stale results
   useEffect(() => {
@@ -23,14 +29,35 @@ export default function YMMSearch({ catalog, onSearch, onReset }) {
     setSelectedModelo('');
     setAnios([]);
     setSelectedAnio('');
+    setBrandRecords([]);
     onReset();
 
     if (!selectedMarca) return;
 
-    const filteredByBrand = catalog.filter(item => item.marca === selectedMarca);
-    const uniqueModels = [...new Set(filteredByBrand.map(item => item.modelo))].sort();
-    setModelos(uniqueModels);
-  }, [selectedMarca, catalog]);
+    let active = true;
+    setLoadingBrand(true);
+    
+    fetch(`http://localhost:5000/api/vehiculos/brand/${selectedMarca}`)
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load models');
+        return res.json();
+      })
+      .then(records => {
+        if (!active) return;
+        // Map _id to id for backwards compatibility
+        const mappedRecords = records.map(r => ({ ...r, id: r._id || r.id }));
+        setBrandRecords(mappedRecords);
+        const uniqueModels = [...new Set(mappedRecords.map(item => item.modelo))].sort();
+        setModelos(uniqueModels);
+        setLoadingBrand(false);
+      })
+      .catch(err => {
+        console.error("Error loading brand models:", err);
+        if (active) setLoadingBrand(false);
+      });
+
+    return () => { active = false; };
+  }, [selectedMarca, onReset]);
 
   // Update years when a model is selected
   useEffect(() => {
@@ -39,9 +66,7 @@ export default function YMMSearch({ catalog, onSearch, onReset }) {
       setSelectedAnio('');
       return;
     }
-    const matches = catalog.filter(
-      item => item.marca === selectedMarca && item.modelo === selectedModelo
-    );
+    const matches = brandRecords.filter(item => item.modelo === selectedModelo);
     const yearsSet = new Set();
     matches.forEach(match => {
       for (let y = match.anio_inicio; y <= match.anio_fin; y++) {
@@ -51,7 +76,7 @@ export default function YMMSearch({ catalog, onSearch, onReset }) {
     const yearsArray = [...yearsSet].sort((a, b) => b - a);
     setAnios(yearsArray);
     setSelectedAnio('');
-  }, [selectedModelo, selectedMarca, catalog]);
+  }, [selectedModelo, brandRecords]);
 
   const handleSearch = () => {
     onSearch({
@@ -59,7 +84,7 @@ export default function YMMSearch({ catalog, onSearch, onReset }) {
       modelo: selectedModelo,
       anio: selectedAnio ? parseInt(selectedAnio) : null,
       linea: selectedLinea,
-    });
+    }, brandRecords);
 
     // Smooth scroll to results after React renders
     setTimeout(() => {
@@ -80,8 +105,10 @@ export default function YMMSearch({ catalog, onSearch, onReset }) {
   // Placeholder text for disabled selects
   const modeloPlaceholder = !selectedMarca
     ? '← Selecciona una marca'
-    : modelos.length === 0
+    : loadingBrand
     ? 'Cargando modelos...'
+    : modelos.length === 0
+    ? 'Sin modelos'
     : '— Seleccionar —';
 
   const anioPlaceholder = !selectedModelo

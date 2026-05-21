@@ -1,0 +1,2073 @@
+{
+  "fuente": "NGK Catálogo Máster 2025 - 1ra Edición",
+  "marca": "Mazda",
+  "total_registros": 86,
+  "registros": [
+    {
+      "id": 1192,
+      "marca": "Mazda",
+      "modelo": "2",
+      "origen": "Nac.",
+      "anio_inicio": 2024,
+      "anio_fin": 2024,
+      "litros": 1.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1193,
+      "marca": "Mazda",
+      "modelo": "2",
+      "origen": "Nac.",
+      "anio_inicio": 2024,
+      "anio_fin": 2024,
+      "litros": 1.5,
+      "motor": "-",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1194,
+      "marca": "Mazda",
+      "modelo": "2",
+      "origen": "Nac.",
+      "anio_inicio": 2015,
+      "anio_fin": 2023,
+      "litros": 1.5,
+      "motor": "Skyactiv-G",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1195,
+      "marca": "Mazda",
+      "modelo": "2",
+      "origen": "Nac.",
+      "anio_inicio": 2012,
+      "anio_fin": 2014,
+      "litros": 1.5,
+      "motor": "MZR",
+      "bujia_stock": {
+        "tipo": "IFR5E13",
+        "codigo": 6903
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1196,
+      "marca": "Mazda",
+      "modelo": "2",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2014,
+      "litros": 1.5,
+      "motor": "MZR",
+      "bujia_stock": {
+        "tipo": "IFR5E11",
+        "codigo": 7994
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.048,
+      "calibracion_mm": 1.2
+    },
+    {
+      "id": 1197,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Nac.",
+      "anio_inicio": 2014,
+      "anio_fin": 2024,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1198,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Nac.",
+      "anio_inicio": 2022,
+      "anio_fin": 2022,
+      "litros": 2.0,
+      "motor": "Skyactiv-G",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1199,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1200,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Nac.",
+      "anio_inicio": 2009,
+      "anio_fin": 2013,
+      "litros": 2.0,
+      "motor": "LFD",
+      "bujia_stock": {
+        "tipo": "ILTR5A-13G",
+        "codigo": 3811
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1201,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2013,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "LTR5BI-13",
+        "codigo": 90083
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1202,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Nac.",
+      "anio_inicio": 2006,
+      "anio_fin": 2008,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILTR5A-13G",
+        "codigo": 3811
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1203,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Nac.",
+      "anio_inicio": 2010,
+      "anio_fin": 2013,
+      "litros": 2.3,
+      "motor": "MZR",
+      "bujia_stock": {
+        "tipo": "SILTR6A7G",
+        "codigo": 95369
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 1204,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2013,
+      "litros": 2.3,
+      "motor": "MZR",
+      "bujia_stock": {
+        "tipo": "SILTR6A7G",
+        "codigo": 95369
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 1205,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Nac.",
+      "anio_inicio": 2006,
+      "anio_fin": 2009,
+      "litros": 2.3,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILTR5A-13G",
+        "codigo": 3811
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1206,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Nac.",
+      "anio_inicio": 2008,
+      "anio_fin": 2009,
+      "litros": 2.3,
+      "motor": "MZR",
+      "bujia_stock": {
+        "tipo": "ILTR6A-8G",
+        "codigo": 3787
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX",
+        "codigo": 94374
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP-8",
+        "codigo": 94372
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1207,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Nac.",
+      "anio_inicio": 2014,
+      "anio_fin": 2024,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1208,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Nac.",
+      "anio_inicio": 2021,
+      "anio_fin": 2024,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1209,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2023,
+      "litros": 2.5,
+      "motor": "Skyactiv-G",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1210,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2023,
+      "litros": 2.5,
+      "motor": "Skyactiv-G Turbo",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1211,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1212,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Nac.",
+      "anio_inicio": 2010,
+      "anio_fin": 2013,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILTR5A-13G",
+        "codigo": 3811
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1213,
+      "marca": "Mazda",
+      "modelo": "3",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2012,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "LTR5BI-13",
+        "codigo": 90083
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1214,
+      "marca": "Mazda",
+      "modelo": "5",
+      "origen": "Nac.",
+      "anio_inicio": 2006,
+      "anio_fin": 2010,
+      "litros": 2.3,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILTR5A-13G",
+        "codigo": 3811
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1215,
+      "marca": "Mazda",
+      "modelo": "5",
+      "origen": "Nac.",
+      "anio_inicio": 2012,
+      "anio_fin": 2015,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILTR5A-13G",
+        "codigo": 3811
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1216,
+      "marca": "Mazda",
+      "modelo": "5",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2014,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "LTR5BI-13",
+        "codigo": 90083
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1217,
+      "marca": "Mazda",
+      "modelo": "6",
+      "origen": "Nac.",
+      "anio_inicio": 2006,
+      "anio_fin": 2008,
+      "litros": 2.3,
+      "motor": "L3-VE",
+      "bujia_stock": {
+        "tipo": "ILTR5A-13G",
+        "codigo": 3811
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1218,
+      "marca": "Mazda",
+      "modelo": "6",
+      "origen": "Imp.",
+      "anio_inicio": 2006,
+      "anio_fin": 2008,
+      "litros": 2.3,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "LTR5BI-13",
+        "codigo": 90083
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1219,
+      "marca": "Mazda",
+      "modelo": "6",
+      "origen": "Imp.",
+      "anio_inicio": 2003,
+      "anio_fin": 2005,
+      "litros": 2.3,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "TR5AI-13",
+        "codigo": 90813
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1220,
+      "marca": "Mazda",
+      "modelo": "6",
+      "origen": "Nac.",
+      "anio_inicio": 2019,
+      "anio_fin": 2021,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1221,
+      "marca": "Mazda",
+      "modelo": "6",
+      "origen": "Nac.",
+      "anio_inicio": 2013,
+      "anio_fin": 2020,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1222,
+      "marca": "Mazda",
+      "modelo": "6",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1223,
+      "marca": "Mazda",
+      "modelo": "6",
+      "origen": "Imp.",
+      "anio_inicio": 2009,
+      "anio_fin": 2013,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "LTR5BI-13",
+        "codigo": 90083
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1224,
+      "marca": "Mazda",
+      "modelo": "6",
+      "origen": "Nac.",
+      "anio_inicio": 2009,
+      "anio_fin": 2012,
+      "litros": 2.5,
+      "motor": "L5-VE",
+      "bujia_stock": {
+        "tipo": "ILTR5A-13G",
+        "codigo": 3811
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1225,
+      "marca": "Mazda",
+      "modelo": "6",
+      "origen": "Nac.",
+      "anio_inicio": 2006,
+      "anio_fin": 2008,
+      "litros": 3.0,
+      "motor": "AJ",
+      "bujia_stock": {
+        "tipo": "ITR5H13",
+        "codigo": 97287
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1226,
+      "marca": "Mazda",
+      "modelo": "6",
+      "origen": "Imp.",
+      "anio_inicio": 2003,
+      "anio_fin": 2007,
+      "litros": 3.0,
+      "motor": "AJ",
+      "bujia_stock": {
+        "tipo": "PTR5F-11",
+        "codigo": 6579
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1227,
+      "marca": "Mazda",
+      "modelo": "6",
+      "origen": "Imp.",
+      "anio_inicio": 2009,
+      "anio_fin": 2013,
+      "litros": 3.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PLTR6A-10G",
+        "codigo": 3587
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1228,
+      "marca": "Mazda",
+      "modelo": "6",
+      "origen": "Nac.",
+      "anio_inicio": 2013,
+      "anio_fin": 2013,
+      "litros": 3.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PLTR6A-10G",
+        "codigo": 3587
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1229,
+      "marca": "Mazda",
+      "modelo": "6",
+      "origen": "Nac.",
+      "anio_inicio": 2009,
+      "anio_fin": 2012,
+      "litros": 3.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILTR6B11",
+        "codigo": 5367
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1230,
+      "marca": "Mazda",
+      "modelo": "626",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 2002,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1231,
+      "marca": "Mazda",
+      "modelo": "626",
+      "origen": "Imp.",
+      "anio_inicio": 1998,
+      "anio_fin": 2002,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ZFR5F",
+        "codigo": 5165
+      },
+      "bujia_iridium_ix": {
+        "tipo": "ZFR5FIX-11",
+        "codigo": 2477
+      },
+      "bujia_g_power": {
+        "tipo": "ZFR5FGP",
+        "codigo": 7098
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1232,
+      "marca": "Mazda",
+      "modelo": "626",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1997,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ZFR5F-11",
+        "codigo": 3886
+      },
+      "bujia_iridium_ix": {
+        "tipo": "ZFR5FIX-11",
+        "codigo": 2477
+      },
+      "bujia_g_power": {
+        "tipo": "ZFR5FGP",
+        "codigo": 7098
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1233,
+      "marca": "Mazda",
+      "modelo": "B2300",
+      "origen": "Imp.",
+      "anio_inicio": 2001,
+      "anio_fin": 2009,
+      "litros": 2.3,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR5F-11",
+        "codigo": 6579
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1234,
+      "marca": "Mazda",
+      "modelo": "B2300",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1997,
+      "litros": 2.3,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR5F-11",
+        "codigo": 6579
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1235,
+      "marca": "Mazda",
+      "modelo": "B2500",
+      "origen": "Imp.",
+      "anio_inicio": 1998,
+      "anio_fin": 2001,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR5F-11",
+        "codigo": 6579
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1236,
+      "marca": "Mazda",
+      "modelo": "B3000",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 2005,
+      "litros": 3.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR5F-11",
+        "codigo": 6579
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR5IX",
+        "codigo": 7397
+      },
+      "bujia_g_power": {
+        "tipo": "TR5GP",
+        "codigo": 3186
+      },
+      "bujia_v_power": {
+        "tipo": "TR5",
+        "codigo": 2238
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1237,
+      "marca": "Mazda",
+      "modelo": "B3000",
+      "origen": "Imp.",
+      "anio_inicio": 1999,
+      "anio_fin": 2001,
+      "litros": 3.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR6D-13",
+        "codigo": 5598
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR6IX",
+        "codigo": 3689
+      },
+      "bujia_g_power": {
+        "tipo": "TR6GP",
+        "codigo": 5141
+      },
+      "bujia_v_power": {
+        "tipo": "TR6",
+        "codigo": 4177
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1238,
+      "marca": "Mazda",
+      "modelo": "B4000",
+      "origen": "Imp.",
+      "anio_inicio": 2006,
+      "anio_fin": 2006,
+      "litros": 4.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "TR55-1",
+        "codigo": 2683
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55-1IX",
+        "codigo": 7316
+      },
+      "bujia_g_power": {
+        "tipo": "TR55-1GP",
+        "codigo": 7159
+      },
+      "bujia_v_power": {
+        "tipo": "TR55-1",
+        "codigo": 2683
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1239,
+      "marca": "Mazda",
+      "modelo": "B4000",
+      "origen": "Imp.",
+      "anio_inicio": 2004,
+      "anio_fin": 2005,
+      "litros": 4.0,
+      "motor": "-",
+      "bujia_stock": null,
+      "bujia_iridium_ix": {
+        "tipo": "TR55-1IX",
+        "codigo": 7316
+      },
+      "bujia_g_power": {
+        "tipo": "TR55-1GP",
+        "codigo": 7159
+      },
+      "bujia_v_power": {
+        "tipo": "TR55-1",
+        "codigo": 2683
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1240,
+      "marca": "Mazda",
+      "modelo": "B4000",
+      "origen": "Imp.",
+      "anio_inicio": 2001,
+      "anio_fin": 2003,
+      "litros": 4.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "TR55-1IX",
+        "codigo": 7316
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55-1IX",
+        "codigo": 7316
+      },
+      "bujia_g_power": {
+        "tipo": "TR55-1GP",
+        "codigo": 7159
+      },
+      "bujia_v_power": {
+        "tipo": "TR55-1",
+        "codigo": 2683
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1241,
+      "marca": "Mazda",
+      "modelo": "B4000",
+      "origen": "Imp.",
+      "anio_inicio": 1997,
+      "anio_fin": 2000,
+      "litros": 4.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR6D-13",
+        "codigo": 5598
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR65IX",
+        "codigo": 3692
+      },
+      "bujia_g_power": {
+        "tipo": "TR6GP",
+        "codigo": 5141
+      },
+      "bujia_v_power": {
+        "tipo": "TR6",
+        "codigo": 4177
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1242,
+      "marca": "Mazda",
+      "modelo": "B4000",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 1996,
+      "litros": 4.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR5C-13",
+        "codigo": 7740
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1243,
+      "marca": "Mazda",
+      "modelo": "CX-3",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2024,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1244,
+      "marca": "Mazda",
+      "modelo": "CX-30",
+      "origen": "Nac.",
+      "anio_inicio": 2022,
+      "anio_fin": 2024,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1245,
+      "marca": "Mazda",
+      "modelo": "CX-30",
+      "origen": "Nac.",
+      "anio_inicio": 2020,
+      "anio_fin": 2024,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1246,
+      "marca": "Mazda",
+      "modelo": "CX-30",
+      "origen": "Nac.",
+      "anio_inicio": 2021,
+      "anio_fin": 2024,
+      "litros": 2.5,
+      "motor": "Turbo",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1247,
+      "marca": "Mazda",
+      "modelo": "CX-30",
+      "origen": "Nac.",
+      "anio_inicio": 2022,
+      "anio_fin": 2022,
+      "litros": 2.5,
+      "motor": "Skyactiv-G",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1248,
+      "marca": "Mazda",
+      "modelo": "CX-5",
+      "origen": "Nac.",
+      "anio_inicio": 2013,
+      "anio_fin": 2019,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1249,
+      "marca": "Mazda",
+      "modelo": "CX-5",
+      "origen": "Imp.",
+      "anio_inicio": 2013,
+      "anio_fin": 2014,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1250,
+      "marca": "Mazda",
+      "modelo": "CX-5",
+      "origen": "Nac.",
+      "anio_inicio": 2014,
+      "anio_fin": 2024,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1251,
+      "marca": "Mazda",
+      "modelo": "CX-5",
+      "origen": "Nac.",
+      "anio_inicio": 2019,
+      "anio_fin": 2024,
+      "litros": 2.5,
+      "motor": "Turbo",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1252,
+      "marca": "Mazda",
+      "modelo": "CX-5",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2023,
+      "litros": 2.5,
+      "motor": "Skyactiv-G",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1253,
+      "marca": "Mazda",
+      "modelo": "CX-5",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2023,
+      "litros": 2.5,
+      "motor": "Skyactiv-G T",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1254,
+      "marca": "Mazda",
+      "modelo": "CX-5",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1255,
+      "marca": "Mazda",
+      "modelo": "CX-50",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2024,
+      "litros": 2.5,
+      "motor": "Turbo",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1256,
+      "marca": "Mazda",
+      "modelo": "CX-7",
+      "origen": "Nac.",
+      "anio_inicio": 2010,
+      "anio_fin": 2012,
+      "litros": 2.3,
+      "motor": "MZR Turbo",
+      "bujia_stock": {
+        "tipo": "SILTR6A7G",
+        "codigo": 95369
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.028,
+      "calibracion_mm": 0.7
+    },
+    {
+      "id": 1257,
+      "marca": "Mazda",
+      "modelo": "CX-7",
+      "origen": "Nac.",
+      "anio_inicio": 2007,
+      "anio_fin": 2009,
+      "litros": 2.3,
+      "motor": "MZR Turbo",
+      "bujia_stock": {
+        "tipo": "ILTR6A-8G",
+        "codigo": 3787
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX",
+        "codigo": 94374
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP-8",
+        "codigo": 94372
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1258,
+      "marca": "Mazda",
+      "modelo": "CX-7",
+      "origen": "Nac.",
+      "anio_inicio": 2010,
+      "anio_fin": 2012,
+      "litros": 2.5,
+      "motor": "L5-VE",
+      "bujia_stock": {
+        "tipo": "ILTR5A-13G",
+        "codigo": 3811
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1259,
+      "marca": "Mazda",
+      "modelo": "CX-7",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2012,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "LTR5BI-13",
+        "codigo": 90083
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1260,
+      "marca": "Mazda",
+      "modelo": "CX-70",
+      "origen": "Nac.",
+      "anio_inicio": 2025,
+      "anio_fin": 2025,
+      "litros": 3.3,
+      "motor": "Turbo",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1261,
+      "marca": "Mazda",
+      "modelo": "CX-9",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2023,
+      "litros": 2.5,
+      "motor": "Skyactiv-G T",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1262,
+      "marca": "Mazda",
+      "modelo": "CX-9",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2022,
+      "litros": 2.5,
+      "motor": "Turbo",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1263,
+      "marca": "Mazda",
+      "modelo": "CX-9",
+      "origen": "Nac.",
+      "anio_inicio": 2007,
+      "anio_fin": 2007,
+      "litros": 3.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PLTR6A-10G",
+        "codigo": 3587
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1264,
+      "marca": "Mazda",
+      "modelo": "CX-9",
+      "origen": "Nac.",
+      "anio_inicio": 2008,
+      "anio_fin": 2015,
+      "litros": 3.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILTR6B11",
+        "codigo": 5367
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1265,
+      "marca": "Mazda",
+      "modelo": "CX-9",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2014,
+      "litros": 3.7,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PLTR6A-10G",
+        "codigo": 3587
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1266,
+      "marca": "Mazda",
+      "modelo": "CX-90",
+      "origen": "Nac.",
+      "anio_inicio": 2024,
+      "anio_fin": 2024,
+      "litros": 3.3,
+      "motor": "Turbo",
+      "bujia_stock": null,
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1267,
+      "marca": "Mazda",
+      "modelo": "MX-5",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2024,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1268,
+      "marca": "Mazda",
+      "modelo": "MX-5",
+      "origen": "Nac.",
+      "anio_inicio": 2014,
+      "anio_fin": 2015,
+      "litros": 2.0,
+      "motor": "MZR",
+      "bujia_stock": {
+        "tipo": "LTR6BI-13",
+        "codigo": 91725
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1269,
+      "marca": "Mazda",
+      "modelo": "MX-5",
+      "origen": "Nac.",
+      "anio_inicio": 2006,
+      "anio_fin": 2013,
+      "litros": 2.0,
+      "motor": "MZR",
+      "bujia_stock": {
+        "tipo": "ILTR6A-13G",
+        "codigo": 3789
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": {
+        "tipo": "LTR6GP",
+        "codigo": 90198
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1270,
+      "marca": "Mazda",
+      "modelo": "MX-5 Miata",
+      "origen": "Imp.",
+      "anio_inicio": 2013,
+      "anio_fin": 2013,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "LTR6BI-13",
+        "codigo": 91725
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR6IX-11",
+        "codigo": 6509
+      },
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1271,
+      "marca": "Mazda",
+      "modelo": "MX-6",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1997,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1272,
+      "marca": "Mazda",
+      "modelo": "MX-6",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1997,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "ZFR5F-11",
+        "codigo": 3886
+      },
+      "bujia_iridium_ix": {
+        "tipo": "ZFR5FIX-11",
+        "codigo": 2477
+      },
+      "bujia_g_power": {
+        "tipo": "ZFR5FGP",
+        "codigo": 7098
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1273,
+      "marca": "Mazda",
+      "modelo": "Navajo",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1994,
+      "litros": 4.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR5C-13",
+        "codigo": 7740
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1274,
+      "marca": "Mazda",
+      "modelo": "Tribute",
+      "origen": "Imp.",
+      "anio_inicio": 2001,
+      "anio_fin": 2004,
+      "litros": 2.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR5A-13",
+        "codigo": 2467
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.048,
+      "calibracion_mm": 1.2
+    },
+    {
+      "id": 1275,
+      "marca": "Mazda",
+      "modelo": "Tribute",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2008,
+      "litros": 2.3,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "TR5AI-13",
+        "codigo": 90813
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1276,
+      "marca": "Mazda",
+      "modelo": "Tribute",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2010,
+      "litros": 2.5,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "LTR5BI-13",
+        "codigo": 90083
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LTR5IX-11",
+        "codigo": 4344
+      },
+      "bujia_g_power": {
+        "tipo": "LTR5GP",
+        "codigo": 5019
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    },
+    {
+      "id": 1277,
+      "marca": "Mazda",
+      "modelo": "Tribute",
+      "origen": "Imp.",
+      "anio_inicio": 2001,
+      "anio_fin": 2008,
+      "litros": 3.0,
+      "motor": "-",
+      "bujia_stock": {
+        "tipo": "PTR5C-13",
+        "codigo": 7740
+      },
+      "bujia_iridium_ix": {
+        "tipo": "TR55IX",
+        "codigo": 7164
+      },
+      "bujia_g_power": {
+        "tipo": "TR55GP",
+        "codigo": 3403
+      },
+      "bujia_v_power": {
+        "tipo": "TR55",
+        "codigo": 4161
+      },
+      "calibracion_pulgadas": 0.052,
+      "calibracion_mm": 1.3
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { motion } from 'framer-motion';
 import { ShoppingCart, Droplet, Wind } from 'lucide-react';
 import { useCart }         from '../context/CartContext';
 import { WHATSAPP_NUMBER } from '../lib/constants';
@@ -50,7 +51,13 @@ export default function ProductCard({ bujia, tipoLinea }) {
     bujia.aspiracion === 'SC' ? '⬡ SUPERCHARGED' : 'N/A';
 
   return (
-    <article
+    <motion.article
+      layout
+      initial={{ opacity: 0, scale: 0.95, y: 20 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
+      transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+      whileHover={{ y: -4 }}
       className="product-card"
       role="article"
       aria-label={`${bujia.marca} ${bujia.modelo} — ${label}`}
@@ -131,6 +138,6 @@ export default function ProductCard({ bujia, tipoLinea }) {
           {inCart ? '✓' : '+'}
         </button>
       </div>
-    </article>
+    </motion.article>
   );
 }

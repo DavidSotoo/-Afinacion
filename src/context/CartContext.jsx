@@ -3,8 +3,25 @@ import React, { createContext, useContext, useState, useCallback, useMemo } from
 const CartContext = createContext(null);
 
 export function CartProvider({ children }) {
-  const [items,  setItems]  = useState([]);
+  const [items,  setItems]  = useState(() => {
+    try {
+      const saved = localStorage.getItem('mas_afinacion_cart');
+      return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      console.error("Error reading cart from localStorage", e);
+      return [];
+    }
+  });
   const [isOpen, setIsOpen] = useState(false);
+
+  // Sync with localStorage
+  React.useEffect(() => {
+    try {
+      localStorage.setItem('mas_afinacion_cart', JSON.stringify(items));
+    } catch (e) {
+      console.error("Error saving cart to localStorage", e);
+    }
+  }, [items]);
 
   // ── Drawer controls ────────────────────────────────────────────────────────
   const openCart  = useCallback(() => setIsOpen(true),  []);
@@ -40,7 +57,7 @@ export function CartProvider({ children }) {
    * @param {Object} bujia      - Catalog record (must have kit_afinacion)
    * @param {string} tipoLinea  - NGK line key ('iridium' | 'platino' | 'vpower' | 'stock')
    */
-  const addKit = useCallback((bujia, tipoLinea) => {
+  const addKit = useCallback((bujia, tipoLinea, initialExcluded = [], aceiteSelected = null) => {
     setItems(prev => {
       const id = makeId('kit', bujia.id, tipoLinea);
       if (prev.some(i => i.id === id)) return prev;
@@ -50,9 +67,10 @@ export function CartProvider({ children }) {
         id,
         bujia,
         tipoLinea,
-        kit_afinacion: bujia.kit_afinacion,   // 4 filtros
+        kit_afinacion: bujia.kit_afinacion,
         qty:          1,
-        excludedParts: [],                    // Keys of removed parts (e.g. 'bujias', 'filtro_aceite')
+        excludedParts: initialExcluded,
+        aceite_motor:  aceiteSelected
       };
       return [...prev, kitItem];
     });

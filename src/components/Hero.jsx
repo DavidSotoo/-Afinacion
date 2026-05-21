@@ -1,58 +1,59 @@
 import React from 'react';
-import { Wrench, Zap, Car, Package } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15, delayChildren: 0.1 }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1, y: 0,
+    transition: { type: 'spring', stiffness: 300, damping: 24 }
+  }
+};
 
 export default function Hero({ totalRecords, uniqueModels, brands }) {
   return (
     <>
-      <section className="hero" aria-labelledby="hero-heading">
-        <div>
-          <p className="hero-eyebrow">
-            <Wrench size={12} aria-hidden="true" />
-            Kit de Afinación Completo — 5 Piezas
-          </p>
-          <h1 className="hero-title" id="hero-heading">
-            Encuentra el Kit<br />
-            <em>Exacto para tu Auto</em>
-          </h1>
-          <p className="hero-sub">
-            Bujías NGK + 4 filtros en un solo pedido.
-            Selecciona tu vehículo y obtén el kit de afinación completo con
-            SKUs exactos para tu motor.
-          </p>
+      <motion.section 
+        className="hero" 
+        aria-label="Banner Principal"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div className="hero-banner-wrap" variants={itemVariants}>
+          <img 
+            src="/Main.jpeg" 
+            alt="MÁS AFINACIÓN - Kits exactos para tu auto" 
+            className="hero-banner-img"
+          />
+        </motion.div>
 
-          {/* Feature pills */}
-          <div className="hero-pills" aria-label="Características del kit">
-            <span className="hero-pill">
-              <Zap size={11} aria-hidden="true" /> Bujías NGK
-            </span>
-            <span className="hero-pill">
-              <Package size={11} aria-hidden="true" /> 4 Filtros incluidos
-            </span>
-            <span className="hero-pill">
-              <Car size={11} aria-hidden="true" /> Por motor
-            </span>
-          </div>
-        </div>
-
-        <div className="hero-stats" aria-label="Estadísticas del catálogo">
-          <div className="stat-item">
+        <motion.div className="hero-stats-bar" aria-label="Estadísticas del catálogo" variants={containerVariants}>
+          <motion.div className="stat-item" variants={itemVariants}>
             <div className="stat-num" id="stat-total">{totalRecords}<span>+</span></div>
-            <div className="stat-label">Aplicaciones totales</div>
-          </div>
-          <div className="stat-item">
+            <div className="stat-label">Aplicaciones</div>
+          </motion.div>
+          <motion.div className="stat-item" variants={itemVariants}>
             <div className="stat-num" id="stat-brands">{brands}</div>
-            <div className="stat-label">Marcas disponibles</div>
-          </div>
-          <div className="stat-item">
+            <div className="stat-label">Marcas</div>
+          </motion.div>
+          <motion.div className="stat-item" variants={itemVariants}>
             <div className="stat-num">5</div>
             <div className="stat-label">Piezas por kit</div>
-          </div>
-          <div className="stat-item">
+          </motion.div>
+          <motion.div className="stat-item" variants={itemVariants}>
             <div className="stat-num" id="stat-models">{uniqueModels}</div>
             <div className="stat-label">Modelos cubiertos</div>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        </motion.div>
+      </motion.section>
 
       <div className="divider" role="separator" />
     </>

@@ -1,0 +1,5633 @@
+{
+  "fuente": "Interfil Catálogo 2020-2021",
+  "marca": "Volkswagen",
+  "total_registros": 194,
+  "registros": [
+    {
+      "modelo": "AMAROK",
+      "motor": "2.0L Turbo Diesel",
+      "anio": "2010-2015",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-3L62"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-2HA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-308D"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "AMAROK",
+      "motor": "2.0L Turbo Diesel",
+      "anio": "2016-2018",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-358"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "AMAROK",
+      "motor": "2.0L Turbo Diesel",
+      "anio": "2018-2019",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5403"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-2HA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "ATLANTIC",
+      "motor": "1.6L",
+      "anio": "1981-1982",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-34A41"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-57"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "ATLANTIC",
+      "motor": "1.7L",
+      "anio": "1981-1987",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-34A41"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-76"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "ATLANTIC GLS",
+      "motor": "1.8L",
+      "anio": "1981-1987",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-34A41"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-103"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BEETLE",
+      "motor": "1.8L",
+      "anio": "1999-2005",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BEETLE",
+      "motor": "1.8L Turbo",
+      "anio": "2014-2015",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-6115"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BEETLE",
+      "motor": "1.9L Turbo Diesel",
+      "anio": "2009",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8530"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BEETLE",
+      "motor": "1.9L Turbo Diesel",
+      "anio": "2013-2014",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-9461"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-332"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BEETLE",
+      "motor": "2.0L",
+      "anio": "2010",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BEETLE",
+      "motor": "2.0L Turbo",
+      "anio": "1998-2005",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BEETLE",
+      "motor": "2.0L Turbo",
+      "anio": "2012-2013",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5403"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BEETLE",
+      "motor": "2.0L Turbo",
+      "anio": "2014-2019",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-6115"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BEETLE",
+      "motor": "2.5L",
+      "anio": "2008-2011",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BEETLE",
+      "motor": "2.5L",
+      "anio": "2012-2019",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7KA12"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-276"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BEETLE CABRIO",
+      "motor": "1.9L Turbo Diesel",
+      "anio": "2006",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-354D"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BEETLE CABRIO SPORT",
+      "motor": "2.5L",
+      "anio": "2006-2007",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BEETLE GLS",
+      "motor": "2.0L Turbo",
+      "anio": "2006",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-245"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BORA",
+      "motor": "1.9L Turbo Diesel",
+      "anio": "2006-2010",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-9461"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-332"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BORA",
+      "motor": "2.5L",
+      "anio": "2006-2010",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7KA12"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-276"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BORA GLI",
+      "motor": "2.0L Turbo",
+      "anio": "2006-2010",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-2KA62 / F-6FA13"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "BRASILIA",
+      "motor": "1.6L",
+      "anio": "1974-1984",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A99"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-56"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CABRIO",
+      "motor": "2.0L",
+      "anio": "1995-2002",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-74A31"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CABRIOLET",
+      "motor": "1.6L Turbo Diesel",
+      "anio": "1985-1987",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A73"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CABRIOLET",
+      "motor": "1.8L",
+      "anio": "1985-1993",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-36A60"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-86"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CABRIOLET",
+      "motor": "1.8L",
+      "anio": "1990-1993",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CADDY",
+      "motor": "1.2L Turbo",
+      "anio": "2014-2017",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-2KA62"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CADDY",
+      "motor": "1.6L",
+      "anio": "2018-2019",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-69A22"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CADDY",
+      "motor": "1.6L Turbo",
+      "anio": "2017",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-12A96"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-276"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CADDY",
+      "motor": "2.0L TDI",
+      "anio": "2016-2018",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-3L62"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-359"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CADDY III",
+      "motor": "2.0L",
+      "anio": "2004-2007",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7KA12"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CARIBE",
+      "motor": "1.6L",
+      "anio": "1977-1978",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-36A60"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-76"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CARIBE",
+      "motor": "1.6L",
+      "anio": "1979-1980",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A84"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-57"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CARIBE",
+      "motor": "1.7L",
+      "anio": "1981-1987",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A84"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-76"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CARIBE",
+      "motor": "1.8L",
+      "anio": "1978-1980",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A84"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-57"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CARIBE",
+      "motor": "1.8L",
+      "anio": "1982-1987",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A84"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-76"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CARIBE GT",
+      "motor": "1.6L",
+      "anio": "1981-1986",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-34A41"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-103"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CC",
+      "motor": "2.0L Turbo",
+      "anio": "2009-2017",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5403"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CC",
+      "motor": "3.6L",
+      "anio": "2009-2012",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-9461"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-103A28"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CC",
+      "motor": "3.6L",
+      "anio": "2013-2017",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5625"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-103A28"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "COMBI",
+      "motor": "1.6L",
+      "anio": "1974-1987",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A99"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-56"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "COMBI",
+      "motor": "1.8L",
+      "anio": "1988-1993",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-80A60"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-103"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "COMBI",
+      "motor": "1.8L",
+      "anio": "1994-2002",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-80A60"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CORRADO",
+      "motor": "1.8L",
+      "anio": "1990-1992",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CORRADO",
+      "motor": "2.8L",
+      "anio": "1995",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-580A"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CORRADO",
+      "motor": "2.8L",
+      "anio": "1992-1994",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CORSAR",
+      "motor": "1.8L",
+      "anio": "1984-1988",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-26A62"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-103"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CRAFTER 30, 35, 50 (2E)",
+      "motor": "2.5L Turbo Diesel",
+      "anio": "2006-2008",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8530"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-103A30"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-301D"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CROSSFOX",
+      "motor": "1.6L",
+      "anio": "2007-2016",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5548D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-5548DSTX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-36A12"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-136"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "CROSSFOX",
+      "motor": "1.6L",
+      "anio": "2017-2018",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-7503"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-77A64"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "DERBY",
+      "motor": "1.8L",
+      "anio": "1995-2005",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-41A16"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-168"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "DERBY",
+      "motor": "1.8L",
+      "anio": "2006-2009",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-96A20"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-168"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "DERBY",
+      "motor": "2.0L",
+      "anio": "2002-2007",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-41A16"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-168"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "EOS",
+      "motor": "1.4L Turbo",
+      "anio": "2008-2014",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "EOS",
+      "motor": "2.0L Turbo",
+      "anio": "2008-2010",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5562 / OF-5403"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-6FA13 / F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "EOS",
+      "motor": "2.0L Turbo",
+      "anio": "2009-2015",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5403"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "EOS",
+      "motor": "2.0L Turbo",
+      "anio": "2011-2015",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-10060 / OF-10575"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-10060STX / OF-10575STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "EOS",
+      "motor": "2.0L Turbo Diesel",
+      "anio": "2007-2008",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-6FA13"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "EOS",
+      "motor": "3.2L",
+      "anio": "2007-2008",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-9461"
+      },
+      "filtro_aire": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "EUROVAN",
+      "motor": "1.9L Turbo Diesel",
+      "anio": "2006-2010",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-9461"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7HA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-267D"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "EUROVAN",
+      "motor": "2.5L",
+      "anio": "1993-1996",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2815"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-53A67 / F-76A91"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "EUROVAN",
+      "motor": "2.5L",
+      "anio": "2001-2004",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2815"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A51"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "EUROVAN",
+      "motor": "2.5L V6",
+      "anio": "2003-2004",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8158"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A51"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "EUROVAN",
+      "motor": "2.8L V6",
+      "anio": "2001-2004",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8158"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A51"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "FOX",
+      "motor": "1.8L",
+      "anio": "1987-1990",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-36A60"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "FOX",
+      "motor": "1.8L",
+      "anio": "1991-1993",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GLI",
+      "motor": "1.8L Turbo",
+      "anio": "2015-2016",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-6115"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GLI",
+      "motor": "2.0L Turbo",
+      "anio": "2017",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-6115"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-2KA62"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GLI",
+      "motor": "2.0L Turbo",
+      "anio": "2007-2008",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-6FA13"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GLI",
+      "motor": "2.0L Turbo",
+      "anio": "2009-2014",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5403"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOL",
+      "motor": "1.6L",
+      "anio": "2008-2019",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5548D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-5548DSTX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7NA15"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-190 / FGI-318"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "1.4L Turbo",
+      "anio": "2013-2014",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "1.4L Turbo",
+      "anio": "2015-2019",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-7503"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-69A22"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "1.6L Turbo Diesel",
+      "anio": "1985-1987",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A73"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "1.6L Turbo Diesel",
+      "anio": "1989-1992",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A73"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "1.8L",
+      "anio": "1992",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "1.8L",
+      "anio": "1985-1986",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A73"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-86"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "1.8L",
+      "anio": "1987-1991",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-34A41"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-103"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "1.8L",
+      "anio": "1993-1999",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-74A31"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "1.8L",
+      "anio": "2001-2005",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "1.9L Turbo Diesel",
+      "anio": "1999-2005",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8530"
+      },
+      "filtro_aire": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-354D"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "2.0L",
+      "anio": "2007",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7HA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "2.0L",
+      "anio": "1986-1995",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-74A31"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-104"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "2.0L",
+      "anio": "1996-1999",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-74A31"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "2.0L",
+      "anio": "2000-2005",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "2.0L Turbo",
+      "anio": "2006-2007",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-6FA13"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "2.0L Turbo Diesel",
+      "anio": "2010-2012",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-9461"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "2.8L",
+      "anio": "1999",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-74A31"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "2.5L",
+      "anio": "2006-2014",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7KA12"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-276"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "2.8L V6",
+      "anio": "1996-2002",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8158"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-74A31"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "2.8L V6",
+      "anio": "1994-1998",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-74A31"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF",
+      "motor": "3.2L V6",
+      "anio": "2010",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-9461"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF GTI",
+      "motor": "1.8L Turbo",
+      "anio": "1999",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-74A31"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF GTI",
+      "motor": "1.8L Turbo",
+      "anio": "2000-2006",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF GTI",
+      "motor": "2.0L",
+      "anio": "1990-1993",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF GTI",
+      "motor": "2.0L Turbo",
+      "anio": "2007-2008",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5562 / OF-5403"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-6FA13 / F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF GTI",
+      "motor": "2.0L Turbo",
+      "anio": "2009-2014",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5403"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF GTI",
+      "motor": "2.0L Turbo",
+      "anio": "2015-2019",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-6115"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-50A12"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF R",
+      "motor": "2.0L",
+      "anio": "2017",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-6115"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-50A12"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "GOLF R",
+      "motor": "2.0L Turbo",
+      "anio": "2018-2019",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-6115"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-50A12"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "1.4L Turbo",
+      "anio": "2019-2020",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-7503"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-69A22"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "1.6L Turbo Diesel",
+      "anio": "1979-1985",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A73"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "1.6L Turbo Diesel",
+      "anio": "1985-1989",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A73"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "1.6L Turbo Diesel",
+      "anio": "1989-1992",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A73"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "1.8L",
+      "anio": "1992",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "1.8L",
+      "anio": "1980-1991",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-86"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "1.8L",
+      "anio": "1993-1999",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-74A31"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "1.9L Turbo Diesel",
+      "anio": "1999-2005",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8530"
+      },
+      "filtro_aire": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-354D"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "1.9L Turbo Diesel",
+      "anio": "2005-2007",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-9461"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-354D"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "2.0L",
+      "anio": "1990-1992",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-104"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "2.0L",
+      "anio": "1993-1999",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-74A31"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "2.0L",
+      "anio": "2000-2010",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "2.0L",
+      "anio": "2015-2018",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-2KA62"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-276"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "2.0L Turbo",
+      "anio": "2008",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5562 / OF-5403"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-6FA13"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "2.0L Turbo",
+      "anio": "2006-2007",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-6FA13"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "2.0L Turbo Diesel",
+      "anio": "2010-2011",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-9461"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA",
+      "motor": "2.5L",
+      "anio": "2005-2018",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7KA12"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-276"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA CLÁSICO",
+      "motor": "2.0L",
+      "anio": "2011-2015",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA GLI",
+      "motor": "1.8L Turbo",
+      "anio": "2000-2005",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA GLI",
+      "motor": "2.0L",
+      "anio": "1980-1992",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-86"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA GLI",
+      "motor": "2.0L",
+      "anio": "2001-2005",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA VR6",
+      "motor": "2.8L V6",
+      "anio": "2004",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-9461"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA VR6",
+      "motor": "2.8L V6",
+      "anio": "1995-1999",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8158"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-86"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "JETTA VR6",
+      "motor": "2.8L V6",
+      "anio": "2000-2003",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8158"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "LUPO",
+      "motor": "1.6L",
+      "anio": "2005-2010",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5548D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-5548DSTX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-36A12"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-136"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "1.8L Turbo",
+      "anio": "1998-2005",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-80A80"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "1.9L Turbo Diesel",
+      "anio": "1997",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8530"
+      },
+      "filtro_aire": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "1.9L Turbo Diesel",
+      "anio": "1993-1996",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "2.0L",
+      "anio": "1990-1995",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-104"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "2.0L Turbo",
+      "anio": "2006-2007",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-6FA13"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "2.0L Turbo",
+      "anio": "2008-2009",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5562 / OF-5403"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-6FA13 / F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "2.0L Turbo",
+      "anio": "2010-2011",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5403"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "2.0L Turbo Diesel",
+      "anio": "2004-2005",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8530"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-76A51"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "2.0L Turbo Diesel",
+      "anio": "2012-2015",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-3L62"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "2.5L",
+      "anio": "2012-2018",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7KA12"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-276"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "2.0L V6",
+      "anio": "1990-1994",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "2.0L V6",
+      "anio": "1995-1996",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "2.8L V6",
+      "anio": "1993-1996",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-74A31"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "2.8L V6",
+      "anio": "1998-2005",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8158"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-80A80"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "3.6L V6",
+      "anio": "2016",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-9461"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-103A28"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "3.6L V6",
+      "anio": "2017-2018",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5625"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-103A28"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT",
+      "motor": "4.0L V8",
+      "anio": "2002-2004",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-74A31"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "PASSAT WAGON VR6",
+      "motor": "2.8L V6",
+      "anio": "1997-1998",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-65A45"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "POINTER",
+      "motor": "1.8L",
+      "anio": "1999-2009",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-76A14"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-136"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "POINTER WAGON",
+      "motor": "1.8L",
+      "anio": "1999-2005",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-76A14"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-136"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "POINTER GTI",
+      "motor": "2.0L",
+      "anio": "2000-2003",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-76A14"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-136"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "POLO",
+      "motor": "1.2L",
+      "anio": "2011-2012",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-20A69"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "POLO",
+      "motor": "1.2L Turbo",
+      "anio": "2009-2014",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-20A69"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "POLO",
+      "motor": "1.4L",
+      "anio": "1998-2005",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-58A98"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "POLO",
+      "motor": "1.6L",
+      "anio": "2000-2005",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-58A98"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "POLO",
+      "motor": "1.6L",
+      "anio": "2003-2006",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5548D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-5548DSTX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-36A12"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-245 / FGI-276"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "POLO",
+      "motor": "1.6L",
+      "anio": "2014-2018",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-12A96"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-276"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "POLO",
+      "motor": "2.0L",
+      "anio": "2006-2007",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-6QA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-245 / FGI-276"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "POLO GTI",
+      "motor": "1.4L Turbo",
+      "anio": "2010-2014",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "POLO GTI",
+      "motor": "1.8L TSI",
+      "anio": "2015-2016",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-6115"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-29A02"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "POLO GTI",
+      "motor": "1.8L Turbo",
+      "anio": "2016-2017",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-6115"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-50A12"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "R32",
+      "motor": "3.2L V6",
+      "anio": "2004-2005",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-86A02"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "RABBIT",
+      "motor": "1.6L Turbo Diesel",
+      "anio": "1979-1985",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A73"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "RABBIT",
+      "motor": "2.5L",
+      "anio": "2006-2007",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5562"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7KA12"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-298"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "ROUTAN",
+      "motor": "3.6L V6",
+      "anio": "2011-2012",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-10955"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-110A50"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "ROUTAN",
+      "motor": "3.8L V6",
+      "anio": "2009-2010",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-3614"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-3614STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-90A54"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "ROUTAN",
+      "motor": "4.0L V6",
+      "anio": "2009-2010",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-10060 / OF-10575"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-10060STX / OF-10575STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-90A54"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "SAVEIRO",
+      "motor": "1.6L",
+      "anio": "2010-2019",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5548D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-5548DSTX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7NA15"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-190 / FGI-318"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "SCIROCCO",
+      "motor": "1.8L",
+      "anio": "1980-1991",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-36A60"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-86"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "SEDAN",
+      "motor": "1.6L",
+      "anio": "1974-1992",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A73 / F-33A84"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-57"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "SEDAN CITY",
+      "motor": "1.6L",
+      "anio": "1993-2004",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-33A73 / F-33A84"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "SHARAN",
+      "motor": "1.4L Turbo",
+      "anio": "2010-2014",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "SHARAN",
+      "motor": "1.8L",
+      "anio": "2000-2007",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7MA31"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "SHARAN",
+      "motor": "1.8L Turbo",
+      "anio": "2005-2007",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7MA31"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-28"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "SPORT VAN",
+      "motor": "1.6L",
+      "anio": "2008-2010",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5548D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-5548DSTX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-36A12"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-245 / FGI-276"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TIGUAN",
+      "motor": "1.4L Turbo",
+      "anio": "2008-2012",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TIGUAN",
+      "motor": "1.4L Turbo",
+      "anio": "2013-2017",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TIGUAN",
+      "motor": "1.4L Turbo",
+      "anio": "2018",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-69A22"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TIGUAN",
+      "motor": "2.0L Turbo",
+      "anio": "2009-2016",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-5403"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-1KA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TIGUAN",
+      "motor": "2.0L Turbo",
+      "anio": "2018-2020",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-6115"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-50A12"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TOUAREG",
+      "motor": "3.0L V6",
+      "anio": "2013-2015",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5919"
+      },
+      "filtro_aire": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TOUAREG",
+      "motor": "3.0L Turbo Diesel V6",
+      "anio": "2013-2016",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5919"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7LA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TOUAREG",
+      "motor": "3.2L V6",
+      "anio": "2003",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8158"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7LA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TOUAREG",
+      "motor": "3.2L V6",
+      "anio": "2004-2007",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-9461"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7LA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TOUAREG",
+      "motor": "3.6L V6",
+      "anio": "2007-2011",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8158"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7LA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TOUAREG",
+      "motor": "3.6L V6",
+      "anio": "2012-2017",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-5625"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7LA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TOUAREG",
+      "motor": "4.2L V8",
+      "anio": "2003-2004",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8158"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7LA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-105"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TOUAREG",
+      "motor": "4.2L V8",
+      "anio": "2007-2010",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-10632"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7LA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TOUAREG",
+      "motor": "5.0L Turbo V10",
+      "anio": "2004-2007",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-8158"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7LA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TOUAREG HÍBRIDO",
+      "motor": "3.0L V6",
+      "anio": "2011-2014",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7LA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TOUAREG HÍBRIDO",
+      "motor": "3.0L Turbo V6",
+      "anio": "2011-2017",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-10160"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7LA01"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-276"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "TRANSPORTER",
+      "motor": "2.0L Turbo Diesel",
+      "anio": "2011-2019",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-3L62"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-7HA01"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "UP",
+      "motor": "1.0L",
+      "anio": "2016-2018",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-7503"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-29A62"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-190 / FGI-318"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "VAN",
+      "motor": "1.8L",
+      "anio": "2003-2006",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-2870 / OF-2870D"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": "Interfil",
+        "sku": "OF-2870STX"
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-41A16"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-168"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "VENTO",
+      "motor": "1.6L",
+      "anio": "2014-2019",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-6103"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-12A96"
+      },
+      "filtro_gasolina": {
+        "marca": "Interfil",
+        "sku": "FGI-276"
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "VENTO TDI",
+      "motor": "1.5L Turbo Diesel",
+      "anio": "2014-2019",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": "Interfil",
+        "sku": "OF-3L62"
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-20A69"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "VIRTUS",
+      "motor": "1.6L",
+      "anio": "2019-2020",
+      "filtro_aceite": {
+        "marca": "Interfil",
+        "sku": "OF-7503"
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-41A29"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    },
+    {
+      "modelo": "WORKER",
+      "motor": "3.9L",
+      "anio": "ALL",
+      "filtro_aceite": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_sintetico": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aceite_cartucho": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_aire": {
+        "marca": "Interfil",
+        "sku": "F-81A50"
+      },
+      "filtro_gasolina": {
+        "marca": null,
+        "sku": null
+      },
+      "filtro_cabina": {
+        "marca": null,
+        "sku": null
+      }
+    }
+  ]
+}

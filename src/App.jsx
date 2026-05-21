@@ -1,11 +1,11 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import Header      from './components/Header';
-import Hero        from './components/Hero';
 import YMMSearch   from './components/YMMSearch';
 import ResultsGrid from './components/ResultsGrid';
 import StoreSection from './components/StoreSection';
 import CartDrawer  from './components/CartDrawer';
-import { CATALOG, CATALOG_STATS, filterCatalog } from './lib/catalog';
+import { filterCatalog } from './lib/catalog';
+import { STORE_PUBLIC_EMAIL } from './lib/constants';
 
 /**
  * App — root component.
@@ -22,20 +22,57 @@ function App() {
   const [filteredResults, setFilteredResults] = useState([]);
   const [activeFilter,    setActiveFilter]    = useState('all');
   const [hasSearched,     setHasSearched]     = useState(false);
+  const [isLoadingResults, setIsLoadingResults] = useState(false);
 
-  /** Run catalog filter and update results state. */
-  const handleSearch = useCallback(({ marca, modelo, anio, linea }) => {
-    const results = filterCatalog({ marca, modelo, anio });
-    setFilteredResults(results);
-    setActiveFilter(linea || 'all');
+  // Smooth scroll to store section if #tienda is in the URL hash
+  useEffect(() => {
+    if (window.location.hash === '#tienda') {
+      setTimeout(() => {
+        const storeSec = document.querySelector('.store-section');
+        if (storeSec) {
+          storeSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 300);
+      // Clean up hash
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }, []);
+
+  /** Run catalog filter and update results state by fetching from backend API. */
+  const handleSearch = useCallback((params) => {
+    setIsLoadingResults(true);
     setHasSearched(true);
-  }, []); // filterCatalog is a pure module-level function — no deps needed
+
+    const queryParams = new URLSearchParams();
+    if (params.marca) queryParams.append('marca', params.marca);
+    if (params.modelo) queryParams.append('modelo', params.modelo);
+    if (params.anio) queryParams.append('anio', params.anio);
+
+    fetch(`http://localhost:5000/api/vehiculos?${queryParams.toString()}`)
+      .then(res => {
+        if (!res.ok) throw new Error('Network response was not ok');
+        return res.json();
+      })
+      .then(data => {
+        // Map _id to id to ensure compatibility with existing component code
+        const mappedData = data.map(r => ({ ...r, id: r._id || r.id }));
+        setFilteredResults(mappedData);
+        setActiveFilter(params.linea || 'all');
+        setIsLoadingResults(false);
+      })
+      .catch(err => {
+        console.error("Error fetching filtered catalog:", err);
+        setFilteredResults([]);
+        setIsLoadingResults(false);
+      });
+  }, []);
 
   /** Clear results and reset UI to initial state. */
   const handleReset = useCallback(() => {
     setFilteredResults([]);
     setActiveFilter('all');
     setHasSearched(false);
+    setIsLoadingResults(false);
   }, []);
 
   /** Switch the active NGK line filter chip without re-fetching. */
@@ -48,14 +85,14 @@ function App() {
       <Header />
       <CartDrawer />
 
-      <main className="page">
-        <Hero
-          totalRecords={CATALOG_STATS.total}
-          uniqueModels={CATALOG_STATS.models}
-          brands={CATALOG_STATS.brands}
-        />
+      <main className="page" style={{ paddingTop: '2rem' }}>
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <h1 style={{ fontFamily: 'var(--display)', fontSize: '2rem', textTransform: 'uppercase', color: 'var(--primary)', letterSpacing: '0.05em' }}>
+            Catálogo de Kits
+          </h1>
+          <p style={{ color: 'var(--text-3)', fontSize: '0.85rem' }}>Selecciona tu vehículo para encontrar el kit exacto.</p>
+        </div>
         <YMMSearch
-          catalog={CATALOG}
           onSearch={handleSearch}
           onReset={handleReset}
         />
@@ -64,6 +101,7 @@ function App() {
           activeFilter={activeFilter}
           onFilterChange={handleFilterChange}
           hasSearched={hasSearched}
+          isLoading={isLoadingResults}
         />
       </main>
 
@@ -73,7 +111,13 @@ function App() {
         <span className="footer-logo">
           <img src="/logo.jpeg" alt="A+ MÁS AFINACIÓN" style={{ height: '24px' }} />
         </span>
-        <span className="footer-copy">KITS EXACTOS PARA TU AUTO BY RAIO</span>
+        <span className="footer-copy">
+          KITS EXACTOS PARA TU AUTO BY RAIO
+          <br />
+          <a href={`mailto:${STORE_PUBLIC_EMAIL}`} style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.9em', marginTop: '4px', display: 'inline-block' }}>
+            {STORE_PUBLIC_EMAIL}
+          </a>
+        </span>
         <span className="footer-right">
           <span className="footer-tag">MX · Jalisco</span>
           <a

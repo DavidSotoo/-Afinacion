@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   X,
   Check,
@@ -49,12 +50,27 @@ function buildConsolidatedMessage(items) {
   // ── Kits ──────────────────────────────────────────────────────────────────
   if (kits.length > 0) {
     kits.forEach((item) => {
-      const { bujia, tipoLinea, kit_afinacion, excludedParts = [] } = item;
+      const { bujia, tipoLinea, kit_afinacion, excludedParts = [], aceite_motor } = item;
       const label      = NGK_LINE_LABELS[tipoLinea] || tipoLinea;
       const skuData    = getSkuData(bujia, tipoLinea);
       const anios      = `${bujia.anio_inicio}–${bujia.anio_fin}`;
       const motor      = `${bujia.litros}L ${bujia.cilindros_config}${bujia.motor ? ` (${bujia.motor})` : ''}`;
       const isExcluded = (key) => excludedParts.includes(key);
+      const kit = bujia.kit_afinacion || {};
+      
+      const getFilterMsg = (num, key, labelTxt) => {
+        if (isExcluded(key)) return `~${num} *Filtro de ${labelTxt}:* (❌ Removido por el cliente)~`;
+        const f = kit[key];
+        if (f?.sku === 'SELLADO') return `${num} *Filtro de ${labelTxt}:* Sellado (No requiere cambio)`;
+        if (f?.sku) return `${num} *Filtro de ${labelTxt}:* ${f.marca ? f.marca + ' ' : ''}${f.sku}`;
+        return `${num} *Filtro de ${labelTxt}:* (Solicitado para este motor)`;
+      };
+
+      const oilMsg = aceite_motor
+        ? (isExcluded('aceite_motor')
+          ? `~6️⃣ *Aceite de Motor:* (❌ Removido por el cliente)~`
+          : `6️⃣ *Aceite de Motor:* ${aceite_motor.marca} ${aceite_motor.viscosidad} ${aceite_motor.tecnologia} (${aceite_motor.presentacion})`)
+        : null;
 
       lines.push(
         `🔧 *Pedido de Kit de Afinación - +AFINACIÓN*`,
@@ -62,12 +78,16 @@ function buildConsolidatedMessage(items) {
         `🚗 *Vehículo:* ${bujia.marca} ${bujia.modelo} ${anios} ${motor}`,
         `-----------------------------------------`,
         isExcluded('bujias') ? `~1️⃣ *Bujías NGK:* (❌ Removido por el cliente)~` : `1️⃣ *Bujías NGK:* ${label} (SKU: ${skuData?.tipo ?? 'N/D'})`,
-        isExcluded('filtro_aceite') ? `~2️⃣ *Filtro de Aceite:* (❌ Removido por el cliente)~` : `2️⃣ *Filtro de Aceite:* (Solicitado para este motor)`,
-        isExcluded('filtro_aire') ? `~3️⃣ *Filtro de Aire:* (❌ Removido por el cliente)~` : `3️⃣ *Filtro de Aire:* (Solicitado para este motor)`,
-        isExcluded('filtro_gasolina') ? `~4️⃣ *Filtro de Gasolina:* (❌ Removido por el cliente)~` : `4️⃣ *Filtro de Gasolina:* (Solicitado para este motor)`,
-        isExcluded('filtro_cabina') ? `~5️⃣ *Filtro de Cabina:* (❌ Removido por el cliente)~` : `5️⃣ *Filtro de Cabina:* (Solicitado para este motor)`,
-        ``,
+        getFilterMsg('2️⃣', 'filtro_aceite', 'Aceite'),
+        getFilterMsg('3️⃣', 'filtro_aire', 'Aire'),
+        getFilterMsg('4️⃣', 'filtro_gasolina', 'Gasolina'),
+        getFilterMsg('5️⃣', 'filtro_cabina', 'Cabina'),
       );
+
+      if (oilMsg) {
+        lines.push(oilMsg);
+      }
+      lines.push(``);
     });
   }
 
@@ -114,7 +134,9 @@ function KitDrawerItem({ item, onRemove, onTogglePart }) {
       <div className="drawer-kit-banner">
         <ShoppingBag size={11} aria-hidden="true" />
         <span>Kit de Afinación Completo</span>
-        <span className="drawer-kit-pieces-badge">5 Piezas</span>
+        <span className="drawer-kit-pieces-badge">
+          {item.aceite_motor ? 6 - excludedParts.length : 5 - excludedParts.length} Piezas
+        </span>
       </div>
 
       <div className={`drawer-item-bar ${tipoLinea}`} aria-hidden="true" />
@@ -160,23 +182,54 @@ function KitDrawerItem({ item, onRemove, onTogglePart }) {
           </li>
 
           {/* 2️⃣ – 5️⃣ Filtros */}
-          {filtros.map(({ key, label: fLabel, num, Icon }) => (
-            <li key={key} className={`drawer-kit-check-row${isExcluded(key) ? ' drawer-kit-check-row--excluded' : ''}`}>
+          {filtros.map(({ key, label: fLabel, num, Icon }) => {
+            const f = kit_afinacion?.[key];
+            let tagText = 'Solicitado';
+            if (isExcluded(key)) {
+              tagText = 'Removido';
+            } else if (f?.sku === 'SELLADO') {
+              tagText = 'Sellado';
+            } else if (f?.sku) {
+              tagText = f.sku;
+            }
+
+            return (
+              <li key={key} className={`drawer-kit-check-row${isExcluded(key) ? ' drawer-kit-check-row--excluded' : ''}`}>
+                <button 
+                  className="drawer-kit-part-toggle" 
+                  onClick={() => onTogglePart(item.id, key)}
+                  aria-label={isExcluded(key) ? `Añadir filtro de ${fLabel} al kit` : `Remover filtro de ${fLabel} del kit`}
+                >
+                  {isExcluded(key) ? <X size={12} /> : <Check size={12} />}
+                </button>
+                <span className="drawer-kit-check-num">{num}</span>
+                <Icon size={11} aria-hidden="true" className="drawer-kit-check-icon" />
+                <span className="drawer-kit-check-label">Filtro de {fLabel}</span>
+                <span className={`drawer-kit-check-tag${!isExcluded(key) && f?.sku && f.sku !== 'SELLADO' ? ' drawer-kit-check-tag--sku' : ''}`}>
+                  {tagText}
+                </span>
+              </li>
+            );
+          })}
+
+          {/* 6️⃣ Aceite de Motor */}
+          {item.aceite_motor && (
+            <li className={`drawer-kit-check-row${isExcluded('aceite_motor') ? ' drawer-kit-check-row--excluded' : ''}`}>
               <button 
                 className="drawer-kit-part-toggle" 
-                onClick={() => onTogglePart(item.id, key)}
-                aria-label={isExcluded(key) ? `Añadir filtro de ${fLabel} al kit` : `Remover filtro de ${fLabel} del kit`}
+                onClick={() => onTogglePart(item.id, 'aceite_motor')}
+                aria-label={isExcluded('aceite_motor') ? "Añadir aceite de motor al kit" : "Remover aceite de motor del kit"}
               >
-                {isExcluded(key) ? <X size={12} /> : <Check size={12} />}
+                {isExcluded('aceite_motor') ? <X size={12} /> : <Check size={12} />}
               </button>
-              <span className="drawer-kit-check-num">{num}</span>
-              <Icon size={11} aria-hidden="true" className="drawer-kit-check-icon" />
-              <span className="drawer-kit-check-label">Filtro de {fLabel}</span>
-              <span className="drawer-kit-check-tag">
-                {isExcluded(key) ? 'Removido' : 'Solicitado'}
+              <span className="drawer-kit-check-num">6️⃣</span>
+              <Droplet size={11} aria-hidden="true" className="drawer-kit-check-icon" style={{ color: 'var(--primary)' }} />
+              <span className="drawer-kit-check-label">Aceite de Motor ({item.aceite_motor.marca})</span>
+              <span className={`drawer-kit-check-tag${!isExcluded('aceite_motor') ? ' drawer-kit-check-tag--sku' : ''}`}>
+                {isExcluded('aceite_motor') ? 'Removido' : `${item.aceite_motor.viscosidad} · ${item.aceite_motor.tecnologia}`}
               </span>
             </li>
-          ))}
+          )}
         </ul>
       </div>
     </li>
@@ -239,34 +292,159 @@ export default function CartDrawer() {
     return () => window.removeEventListener('keydown', onKey);
   }, [isOpen, closeCart]);
 
-  const whatsappUrl = useMemo(() =>
-    isOpen && items.length > 0
-      ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(buildConsolidatedMessage(items))}`
-      : '#',
-    [isOpen, items],
-  );
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+
+  const handleConfirmarPedido = async () => {
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+
+    try {
+      const primerKit = items.find(i => i.type === 'kit');
+      const vehiculo = primerKit
+        ? {
+            marca: primerKit.bujia.marca,
+            modelo: primerKit.bujia.modelo,
+            anios: `${primerKit.bujia.anio_inicio}–${primerKit.bujia.anio_fin}`,
+            motor: primerKit.bujia.motor || '',
+            litros: String(primerKit.bujia.litros || ''),
+            cilindros: String(primerKit.bujia.cilindros_config || '')
+          }
+        : {
+            marca: 'Varios / Bujías Sueltas',
+            modelo: 'Cotización',
+            anios: 'N/A'
+          };
+
+      const tipoBujia = primerKit ? (NGK_LINE_LABELS[primerKit.tipoLinea] || primerKit.tipoLinea) : 'stock';
+      const bujiaSku = primerKit ? (getSkuData(primerKit.bujia, primerKit.tipoLinea)?.tipo || '') : '';
+
+      const piezas = [];
+      if (primerKit) {
+        piezas.push({
+          nombre: 'Bujías NGK',
+          sku: bujiaSku,
+          excluida: primerKit.excludedParts.includes('bujias')
+        });
+        
+        const kit = primerKit.kit_afinacion || {};
+        const isExcluded = (key) => primerKit.excludedParts.includes(key);
+        const filtrosKeys = [
+          { key: 'filtro_aceite', label: 'Filtro de Aceite' },
+          { key: 'filtro_aire', label: 'Filtro de Aire' },
+          { key: 'filtro_gasolina', label: 'Filtro de Gasolina' },
+          { key: 'filtro_cabina', label: 'Filtro de Cabina' }
+        ];
+        filtrosKeys.forEach(({ key, label }) => {
+          const f = kit[key];
+          piezas.push({
+            nombre: label,
+            sku: f?.sku || '',
+            excluida: isExcluded(key)
+          });
+        });
+      }
+
+      // Kits adicionales
+      items.filter((i, idx) => i.type === 'kit' && idx > 0).forEach(kitItem => {
+        piezas.push({
+          nombre: `Kit Adicional: ${kitItem.bujia.marca} ${kitItem.bujia.modelo}`,
+          sku: `Línea: ${NGK_LINE_LABELS[kitItem.tipoLinea] || kitItem.tipoLinea}`,
+          excluida: false
+        });
+      });
+
+      // Piezas sueltas
+      items.filter(i => i.type === 'pieza').forEach(p => {
+        piezas.push({
+          nombre: `Bujía Individual: ${p.bujia.marca} ${p.bujia.modelo}`,
+          sku: getSkuData(p.bujia, p.tipoLinea)?.tipo || '',
+          excluida: false
+        });
+      });
+
+      const aceite = (primerKit?.aceite_motor && !primerKit.excludedParts.includes('aceite_motor'))
+        ? {
+            marca: primerKit.aceite_motor.marca,
+            viscosidad: primerKit.aceite_motor.viscosidad,
+            tecnologia: primerKit.aceite_motor.tecnologia,
+            presentacion: primerKit.aceite_motor.presentacion,
+            litros: primerKit.aceite_motor.litros
+          }
+        : undefined;
+
+      const payload = {
+        vehiculo,
+        tipoBujia,
+        bujiaSku,
+        piezas,
+        aceite
+      };
+
+      const res = await fetch('http://localhost:5000/api/cotizaciones', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (!res.ok) {
+        throw new Error('Error al registrar la cotización');
+      }
+
+      const cotizacionGuardada = await res.json();
+      const folio = cotizacionGuardada.folio;
+
+      const baseMsg = buildConsolidatedMessage(items);
+      const msgConFolio = `📋 *FOLIO DE COTIZACIÓN: #${folio}*\n\n` + baseMsg;
+      
+      const targetUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msgConFolio)}`;
+      
+      window.open(targetUrl, '_blank', 'noopener,noreferrer');
+      clearCart();
+      closeCart();
+
+    } catch (err) {
+      console.error('Error al cotizar:', err);
+      const baseMsg = buildConsolidatedMessage(items);
+      const targetUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(baseMsg)}`;
+      window.open(targetUrl, '_blank', 'noopener,noreferrer');
+      clearCart();
+      closeCart();
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const kitCount   = useMemo(() => items.filter(i => i.type === 'kit').length,   [items]);
   const piezaCount = useMemo(() => items.filter(i => i.type === 'pieza').length, [items]);
 
   return (
-    <>
-      {/* Backdrop */}
-      <div
-        className={`drawer-backdrop${isOpen ? ' drawer-backdrop--open' : ''}`}
-        onClick={closeCart}
-        aria-hidden="true"
-      />
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="drawer-backdrop drawer-backdrop--open"
+            onClick={closeCart}
+            aria-hidden="true"
+          />
 
-      {/* Drawer panel */}
-      <aside
-        className={`cart-drawer${isOpen ? ' cart-drawer--open' : ''}`}
-        role="dialog"
-        aria-label="Resumen de pedido"
-        aria-modal="true"
-        aria-hidden={!isOpen}
-      >
-        {/* ── Header ── */}
+          {/* Drawer panel */}
+          <motion.aside
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+            className="cart-drawer cart-drawer--open"
+            role="dialog"
+            aria-label="Resumen de pedido"
+            aria-modal="true"
+            aria-hidden={false}
+          >
+            {/* ── Header ── */}
         <div className="drawer-header">
           <div className="drawer-title-wrap">
             <ShoppingCart size={18} className="drawer-title-icon" aria-hidden="true" />
@@ -343,23 +521,25 @@ export default function CartDrawer() {
               <span className="drawer-summary-value">{totalItems}</span>
             </div>
 
-            <a
+            <button
               className="drawer-confirm-btn"
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={handleConfirmarPedido}
+              disabled={isSubmitting}
               aria-label="Confirmar pedido completo por WhatsApp"
+              style={{ width: '100%', border: 'none', cursor: 'pointer' }}
             >
               <MessageCircle size={18} aria-hidden="true" />
-              Confirmar Pedido por WhatsApp
-            </a>
+              {isSubmitting ? 'Generando Folio...' : 'Confirmar Pedido por WhatsApp'}
+            </button>
 
             <button className="drawer-clear" onClick={clearCart}>
               Vaciar carrito
             </button>
           </div>
         )}
-      </aside>
-    </>
+          </motion.aside>
+        </>
+      )}
+    </AnimatePresence>
   );
 }

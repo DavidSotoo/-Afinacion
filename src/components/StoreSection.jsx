@@ -1,13 +1,13 @@
 import React from 'react';
-import { MapPin, Clock, Phone, Navigation } from 'lucide-react';
+import { MapPin, Clock, Phone, Navigation, Mail } from 'lucide-react';
+import { WHATSAPP_NUMBER, STORE_FIXED_PHONE, STORE_PUBLIC_EMAIL } from '../lib/constants';
 
 // 🔧 Cambia estas constantes con la dirección y número reales de tu tío
 const STORE_NAME   = '+AFINACIÓN — Refaccionaria';
-const STORE_ADDR   = 'Av. Circunvalación Oblatos 1982, San Martin, 44710 Guadalajara, Jal.';
-const MAPS_URL     = 'https://maps.app.goo.gl/UrW26uqTYLK94erv9';
-const WHATSAPP_NUM = '523312345678'; // ← número real
+const STORE_ADDR   = 'Av. Circunvalación Oblatos 1982, San Martín, 44710 Guadalajara, Jal.';
+const MAPS_URL     = 'https://www.google.com/maps/search/?api=1&query=Av+Circunvalacion+Oblatos+1982+Guadalajara';
 const WA_MSG       = encodeURIComponent('¡Hola! Quiero pasar a recoger mi pedido de bujías NGK. ¿Cuál es su horario disponible hoy?');
-const WA_URL       = `https://wa.me/${WHATSAPP_NUM}?text=${WA_MSG}`;
+const WA_URL       = `https://wa.me/${WHATSAPP_NUMBER}?text=${WA_MSG}`;
 
 const SCHEDULE = [
   { days: 'Lunes – Viernes', hours: '10:00 am – 7:00 pm' },
@@ -27,6 +27,18 @@ export default function StoreSection() {
           </p>
           <h2 className="store-title" id="store-heading">{STORE_NAME}</h2>
           <p className="store-address">{STORE_ADDR}</p>
+          <div className="store-contact-info" style={{ marginTop: '0.5rem', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '8px', color: 'var(--text-muted)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Phone size={14} />
+              <a href={`tel:${STORE_FIXED_PHONE}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                33 4749 9638
+              </a>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Mail size={14} />
+              <a href={`mailto:${STORE_PUBLIC_EMAIL}`} style={{ color: 'inherit', textDecoration: 'none' }}>{STORE_PUBLIC_EMAIL}</a>
+            </div>
+          </div>
 
           <div className="store-schedule" aria-label="Horarios de atención">
             <p className="schedule-heading">
