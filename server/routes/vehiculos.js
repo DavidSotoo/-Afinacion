@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const auth = require('../middleware/auth');
+const antiscaping = require('../middleware/antiscaping');
 const path = require('path');
 const fs = require('fs');
 const Vehiculo = require('../models/Vehiculo');
+const PrecioUnifil = require('../models/PrecioUnifil');
+const PrecioBujia = require('../models/PrecioBujia');
 
 // Cargar la base de datos de filtros de VW de Interfil en el servidor
 let vwFiltrosData = [];
@@ -80,6 +84,79 @@ try {
   }
 } catch (err) {
   console.error('Error loading Mazda filters on backend:', err.message);
+}
+
+// Cargar la base de datos de filtros de Nissan JOE en el servidor
+let nissanJoeFiltrosData = [];
+try {
+  nissanJoeFiltrosData = require('../src/data/nissanAireJoe');
+} catch (err) {
+  console.error('Error loading Nissan JOE filters on backend:', err.message);
+}
+
+// Cargar la base de datos de filtros de Nissan UNIFIL en el servidor
+let nissanUnifilData = [];
+try {
+  nissanUnifilData = require('../src/data/nissanUnifil');
+} catch (err) {
+  console.error('Error loading Nissan Unifil filters on backend:', err.message);
+}
+
+// Cargar la base de datos de filtros de VW UNIFIL en el servidor
+let volkswagenUnifilData = [];
+try {
+  volkswagenUnifilData = require('../src/data/volkswagenUnifil');
+} catch (err) {
+  console.error('Error loading VW Unifil filters on backend:', err.message);
+}
+
+
+// Cargar la base de datos de filtros de VW JOE en el servidor
+let vwJoeFiltrosData = [];
+try {
+  vwJoeFiltrosData = require('../src/data/volkswagenAireJoe');
+} catch (err) {
+  console.error('Error loading VW JOE filters on backend:', err.message);
+}
+
+// Cargar la base de datos de filtros de Chevrolet JOE en el servidor
+let chevroletJoeFiltrosData = [];
+try {
+  chevroletJoeFiltrosData = require('../src/data/chevroletAireJoe');
+} catch (err) {
+  console.error('Error loading Chevrolet JOE filters on backend:', err.message);
+}
+
+// Cargar la base de datos de filtros de Ford JOE en el servidor
+let fordJoeFiltrosData = [];
+try {
+  fordJoeFiltrosData = require('../src/data/fordAireJoe');
+} catch (err) {
+  console.error('Error loading Ford JOE filters on backend:', err.message);
+}
+
+// Cargar la base de datos de filtros de Honda JOE en el servidor
+let hondaJoeFiltrosData = [];
+try {
+  hondaJoeFiltrosData = require('../src/data/hondaAireJoe');
+} catch (err) {
+  console.error('Error loading Honda JOE filters on backend:', err.message);
+}
+
+// Cargar la base de datos de filtros de Toyota JOE en el servidor
+let toyotaJoeFiltrosData = [];
+try {
+  toyotaJoeFiltrosData = require('../src/data/toyotaAireJoe');
+} catch (err) {
+  console.error('Error loading Toyota JOE filters on backend:', err.message);
+}
+
+// Cargar la base de datos de filtros de Mazda JOE en el servidor
+let mazdaJoeFiltrosData = [];
+try {
+  mazdaJoeFiltrosData = require('../src/data/mazdaAireJoe');
+} catch (err) {
+  console.error('Error loading Mazda JOE filters on backend:', err.message);
 }
 
 /**
@@ -735,6 +812,1001 @@ async function syncMazdaFiltersInDatabase() {
   }
 }
 
+/**
+ * Búsqueda difusa de filtros de aire de Nissan (JOE)
+ */
+function lookupNissanAireJoe(vehiculo) {
+  const modeloBujia = (vehiculo.modelo || '').trim().toUpperCase();
+  const matches = nissanJoeFiltrosData.filter(r => {
+    const modeloJoe = (r.modelo || '').toUpperCase();
+    if (!modeloJoe.includes(modeloBujia) && !modeloBujia.includes(modeloJoe)) {
+      return false;
+    }
+
+    const litBujia = parseFloat(vehiculo.litros);
+    if (!isNaN(litBujia)) {
+      const match = (r.motor || '').match(/(\d+\.?\d*)\s*L/i);
+      if (match) {
+        const litRecord = parseFloat(match[1]);
+        if (litRecord !== litBujia) return false;
+      }
+    }
+
+    if (r.anio && r.anio.toUpperCase() !== 'ALL') {
+      let start = null;
+      let end = null;
+      
+      if (r.anio.includes('-')) {
+        const parts = r.anio.split('-');
+        start = parseInt(parts[0], 10);
+        end = parseInt(parts[1], 10);
+      } else if (r.anio.includes('>')) {
+        start = parseInt(r.anio.replace('>', ''), 10);
+        end = 2030;
+      } else {
+        start = parseInt(r.anio, 10);
+        end = start;
+      }
+
+      if (start && !isNaN(start)) {
+        if (!end || isNaN(end)) end = start;
+        if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
+      }
+    }
+    return true;
+  });
+
+  return matches.length > 0 ? matches[0] : null;
+}
+
+/**
+ * Búsqueda difusa de filtros de Unifil para Nissan
+ */
+function lookupNissanUnifil(vehiculo) {
+  const modeloBujia = (vehiculo.modelo || '').trim().toUpperCase();
+  const matches = nissanUnifilData.filter(r => {
+    const modeloUnifil = (r.modelo || '').toUpperCase();
+    if (!modeloUnifil.includes(modeloBujia) && !modeloBujia.includes(modeloUnifil)) {
+      return false;
+    }
+
+    const litBujia = parseFloat(vehiculo.litros);
+    if (!isNaN(litBujia)) {
+      const match = (r.motor || '').match(/(\d+\.?\d*)\s*L/i);
+      if (match) {
+        const litRecord = parseFloat(match[1]);
+        if (litRecord !== litBujia) return false;
+      }
+    }
+
+    if (r.anio && r.anio.toUpperCase() !== 'ALL') {
+      let start = null;
+      let end = null;
+      
+      if (r.anio.includes('-')) {
+        const parts = r.anio.split('-');
+        start = parseInt(parts[0], 10);
+        end = parseInt(parts[1], 10);
+      } else if (r.anio.includes('>')) {
+        start = parseInt(r.anio.replace('>', ''), 10);
+        end = 2030;
+      } else {
+        start = parseInt(r.anio, 10);
+        end = start;
+      }
+
+      if (start && !isNaN(start)) {
+        if (!end || isNaN(end)) end = start;
+        if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
+      }
+    }
+    return true;
+  });
+
+  return matches.length > 0 ? matches[0] : null;
+}
+
+/**
+ * Sincronizar filtros de Unifil para Nissan en la base de datos
+ */
+async function syncNissanUnifil() {
+  try {
+    const TIPO_FILTRO = {
+      filtro_aceite:   'Intercambiable / Cartucho',
+      filtro_aire:     'Panel / Cilíndrico',
+      filtro_gasolina: 'Línea',
+      filtro_cabina:   'Polen',
+    };
+
+    const nissans = await Vehiculo.find({ marca: /nissan/i });
+    let updatedCount = 0;
+    const keys = ['filtro_aceite', 'filtro_aire', 'filtro_gasolina', 'filtro_cabina'];
+
+    for (const nissan of nissans) {
+      const record = lookupNissanUnifil(nissan);
+      if (record && record.filtros) {
+        const unifilObj = {
+          filtro_aire: record.filtros.filtro_aire || null,
+          filtro_aceite: record.filtros.filtro_aceite || null,
+          filtro_gasolina: record.filtros.filtro_gasolina || null,
+          filtro_cabina: record.filtros.filtro_cabina || null
+        };
+
+        const newKit = {};
+        for (const key of keys) {
+          const currentFiltro = nissan.kit_afinacion?.[key];
+          let interfilSku = null;
+          if (currentFiltro) {
+            if (currentFiltro.marca && currentFiltro.marca !== 'UNIFIL') {
+              interfilSku = currentFiltro.sku;
+            } else if (currentFiltro.alternos && Array.isArray(currentFiltro.alternos)) {
+              const found = currentFiltro.alternos.find(a => a.marca && a.marca.toUpperCase() === 'INTERFIL');
+              if (found) interfilSku = found.sku;
+            }
+          }
+
+          const joeSku = nissan.referencias_alternas?.[`${key}_joe`] || null;
+          const unifilSku = record.filtros[key] || null;
+
+          let winnerMarca = null;
+          let winnerSku = null;
+          const alternos = [];
+
+          if (unifilSku) {
+            winnerMarca = 'UNIFIL';
+            winnerSku = unifilSku;
+            if (interfilSku) {
+              alternos.push({ marca: 'INTERFIL', sku: interfilSku });
+            }
+            if (joeSku) {
+              alternos.push({ marca: 'JOE', sku: joeSku });
+            }
+          } else if (interfilSku) {
+            winnerMarca = 'INTERFIL';
+            winnerSku = interfilSku;
+            if (joeSku) {
+              alternos.push({ marca: 'JOE', sku: joeSku });
+            }
+          } else if (joeSku) {
+            winnerMarca = 'JOE';
+            winnerSku = joeSku;
+          }
+
+          if (key === 'filtro_gasolina' && !winnerSku) {
+            winnerSku = 'SELLADO';
+            winnerMarca = null;
+          }
+
+          newKit[key] = {
+            tipo: TIPO_FILTRO[key],
+            marca: winnerMarca,
+            sku: winnerSku,
+            hasData: !!winnerSku,
+            alternos: alternos
+          };
+        }
+
+        let modified = false;
+
+        if (JSON.stringify(nissan.filtros_unifil) !== JSON.stringify(unifilObj)) {
+          nissan.filtros_unifil = unifilObj;
+          nissan.markModified('filtros_unifil');
+          modified = true;
+        }
+
+        if (JSON.stringify(nissan.kit_afinacion) !== JSON.stringify(newKit)) {
+          nissan.kit_afinacion = newKit;
+          nissan.markModified('kit_afinacion');
+          modified = true;
+        }
+
+        if (modified) {
+          await nissan.save();
+          updatedCount++;
+        }
+      }
+    }
+    if (updatedCount > 0) {
+      console.log(`⚡ Sincronizados de inmediato ${updatedCount} vehículos Nissan con filtros UNIFIL en MongoDB Atlas.`);
+    }
+  } catch (err) {
+    console.error('Error synchronizing Nissan UNIFIL database filters:', err.message);
+  }
+}
+
+/**
+ * Búsqueda difusa de filtros de Unifil para Volkswagen
+ */
+function lookupVolkswagenUnifil(vehiculo) {
+  const modeloBujia = (vehiculo.modelo || '').trim().toUpperCase();
+  let modeloNorm = modeloBujia;
+  if (modeloBujia === 'JETTA CLASICO' || modeloBujia === 'CLASICO JETTA' || modeloBujia === 'CLASICO') {
+    modeloNorm = 'CLASICO';
+  }
+
+  const matches = volkswagenUnifilData.filter(r => {
+    const modeloUnifil = (r.modelo || '').toUpperCase();
+    if (modeloUnifil !== modeloNorm && !modeloUnifil.includes(modeloNorm) && !modeloNorm.includes(modeloUnifil)) {
+      return false;
+    }
+
+    const litBujia = parseFloat(vehiculo.litros);
+    if (!isNaN(litBujia)) {
+      const match = (r.motor || '').match(/(\d+\.?\d*)\s*L/i);
+      if (match) {
+        const litRecord = parseFloat(match[1]);
+        if (litRecord !== litBujia) return false;
+      }
+    }
+
+    if (r.anio && r.anio.toUpperCase() !== 'ALL') {
+      let start = null;
+      let end = null;
+      
+      if (r.anio.includes(',')) {
+        const years = r.anio.split(',').map(y => parseInt(y.trim(), 10));
+        let overlaps = false;
+        for (let y = vehiculo.anio_inicio; y <= vehiculo.anio_fin; y++) {
+          if (years.includes(y)) {
+            overlaps = true;
+            break;
+          }
+        }
+        if (!overlaps) return false;
+      } else if (r.anio.includes('-')) {
+        const parts = r.anio.split('-');
+        start = parseInt(parts[0], 10);
+        end = parseInt(parts[1], 10);
+      } else if (r.anio.includes('>')) {
+        start = parseInt(r.anio.replace('>', ''), 10);
+        end = 2030;
+      } else {
+        start = parseInt(r.anio, 10);
+        end = start;
+      }
+
+      if (start && !isNaN(start)) {
+        if (!end || isNaN(end)) end = start;
+        if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
+      }
+    }
+    return true;
+  });
+
+  return matches.length > 0 ? matches[0] : null;
+}
+
+/**
+ * Sincronizar filtros de Unifil para Volkswagen en la base de datos
+ */
+async function syncVolkswagenUnifil() {
+  try {
+    const TIPO_FILTRO = {
+      filtro_aceite:   'Intercambiable / Cartucho',
+      filtro_aire:     'Panel / Cilíndrico',
+      filtro_gasolina: 'Línea',
+      filtro_cabina:   'Polen',
+    };
+
+    const vws = await Vehiculo.find({ marca: /volkswagen/i });
+    let updatedCount = 0;
+    const keys = ['filtro_aceite', 'filtro_aire', 'filtro_gasolina', 'filtro_cabina'];
+
+    for (const vw of vws) {
+      const record = lookupVolkswagenUnifil(vw);
+      if (record && record.filtros) {
+        const unifilObj = {
+          filtro_aire: record.filtros.filtro_aire || null,
+          filtro_aceite: record.filtros.filtro_aceite || null,
+          filtro_gasolina: record.filtros.filtro_gasolina || null,
+          filtro_cabina: record.filtros.filtro_cabina || null
+        };
+
+        const newKit = {};
+        for (const key of keys) {
+          const currentFiltro = vw.kit_afinacion?.[key];
+          let interfilSku = null;
+          if (currentFiltro) {
+            if (currentFiltro.marca && currentFiltro.marca !== 'UNIFIL') {
+              interfilSku = currentFiltro.sku;
+            } else if (currentFiltro.alternos && Array.isArray(currentFiltro.alternos)) {
+              const found = currentFiltro.alternos.find(a => a.marca && a.marca.toUpperCase() === 'INTERFIL');
+              if (found) interfilSku = found.sku;
+            }
+          }
+
+          const joeSku = vw.referencias_alternas?.[`${key}_joe`] || null;
+          const unifilSku = record.filtros[key] || null;
+
+          let winnerMarca = null;
+          let winnerSku = null;
+          const alternos = [];
+
+          if (unifilSku) {
+            winnerMarca = 'UNIFIL';
+            winnerSku = unifilSku;
+            if (interfilSku) {
+              alternos.push({ marca: 'INTERFIL', sku: interfilSku });
+            }
+            if (joeSku) {
+              alternos.push({ marca: 'JOE', sku: joeSku });
+            }
+          } else if (interfilSku) {
+            winnerMarca = 'INTERFIL';
+            winnerSku = interfilSku;
+            if (joeSku) {
+              alternos.push({ marca: 'JOE', sku: joeSku });
+            }
+          } else if (joeSku) {
+            winnerMarca = 'JOE';
+            winnerSku = joeSku;
+          }
+
+          if (key === 'filtro_gasolina' && !winnerSku) {
+            winnerSku = 'SELLADO';
+            winnerMarca = null;
+          }
+
+          newKit[key] = {
+            tipo: TIPO_FILTRO[key],
+            marca: winnerMarca,
+            sku: winnerSku,
+            hasData: !!winnerSku,
+            alternos: alternos
+          };
+        }
+
+        let modified = false;
+
+        if (JSON.stringify(vw.filtros_unifil) !== JSON.stringify(unifilObj)) {
+          vw.filtros_unifil = unifilObj;
+          vw.markModified('filtros_unifil');
+          modified = true;
+        }
+
+        if (JSON.stringify(vw.kit_afinacion) !== JSON.stringify(newKit)) {
+          vw.kit_afinacion = newKit;
+          vw.markModified('kit_afinacion');
+          modified = true;
+        }
+
+        if (modified) {
+          await vw.save();
+          updatedCount++;
+        }
+      }
+    }
+    if (updatedCount > 0) {
+      console.log(`⚡ Sincronizados de inmediato ${updatedCount} vehículos Volkswagen con filtros UNIFIL en MongoDB Atlas.`);
+    }
+  } catch (err) {
+    console.error('Error synchronizing VW UNIFIL database filters:', err.message);
+  }
+}
+
+/**
+ * Sincronizar filtros de aire JOE para Nissan en la base de datos
+ */
+async function syncNissanAireJoe() {
+  try {
+    const nissans = await Vehiculo.find({ marca: /nissan/i });
+    let updatedCount = 0;
+    for (const nissan of nissans) {
+      const record = lookupNissanAireJoe(nissan);
+      if (record && record.filtro_aire && record.filtro_aire.sku) {
+        const currentRef = nissan.referencias_alternas || {};
+        if (currentRef.filtro_aire_joe !== record.filtro_aire.sku) {
+          nissan.referencias_alternas = {
+            ...currentRef,
+            filtro_aire_joe: record.filtro_aire.sku
+          };
+          nissan.markModified('referencias_alternas');
+          await nissan.save();
+          updatedCount++;
+        }
+      }
+    }
+    if (updatedCount > 0) {
+      console.log(`⚡ Sincronizados de inmediato ${updatedCount} vehículos Nissan con referencias alternas JOE en MongoDB Atlas.`);
+    }
+  } catch (err) {
+    console.error('Error synchronizing Nissan JOE database filters:', err.message);
+  }
+}
+
+/**
+ * Búsqueda difusa de filtros de aire de VW (JOE)
+ */
+function lookupVWAireJoe(vehiculo) {
+  const modeloBujia = (vehiculo.modelo || '').trim().toUpperCase();
+  const matches = vwJoeFiltrosData.filter(r => {
+    const modeloJoe = (r.modelo || '').toUpperCase();
+    if (!modeloJoe.includes(modeloBujia) && !modeloBujia.includes(modeloJoe)) {
+      return false;
+    }
+
+    const litBujia = parseFloat(vehiculo.litros);
+    if (!isNaN(litBujia)) {
+      const match = (r.motor || '').match(/(\d+\.?\d*)\s*L/i);
+      if (match) {
+        const litRecord = parseFloat(match[1]);
+        if (litRecord !== litBujia) return false;
+      }
+    }
+
+    if (r.anio && r.anio.toUpperCase() !== 'ALL') {
+      let start = null;
+      let end = null;
+      
+      if (r.anio.includes('-')) {
+        const parts = r.anio.split('-');
+        start = parseInt(parts[0], 10);
+        end = parseInt(parts[1], 10);
+      } else if (r.anio.includes('>')) {
+        start = parseInt(r.anio.replace('>', ''), 10);
+        end = 2030;
+      } else {
+        start = parseInt(r.anio, 10);
+        end = start;
+      }
+
+      if (start && !isNaN(start)) {
+        if (!end || isNaN(end)) end = start;
+        if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
+      }
+    }
+    return true;
+  });
+
+  return matches.length > 0 ? matches[0] : null;
+}
+
+/**
+ * Sincronizar filtros de aire JOE para VW en la base de datos
+ */
+async function syncVWAireJoe() {
+  try {
+    const vws = await Vehiculo.find({ marca: /volkswagen/i });
+    let updatedCount = 0;
+    for (const vw of vws) {
+      const record = lookupVWAireJoe(vw);
+      if (record && record.filtro_aire && record.filtro_aire.sku) {
+        const currentRef = vw.referencias_alternas || {};
+        if (currentRef.filtro_aire_joe !== record.filtro_aire.sku) {
+          vw.referencias_alternas = {
+            ...currentRef,
+            filtro_aire_joe: record.filtro_aire.sku
+          };
+          vw.markModified('referencias_alternas');
+          await vw.save();
+          updatedCount++;
+        }
+      }
+    }
+    if (updatedCount > 0) {
+      console.log(`⚡ Sincronizados de inmediato ${updatedCount} vehículos Volkswagen con referencias alternas JOE en MongoDB Atlas.`);
+    }
+  } catch (err) {
+    console.error('Error synchronizing VW JOE database filters:', err.message);
+  }
+}
+
+/**
+ * Búsqueda difusa de filtros de aire de Chevrolet (JOE)
+ */
+function lookupChevroletAireJoe(vehiculo) {
+  const modeloBujia = (vehiculo.modelo || '').trim().toUpperCase();
+  const matches = chevroletJoeFiltrosData.filter(r => {
+    const modeloJoe = (r.modelo || '').toUpperCase();
+    if (!modeloJoe.includes(modeloBujia) && !modeloBujia.includes(modeloJoe)) {
+      return false;
+    }
+
+    const litBujia = parseFloat(vehiculo.litros);
+    if (!isNaN(litBujia)) {
+      const match = (r.motor || '').match(/(\d+\.?\d*)\s*L/i);
+      if (match) {
+        const litRecord = parseFloat(match[1]);
+        if (litRecord !== litBujia) return false;
+      }
+    }
+
+    if (r.anio && r.anio.toUpperCase() !== 'ALL') {
+      let start = null;
+      let end = null;
+      
+      if (r.anio.includes('-')) {
+        const parts = r.anio.split('-');
+        start = parseInt(parts[0], 10);
+        end = parseInt(parts[1], 10);
+      } else if (r.anio.includes('>')) {
+        start = parseInt(r.anio.replace('>', ''), 10);
+        end = 2030;
+      } else {
+        start = parseInt(r.anio, 10);
+        end = start;
+      }
+
+      if (start && !isNaN(start)) {
+        if (!end || isNaN(end)) end = start;
+        if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
+      }
+    }
+    return true;
+  });
+
+  return matches.length > 0 ? matches[0] : null;
+}
+
+/**
+ * Sincronizar filtros de aire JOE para Chevrolet en la base de datos
+ */
+async function syncChevroletAireJoe() {
+  try {
+    const chevrolets = await Vehiculo.find({ marca: /chevrolet/i });
+    let updatedCount = 0;
+    for (const chev of chevrolets) {
+      const record = lookupChevroletAireJoe(chev);
+      if (record && record.filtro_aire && record.filtro_aire.sku) {
+        const currentRef = chev.referencias_alternas || {};
+        if (currentRef.filtro_aire_joe !== record.filtro_aire.sku) {
+          chev.referencias_alternas = {
+            ...currentRef,
+            filtro_aire_joe: record.filtro_aire.sku
+          };
+          chev.markModified('referencias_alternas');
+          await chev.save();
+          updatedCount++;
+        }
+      }
+    }
+    if (updatedCount > 0) {
+      console.log(`⚡ Sincronizados de inmediato ${updatedCount} vehículos Chevrolet con referencias alternas JOE en MongoDB Atlas.`);
+    }
+  } catch (err) {
+    console.error('Error synchronizing Chevrolet JOE database filters:', err.message);
+  }
+}
+
+/**
+ * Búsqueda difusa de filtros de aire de Ford (JOE)
+ */
+function lookupFordAireJoe(vehiculo) {
+  const modeloBujia = (vehiculo.modelo || '').trim().toUpperCase();
+  const matches = fordJoeFiltrosData.filter(r => {
+    const modeloJoe = (r.modelo || '').toUpperCase();
+    if (!modeloJoe.includes(modeloBujia) && !modeloBujia.includes(modeloJoe)) {
+      return false;
+    }
+
+    const litBujia = parseFloat(vehiculo.litros);
+    if (!isNaN(litBujia)) {
+      const match = (r.motor || '').match(/(\d+\.?\d*)\s*L/i);
+      if (match) {
+        const litRecord = parseFloat(match[1]);
+        if (litRecord !== litBujia) return false;
+      }
+    }
+
+    if (r.anio && r.anio.toUpperCase() !== 'ALL') {
+      let start = null;
+      let end = null;
+
+      if (r.anio.includes('-')) {
+        const parts = r.anio.split('-');
+        start = parseInt(parts[0], 10);
+        end   = parseInt(parts[1], 10);
+      } else if (r.anio.includes('>')) {
+        start = parseInt(r.anio.replace('>', ''), 10);
+        end   = 2030;
+      } else {
+        start = parseInt(r.anio, 10);
+        end   = start;
+      }
+
+      if (start && !isNaN(start)) {
+        if (!end || isNaN(end)) end = start;
+        if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
+      }
+    }
+    return true;
+  });
+
+  return matches.length > 0 ? matches[0] : null;
+}
+
+/**
+ * Sincronizar filtros de aire JOE para Ford en la base de datos
+ */
+async function syncFordAireJoe() {
+  try {
+    const fords = await Vehiculo.find({ marca: /ford/i });
+    let updatedCount = 0;
+    for (const ford of fords) {
+      const record = lookupFordAireJoe(ford);
+      if (record && record.filtro_aire && record.filtro_aire.sku) {
+        const currentRef = ford.referencias_alternas || {};
+        if (currentRef.filtro_aire_joe !== record.filtro_aire.sku) {
+          ford.referencias_alternas = {
+            ...currentRef,
+            filtro_aire_joe: record.filtro_aire.sku
+          };
+          ford.markModified('referencias_alternas');
+          await ford.save();
+          updatedCount++;
+        }
+      }
+    }
+    if (updatedCount > 0) {
+      console.log(`⚡ Sincronizados de inmediato ${updatedCount} vehículos Ford con referencias alternas JOE en MongoDB Atlas.`);
+    }
+  } catch (err) {
+    console.error('Error synchronizing Ford JOE database filters:', err.message);
+  }
+}
+
+/**
+ * Búsqueda difusa de filtros de aire de Honda (JOE)
+ */
+function lookupHondaAireJoe(vehiculo) {
+  const modeloBujia = (vehiculo.modelo || '').trim().toUpperCase();
+  const matches = hondaJoeFiltrosData.filter(r => {
+    const modeloJoe = (r.modelo || '').toUpperCase();
+    if (!modeloJoe.includes(modeloBujia) && !modeloBujia.includes(modeloJoe)) {
+      return false;
+    }
+
+    const litBujia = parseFloat(vehiculo.litros);
+    if (!isNaN(litBujia)) {
+      const match = (r.motor || '').match(/(\d+\.?\d*)\s*L/i);
+      if (match) {
+        const litRecord = parseFloat(match[1]);
+        if (litRecord !== litBujia) return false;
+      }
+    }
+
+    if (r.anio && r.anio.toUpperCase() !== 'ALL') {
+      let start = null;
+      let end = null;
+
+      if (r.anio.includes('-')) {
+        const parts = r.anio.split('-');
+        start = parseInt(parts[0], 10);
+        end   = parseInt(parts[1], 10);
+      } else if (r.anio.includes('>')) {
+        start = parseInt(r.anio.replace('>', ''), 10);
+        end   = 2030;
+      } else {
+        start = parseInt(r.anio, 10);
+        end   = start;
+      }
+
+      if (start && !isNaN(start)) {
+        if (!end || isNaN(end)) end = start;
+        if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
+      }
+    }
+    return true;
+  });
+
+  return matches.length > 0 ? matches[0] : null;
+}
+
+/**
+ * Sincronizar filtros de aire JOE para Honda en la base de datos
+ */
+async function syncHondaAireJoe() {
+  try {
+    const hondas = await Vehiculo.find({ marca: /honda/i });
+    let updatedCount = 0;
+    for (const honda of hondas) {
+      const record = lookupHondaAireJoe(honda);
+      if (record && record.filtro_aire && record.filtro_aire.sku) {
+        const currentRef = honda.referencias_alternas || {};
+        if (currentRef.filtro_aire_joe !== record.filtro_aire.sku) {
+          honda.referencias_alternas = {
+            ...currentRef,
+            filtro_aire_joe: record.filtro_aire.sku
+          };
+          honda.markModified('referencias_alternas');
+          await honda.save();
+          updatedCount++;
+        }
+      }
+    }
+    if (updatedCount > 0) {
+      console.log(`⚡ Sincronizados de inmediato ${updatedCount} vehículos Honda con referencias alternas JOE en MongoDB Atlas.`);
+    }
+  } catch (err) {
+    console.error('Error synchronizing Honda JOE database filters:', err.message);
+  }
+}
+
+/**
+ * Búsqueda difusa de filtros de aire de Toyota (JOE)
+ */
+function lookupToyotaAireJoe(vehiculo) {
+  const modeloBujia = (vehiculo.modelo || '').trim().toUpperCase();
+  const matches = toyotaJoeFiltrosData.filter(r => {
+    const modeloJoe = (r.modelo || '').toUpperCase();
+    if (!modeloJoe.includes(modeloBujia) && !modeloBujia.includes(modeloJoe)) {
+      return false;
+    }
+
+    const litBujia = parseFloat(vehiculo.litros);
+    if (!isNaN(litBujia)) {
+      const match = (r.motor || '').match(/(\d+\.?\d*)\s*L/i);
+      if (match) {
+        const litRecord = parseFloat(match[1]);
+        if (litRecord !== litBujia) return false;
+      }
+    }
+
+    if (r.anio && r.anio.toUpperCase() !== 'ALL') {
+      let start = null;
+      let end = null;
+
+      if (r.anio.includes('-')) {
+        const parts = r.anio.split('-');
+        start = parseInt(parts[0], 10);
+        end   = parseInt(parts[1], 10);
+      } else if (r.anio.includes('>')) {
+        start = parseInt(r.anio.replace('>', ''), 10);
+        end   = 2030;
+      } else {
+        start = parseInt(r.anio, 10);
+        end   = start;
+      }
+
+      if (start && !isNaN(start)) {
+        if (!end || isNaN(end)) end = start;
+        if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
+      }
+    }
+    return true;
+  });
+
+  return matches.length > 0 ? matches[0] : null;
+}
+
+/**
+ * Sincronizar filtros de aire JOE para Toyota en la base de datos
+ */
+async function syncToyotaAireJoe() {
+  try {
+    const toyotas = await Vehiculo.find({ marca: /toyota/i });
+    let updatedCount = 0;
+    for (const toyota of toyotas) {
+      const record = lookupToyotaAireJoe(toyota);
+      if (record && record.filtro_aire && record.filtro_aire.sku) {
+        const currentRef = toyota.referencias_alternas || {};
+        if (currentRef.filtro_aire_joe !== record.filtro_aire.sku) {
+          toyota.referencias_alternas = {
+            ...currentRef,
+            filtro_aire_joe: record.filtro_aire.sku
+          };
+          toyota.markModified('referencias_alternas');
+          await toyota.save();
+          updatedCount++;
+        }
+      }
+    }
+    if (updatedCount > 0) {
+      console.log(`⚡ Sincronizados de inmediato ${updatedCount} vehículos Toyota con referencias alternas JOE en MongoDB Atlas.`);
+    }
+  } catch (err) {
+    console.error('Error synchronizing Toyota JOE database filters:', err.message);
+  }
+}
+
+/**
+ * Búsqueda difusa de filtros de aire de Mazda (JOE)
+ */
+function lookupMazdaAireJoe(vehiculo) {
+  const modeloBujia = (vehiculo.modelo || '').trim().toUpperCase();
+  const matches = mazdaJoeFiltrosData.filter(r => {
+    const modeloJoe = (r.modelo || '').toUpperCase();
+    if (!modeloJoe.includes(modeloBujia) && !modeloBujia.includes(modeloJoe)) {
+      return false;
+    }
+
+    const litBujia = parseFloat(vehiculo.litros);
+    if (!isNaN(litBujia)) {
+      const match = (r.motor || '').match(/(\d+\.?\d*)\s*L/i);
+      if (match) {
+        const litRecord = parseFloat(match[1]);
+        if (litRecord !== litBujia) return false;
+      }
+    }
+
+    if (r.anio && r.anio.toUpperCase() !== 'ALL') {
+      let start = null;
+      let end = null;
+
+      if (r.anio.includes('-')) {
+        const parts = r.anio.split('-');
+        start = parseInt(parts[0], 10);
+        end   = parseInt(parts[1], 10);
+      } else if (r.anio.includes('>')) {
+        start = parseInt(r.anio.replace('>', ''), 10);
+        end   = 2030;
+      } else {
+        start = parseInt(r.anio, 10);
+        end   = start;
+      }
+
+      if (start && !isNaN(start)) {
+        if (!end || isNaN(end)) end = start;
+        if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
+      }
+    }
+    return true;
+  });
+
+  return matches.length > 0 ? matches[0] : null;
+}
+
+/**
+ * Sincronizar filtros de aire JOE para Mazda en la base de datos
+ */
+async function syncMazdaAireJoe() {
+  try {
+    const mazdas = await Vehiculo.find({ marca: /mazda/i });
+    let updatedCount = 0;
+    for (const mazda of mazdas) {
+      const record = lookupMazdaAireJoe(mazda);
+      if (record && record.filtro_aire && record.filtro_aire.sku) {
+        const currentRef = mazda.referencias_alternas || {};
+        if (currentRef.filtro_aire_joe !== record.filtro_aire.sku) {
+          mazda.referencias_alternas = {
+            ...currentRef,
+            filtro_aire_joe: record.filtro_aire.sku
+          };
+          mazda.markModified('referencias_alternas');
+          await mazda.save();
+          updatedCount++;
+        }
+      }
+    }
+    if (updatedCount > 0) {
+      console.log(`⚡ Sincronizados de inmediato ${updatedCount} vehículos Mazda con referencias alternas JOE en MongoDB Atlas.`);
+    }
+  } catch (err) {
+    console.error('Error synchronizing Mazda JOE database filters:', err.message);
+  }
+}
+
+
+
+/**
+ * Helper to dynamically enrich vehicles' kit_afinacion with costs from PrecioUnifil.
+ * Calculates costs for UNIFIL items and provides a fallback for other brands.
+ */
+async function enrichVehiculosWithPrices(vehiculos) {
+  try {
+    const preciosList = await PrecioUnifil.find({});
+    const preciosMap = new Map();
+    preciosList.forEach(p => {
+      if (p.clave) {
+        preciosMap.set(p.clave.trim().toUpperCase(), p.precio);
+      }
+    });
+
+    const bujiasList = await PrecioBujia.find({});
+    const bujiasMap = new Map();
+    bujiasList.forEach(b => {
+      if (b.sku) {
+        bujiasMap.set(b.sku.trim().toUpperCase(), b.precio_cliente);
+      }
+    });
+
+    const DEFAULT_COST = 80;
+
+    return vehiculos.map(v => {
+      const vObj = v.toObject();
+      
+      // Parse cylinders/spark plugs count
+      const matchCyl = (vObj.cilindros_config || '').match(/\d+/);
+      const numCilindros = matchCyl ? parseInt(matchCyl[0], 10) : 4;
+
+      const getBujiaPrice = (sku) => {
+        if (!sku) return 0;
+        const skuUpper = sku.trim().toUpperCase();
+        if (bujiasMap.has(skuUpper)) {
+          return bujiasMap.get(skuUpper);
+        }
+        return 50; // default unit price: $50
+      };
+
+      if (vObj.kit_afinacion) {
+        let costoTotal = 0;
+        const keys = ['filtro_aceite', 'filtro_aire', 'filtro_gasolina', 'filtro_cabina'];
+        
+        keys.forEach(key => {
+          const filtro = vObj.kit_afinacion[key];
+          if (filtro && filtro.sku) {
+            const skuUpper = (filtro.sku || '').trim().toUpperCase();
+            if (skuUpper === 'SELLADO') {
+              filtro.costo = 0;
+            } else {
+              let costo = DEFAULT_COST;
+              const nameUpper = (filtro.marca || '').trim().toUpperCase();
+              
+              if (nameUpper === 'UNIFIL') {
+                if (preciosMap.has(skuUpper)) {
+                  costo = preciosMap.get(skuUpper);
+                }
+              }
+              filtro.costo = costo;
+              costoTotal += costo;
+            }
+          } else if (filtro) {
+            filtro.costo = 0;
+          }
+        });
+        vObj.kit_afinacion.costo_total = parseFloat(costoTotal.toFixed(2));
+
+        // Add dynamic spark plug prices to the kit_afinacion structure
+        const iridiumPriceUnit = getBujiaPrice(vObj.bujia_iridium_ix?.tipo);
+        const platinoPriceUnit = getBujiaPrice(vObj.bujia_g_power?.tipo);
+        const vpowerPriceUnit = getBujiaPrice(vObj.bujia_v_power?.tipo);
+        const stockPriceUnit = getBujiaPrice(vObj.bujia_stock?.tipo);
+
+        vObj.kit_afinacion.bujias = {
+          iridium: {
+            sku: vObj.bujia_iridium_ix?.tipo || null,
+            precio_unitario: iridiumPriceUnit,
+            precio_total: parseFloat((iridiumPriceUnit * numCilindros).toFixed(2))
+          },
+          platino: {
+            sku: vObj.bujia_g_power?.tipo || null,
+            precio_unitario: platinoPriceUnit,
+            precio_total: parseFloat((platinoPriceUnit * numCilindros).toFixed(2))
+          },
+          vpower: {
+            sku: vObj.bujia_v_power?.tipo || null,
+            precio_unitario: vpowerPriceUnit,
+            precio_total: parseFloat((vpowerPriceUnit * numCilindros).toFixed(2))
+          },
+          stock: {
+            sku: vObj.bujia_stock?.tipo || null,
+            precio_unitario: stockPriceUnit,
+            precio_total: parseFloat((stockPriceUnit * numCilindros).toFixed(2))
+          }
+        };
+      }
+      return vObj;
+    });
+  } catch (err) {
+    console.error('Error enriching vehicles with prices:', err.message);
+    return vehiculos.map(v => {
+      const vObj = v.toObject();
+      if (vObj.kit_afinacion) {
+        let costoTotal = 0;
+        const keys = ['filtro_aceite', 'filtro_aire', 'filtro_gasolina', 'filtro_cabina'];
+        keys.forEach(key => {
+          const filtro = vObj.kit_afinacion[key];
+          if (filtro && filtro.sku && filtro.sku !== 'SELLADO') {
+            filtro.costo = 80;
+            costoTotal += 80;
+          } else if (filtro) {
+            filtro.costo = 0;
+          }
+        });
+        vObj.kit_afinacion.costo_total = costoTotal;
+        // Fallback spark plug pricing structures
+        vObj.kit_afinacion.bujias = {
+          iridium: { sku: vObj.bujia_iridium_ix?.tipo || null, precio_unitario: 50, precio_total: 200 },
+          platino: { sku: vObj.bujia_g_power?.tipo || null, precio_unitario: 50, precio_total: 200 },
+          vpower: { sku: vObj.bujia_v_power?.tipo || null, precio_unitario: 50, precio_total: 200 },
+          stock: { sku: vObj.bujia_stock?.tipo || null, precio_unitario: 50, precio_total: 200 }
+        };
+      }
+      return vObj;
+    });
+  }
+}
+
 // GET /api/vehiculos/brands
 router.get('/brands', async (req, res) => {
   try {
@@ -750,14 +1822,15 @@ router.get('/brand/:marca', async (req, res) => {
   try {
     const { marca } = req.params;
     const vehiculos = await Vehiculo.find({ marca: { $regex: new RegExp(`^${marca}$`, 'i') } });
-    res.json(vehiculos);
+    const enriched = await enrichVehiculosWithPrices(vehiculos);
+    res.json(enriched);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
 // GET /api/vehiculos
-router.get('/', async (req, res) => {
+router.get('/', antiscaping, async (req, res) => {
   try {
     const { marca, modelo, anio } = req.query;
     const filter = {};
@@ -771,7 +1844,8 @@ router.get('/', async (req, res) => {
     }
 
     const vehiculos = await Vehiculo.find(filter).sort({ modelo: 1, anio_inicio: 1 });
-    res.json(vehiculos);
+    const enriched = await enrichVehiculosWithPrices(vehiculos);
+    res.json(enriched);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -789,7 +1863,7 @@ router.get('/stats', async (req, res) => {
 });
 
 // POST /api/vehiculos/seed
-router.post('/seed', async (req, res) => {
+router.post('/seed', auth, async (req, res) => {
   try {
     const records = req.body;
     if (!Array.isArray(records)) {
@@ -828,10 +1902,93 @@ router.post('/seed', async (req, res) => {
   }
 });
 
+/**
+ * PUT /api/vehiculos/:id  — PROTEGIDO (JWT requerido)
+ * Permite al administrador actualizar manualmente el kit_afinacion
+ * y las referencias_alternas de un vehículo específico.
+ *
+ * Body puede contener:
+ *   - kit_afinacion: { filtro_aceite, filtro_aire, filtro_gasolina, filtro_cabina }
+ *   - referencias_alternas: { filtro_aceite_alterno, filtro_aire_alterno, ... }
+ */
+router.put('/:id', auth, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { kit_afinacion, referencias_alternas } = req.body;
+
+    // Validate that at least one field to update was provided
+    if (!kit_afinacion && !referencias_alternas) {
+      return res.status(400).json({
+        error: 'Se requiere al menos un campo a actualizar: kit_afinacion o referencias_alternas.'
+      });
+    }
+
+    // Find the vehicle first to ensure it exists
+    const vehiculo = await Vehiculo.findById(id);
+    if (!vehiculo) {
+      return res.status(404).json({ error: 'Vehículo no encontrado.' });
+    }
+
+    // Merge kit_afinacion field-by-field to preserve existing structure
+    if (kit_afinacion) {
+      const FILTRO_KEYS = ['filtro_aceite', 'filtro_aire', 'filtro_gasolina', 'filtro_cabina'];
+      const currentKit = vehiculo.kit_afinacion || {};
+
+      for (const key of FILTRO_KEYS) {
+        if (kit_afinacion[key] !== undefined) {
+          const incoming = kit_afinacion[key];
+          const current  = currentKit[key] || {};
+
+          // Build updated filtro preserving tipo field from original
+          currentKit[key] = {
+            tipo:    current.tipo    || incoming.tipo    || null,
+            marca:   incoming.marca  !== undefined ? (incoming.marca  || null) : (current.marca  || null),
+            sku:     incoming.sku    !== undefined ? (incoming.sku    || null) : (current.sku    || null),
+            hasData: !!(incoming.sku || current.sku),
+            alternos: incoming.alternos !== undefined ? incoming.alternos : (current.alternos || []),
+          };
+        }
+      }
+
+      vehiculo.kit_afinacion = currentKit;
+      vehiculo.markModified('kit_afinacion');
+    }
+
+    // Merge referencias_alternas if provided
+    if (referencias_alternas) {
+      vehiculo.referencias_alternas = {
+        ...(vehiculo.referencias_alternas || {}),
+        ...referencias_alternas,
+      };
+      vehiculo.markModified('referencias_alternas');
+    }
+
+    await vehiculo.save();
+
+    return res.json({
+      ok: true,
+      message: 'Vehículo actualizado correctamente.',
+      vehiculo,
+    });
+  } catch (err) {
+    console.error('Error updating vehiculo:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 router.syncVwFiltersInDatabase        = syncVwFiltersInDatabase;
 router.syncChevroletFiltersInDatabase = syncChevroletFiltersInDatabase;
 router.syncFordFiltersInDatabase      = syncFordFiltersInDatabase;
 router.syncHondaFiltersInDatabase     = syncHondaFiltersInDatabase;
 router.syncToyotaFiltersInDatabase    = syncToyotaFiltersInDatabase;
 router.syncMazdaFiltersInDatabase     = syncMazdaFiltersInDatabase;
+router.syncNissanAireJoe              = syncNissanAireJoe;
+router.syncNissanUnifil             = syncNissanUnifil;
+router.syncVolkswagenUnifil         = syncVolkswagenUnifil;
+router.syncVWAireJoe                  = syncVWAireJoe;
+router.syncChevroletAireJoe           = syncChevroletAireJoe;
+router.syncFordAireJoe                = syncFordAireJoe;
+router.syncHondaAireJoe               = syncHondaAireJoe;
+router.syncToyotaAireJoe              = syncToyotaAireJoe;
+router.syncMazdaAireJoe               = syncMazdaAireJoe;
 module.exports = router;

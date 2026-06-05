@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SearchX, LayoutGrid, Package } from 'lucide-react';
+import { SearchX, LayoutGrid, Package, ShieldAlert } from 'lucide-react';
 import ProductCard from './ProductCard';
 import KitCard     from './KitCard';
 
@@ -26,7 +26,7 @@ const FILTER_CHIPS = [
  *  'kits'   → one KitCard per bujia record (full tune-up dashboard)
  *  'piezas' → one ProductCard per NGK line (original behavior)
  */
-export default function ResultsGrid({ results, activeFilter, onFilterChange, hasSearched, isLoading }) {
+export default function ResultsGrid({ results, activeFilter, onFilterChange, hasSearched, isLoading, error }) {
   const [viewMode, setViewMode] = useState('kits');
 
   /** Expand records into individual line cards (pieza mode).
@@ -100,6 +100,43 @@ export default function ResultsGrid({ results, activeFilter, onFilterChange, has
             100% { opacity: 0.4; }
           }
         `}</style>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section id="results-container" className="results-section">
+        <motion.div 
+          key="error"
+          className="empty-state"
+          role="alert"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.2 }}
+          style={{
+            border: '1px solid rgba(239, 68, 68, 0.25)',
+            background: 'rgba(239, 68, 68, 0.04)',
+            padding: '2.5rem 1.5rem',
+            borderRadius: '16px',
+            maxWidth: '550px',
+            margin: '2rem auto',
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '1rem',
+            boxShadow: '0 4px 24px rgba(0, 0, 0, 0.3)'
+          }}
+        >
+          <ShieldAlert size={48} style={{ color: '#ef4444' }} aria-hidden="true" />
+          <p className="empty-title" style={{ color: '#ef4444', fontSize: '1.25rem', fontWeight: '800', margin: 0 }}>
+            Consulta Limitada
+          </p>
+          <p className="empty-sub" style={{ color: 'var(--text-2)', fontSize: '0.9rem', lineHeight: '1.6', margin: 0 }}>
+            {error}
+          </p>
+        </motion.div>
       </section>
     );
   }

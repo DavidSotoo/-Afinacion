@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  /* Override violet with +AFINACIÓN brand green colors */
+  --color-violet-50: #f1fcf0;
+  --color-violet-100: #e2fad9;
+  --color-violet-200: #c9f5ba;
+  --color-violet-300: #a3eb8a;
+  --color-violet-400: #71dc4f;
+  --color-violet-500: #62a81d; /* primary */
+  --color-violet-600: #4e8717; /* primary-dim */
+  --color-violet-700: #3c6a12;
+  --color-violet-800: #315411;
+  --color-violet-900: #294510;
+  --color-violet-950: #122405;
+}

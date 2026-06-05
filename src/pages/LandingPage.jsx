@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import CartDrawer from '../components/CartDrawer';
-import { CATALOG_STATS } from '../lib/catalog';
-import { STORE_PUBLIC_EMAIL } from '../lib/constants';
+import { STORE_PUBLIC_EMAIL, CATALOG_STATS } from '../lib/constants';
 import { ArrowRight } from 'lucide-react';
 
 const containerVariants = {
@@ -91,14 +90,6 @@ export default function LandingPage() {
         </span>
         <span className="footer-right">
           <span className="footer-tag">MX · Jalisco</span>
-          <a
-            href="/admin"
-            className="admin-link"
-            aria-label="Acceso administración"
-            title="Panel de administración"
-          >
-            ⚙
-          </a>
         </span>
       </footer>
     </>

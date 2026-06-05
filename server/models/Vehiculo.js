@@ -6,10 +6,12 @@ const BujiaSchema = new mongoose.Schema({
 }, { _id: false });
 
 const FiltroSchema = new mongoose.Schema({
+  _id: { type: mongoose.Schema.Types.ObjectId, ref: 'PrecioUnifil' },
   tipo: String,
   sku: String,
   marca: String,
-  hasData: Boolean
+  hasData: Boolean,
+  alternos: { type: mongoose.Schema.Types.Mixed, default: [] }
 }, { _id: false });
 
 const KitAfinacionSchema = new mongoose.Schema({
@@ -34,6 +36,17 @@ const VehiculoSchema = new mongoose.Schema({
   bujia_g_power: BujiaSchema,
   bujia_v_power: BujiaSchema,
   calibracion_mm: Number,
+
+  // Referencias alternas dinámicas (ej: filtro_aire_joe)
+  referencias_alternas: {
+    type: mongoose.Schema.Types.Mixed,
+    default: {}
+  },
+
+  filtros_unifil: {
+    type: mongoose.Schema.Types.Mixed,
+    default: {}
+  },
 
   // El kit_afinacion ya vendrá precalculado desde el seed script
   kit_afinacion: KitAfinacionSchema

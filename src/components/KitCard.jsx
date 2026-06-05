@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useMemo, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   ShoppingBag,
   Zap,
@@ -11,10 +11,11 @@ import {
   ChevronDown,
   CheckCircle,
   MessageCircle,
+  X,
 } from 'lucide-react';
 import { useCart }             from '../context/CartContext';
 import { WHATSAPP_NUMBER, MOTOR_OIL_BRANDS, MOTOR_OIL_VISCOSITIES } from '../lib/constants';
-import { filtroTieneSkuReal, recomendarAceiteDefault }  from '../lib/kitDefaults';
+import { filtroTieneSkuReal, recomendarAceiteDefault }  from '../lib/kitHelpers';
 
 /* ─── Static config ───────────────────────────────────────────────────────── */
 
@@ -67,19 +68,31 @@ const FILTRO_CONFIG = [
  *  4. Footer   — "Cotizar Bujías" (individual) + "Agregar Kit (5 Piezas)" (neon CTA)
  */
 export default function KitCard({ bujia }) {
-  const { addKit, addItem, items } = useCart();
+  const { addKit, addItem, addFiltro, items } = useCart();
 
   // ── Local UI state ────────────────────────────────────────────────────────
   const defaultLine = ALL_LINES.find(l => bujia[LINE_CONFIG[l].field]?.tipo) ?? 'stock';
   const [selectedLine,  setSelectedLine]  = useState(defaultLine);
   const [lineDropOpen,  setLineDropOpen]  = useState(false);
   const [justAdded,     setJustAdded]     = useState(false);
+  const [viewMode,      setViewMode]      = useState('list');
+  const [activeComponent, setActiveComponent] = useState(null);
+  const [hoveredNode,   setHoveredNode]   = useState(null);
+  const [tooltipPos,    setTooltipPos]    = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setTooltipPos({
+      x: e.clientX - rect.left + 15,
+      y: e.clientY - rect.top - 15,
+    });
+  };
 
   // ── Motor Oil state ───────────────────────────────────────────────────────
   const recomendacionAceite = useMemo(() => recomendarAceiteDefault(bujia), [bujia]);
   const [aceiteSelected, setAceiteSelected] = useState(recomendacionAceite);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setAceiteSelected(recomendacionAceite);
   }, [recomendacionAceite]);
 
@@ -101,6 +114,22 @@ export default function KitCard({ bujia }) {
   const piezaInCart = useMemo(() => items.some(i => i.id === piezaCartId), [items, piezaCartId]);
 
   const noBujias = availableLines.length === 0;
+  
+  const totalCost = useMemo(() => {
+    if (!kit) return 0;
+    const filtersCost = kit.costo_total || 340;
+    
+    let plugsCost = 0;
+    if (!noBujias) {
+      const bujiasPriceObj = kit.bujias?.[selectedLine];
+      plugsCost = (bujiasPriceObj && bujiasPriceObj.precio_total !== undefined)
+        ? bujiasPriceObj.precio_total
+        : 200;
+    }
+    
+    const oilCost = aceiteSelected ? 400 : 0;
+    return filtersCost + plugsCost + oilCost;
+  }, [kit, noBujias, selectedLine, aceiteSelected]);
 
   // WhatsApp — bujías individuales only
   const whatsappBujiasUrl = useMemo(() => {
@@ -122,8 +151,6 @@ export default function KitCard({ bujia }) {
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
   }, [bujia, lineConfig, bujiaData]);
 
-  if (!kit) return null;
-
   // ── Handlers ──────────────────────────────────────────────────────────────
   const handleAddKit = () => {
     addKit(bujia, selectedLine, [], aceiteSelected);
@@ -132,6 +159,75 @@ export default function KitCard({ bujia }) {
   };
 
   const handleAddBujia = () => addItem(bujia, selectedLine);
+
+  const NODES = [
+    {
+      id: 'bujias',
+      label: 'Bujías NGK',
+      cx: 200,
+      cy: 85,
+      color: '#facc15',
+      glowColor: 'rgba(250, 204, 21, 0.4)',
+      icon: Zap,
+      sku: bujiaData?.tipo || 'N/D',
+      status: noBujias ? 'No requiere' : 'Confirmada',
+    },
+    {
+      id: 'filtro_aceite',
+      label: 'Filtro de Aceite',
+      cx: 165,
+      cy: 100,
+      color: '#f59e0b',
+      glowColor: 'rgba(245, 158, 11, 0.4)',
+      icon: Droplet,
+      sku: kit?.filtro_aceite?.sku || 'En verificación',
+      status: filtroTieneSkuReal(kit?.filtro_aceite) ? 'Confirmado' : 'Cotizar',
+    },
+    {
+      id: 'filtro_aire',
+      label: 'Filtro de Aire',
+      cx: 235,
+      cy: 75,
+      color: '#38bdf8',
+      glowColor: 'rgba(56, 189, 248, 0.4)',
+      icon: Wind,
+      sku: kit?.filtro_aire?.sku || 'En verificación',
+      status: filtroTieneSkuReal(kit?.filtro_aire) ? 'Confirmado' : 'Cotizar',
+    },
+    {
+      id: 'filtro_cabina',
+      label: 'Filtro de Cabina',
+      cx: 200,
+      cy: 140,
+      color: '#2dd4bf',
+      glowColor: 'rgba(45, 212, 191, 0.4)',
+      icon: AirVent,
+      sku: kit?.filtro_cabina?.sku || 'En verificación',
+      status: filtroTieneSkuReal(kit?.filtro_cabina) ? 'Confirmado' : 'Cotizar',
+    },
+    {
+      id: 'filtro_gasolina',
+      label: 'Filtro de Gasolina',
+      cx: 200,
+      cy: 225,
+      color: '#a78bfa',
+      glowColor: 'rgba(167, 139, 250, 0.4)',
+      icon: Fuel,
+      sku: kit?.filtro_gasolina?.sku || 'En verificación',
+      status: filtroTieneSkuReal(kit?.filtro_gasolina) ? 'Confirmado' : 'Cotizar',
+    },
+    {
+      id: 'aceite',
+      label: 'Aceite de Motor',
+      cx: 175,
+      cy: 75,
+      color: '#eab308',
+      glowColor: 'rgba(234, 179, 8, 0.4)',
+      icon: Droplet,
+      sku: aceiteSelected ? `${aceiteSelected.marca} ${aceiteSelected.viscosidad}` : 'Sin aceite',
+      status: aceiteSelected ? 'Seleccionado' : 'No incluido',
+    }
+  ];
 
   const vehicleLabel = `${bujia.marca} ${bujia.modelo}`;
   const motorLabel   = `${bujia.litros}L ${bujia.cilindros_config}${bujia.motor ? ` (${bujia.motor})` : ''}`;
@@ -154,7 +250,22 @@ export default function KitCard({ bujia }) {
       {/* ── Header ─────────────────────────────────────────────────── */}
       <div className="kit-card-header">
         <div className="kit-card-title-wrap">
-          <span className="kit-pieces-pill" aria-label="5 piezas">5 Piezas</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <span className="kit-pieces-pill" aria-label="5 piezas">{aceiteSelected ? '6 Piezas' : '5 Piezas'}</span>
+            {totalCost > 0 && (
+              <span className="kit-price-pill" style={{
+                background: 'rgba(98, 168, 29, 0.1)',
+                border: '1px solid rgba(98, 168, 29, 0.25)',
+                color: 'var(--primary)',
+                fontSize: '0.7rem',
+                fontWeight: 'bold',
+                padding: '2px 8px',
+                borderRadius: '999px',
+              }}>
+                Est. ${totalCost.toLocaleString('es-MX')}
+              </span>
+            )}
+          </div>
           <h3 className="kit-card-title">{vehicleLabel}</h3>
           <p className="kit-card-meta">
             {bujia.anio_inicio}–{bujia.anio_fin} · {motorLabel}
@@ -169,10 +280,145 @@ export default function KitCard({ bujia }) {
         )}
       </div>
 
-      {/* ── Content grid ────────────────────────────────────────────── */}
-      <div className="kit-sections">
+      {/* ── Visual/List View Header ── */}
+      <div className="blueprint-view-header">
+        <div className="blueprint-view-title">
+          <span className="blueprint-view-pulse" />
+          <span>Afinador Interactivo</span>
+        </div>
+        <div className="blueprint-toggle-btn-group">
+          <button
+            onClick={() => { setViewMode('list'); setActiveComponent(null); }}
+            className={`blueprint-toggle-btn${viewMode === 'list' ? ' active' : ''}`}
+            type="button"
+          >
+            📋 Lista
+          </button>
+          <button
+            onClick={() => { setViewMode('visual'); setActiveComponent(null); }}
+            className={`blueprint-toggle-btn${viewMode === 'visual' ? ' active' : ''}`}
+            type="button"
+          >
+            🛠️ Visual
+          </button>
+        </div>
+      </div>
 
-        {/* ▸ BLOQUE 1 — Bujías NGK ──────────────────────────────── */}
+      {/* ── Content grid ────────────────────────────────────────────── */}
+      <div className="kit-sections" style={{ position: 'relative' }}>
+        {viewMode === 'visual' ? (
+          <div
+            className="blueprint-container"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={() => setHoveredNode(null)}
+          >
+            <svg
+              viewBox="0 0 400 320"
+              className="blueprint-svg"
+              width="100%"
+              height="100%"
+            >
+              <defs>
+                <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255, 255, 255, 0.02)" strokeWidth="1" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)" />
+
+              {/* Chassis outline */}
+              {/* Wheels */}
+              <rect x="95" y="60" width="22" height="40" rx="3" fill="#1e293b" stroke="rgba(255,255,255,0.05)" />
+              <rect x="283" y="60" width="22" height="40" rx="3" fill="#1e293b" stroke="rgba(255,255,255,0.05)" />
+              <rect x="95" y="220" width="22" height="45" rx="3" fill="#1e293b" stroke="rgba(255,255,255,0.05)" />
+              <rect x="283" y="220" width="22" height="45" rx="3" fill="#1e293b" stroke="rgba(255,255,255,0.05)" />
+
+              {/* Main Body */}
+              <path
+                d="M 160 40 L 240 40 C 260 40 275 50 275 70 L 270 110 C 280 120 285 130 285 145 L 285 210 L 280 230 L 275 240 C 275 260 260 270 240 270 L 160 270 C 140 270 125 260 125 240 L 120 230 L 115 210 L 115 145 C 115 130 120 120 130 110 L 125 70 C 125 50 140 40 160 40 Z"
+                fill="none"
+                stroke="rgba(255, 255, 255, 0.08)"
+                strokeWidth="2"
+              />
+
+              {/* Windshield */}
+              <path
+                d="M 135 125 C 145 105, 255 105, 265 125 Z"
+                fill="none"
+                stroke="rgba(255, 255, 255, 0.04)"
+                strokeWidth="1.5"
+              />
+
+              {/* Engine Block */}
+              <rect x="145" y="55" width="110" height="55" rx="6" fill="none" stroke="rgba(255, 255, 255, 0.06)" strokeWidth="1.5" />
+
+              {/* Nodes */}
+              {NODES.map((node) => {
+                const isHovered = hoveredNode?.id === node.id;
+                const isActive = activeComponent?.id === node.id;
+                return (
+                  <g
+                    key={node.id}
+                    className="blueprint-node"
+                    onMouseEnter={() => setHoveredNode(node)}
+                    onMouseLeave={() => setHoveredNode(null)}
+                    onClick={() => setActiveComponent(node)}
+                  >
+                    {/* Pulsating Ring */}
+                    <motion.circle
+                      cx={node.cx}
+                      cy={node.cy}
+                      r={isHovered || isActive ? 14 : 10}
+                      fill="none"
+                      stroke={node.color}
+                      strokeWidth="1.5"
+                      animate={{
+                        scale: isHovered || isActive ? [1, 1.15, 1] : [1, 1.3, 1],
+                        opacity: isHovered || isActive ? [0.6, 0.8, 0.6] : [0.3, 0.7, 0.3],
+                      }}
+                      transition={{
+                        duration: isHovered || isActive ? 1.2 : 2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    />
+                    {/* Core node */}
+                    <circle
+                      cx={node.cx}
+                      cy={node.cy}
+                      r={6}
+                      fill={node.color}
+                      style={{ filter: `drop-shadow(0 0 5px ${node.color})` }}
+                    />
+                    {/* Hover hotspot */}
+                    <circle
+                      cx={node.cx}
+                      cy={node.cy}
+                      r={18}
+                      fill="transparent"
+                    />
+                  </g>
+                );
+              })}
+            </svg>
+
+            {/* Hover Tooltip */}
+            {hoveredNode && (
+              <div
+                className="blueprint-tooltip"
+                style={{
+                  left: tooltipPos.x,
+                  top: tooltipPos.y,
+                }}
+              >
+                <span className="blueprint-tooltip-title">{hoveredNode.label}</span>
+                <span className="blueprint-tooltip-name">{hoveredNode.sku === 'SELLADO' ? 'Filtro Sellado (In-Tank)' : hoveredNode.sku}</span>
+                <span className="blueprint-tooltip-status">{hoveredNode.status}</span>
+              </div>
+            )}
+          </div>
+        ) : (
+          <>
+            {/* ▸ BLOQUE 1 — Bujías NGK ──────────────────────────────── */}
         <section className="kit-section-block kit-section-block--spark" aria-label="Bujías NGK">
           <header className="kit-section-label">
             <Zap size={13} aria-hidden="true" className="kit-section-icon kit-section-icon--spark" />
@@ -248,22 +494,59 @@ export default function KitCard({ bujia }) {
             <span className="kit-section-numbers">② ③ ④ ⑤</span>
           </header>
 
-          <div className="kit-filter-grid">
-            {FILTRO_CONFIG.map(({ key, label, Icon, color }, idx) => {
-              const filtro   = kit[key];
-              const tienesku = filtroTieneSkuReal(filtro);
-              return (
-                <div
-                  key={key}
-                  className={`kit-filter-card kit-filter-card--${color}${tienesku ? ' kit-filter-card--confirmed' : ''}`}
-                  aria-label={`${label}: ${filtro?.tipo}`}
-                >
-                  <div className="kit-filter-card-header">
-                    <Icon size={12} aria-hidden="true" className="kit-filter-icon" />
-                    <span className="kit-filter-name">{label}</span>
-                    <span className="kit-filter-number">{['②','③','④','⑤'][idx]}</span>
-                  </div>
-                  <span className="kit-filter-tipo">{filtro?.tipo}</span>
+          {!kit ? (
+            <div className="kit-alert-oem" style={{ padding: '0.75rem', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '4px', borderLeft: '3px solid var(--text-3)', marginTop: '0.5rem' }}>
+              <span className="kit-alert-text" style={{ fontSize: '0.75rem', color: 'var(--text-2)', lineHeight: '1.4', display: 'block' }}>
+                Filtros en verificación para este modelo.
+              </span>
+            </div>
+          ) : (
+            <div className="kit-filter-grid">
+              {FILTRO_CONFIG.map(({ key, label, Icon, color }, idx) => {
+                const filtro   = kit[key];
+                const tienesku = filtroTieneSkuReal(filtro);
+                const isFiltroInCart = items.some(i => i.id === `filtro-${bujia.id}-${key}`);
+                return (
+                  <div
+                    key={key}
+                    className={`kit-filter-card kit-filter-card--${color}${tienesku ? ' kit-filter-card--confirmed' : ''}`}
+                    aria-label={`${label}: ${filtro?.tipo}`}
+                  >
+                    <div className="kit-filter-card-header">
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', flex: 1 }}>
+                        <Icon size={12} aria-hidden="true" className="kit-filter-icon" />
+                        <span className="kit-filter-name">{label}</span>
+                        {filtro?.sku !== 'SELLADO' && filtro?.costo !== undefined && (
+                          <span style={{ fontSize: '0.65rem', color: 'var(--text-muted, #71717a)', marginLeft: 'auto', marginRight: '4px', fontWeight: 'bold' }}>
+                            ${filtro.costo}
+                          </span>
+                        )}
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                        <span className="kit-filter-number">{['②','③','④','⑤'][idx]}</span>
+                        <button
+                          className="kit-filter-add-btn"
+                          onClick={() => addFiltro(bujia, key)}
+                          disabled={isFiltroInCart}
+                          title="Agregar pieza suelta"
+                          style={{
+                            background: isFiltroInCart ? 'var(--bg-3)' : 'var(--bg-2)',
+                            border: '1px solid var(--border-subtle)',
+                            borderRadius: '4px',
+                            color: isFiltroInCart ? 'var(--primary)' : 'var(--text-2)',
+                            cursor: isFiltroInCart ? 'default' : 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: '2px 4px',
+                          }}
+                        >
+                          <ShoppingBag size={10} />
+                          <span style={{ fontSize: '0.6rem', marginLeft: '2px' }}>{isFiltroInCart ? '✓' : '+'}</span>
+                        </button>
+                      </div>
+                    </div>
+                    <span className="kit-filter-tipo">{filtro?.tipo}</span>
 
                   {filtro?.sku === 'SELLADO' ? (
                     /* ── FILTRO SELLADO (IN-TANK) ── */
@@ -276,29 +559,47 @@ export default function KitCard({ bujia }) {
                   ) : tienesku ? (
                     /* ── SKU REAL ASIGNADO ── */
                     <div className="kit-filter-sku-real">
-                      {filtro.marca && (
-                        <span className="kit-filter-marca">{filtro.marca}</span>
+                      <div className="kit-filter-sku-winner">
+                        {filtro.marca && (
+                          <span className={`kit-filter-marca kit-filter-marca--${(filtro.marca || '').toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'') || 'default'}`}>
+                            {filtro.marca}
+                          </span>
+                        )}
+                        <span className="kit-filter-sku-code">{filtro.sku}</span>
+                      </div>
+                      {filtro.alternos && filtro.alternos.length > 0 && (
+                        <div className="kit-filter-alternos">
+                          {filtro.alternos.map((alt, i) => (
+                             <div key={i} className={`kit-filter-alterno-chip alterno-${(alt.marca || '').toLowerCase()}`} title={`Alternativa compatible de ${alt.marca}`}>
+                               <span className="alterno-marca">Alt. {alt.marca}</span>
+                               <span className="alterno-sku">{alt.sku}</span>
+                             </div>
+                          ))}
+                        </div>
                       )}
-                      <span className="kit-filter-sku-code">{filtro.sku}</span>
                     </div>
                   ) : (
                     /* ── FALLBACK: sin SKU aún ── */
-                    <span
-                      className={`kit-filter-sku-tag${filtro?.hasData ? ' kit-filter-sku-tag--pending' : ' kit-filter-sku-tag--unknown'}`}
-                      aria-label="SKU pendiente de asignación"
-                    >
-                      {filtro?.hasData
-                        ? '📋 Consultar SKU con mostrador'
-                        : 'Código en verificación · Cotizar por WhatsApp'}
-                    </span>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      <span
+                        className={`kit-filter-sku-tag${filtro?.hasData ? ' kit-filter-sku-tag--pending' : ' kit-filter-sku-tag--unknown'}`}
+                        aria-label="SKU pendiente de asignación"
+                      >
+                        {filtro?.hasData
+                          ? '📋 Consultar SKU con mostrador'
+                          : 'Código en verificación · Cotizar por WhatsApp'}
+                      </span>
+                    </div>
                   )}
                 </div>
               );
             })}
           </div>
+          )}
         </section>
 
         {/* ▸ BLOQUE 3 — Aceite de Motor (6ta pieza) ─────────────────────── */}
+        {kit && (
         <section className="kit-section-block kit-section-block--oil" aria-label="Aceite de motor recomendado">
           <header className="kit-section-label">
             <Droplet size={13} aria-hidden="true" className="kit-section-icon kit-section-icon--oil" style={{ color: 'var(--primary)' }} />
@@ -375,6 +676,233 @@ export default function KitCard({ bujia }) {
             </div>
           </div>
         </section>
+        )}
+          </>
+        )}
+
+        {/* ── Visual Blueprint Component Customizer Drawer ── */}
+        <AnimatePresence>
+          {activeComponent && (
+            <motion.div
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 220 }}
+              className="blueprint-drawer"
+            >
+              <div className="blueprint-drawer-header">
+                <span className="blueprint-drawer-title">
+                  {React.createElement(activeComponent.icon, { size: 16, className: "text-violet-400" })}
+                  {activeComponent.label}
+                </span>
+                <button
+                  className="blueprint-drawer-close"
+                  onClick={() => setActiveComponent(null)}
+                  type="button"
+                  aria-label="Cerrar"
+                >
+                  <X size={15} />
+                </button>
+              </div>
+
+              <div className="blueprint-drawer-body">
+                {/* Bujías NGK Controls */}
+                {activeComponent.id === 'bujias' && (
+                  <>
+                    {noBujias ? (
+                      <div className="kit-alert-oem" style={{ padding: '0.75rem', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '4px', borderLeft: '3px solid var(--text-3)' }}>
+                        <span className="kit-alert-text" style={{ fontSize: '0.75rem', color: 'var(--text-2)', lineHeight: '1.4', display: 'block' }}>
+                          Bujías exclusivas de equipo original (Agencia).
+                        </span>
+                      </div>
+                    ) : (
+                      <>
+                        <div className="blueprint-drawer-sku-box">
+                          <span className="blueprint-drawer-label">SKU / Tipo de Bujía</span>
+                          <span className="blueprint-drawer-value" style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap', alignItems: 'center' }}>
+                            <span className="kit-sku-chip">{bujiaData?.tipo}</span>
+                            {bujia.calibracion_mm && <span className="kit-cal-badge">{bujia.calibracion_mm}mm</span>}
+                            {bujiaData?.codigo && <span className="kit-code-badge">#{bujiaData.codigo}</span>}
+                          </span>
+                        </div>
+
+                        {availableLines.length > 1 && (
+                          <div className="oil-field-group">
+                            <label className="oil-field-label">Línea NGK</label>
+                            <select
+                              className="oil-field-select"
+                              value={selectedLine}
+                              onChange={(e) => setSelectedLine(e.target.value)}
+                            >
+                              {availableLines.map(l => (
+                                <option key={l} value={l}>{LINE_CONFIG[l].label}</option>
+                              ))}
+                            </select>
+                          </div>
+                        )}
+
+                        <div className="blueprint-drawer-btn-row">
+                          <button
+                            className={`blueprint-drawer-primary-btn${piezaInCart ? ' blueprint-drawer-primary-btn--added' : ''}`}
+                            onClick={handleAddBujia}
+                            disabled={piezaInCart}
+                            type="button"
+                          >
+                            {piezaInCart ? '✓ Bujías en Carrito' : '+ Agregar Solo Bujías'}
+                          </button>
+                        </div>
+                      </>
+                    )}
+                  </>
+                )}
+
+                {/* Aceite de Motor Controls */}
+                {activeComponent.id === 'aceite' && (
+                  <>
+                    <div className="blueprint-drawer-sku-box">
+                      <span className="blueprint-drawer-label">Aceite Seleccionado</span>
+                      <span className="blueprint-drawer-value">
+                        {aceiteSelected ? `${aceiteSelected.marca} ${aceiteSelected.viscosidad}` : 'Sin aceite'}
+                      </span>
+                      <span className="oil-summary-tech-badge" style={{ marginTop: '0.25rem', width: 'fit-content' }}>
+                        {aceiteSelected?.tecnologia}
+                      </span>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
+                      <div className="oil-field-group">
+                        <label className="oil-field-label">Marca</label>
+                        <select
+                          className="oil-field-select"
+                          value={aceiteSelected?.marca || ''}
+                          onChange={(e) => setAceiteSelected(prev => ({ ...prev, marca: e.target.value }))}
+                        >
+                          {MOTOR_OIL_BRANDS.map(brand => (
+                            <option key={brand.id} value={brand.label}>{brand.label}</option>
+                          ))}
+                        </select>
+                      </div>
+
+                      <div className="oil-field-group">
+                        <label className="oil-field-label">Viscosidad</label>
+                        <select
+                          className="oil-field-select"
+                          value={aceiteSelected?.viscosidad || ''}
+                          onChange={(e) => {
+                            const newVisc = e.target.value;
+                            let newTec = 'Sintético';
+                            if (newVisc === '10W-30' || newVisc === '5W-20') newTec = 'Semisintético';
+                            else if (newVisc === '15W-40' || newVisc === '20W-50') newTec = 'Mineral';
+                            setAceiteSelected(prev => ({ ...prev, viscosidad: newVisc, tecnologia: newTec }));
+                          }}
+                        >
+                          {MOTOR_OIL_VISCOSITIES.map(v => (
+                            <option key={v} value={v}>{v}</option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+
+                    <div className="oil-field-group">
+                      <label className="oil-field-label">Cantidad</label>
+                      <select
+                        className="oil-field-select"
+                        value={aceiteSelected?.litros || 4}
+                        onChange={(e) => {
+                          const l = parseInt(e.target.value, 10);
+                          let pres = 'Garrafa (4 Litros)';
+                          if (l === 5) pres = 'Garrafa (5 Litros)';
+                          else if (l > 5) pres = `Garrafa (4L) + ${l - 4} Botella(s) (1L)`;
+                          setAceiteSelected(prev => ({ ...prev, litros: l, presentacion: pres }));
+                        }}
+                      >
+                        <option value={4}>4 Litros (Estándar)</option>
+                        <option value={5}>5 Litros</option>
+                        <option value={6}>6 Litros</option>
+                        <option value={7}>7 Litros</option>
+                        <option value={8}>8 Litros</option>
+                      </select>
+                    </div>
+                  </>
+                )}
+
+                {/* Filtros de Aceite/Aire/Gasolina/Cabina Controls */}
+                {activeComponent.id.startsWith('filtro_') && (() => {
+                  const filterKey = activeComponent.id;
+                  const filtro = kit?.[filterKey];
+                  const tienesku = filtroTieneSkuReal(filtro);
+                  const isFiltroInCart = items.some(i => i.id === `filtro-${bujia.id}-${filterKey}`);
+
+                  return (
+                    <>
+                      <div className="blueprint-drawer-sku-box">
+                        <span className="blueprint-drawer-label">SKU / Estado del Filtro</span>
+                        {filtro?.sku === 'SELLADO' ? (
+                          <span className="blueprint-drawer-value" style={{ fontSize: '0.75rem', color: 'var(--primary)' }}>
+                            Filtro sellado (In-Tank)
+                          </span>
+                        ) : tienesku ? (
+                          <span className="blueprint-drawer-value">
+                            {filtro.marca && (
+                              <span className={`kit-filter-marca kit-filter-marca--${filtro.marca.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'')}`}>
+                                {filtro.marca}
+                              </span>
+                            )}
+                            <span>{filtro.sku}</span>
+                          </span>
+                        ) : (
+                          <span className="blueprint-drawer-value" style={{ fontSize: '0.72rem', color: '#fbbf24' }}>
+                            {filtro?.hasData ? '📋 Consultar SKU en mostrador' : 'Código en verificación'}
+                          </span>
+                        )}
+                        {filtro?.costo !== undefined && filtro?.sku !== 'SELLADO' && (
+                          <span style={{ fontSize: '0.7rem', color: 'var(--text-2)', marginTop: '0.25rem' }}>
+                            Costo: <strong>${filtro.costo} MXN</strong>
+                          </span>
+                        )}
+                      </div>
+
+                      {filtro?.alternos && filtro.alternos.length > 0 && (
+                        <div className="oil-field-group">
+                          <label className="oil-field-label">Alternativos compatibles</label>
+                          <div className="blueprint-drawer-alternos">
+                            {filtro.alternos.map((alt, idx) => (
+                              <div key={idx} className="blueprint-drawer-alt-chip">
+                                <strong>{alt.marca}:</strong> {alt.sku}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {filtro?.sku !== 'SELLADO' && (
+                        <div className="blueprint-drawer-btn-row">
+                          <button
+                            className={`blueprint-drawer-primary-btn${isFiltroInCart ? ' blueprint-drawer-primary-btn--added' : ''}`}
+                            onClick={() => addFiltro(bujia, filterKey)}
+                            disabled={isFiltroInCart}
+                            type="button"
+                          >
+                            {isFiltroInCart ? '✓ Ya en Carrito' : '+ Agregar Solo Filtro'}
+                          </button>
+                        </div>
+                      )}
+                    </>
+                  );
+                })()}
+              </div>
+
+              <button
+                className="blueprint-drawer-secondary-btn"
+                style={{ width: '100%', marginTop: '0.6rem' }}
+                onClick={() => setActiveComponent(null)}
+                type="button"
+              >
+                Volver al Plano
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
       </div>{/* end kit-sections */}
 
@@ -403,36 +931,40 @@ export default function KitCard({ bujia }) {
                 aria-label={piezaInCart ? 'Bujías ya en carrito' : `Agregar bujías ${lineConfig.label} al carrito`}
                 aria-pressed={piezaInCart}
               >
-                {piezaInCart ? '✓ Bujías' : '+ Solo Bujías'}
+                {piezaInCart ? '✓ Bujías' : '+ Agregar Solo Bujías'}
               </button>
-              <button
-                className={`btn-cart-pieza${kitInCart ? ' btn-cart-pieza--added' : ''}`}
-                style={{ marginLeft: 0 }}
-                onClick={() => !kitInCart && addKit(bujia, selectedLine, ['bujias'])}
-                disabled={kitInCart}
-                aria-label={kitInCart ? 'Filtros ya en carrito' : 'Agregar solo filtros al carrito'}
-                aria-pressed={kitInCart}
-              >
-                <Filter size={13} /> {kitInCart ? 'Agregados' : '+ Solo Filtros'}
-              </button>
+              {kit && (
+                <button
+                  className={`btn-cart-pieza${kitInCart ? ' btn-cart-pieza--added' : ''}`}
+                  style={{ marginLeft: 0 }}
+                  onClick={() => !kitInCart && addKit(bujia, selectedLine, ['bujias'])}
+                  disabled={kitInCart}
+                  aria-label={kitInCart ? 'Filtros ya en carrito' : 'Agregar solo filtros al carrito'}
+                  aria-pressed={kitInCart}
+                >
+                  <Filter size={13} /> {kitInCart ? 'Agregados' : '+ Solo Filtros'}
+                </button>
+              )}
             </div>
           </div>
         )}
 
         {/* PRIMARY — Agregar Kit Completo 6 Piezas */}
-        <button
-          className={`btn-add-kit-full${kitInCart || justAdded ? ' btn-add-kit-full--done' : ''}`}
-          onClick={handleAddKit}
-          disabled={kitInCart}
-          aria-label={kitInCart ? 'Kit completo ya en carrito' : 'Agregar Kit de Afinación Completo (6 Piezas) al carrito'}
-        >
-          <ShoppingBag size={17} aria-hidden="true" />
-          {justAdded
-            ? '¡Kit Agregado! ✓'
-            : kitInCart
-            ? 'Kit en Carrito ✓'
-            : 'Agregar Kit de Afinación Completo (6 Piezas)'}
-        </button>
+        {kit && (
+          <button
+            className={`btn-add-kit-full${kitInCart || justAdded ? ' btn-add-kit-full--done' : ''}`}
+            onClick={handleAddKit}
+            disabled={kitInCart}
+            aria-label={kitInCart ? 'Kit completo ya en carrito' : 'Agregar Kit de Afinación Completo (6 Piezas) al carrito'}
+          >
+            <ShoppingBag size={17} aria-hidden="true" />
+            {justAdded
+              ? '¡Kit Agregado! ✓'
+              : kitInCart
+              ? 'Kit en Carrito ✓'
+              : 'Agregar Kit de Afinación Completo (6 Piezas)'}
+          </button>
+        )}
 
       </div>
     </motion.article>

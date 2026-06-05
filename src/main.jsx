@@ -6,7 +6,7 @@ import { CartProvider } from './context/CartContext.jsx'
 
 const LandingPage = lazy(() => import('./pages/LandingPage.jsx'))
 const App         = lazy(() => import('./App.jsx'))
-const AdminPage   = lazy(() => import('./pages/AdminPage.jsx'))
+const Checkout    = lazy(() => import('./pages/Checkout.jsx'))
 
 // Fallback loader for Suspense
 const LoadingFallback = () => (
@@ -23,7 +23,7 @@ createRoot(document.getElementById('root')).render(
           <Routes>
             <Route path="/"          element={<LandingPage />} />
             <Route path="/catalogo"  element={<App />} />
-            <Route path="/admin"     element={<AdminPage />} />
+            <Route path="/checkout"  element={<Checkout />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

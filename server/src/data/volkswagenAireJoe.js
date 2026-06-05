@@ -1,0 +1,381 @@
+module.exports = [
+  {
+    "modelo": "SEDAN / CARIBE / SAFARI / RABBIT",
+    "motor": "1.6L",
+    "anio": "1973-2004",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JAVW2"
+    }
+  },
+  {
+    "modelo": "COMBI / PANEL / BRASILIA",
+    "motor": "1.6L ENFRIADO POR AIRE",
+    "anio": "ALL",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JAVW4"
+    }
+  },
+  {
+    "modelo": "POINTER SEDAN / WAGON / PICK UP",
+    "motor": "1.8L Y 2.0L",
+    "anio": "1997-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JAVW5"
+    }
+  },
+  {
+    "modelo": "BORA / JETTA / GOLF GTI",
+    "motor": "1.8L DIESEL TURBO 16V",
+    "anio": "2005-2010",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JAVW6"
+    }
+  },
+  {
+    "modelo": "FOX / SCIROCCO",
+    "motor": "4 CIL. 1.6L Y 2.0L",
+    "anio": "2015-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JAVW8"
+    }
+  },
+  {
+    "modelo": "CARIBE / ATLANTIC / GOLF / JETTA",
+    "motor": "1.6L, 1.7L Y 1.8L",
+    "anio": "1981-1997",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JAVW10"
+    }
+  },
+  {
+    "modelo": "CORSAR / VARIANT WAGON",
+    "motor": "1.8L",
+    "anio": "1984-1988",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JAVW22"
+    }
+  },
+  {
+    "modelo": "COMBI / PANEL / CARAVELLE",
+    "motor": "1.8L",
+    "anio": "1988-2002",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA49"
+    }
+  },
+  {
+    "modelo": "BORA GLI / CADDY / CLASICO GLI / JETTA / PASSAT",
+    "motor": "1.2L Y 2.0L TURBO",
+    "anio": "2014-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA309"
+    }
+  },
+  {
+    "modelo": "DERBY",
+    "motor": "1.6L Y 1.8L",
+    "anio": "2006-2009",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA1296"
+    }
+  },
+  {
+    "modelo": "BEETLE / BORA / CC / EOS / GLI / GOLF GTI / JETTA / PASSAT / TIGUAN",
+    "motor": "4 CIL. 1.8L Y 2.0L",
+    "anio": "2009-2010",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA1392"
+    }
+  },
+  {
+    "modelo": "GOL / SAVEIRO",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2008-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA2295"
+    }
+  },
+  {
+    "modelo": "POLO",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2006-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA2962"
+    }
+  },
+  {
+    "modelo": "CROSSFOX / LUPO / POLO / SPORT VAN",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2004-2017",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA2998"
+    }
+  },
+  {
+    "modelo": "DERBY / DERBY VAN",
+    "motor": "1.8L Y 2.0L",
+    "anio": "1995-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA4116"
+    }
+  },
+  {
+    "modelo": "CROSSFOX / CADDY / VIRTUS",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2017-2022",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA4129"
+    }
+  },
+  {
+    "modelo": "POLO / GTI",
+    "motor": "4 CIL. 1.4L Y 1.6L",
+    "anio": "1998-2005",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA5898"
+    }
+  },
+  {
+    "modelo": "AMAROK",
+    "motor": "DIESEL 4 CIL. 2.0L",
+    "anio": "2010-2021",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6002"
+    }
+  },
+  {
+    "modelo": "GOLF GTI / JETTA / PASSAT / CABRIOLET",
+    "motor": "VR6 6 CIL. 2.0L, 2.2L Y 2.8L",
+    "anio": "1992-1998",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6545"
+    }
+  },
+  {
+    "modelo": "EUROVAN",
+    "motor": "DIESEL 5 Y 6 CIL. 2.4L Y 2.5L",
+    "anio": "1991-1996",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7691"
+    }
+  },
+  {
+    "modelo": "CROSSFOX",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2017-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7764"
+    }
+  },
+  {
+    "modelo": "PASSAT / CABRIOLET",
+    "motor": "2.8L, 4.4L Y 5.0L 24V Y 32V",
+    "anio": "1997-2005",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8080"
+    }
+  },
+  {
+    "modelo": "EUROVAN",
+    "motor": "5 Y 6 CIL. 2.5L Y 2.8L",
+    "anio": "2000-2004",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8169"
+    }
+  },
+  {
+    "modelo": "JETTA / GOLF A4 / BEETLE COUPE",
+    "motor": "4 Y 6 CIL. 1.8L, 1.9L Y 2.0L",
+    "anio": "2000-2014",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8602"
+    }
+  },
+  {
+    "modelo": "EUROVAN",
+    "motor": "DIESEL 4 CIL. 1.9L",
+    "anio": "2003-2006",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8640"
+    }
+  },
+  {
+    "modelo": "VENTO / VENTO TDI",
+    "motor": "4 CIL. 1.6L TURBO DIESEL",
+    "anio": "2014-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9192"
+    }
+  },
+  {
+    "modelo": "GOLF / JETTA A3 / CABRIO / PASSAT",
+    "motor": "4 CIL. 1.8L Y 2.0L",
+    "anio": "1994-2003",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9620"
+    }
+  },
+  {
+    "modelo": "BORA",
+    "motor": "5 CIL. 2.5L 20V",
+    "anio": "2006-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10085"
+    }
+  },
+  {
+    "modelo": "TOUAREG / CAYENNE",
+    "motor": "6 Y 8 CIL. 3.2L Y 4.2L",
+    "anio": "2004-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10236"
+    }
+  },
+  {
+    "modelo": "JETTA GLI TURBO / PASSAT GTI TURBO",
+    "motor": "4 CIL. 2.0L 16V",
+    "anio": "2006-2013",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10256"
+    }
+  },
+  {
+    "modelo": "CC / PASSAT",
+    "motor": "4 Y 6 CIL. 3.6L",
+    "anio": "2006-2017",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10328"
+    }
+  },
+  {
+    "modelo": "CRAFTER",
+    "motor": "DIESEL 5 CIL. 2.5L",
+    "anio": "2008>",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10330"
+    }
+  },
+  {
+    "modelo": "CROSS SPORT / TERAMONT",
+    "motor": "4 CIL. 2.0L Y V6 3.6L",
+    "anio": "2019-2022",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10778"
+    }
+  },
+  {
+    "modelo": "POLO / VENTO TDI",
+    "motor": "4 CIL. 1.2L TURBO / 1.6L TURBO DIESEL",
+    "anio": "2009-2016",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10822"
+    }
+  },
+  {
+    "modelo": "ROUTAN",
+    "motor": "6 CIL. 3.6L",
+    "anio": "2011-2012",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11050"
+    }
+  },
+  {
+    "modelo": "UP",
+    "motor": "3 CIL. 1.0L",
+    "anio": "2016-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11458"
+    }
+  },
+  {
+    "modelo": "CADDY / GOLF / JETTA / TAOS / TIGUAN",
+    "motor": "4 CIL. 1.4L, 1.6L Y 2.0L TURBO",
+    "anio": "2013-2022",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11503"
+    }
+  },
+  {
+    "modelo": "GOLF",
+    "motor": "4 CIL. 1.8L",
+    "anio": "2015-2017",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11876"
+    }
+  },
+  {
+    "modelo": "CADDY / GOLF / POLO",
+    "motor": "4 CIL. 1.0L",
+    "anio": "2015-2019",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12017"
+    }
+  },
+  {
+    "modelo": "CRAFTER TDI",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2019-2024",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12563"
+    }
+  },
+  {
+    "modelo": "POLO",
+    "motor": "4 CIL. 1.8L TURBO",
+    "anio": "2015-2017",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12962"
+    }
+  },
+  {
+    "modelo": "DELIVERY (CUMMINS ISF)",
+    "motor": "2.8L Y 3.8L",
+    "anio": "2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JAA37480"
+    }
+  }
+]
+;

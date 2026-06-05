@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search, RefreshCw } from 'lucide-react';
 
 export default function YMMSearch({ onSearch, onReset }) {

@@ -4,7 +4,6 @@ import YMMSearch   from './components/YMMSearch';
 import ResultsGrid from './components/ResultsGrid';
 import StoreSection from './components/StoreSection';
 import CartDrawer  from './components/CartDrawer';
-import { filterCatalog } from './lib/catalog';
 import { STORE_PUBLIC_EMAIL } from './lib/constants';
 
 /**
@@ -23,6 +22,7 @@ function App() {
   const [activeFilter,    setActiveFilter]    = useState('all');
   const [hasSearched,     setHasSearched]     = useState(false);
   const [isLoadingResults, setIsLoadingResults] = useState(false);
+  const [searchError,     setSearchError]     = useState(null);
 
   // Smooth scroll to store section if #tienda is in the URL hash
   useEffect(() => {
@@ -42,6 +42,7 @@ function App() {
   const handleSearch = useCallback((params) => {
     setIsLoadingResults(true);
     setHasSearched(true);
+    setSearchError(null);
 
     const queryParams = new URLSearchParams();
     if (params.marca) queryParams.append('marca', params.marca);
@@ -49,8 +50,14 @@ function App() {
     if (params.anio) queryParams.append('anio', params.anio);
 
     fetch(`http://localhost:5000/api/vehiculos?${queryParams.toString()}`)
-      .then(res => {
-        if (!res.ok) throw new Error('Network response was not ok');
+      .then(async res => {
+        if (!res.ok) {
+          if (res.status === 429) {
+            const errData = await res.json();
+            throw new Error(errData.error || 'Actividad inusual detectada.');
+          }
+          throw new Error('Network response was not ok');
+        }
         return res.json();
       })
       .then(data => {
@@ -59,9 +66,11 @@ function App() {
         setFilteredResults(mappedData);
         setActiveFilter(params.linea || 'all');
         setIsLoadingResults(false);
+        setSearchError(null);
       })
       .catch(err => {
         console.error("Error fetching filtered catalog:", err);
+        setSearchError(err.message);
         setFilteredResults([]);
         setIsLoadingResults(false);
       });
@@ -73,6 +82,7 @@ function App() {
     setActiveFilter('all');
     setHasSearched(false);
     setIsLoadingResults(false);
+    setSearchError(null);
   }, []);
 
   /** Switch the active NGK line filter chip without re-fetching. */
@@ -102,6 +112,7 @@ function App() {
           onFilterChange={handleFilterChange}
           hasSearched={hasSearched}
           isLoading={isLoadingResults}
+          error={searchError}
         />
       </main>
 
@@ -120,14 +131,6 @@ function App() {
         </span>
         <span className="footer-right">
           <span className="footer-tag">MX · Jalisco</span>
-          <a
-            href="/admin"
-            className="admin-link"
-            aria-label="Acceso administración"
-            title="Panel de administración"
-          >
-            ⚙
-          </a>
         </span>
       </footer>
     </>

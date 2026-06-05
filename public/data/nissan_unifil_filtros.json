@@ -1,0 +1,1366 @@
+[
+  {
+    "modelo": "200SX",
+    "motor": "4 CIL. 2.0L",
+    "anio": "1995-1998",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-27",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "350Z",
+    "motor": "V6 3.5L",
+    "anio": "2003-2007",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "ALMERA",
+    "motor": "4 CIL. 1.8L",
+    "anio": "2001-2003",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-0260",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "ALMERA",
+    "motor": "4 CIL. 1.8L",
+    "anio": "2004-2005",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-0037",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "ALTIMA",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2019-2024",
+    "filtros": {
+      "filtro_aire": "FA-6CB0A",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-12552"
+    }
+  },
+  {
+    "modelo": "ALTIMA",
+    "motor": "4 CIL. 2.4L",
+    "anio": "1998-2001",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-2725"
+    }
+  },
+  {
+    "modelo": "ALTIMA",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2002-2006",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10140"
+    }
+  },
+  {
+    "modelo": "ALTIMA",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2007-2012",
+    "filtros": {
+      "filtro_aire": "FA-10349",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11173"
+    }
+  },
+  {
+    "modelo": "ALTIMA",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2014-2018",
+    "filtros": {
+      "filtro_aire": "FA-11450",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11776"
+    }
+  },
+  {
+    "modelo": "ALTIMA",
+    "motor": "V6 3.5L",
+    "anio": "2002-2006",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10140"
+    }
+  },
+  {
+    "modelo": "ALTIMA",
+    "motor": "V6 3.5L",
+    "anio": "2002-2018",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "ALTIMA",
+    "motor": "V6 3.5L",
+    "anio": "2007-2012",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11173"
+    }
+  },
+  {
+    "modelo": "APRIO",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2008-2010",
+    "filtros": {
+      "filtro_aire": null,
+      "filtro_aceite": "FO-291",
+      "filtro_gasolina": "FG-190",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "ARMADA",
+    "motor": "V8 5.6L",
+    "anio": "2005-2015",
+    "filtros": {
+      "filtro_aire": "FA-7440",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "ARMADA",
+    "motor": "V8 5.6L",
+    "anio": "2017-2024",
+    "filtros": {
+      "filtro_aire": null,
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "CABSTAR",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2008-2009",
+    "filtros": {
+      "filtro_aire": "FA-10241",
+      "filtro_aceite": "FO-16",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "CABSTAR",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2011",
+    "filtros": {
+      "filtro_aire": "FA-10241",
+      "filtro_aceite": "FO-16",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "CABSTAR E",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2008-2009",
+    "filtros": {
+      "filtro_aire": "FA-10241",
+      "filtro_aceite": "FO-16",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "CUBE",
+    "motor": "4 CIL. 1.8L",
+    "anio": "2009-2014",
+    "filtros": {
+      "filtro_aire": "FA-10234",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11177"
+    }
+  },
+  {
+    "modelo": "FRONTIER",
+    "motor": "4 CIL. 2.4L",
+    "anio": "1998-2004",
+    "filtros": {
+      "filtro_aire": "FA-6850",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-27",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "FRONTIER",
+    "motor": "4 CIL. 2.4L",
+    "anio": "2006-2008",
+    "filtros": {
+      "filtro_aire": "FA-6850",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-27",
+      "filtro_cabina": "FC-10553"
+    }
+  },
+  {
+    "modelo": "FRONTIER",
+    "motor": "4 CIL. 2.4L",
+    "anio": "2011-2015",
+    "filtros": {
+      "filtro_aire": "FA-6850",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-0037",
+      "filtro_cabina": "FC-10553"
+    }
+  },
+  {
+    "modelo": "FRONTIER",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2005-2019",
+    "filtros": {
+      "filtro_aire": "FA-10254",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10553"
+    }
+  },
+  {
+    "modelo": "FRONTIER",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2021-2023",
+    "filtros": {
+      "filtro_aire": "FA-21001",
+      "filtro_aceite": null,
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10140"
+    }
+  },
+  {
+    "modelo": "FRONTIER",
+    "motor": "V6 3.3L",
+    "anio": "1999-2004",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-27",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "FRONTIER",
+    "motor": "V6 3.8L",
+    "anio": "2020-2021",
+    "filtros": {
+      "filtro_aire": null,
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10553"
+    }
+  },
+  {
+    "modelo": "FRONTIER",
+    "motor": "V3 3.8L",
+    "anio": "2022-2024",
+    "filtros": {
+      "filtro_aire": null,
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "FRONTIER",
+    "motor": "V6 4.0L",
+    "anio": "2005-2020",
+    "filtros": {
+      "filtro_aire": "FA-7440",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10553"
+    }
+  },
+  {
+    "modelo": "GTR",
+    "motor": "V6 3.8L",
+    "anio": "2009-2021",
+    "filtros": {
+      "filtro_aire": null,
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "GTR",
+    "motor": "V6 3.8L",
+    "anio": "2023-2024",
+    "filtros": {
+      "filtro_aire": null,
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "JUKE",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2011-2017",
+    "filtros": {
+      "filtro_aire": "FA-6900",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11177"
+    }
+  },
+  {
+    "modelo": "KICKS",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2017-2024",
+    "filtros": {
+      "filtro_aire": "FA-5RA0A",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-12552"
+    }
+  },
+  {
+    "modelo": "LUCINO",
+    "motor": "4 CIL. 2.0L",
+    "anio": "1996-1999",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-27",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "LUCINO",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2000",
+    "filtros": {
+      "filtro_aire": "FA-6900",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-0037",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "MARCH",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2012-2023",
+    "filtros": {
+      "filtro_aire": "FA-11215",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-12237"
+    }
+  },
+  {
+    "modelo": "MAXIMA",
+    "motor": "V6 3.0L",
+    "anio": "1995-1999",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-27",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "MAXIMA",
+    "motor": "V6 3.0L",
+    "anio": "2000-2001",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "MAXIMA",
+    "motor": "V6 3.5L",
+    "anio": "2002-2023",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "MAXIMA",
+    "motor": "V6 3.5L",
+    "anio": "2004-2008",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10140"
+    }
+  },
+  {
+    "modelo": "MAXIMA",
+    "motor": "V6 3.5L",
+    "anio": "2009-2015",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11173"
+    }
+  },
+  {
+    "modelo": "MICRA",
+    "motor": "4 CIL. 1.4L",
+    "anio": "2005-2007",
+    "filtros": {
+      "filtro_aire": "FA-315",
+      "filtro_aceite": "FO-4386",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "MICRA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2015-2019",
+    "filtros": {
+      "filtro_aire": "FA-11215",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-12237"
+    }
+  },
+  {
+    "modelo": "MURANO",
+    "motor": "V6 3.5L",
+    "anio": "2003-2008",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10140"
+    }
+  },
+  {
+    "modelo": "MURANO",
+    "motor": "V6 3.5L",
+    "anio": "2009-2014",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11173"
+    }
+  },
+  {
+    "modelo": "NOTE",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2014-2019",
+    "filtros": {
+      "filtro_aire": "FA-11215",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-12237"
+    }
+  },
+  {
+    "modelo": "NP300",
+    "motor": "4 CIL. 2.4L",
+    "anio": "2009-2013",
+    "filtros": {
+      "filtro_aire": "FA-6850",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "NP300",
+    "motor": "4 CIL. 2.4L",
+    "anio": "2014-2015",
+    "filtros": {
+      "filtro_aire": "FA-6850",
+      "filtro_aceite": null,
+      "filtro_gasolina": "FG-0037",
+      "filtro_cabina": "FC-10553"
+    }
+  },
+  {
+    "modelo": "NP300",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2009-2010",
+    "filtros": {
+      "filtro_aire": "FA-6850",
+      "filtro_aceite": "FO-16",
+      "filtro_gasolina": "FD-272",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "NP300",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2011-2013",
+    "filtros": {
+      "filtro_aire": "FA-36",
+      "filtro_aceite": "FO-9432",
+      "filtro_gasolina": "FD-272",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "NP300",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2014-2015",
+    "filtros": {
+      "filtro_aire": "FA-21001",
+      "filtro_aceite": null,
+      "filtro_gasolina": "FD-272",
+      "filtro_cabina": "FC-10553"
+    }
+  },
+  {
+    "modelo": "NP300",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2016-2023",
+    "filtros": {
+      "filtro_aire": "FA-21001",
+      "filtro_aceite": null,
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10140"
+    }
+  },
+  {
+    "modelo": "NP300 FRONITER",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2016-2020",
+    "filtros": {
+      "filtro_aire": "FA-21001",
+      "filtro_aceite": null,
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10140"
+    }
+  },
+  {
+    "modelo": "NP300 FRONITER",
+    "motor": "4 CIL. 2.5L DIESEL",
+    "anio": "2016-2020",
+    "filtros": {
+      "filtro_aire": null,
+      "filtro_aceite": "FO-16",
+      "filtro_gasolina": "FD-18050",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "NV1500",
+    "motor": "V6 4.0L",
+    "anio": "2012-2020",
+    "filtros": {
+      "filtro_aire": "FA-7440",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "NV200",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2013-2016",
+    "filtros": {
+      "filtro_aire": "FA-10234",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "NV200",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2017-2018",
+    "filtros": {
+      "filtro_aire": "FA-10234",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-12237"
+    }
+  },
+  {
+    "modelo": "NV200",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2019",
+    "filtros": {
+      "filtro_aire": "FA-10234",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "NV200",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2020-2021",
+    "filtros": {
+      "filtro_aire": "FA-10234",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-12237"
+    }
+  },
+  {
+    "modelo": "NV2500",
+    "motor": "V6 4.0L",
+    "anio": "2012-2021",
+    "filtros": {
+      "filtro_aire": "FA-7440",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "NV2500",
+    "motor": "V8 5.6L",
+    "anio": "2012-2017",
+    "filtros": {
+      "filtro_aire": "FA-7440",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "NV2500",
+    "motor": "V8 5.6L",
+    "anio": "2012-2021",
+    "filtros": {
+      "filtro_aire": null,
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "NV350 URVAN",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2014-2022",
+    "filtros": {
+      "filtro_aire": "FA-16",
+      "filtro_aceite": null,
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "NV350 URVAN",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2021-2023",
+    "filtros": {
+      "filtro_aire": "FA-16",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "NV3500",
+    "motor": "V6 4.0L",
+    "anio": "2012-2021",
+    "filtros": {
+      "filtro_aire": "FA-7440",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "NV3500",
+    "motor": "V8 5.6L",
+    "anio": "2012-2017",
+    "filtros": {
+      "filtro_aire": "FA-7440",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "NV3500",
+    "motor": "V8 5.6L",
+    "anio": "2012-2021",
+    "filtros": {
+      "filtro_aire": null,
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "PATHFINDER",
+    "motor": "V6 3.3L",
+    "anio": "1996-1999",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-27",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "PATHFINDER",
+    "motor": "V6 3.3L",
+    "anio": "2000",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-27",
+      "filtro_cabina": "FC-2725"
+    }
+  },
+  {
+    "modelo": "PATHFINDER",
+    "motor": "V6 3.5L",
+    "anio": "2001-2004",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-27",
+      "filtro_cabina": "FC-2725"
+    }
+  },
+  {
+    "modelo": "PATHFINDER",
+    "motor": "V6 3.5L",
+    "anio": "2013-2021",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "PATHFINDER",
+    "motor": "V6 4.0L",
+    "anio": "2005-2012",
+    "filtros": {
+      "filtro_aire": "FA-7440",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10553"
+    }
+  },
+  {
+    "modelo": "PATHFINDER",
+    "motor": "V8 5.6L",
+    "anio": "2008-2012",
+    "filtros": {
+      "filtro_aire": "FA-7440",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10553"
+    }
+  },
+  {
+    "modelo": "PATHFINDER ARMADA",
+    "motor": "V8 5.6L",
+    "anio": "2004",
+    "filtros": {
+      "filtro_aire": "FA-7440",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "PICKUP",
+    "motor": "4 CIL. 2.4L",
+    "anio": "2004-2010",
+    "filtros": {
+      "filtro_aire": "FA-6850",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "PICKUP",
+    "motor": "4 CIL. 2.4L",
+    "anio": "2005-2009",
+    "filtros": {
+      "filtro_aire": "FA-6850",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-0260",
+      "filtro_cabina": "FC-10553"
+    }
+  },
+  {
+    "modelo": "PICKUP",
+    "motor": "4 CIL. 2.4L",
+    "anio": "2010",
+    "filtros": {
+      "filtro_aire": "FA-6850",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "PICKUP",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2010",
+    "filtros": {
+      "filtro_aire": "FA-36",
+      "filtro_aceite": "FO-8",
+      "filtro_gasolina": "FD-272",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "PLATINA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2002-2010",
+    "filtros": {
+      "filtro_aire": "FA-291",
+      "filtro_aceite": "FO-291",
+      "filtro_gasolina": "FG-190",
+      "filtro_cabina": "FC-8838"
+    }
+  },
+  {
+    "modelo": "QASHQAI",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2017-2023",
+    "filtros": {
+      "filtro_aire": "FA-11858",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11854"
+    }
+  },
+  {
+    "modelo": "QUEST",
+    "motor": "V6 3.5L",
+    "anio": "2004-2009",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "QUEST",
+    "motor": "V6 3.5L",
+    "anio": "2011-2017",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11173"
+    }
+  },
+  {
+    "modelo": "ROGUE",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2017-2019",
+    "filtros": {
+      "filtro_aire": "FA-11858",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11854"
+    }
+  },
+  {
+    "modelo": "ROGUE",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2008-2013",
+    "filtros": {
+      "filtro_aire": "FA-6900",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10550"
+    }
+  },
+  {
+    "modelo": "ROGUE",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2014-2020",
+    "filtros": {
+      "filtro_aire": "FA-11858",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11854"
+    }
+  },
+  {
+    "modelo": "ROGUE SELECT",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2014-2015",
+    "filtros": {
+      "filtro_aire": "FA-6900",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10550"
+    }
+  },
+  {
+    "modelo": "ROGUE SPORT",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2017-2022",
+    "filtros": {
+      "filtro_aire": "FA-11858",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11854"
+    }
+  },
+  {
+    "modelo": "SENTRA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2017-2019",
+    "filtros": {
+      "filtro_aire": "FA-6900",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "SENTRA",
+    "motor": "4 CIL. 1.8L",
+    "anio": "2000-2006",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10140"
+    }
+  },
+  {
+    "modelo": "SENTRA",
+    "motor": "4 CIL. 1.8L",
+    "anio": "2013-2019",
+    "filtros": {
+      "filtro_aire": "FA-6900",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11177"
+    }
+  },
+  {
+    "modelo": "SENTRA",
+    "motor": "4 CIL. 2.0L",
+    "anio": "1996-1998",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "SENTRA",
+    "motor": "4 CIL. 2.0L",
+    "anio": "1998-1999",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-27",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "SENTRA",
+    "motor": "4 CIL. 2.0L",
+    "anio": "1999",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-27",
+      "filtro_cabina": "FC-10550"
+    }
+  },
+  {
+    "modelo": "SENTRA",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2000-2001",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-0037",
+      "filtro_cabina": "FC-10140"
+    }
+  },
+  {
+    "modelo": "SENTRA",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2007-2012",
+    "filtros": {
+      "filtro_aire": "FA-10436",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10550"
+    }
+  },
+  {
+    "modelo": "SENTRA",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2020-2025",
+    "filtros": {
+      "filtro_aire": "FA-99575",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-12522"
+    }
+  },
+  {
+    "modelo": "SENTRA",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2002-2006",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10140"
+    }
+  },
+  {
+    "modelo": "SENTRA",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2007-2012",
+    "filtros": {
+      "filtro_aire": "FA-6900",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10550"
+    }
+  },
+  {
+    "modelo": "TIDA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2013-2014",
+    "filtros": {
+      "filtro_aire": "FA-10234",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10545"
+    }
+  },
+  {
+    "modelo": "TIDA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2015",
+    "filtros": {
+      "filtro_aire": "FA-10234",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-0260",
+      "filtro_cabina": "FC-10545"
+    }
+  },
+  {
+    "modelo": "TIDA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2016-2018",
+    "filtros": {
+      "filtro_aire": "FA-11215",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10545"
+    }
+  },
+  {
+    "modelo": "TIDA",
+    "motor": "4 CIL. 1.8L",
+    "anio": "2007-2018",
+    "filtros": {
+      "filtro_aire": "FA-10234",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10545"
+    }
+  },
+  {
+    "modelo": "TITAN",
+    "motor": "V8 5.6L",
+    "anio": "2004-2015",
+    "filtros": {
+      "filtro_aire": "FA-7440",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "TITAN",
+    "motor": "V8 5.6L",
+    "anio": "2017-2024",
+    "filtros": {
+      "filtro_aire": null,
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "URVAN",
+    "motor": "4 CIL. 2.4L",
+    "anio": "2005-2007",
+    "filtros": {
+      "filtro_aire": "FA-34",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "URVAN",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2008-2013",
+    "filtros": {
+      "filtro_aire": "FA-16",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "URVAN",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2012-2013",
+    "filtros": {
+      "filtro_aire": "FA-16",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "URVAN",
+    "motor": "4 CIL. 3.0L",
+    "anio": "2008-2011",
+    "filtros": {
+      "filtro_aire": "FA-16",
+      "filtro_aceite": "FO-5208",
+      "filtro_gasolina": "FD-272",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "URVAN",
+    "motor": "4 CIL. 3.0L",
+    "anio": "2012-2013",
+    "filtros": {
+      "filtro_aire": "FA-16",
+      "filtro_aceite": "FO-2092",
+      "filtro_gasolina": "FD-272",
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "V-DRIVE",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2020-2023",
+    "filtros": {
+      "filtro_aire": "FA-11215",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10743"
+    }
+  },
+  {
+    "modelo": "VERSA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2009-2011",
+    "filtros": {
+      "filtro_aire": "FA-10234",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10545"
+    }
+  },
+  {
+    "modelo": "VERSA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2012-2019",
+    "filtros": {
+      "filtro_aire": "FA-11215",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-12237"
+    }
+  },
+  {
+    "modelo": "VERSA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2020-2024",
+    "filtros": {
+      "filtro_aire": "FA-5RA0A",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-12552"
+    }
+  },
+  {
+    "modelo": "VERSA",
+    "motor": "4 CIL. 1.8L",
+    "anio": "2007-2012",
+    "filtros": {
+      "filtro_aire": "FA-10234",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10545"
+    }
+  },
+  {
+    "modelo": "VERSA NOTE",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2014-2019",
+    "filtros": {
+      "filtro_aire": "FA-11215",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-12237"
+    }
+  },
+  {
+    "modelo": "XTERRA",
+    "motor": "4 CIL. 2.4L",
+    "anio": "2000-2004",
+    "filtros": {
+      "filtro_aire": "FA-6850",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-27",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "XTERRA",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2005",
+    "filtros": {
+      "filtro_aire": null,
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10553"
+    }
+  },
+  {
+    "modelo": "XTERRA",
+    "motor": "V6 3.3L",
+    "anio": "2000-2004",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": "FG-27",
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "XTERRA",
+    "motor": "V6 4.0L",
+    "anio": "2005-2015",
+    "filtros": {
+      "filtro_aire": "FA-7440",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10553"
+    }
+  },
+  {
+    "modelo": "X-TRAIL",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2018-2022",
+    "filtros": {
+      "filtro_aire": "FA-11858",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11854"
+    }
+  },
+  {
+    "modelo": "X-TRAIL",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2002-2010",
+    "filtros": {
+      "filtro_aire": "FA-4309",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10140"
+    }
+  },
+  {
+    "modelo": "X-TRAIL",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2002-2014",
+    "filtros": {
+      "filtro_aire": null,
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10140"
+    }
+  },
+  {
+    "modelo": "X-TRAIL",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2011-2013",
+    "filtros": {
+      "filtro_aire": "FA-6900",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-10140"
+    }
+  },
+  {
+    "modelo": "X-TRAIL",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2014-2022",
+    "filtros": {
+      "filtro_aire": "FA-11858",
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": null
+    }
+  },
+  {
+    "modelo": "X-TRAIL",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2015-2023",
+    "filtros": {
+      "filtro_aire": null,
+      "filtro_aceite": "FO-6607",
+      "filtro_gasolina": null,
+      "filtro_cabina": "FC-11854"
+    }
+  }
+]

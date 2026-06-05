@@ -30,3 +30,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Temporary scratch folder
+scratch/
+
+# Electron release folder and build output
+admin-app/release/
+admin-app/dist/
+
+# Large catalog files
+public/data/2025 CATALOGO page 5 listo version 14-05.pdf

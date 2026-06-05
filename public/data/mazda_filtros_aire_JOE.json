@@ -1,0 +1,200 @@
+[
+  {
+    "modelo": "PICK UP",
+    "motor": "4 CIL. 2.0L Y 2.2L",
+    "anio": "1977-1982",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA2740"
+    }
+  },
+  {
+    "modelo": "626",
+    "motor": "4 CIL. 1.6L",
+    "anio": "1986-1987",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA3997"
+    }
+  },
+  {
+    "modelo": "PROTEGE",
+    "motor": "4 CIL. 1.6L Y 1.8L",
+    "anio": "1995-2000",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA5595"
+    }
+  },
+  {
+    "modelo": "MILENIA",
+    "motor": "V6 2.5L 24V",
+    "anio": "1996-2003",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6051"
+    }
+  },
+  {
+    "modelo": "RX7 TURBO",
+    "motor": "1.3L",
+    "anio": "1990-1995",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6381"
+    }
+  },
+  {
+    "modelo": "PICK UP SERIES V / MPV / 929",
+    "motor": "3.0L F/I",
+    "anio": "1990-2000",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6558"
+    }
+  },
+  {
+    "modelo": "929",
+    "motor": "V6 3.0L",
+    "anio": "1992-1995",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6690"
+    }
+  },
+  {
+    "modelo": "626",
+    "motor": "4 CIL. Y V6 2.0L Y 2.5L 16V Y 24V",
+    "anio": "1998-2002",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8547"
+    }
+  },
+  {
+    "modelo": "MX5",
+    "motor": "4 CIL. 1.8L 16V",
+    "anio": "2002-2005",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8601"
+    }
+  },
+  {
+    "modelo": "MAZDA 6",
+    "motor": "4 CIL. 4.3L",
+    "anio": "2006-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8922"
+    }
+  },
+  {
+    "modelo": "MAZDA 3 HATCHBACK / MAZDA 3 SEDAN / CX-30",
+    "motor": "2.0L Y 2.5L",
+    "anio": "2019-2020",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9133"
+    }
+  },
+  {
+    "modelo": "MAZDA 6 / CX-7",
+    "motor": "V6 2.3L Y 3.0L",
+    "anio": "2006-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9669"
+    }
+  },
+  {
+    "modelo": "CX-9",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2016-2017",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9790"
+    }
+  },
+  {
+    "modelo": "MAZDA 2",
+    "motor": "4 CIL. 1.5L 16V",
+    "anio": "2011-2016",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9894"
+    }
+  },
+  {
+    "modelo": "MAZDA 3 / MAZDA 5",
+    "motor": "4 CIL. 2.3L Y 2.5L",
+    "anio": "2003-2010",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9898"
+    }
+  },
+  {
+    "modelo": "CX-9 / MAZDA 6",
+    "motor": "6 CIL. 3.5L 24V SFI DOHC",
+    "anio": "2007-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10242"
+    }
+  },
+  {
+    "modelo": "MAZDA 2 / MAZDA 3 / HATCHBACK",
+    "motor": "4 CIL. 1.5L",
+    "anio": "2011-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10408"
+    }
+  },
+  {
+    "modelo": "MAZDA X5 / MIATA",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2006-2015",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10495"
+    }
+  },
+  {
+    "modelo": "TRIBUTE",
+    "motor": "V6 3.0L",
+    "anio": "2009-2010",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10616"
+    }
+  },
+  {
+    "modelo": "MAZDA 3 / MAZDA 6 / CX-5",
+    "motor": "4 CIL. 2.0L Y 2.5L",
+    "anio": "2012-2016",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11259"
+    }
+  },
+  {
+    "modelo": "MX5 / MIATA",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2016-2020",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12075"
+    }
+  },
+  {
+    "modelo": "CX-3",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2016-2019",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12088"
+    }
+  }
+]

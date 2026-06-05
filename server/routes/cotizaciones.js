@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const auth = require('../middleware/auth');
 const Cotizacion = require('../models/Cotizacion');
 
 // Generador de folio único e.g. AF-8392
@@ -24,7 +25,7 @@ async function generarFolioUnico() {
 // @desc    Crear una nueva cotización y generar folio
 router.post('/', async (req, res) => {
   try {
-    const { vehiculo, tipoBujia, bujiaSku, piezas, aceite } = req.body;
+    const { vehiculo, tipoBujia, bujiaSku, piezas, aceite, servicioTaller, metodoPago, detallesPago, direccionEnvio } = req.body;
     
     if (!vehiculo || !vehiculo.marca || !vehiculo.modelo) {
       return res.status(400).json({ error: 'Falta información esencial del vehículo' });
@@ -38,7 +39,11 @@ router.post('/', async (req, res) => {
       tipoBujia,
       bujiaSku,
       piezas,
-      aceite
+      aceite,
+      servicioTaller,
+      metodoPago,
+      detallesPago,
+      direccionEnvio
     });
 
     const guardada = await nuevaCotizacion.save();
@@ -51,7 +56,7 @@ router.post('/', async (req, res) => {
 
 // @route   GET api/cotizaciones
 // @desc    Obtener todas las cotizaciones ordenadas por fecha (recientes primero)
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
   try {
     const lista = await Cotizacion.find().sort({ fecha: -1 });
     res.json(lista);
@@ -63,10 +68,10 @@ router.get('/', async (req, res) => {
 
 // @route   PUT api/cotizaciones/:id/status
 // @desc    Actualizar el estatus de la cotización
-router.put('/:id/status', async (req, res) => {
+router.put('/:id/status', auth, async (req, res) => {
   try {
     const { estatus } = req.body;
-    if (!['Pendiente', 'Atendida', 'Cancelada'].includes(estatus)) {
+    if (!['Pendiente', 'Atendida', 'Cancelada', 'Pagado / Listo para surtir'].includes(estatus)) {
       return res.status(400).json({ error: 'Estatus no válido' });
     }
 
@@ -89,7 +94,7 @@ router.put('/:id/status', async (req, res) => {
 
 // @route   DELETE api/cotizaciones/:id
 // @desc    Eliminar una cotización
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
   try {
     const cotizacion = await Cotizacion.findByIdAndDelete(req.params.id);
     if (!cotizacion) {

@@ -66,7 +66,7 @@ export default function ProductCard({ bujia, tipoLinea }) {
 
       <div className={`card-badge ${badge}`} aria-label={`Tipo de bujía: ${label}`}>
         <span className="dot" aria-hidden="true" />
-        {label}
+        ⚡ BUJÍA NGK {label.toUpperCase()}
       </div>
 
       <h3 className="card-model">{bujia.marca} {bujia.modelo}</h3>
@@ -95,23 +95,27 @@ export default function ProductCard({ bujia, tipoLinea }) {
       </dl>
 
       <div className="card-sku">
-        <span className="sku-label">SKU / Tipo:</span>
+        <span className="sku-label" style={{ fontSize: '0.65rem' }}>Número de Parte (SKU):</span>
         <span className="sku-value">{data.tipo}</span>
       </div>
 
-      {/* Kit de Afinación — coming soon placeholders */}
-      <div className="kit-section" aria-label="Kit de afinación completo — próximamente">
+      {/* Kit de Afinación — availability */}
+      <div className="kit-section" aria-label="Kit de afinación completo">
         <p className="kit-title">⚙️ Kit de Afinación</p>
         <div className="kit-items">
           <div className="kit-item kit-coming-soon">
             <Droplet size={12} className="kit-icon" aria-hidden="true" />
             <span className="kit-label">Aceite recomendado</span>
-            <span className="kit-tag">Próximamente</span>
+            <span className="kit-tag" style={{ color: bujia.kit_afinacion ? 'var(--primary)' : undefined }}>
+              {bujia.kit_afinacion ? 'En Vista Kit' : 'Próximamente'}
+            </span>
           </div>
           <div className="kit-item kit-coming-soon">
             <Wind size={12} className="kit-icon" aria-hidden="true" />
             <span className="kit-label">Filtros</span>
-            <span className="kit-tag">Próximamente</span>
+            <span className="kit-tag" style={{ color: bujia.kit_afinacion ? 'var(--primary)' : undefined }}>
+              {bujia.kit_afinacion ? 'En Vista Kit' : 'Próximamente'}
+            </span>
           </div>
         </div>
       </div>
@@ -125,7 +129,7 @@ export default function ProductCard({ bujia, tipoLinea }) {
           rel="noopener noreferrer"
           aria-label={`Cotizar por WhatsApp: ${bujia.marca} ${bujia.modelo} — ${label}`}
         >
-          Cotizar
+          COTIZAR BUJÍA
         </a>
 
         <button

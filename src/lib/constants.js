@@ -21,6 +21,13 @@ export const STORE_ADMIN_EMAIL = 'administracion@masafinaciones.com';
 /** Admin PIN — change before going to production */
 export const ADMIN_PIN = '1234';
 
+/** Estadísticas del catálogo de bujías y marcas */
+export const CATALOG_STATS = {
+  total:  1277,
+  models: 155,
+  brands: 7,
+};
+
 /** NGK spark plug lines — label map used by ProductCard, CartDrawer, AdminPage */
 export const NGK_LINE_LABELS = {
   iridium: 'Iridium IX',
@@ -43,6 +50,55 @@ export const STORE_INFO = {
     { days: 'Domingo',         hours: 'Cerrado' },
   ],
 };
+
+/**
+ * Delivery options shown in the cart checkout.
+ * id            — unique key
+ * label         — display name
+ * icon          — emoji shorthand
+ * baseCost      — numeric cost in MXN (0 = free)
+ * freeThreshold — if set, conditions under which cost becomes $0
+ */
+export const DELIVERY_OPTIONS = [
+  {
+    id:    'local',
+    label: 'Recoger en Local',
+    icon:  '🏪',
+    baseCost: 0,
+    address: 'Av. Circunvalación Oblatos 1982, San Martín, Tlaquepaque, Jal.',
+  },
+  {
+    id:      'zmg',
+    label:   'Envío Local (ZMG)',
+    icon:    '🛵',
+    baseCost: 80,          // costo estándar cuando no aplica gratis
+    freeIfKit: true,       // gratis si hay un Kit de Afinación Completo
+    freeIfTotal: 1500,     // gratis si el subtotal > $1,500
+  },
+  {
+    id:       'foraneo',
+    label:    'Envío Foráneo',
+    icon:     '🚚',
+    baseCost: 150,
+    note:     'Sujeto a reajuste de $150–$200 según la zona',
+  },
+];
+
+/** Free-shipping threshold for ZMG (MXN) */
+export const FREE_SHIPPING_THRESHOLD = 1500;
+
+/**
+ * Payment methods accepted.
+ * id    — unique key used for radio selection
+ * label — display name
+ * icon  — emoji
+ */
+export const PAYMENT_METHODS = [
+  { id: 'tarjeta',      label: 'Tarjeta',         icon: '💳' },
+  { id: 'transferencia',label: 'Transferencia',    icon: '🏦' },
+  { id: 'deposito',     label: 'Depósito',         icon: '📥' },
+  { id: 'efectivo',     label: 'Efectivo (en local)', icon: '💵' },
+];
 
 /** Motor Oil Configuration Constants for tune-up kits */
 export const MOTOR_OIL_BRANDS = [

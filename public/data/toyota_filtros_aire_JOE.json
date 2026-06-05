@@ -1,0 +1,443 @@
+[
+  {
+    "modelo": "HILUX",
+    "motor": "4 CIL. 2.7L",
+    "anio": "2007-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA199AX"
+    }
+  },
+  {
+    "modelo": "AVANZA",
+    "motor": "4 CIL. 1.5L",
+    "anio": "2007-2010",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA1701"
+    }
+  },
+  {
+    "modelo": "PICK UP 2WD / 4RUNNER",
+    "motor": "2.4L",
+    "anio": "1971-1991",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA2719"
+    }
+  },
+  {
+    "modelo": "HIACE",
+    "motor": "4 CIL.",
+    "anio": "2010-2012",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA3006"
+    }
+  },
+  {
+    "modelo": "HIACE",
+    "motor": "4 CIL. 2.7L",
+    "anio": "2005-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA3248"
+    }
+  },
+  {
+    "modelo": "CAMRY / ALL TRAC",
+    "motor": "4 CIL. 2.0L Y 2.4L",
+    "anio": "1987-1991",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA4778"
+    }
+  },
+  {
+    "modelo": "PICK UP 2WD TURBO",
+    "motor": "ALL",
+    "anio": "1986-1992",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA4830"
+    }
+  },
+  {
+    "modelo": "SUPRA / CRESSIDA / PASEO",
+    "motor": "V6 2.4L Y 3.0L",
+    "anio": "1989-1996",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA4939"
+    }
+  },
+  {
+    "modelo": "CELICA ALL TRAC / COROLLA / CELICA",
+    "motor": "1.6L, 1.8L Y 2.0L",
+    "anio": "1987-1994",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA5125"
+    }
+  },
+  {
+    "modelo": "COROLLA COUPE FX / LIFTBACK",
+    "motor": "1.6L Y 1.8L",
+    "anio": "1993-1998",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA5466"
+    }
+  },
+  {
+    "modelo": "HILUX SFI",
+    "motor": "4 CIL.",
+    "anio": "2004-2006",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6201"
+    }
+  },
+  {
+    "modelo": "COROLLA II / LITEACE / TERCEL / CORSA",
+    "motor": "1.8L Y 2.0L",
+    "anio": "1985-1989",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6301"
+    }
+  },
+  {
+    "modelo": "CARINA / TERCEL / GTI",
+    "motor": "1.6L Y 1.8L",
+    "anio": "1981-1985",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6377"
+    }
+  },
+  {
+    "modelo": "COROLLA / CELICA / PRIZM / RAV4 / MR2",
+    "motor": "4 CIL. 2.0L 16V",
+    "anio": "1988-2001",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6395"
+    }
+  },
+  {
+    "modelo": "COROLLA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "1988-1989",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6544"
+    }
+  },
+  {
+    "modelo": "4RUNNER / PICK UP / TACOMA",
+    "motor": "4 CIL. 2.4L Y 2.7L",
+    "anio": "1992-2004",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6690"
+    }
+  },
+  {
+    "modelo": "PASEO / TERCEL",
+    "motor": "4 CIL. 1.5L",
+    "anio": "1991-1999",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7167"
+    }
+  },
+  {
+    "modelo": "CAMRY / CELICA ALL TRAC / AVALON",
+    "motor": "2.0L Y 2.4L",
+    "anio": "1993-2004",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7351"
+    }
+  },
+  {
+    "modelo": "TRUCK / TACOMA / T100",
+    "motor": "4 CIL. 2.3L",
+    "anio": "1993-2002",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7417"
+    }
+  },
+  {
+    "modelo": "SUPRA / CELICA / 4RUNNER",
+    "motor": "3.0L Y 3.4L",
+    "anio": "1990-2003",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7626"
+    }
+  },
+  {
+    "modelo": "4RUNNER / LAND CRUISER / TUNDRA",
+    "motor": "V8 4.7L",
+    "anio": "1998-2009",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8918"
+    }
+  },
+  {
+    "modelo": "YARIS / ECHO XA / XB / SCION",
+    "motor": "4 CIL. 1.3L Y 1.5L",
+    "anio": "2003-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9115"
+    }
+  },
+  {
+    "modelo": "RAV4",
+    "motor": "2.0L 16V",
+    "anio": "2001-2006",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9359"
+    }
+  },
+  {
+    "modelo": "CAMRY / SIENNA / SOLARA / HIGHLANDER",
+    "motor": "2.4L, 3.0L Y 3.3L 16V Y 24V",
+    "anio": "2001-2005",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9360"
+    }
+  },
+  {
+    "modelo": "COROLLA / MATRIX",
+    "motor": "4 CIL. 1.8L",
+    "anio": "2003-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9482"
+    }
+  },
+  {
+    "modelo": "TACOMA / 4RUNNER",
+    "motor": "V6 4.0L",
+    "anio": "2001-2006",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9683"
+    }
+  },
+  {
+    "modelo": "HIGHLANDER",
+    "motor": "V6 3.5L",
+    "anio": "2011-2016",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9762"
+    }
+  },
+  {
+    "modelo": "RAV4 II",
+    "motor": "ALL",
+    "anio": "2002-2004",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9826"
+    }
+  },
+  {
+    "modelo": "PRIUS HYBRID",
+    "motor": "4 CIL. 1.5L",
+    "anio": "2004-2009",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10159"
+    }
+  },
+  {
+    "modelo": "TACOMA",
+    "motor": "4 CIL. 2.7L",
+    "anio": "2005-2009",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10163"
+    }
+  },
+  {
+    "modelo": "RAV4 / CAMRY",
+    "motor": "2.4L Y 3.5L 16V",
+    "anio": "2006-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10169"
+    }
+  },
+  {
+    "modelo": "CAMRY",
+    "motor": "2.4L 16V",
+    "anio": "2007-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10171"
+    }
+  },
+  {
+    "modelo": "COROLLA / MATRIX / YARIS",
+    "motor": "4 CIL. 1.8L",
+    "anio": "2008-2011",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10190"
+    }
+  },
+  {
+    "modelo": "HIGHLANDER HYBRID",
+    "motor": "V6 3.3L",
+    "anio": "2006-2009",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10257"
+    }
+  },
+  {
+    "modelo": "TUNDRA / LAND CRUISER",
+    "motor": "V8 4.7L Y 5.7L",
+    "anio": "2007-2009",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10343"
+    }
+  },
+  {
+    "modelo": "YARIS",
+    "motor": "4 CIL. 1.5L",
+    "anio": "2017-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10408"
+    }
+  },
+  {
+    "modelo": "CAMRY / RAV4",
+    "motor": "4 CIL. 2.5L 16V",
+    "anio": "2012-2014",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10677"
+    }
+  },
+  {
+    "modelo": "PRIUS HYBRID",
+    "motor": "4 CIL. 1.8L 16V",
+    "anio": "2010-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10741"
+    }
+  },
+  {
+    "modelo": "SIENNA",
+    "motor": "4 Y 6 CIL. 2.7L Y 3.5L 16V Y 24V",
+    "anio": "2011",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10755"
+    }
+  },
+  {
+    "modelo": "AVALON / CAMRY / COROLLA / HIGHLANDER",
+    "motor": "4 CIL. 1.8L, 2.0L Y 2.5L",
+    "anio": "2018-2020",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10807"
+    }
+  },
+  {
+    "modelo": "4RUNNER / FJ CRUISER",
+    "motor": "6 CIL. 4.0L 24V",
+    "anio": "2010-2022",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10835"
+    }
+  },
+  {
+    "modelo": "PRIUS PRIME",
+    "motor": "4 CIL. 1.8L",
+    "anio": "2016-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11426"
+    }
+  },
+  {
+    "modelo": "SEQUOIA / TACOMA / TUNDRA",
+    "motor": "V6 Y V8 3.5L, 4.0L, 4.6L Y 5.7L",
+    "anio": "2013-2019",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11895"
+    }
+  },
+  {
+    "modelo": "PROARCE",
+    "motor": "1.2L",
+    "anio": "2019",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12021"
+    }
+  },
+  {
+    "modelo": "HILUX",
+    "motor": "4 CIL. 2.7L",
+    "anio": "2016-2021",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12055"
+    }
+  },
+  {
+    "modelo": "AVALON / CAMRY / HIGHLANDER / RAV4",
+    "motor": "4 Y 6 CIL. 2.5L Y 3.5L",
+    "anio": "2018-2020",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12377"
+    }
+  },
+  {
+    "modelo": "HIGHLANDER",
+    "motor": "V6 3.5L",
+    "anio": "2016-2020",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12378"
+    }
+  },
+  {
+    "modelo": "HIACE",
+    "motor": "4 Y 6 CIL. 2.8L Y 3.5L",
+    "anio": "2019-2020",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA31160"
+    }
+  },
+  {
+    "modelo": "AVANZA / RAIZE / YARIS",
+    "motor": "4 CIL. 1.0L Y 1.5L",
+    "anio": "2021-2024",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JAZ110"
+    }
+  }
+]
