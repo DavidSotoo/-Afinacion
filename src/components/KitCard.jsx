@@ -724,6 +724,10 @@ export default function KitCard({ bujia }) {
                             {bujia.calibracion_mm && <span className="kit-cal-badge">{bujia.calibracion_mm}mm</span>}
                             {bujiaData?.codigo && <span className="kit-code-badge">#{bujiaData.codigo}</span>}
                           </span>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.6rem', borderTop: '1px dashed rgba(255,255,255,0.06)', paddingTop: '0.5rem', fontSize: '0.65rem' }}>
+                            <span className="text-slate-500 font-mono">DISPONIBILIDAD:</span>
+                            <span className="text-emerald-400 font-bold font-mono">EN EXISTENCIA (10+ pzas)</span>
+                          </div>
                         </div>
 
                         {availableLines.length > 1 && (
@@ -767,6 +771,10 @@ export default function KitCard({ bujia }) {
                       <span className="oil-summary-tech-badge" style={{ marginTop: '0.25rem', width: 'fit-content' }}>
                         {aceiteSelected?.tecnologia}
                       </span>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.6rem', borderTop: '1px dashed rgba(255,255,255,0.06)', paddingTop: '0.5rem', fontSize: '0.65rem' }}>
+                        <span className="text-slate-500 font-mono">DISPONIBILIDAD:</span>
+                        <span className="text-emerald-400 font-bold font-mono">EN EXISTENCIA (DISPONIBLE)</span>
+                      </div>
                     </div>
 
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
@@ -860,6 +868,16 @@ export default function KitCard({ bujia }) {
                             Costo: <strong>${filtro.costo} MXN</strong>
                           </span>
                         )}
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.6rem', borderTop: '1px dashed rgba(255,255,255,0.06)', paddingTop: '0.5rem', fontSize: '0.65rem' }}>
+                          <span className="text-slate-500 font-mono">DISPONIBILIDAD:</span>
+                          {filtro?.sku === 'SELLADO' ? (
+                            <span className="text-violet-400 font-bold font-mono">NO REQUIERE CAMBIO</span>
+                          ) : tienesku ? (
+                            <span className="text-emerald-400 font-bold font-mono">EN EXISTENCIA (8 pzas)</span>
+                          ) : (
+                            <span className="text-amber-500 font-bold font-mono">BAJO PEDIDO</span>
+                          )}
+                        </div>
                       </div>
 
                       {filtro?.alternos && filtro.alternos.length > 0 && (
