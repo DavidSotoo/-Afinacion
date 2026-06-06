@@ -78,21 +78,17 @@ export default function StoreSection() {
           </div>
         </div>
 
-        {/* Right — map embed placeholder */}
-        <div className="store-map-wrap" aria-label="Vista del mapa">
-          <a
-            href={MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="store-map-link"
-            aria-label="Ver en Google Maps"
-          >
-            <div className="store-map-placeholder">
-              <MapPin size={40} className="map-pin-icon" />
-              <p className="map-placeholder-text">Ver en Google Maps</p>
-              <p className="map-placeholder-sub">San Martin, Guadalajara · Jal.</p>
-            </div>
-          </a>
+        {/* Right — live interactive map embed */}
+        <div className="store-map-wrap" aria-label="Vista del mapa" style={{ borderRadius: '8px' }}>
+          <iframe
+            src={`https://maps.google.com/maps?q=${encodeURIComponent(STORE_ADDR)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+            width="100%"
+            height="100%"
+            style={{ border: 0, minHeight: '280px', filter: 'invert(90%) hue-rotate(180deg) contrast(1.2) brightness(0.95)' }}
+            allowFullScreen=""
+            loading="lazy"
+            title="Ubicación de la sucursal en Google Maps"
+          />
         </div>
 
       </div>
