@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { NGK_LINE_LABELS } from '../lib/constants';
+import { calculateOilPrice, formatOilName } from '../lib/kitHelpers';
 
 /* ─── Helpers ─────────────────────────────────────────────────────────────── */
 
@@ -66,7 +67,7 @@ function KitDrawerItem({ item, onRemove, onTogglePart }) {
     }
 
     if (item.aceite_motor && !isExcluded('aceite_motor')) {
-      price += 400;
+      price += calculateOilPrice(bujia.anio_inicio, item.aceite_motor.tecnologia, item.aceite_motor.litros);
     }
 
     return price;
@@ -184,9 +185,9 @@ function KitDrawerItem({ item, onRemove, onTogglePart }) {
                 </button>
                 <span className="drawer-kit-check-num">6️⃣</span>
                 <Droplet size={11} aria-hidden="true" className="drawer-kit-check-icon" style={{ color: 'var(--primary)' }} />
-                <span className="drawer-kit-check-label">Aceite de Motor ({item.aceite_motor.marca})</span>
+                <span className="drawer-kit-check-label">{formatOilName(item.aceite_motor.tecnologia, item.aceite_motor.viscosidad)}</span>
                 <span className={`drawer-kit-check-tag${!isExcluded('aceite_motor') ? ' drawer-kit-check-tag--sku' : ''}`}>
-                  {isExcluded('aceite_motor') ? 'Removido' : `${item.aceite_motor.viscosidad} · ${item.aceite_motor.tecnologia}`}
+                  {isExcluded('aceite_motor') ? 'Removido' : item.aceite_motor.presentacion}
                 </span>
               </li>
             )}

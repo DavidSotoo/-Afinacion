@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { useCart }             from '../context/CartContext';
 import { WHATSAPP_NUMBER, MOTOR_OIL_BRANDS, MOTOR_OIL_VISCOSITIES } from '../lib/constants';
-import { filtroTieneSkuReal, recomendarAceiteDefault }  from '../lib/kitHelpers';
+import { filtroTieneSkuReal, recomendarAceiteDefault, calculateOilPrice, formatOilName }  from '../lib/kitHelpers';
 
 /* ─── Static config ───────────────────────────────────────────────────────── */
 
@@ -96,6 +96,44 @@ export default function KitCard({ bujia }) {
     setAceiteSelected(recomendacionAceite);
   }, [recomendacionAceite]);
 
+  const anioVehiculo = parseInt(bujia.anio_inicio, 10) || 2015;
+
+  const handleTechChange = (newTech) => {
+    setAceiteSelected(prev => {
+      let newVisc = prev.viscosidad;
+      if (newTech === 'Sintético') {
+        newVisc = '5W-30';
+      } else if (newTech === 'Semisintético') {
+        if (!['5W-30', '10W-30', '10W-40'].includes(prev.viscosidad)) {
+          newVisc = '5W-30';
+        }
+      } else {
+        if (!['20W-50', '25W-50'].includes(prev.viscosidad)) {
+          newVisc = '20W-50';
+        }
+      }
+      return { ...prev, tecnologia: newTech, viscosidad: newVisc };
+    });
+  };
+
+  const handleViscosityChange = (newVisc) => {
+    setAceiteSelected(prev => {
+      let newTec = prev.tecnologia;
+      if (anioVehiculo <= 2009) {
+        newTec = 'Mineral';
+      } else {
+        if (newVisc === '5W-30') {
+          if (newTec !== 'Sintético' && newTec !== 'Semisintético') {
+            newTec = 'Semisintético';
+          }
+        } else if (['10W-30', '10W-40'].includes(newVisc)) {
+          newTec = 'Semisintético';
+        }
+      }
+      return { ...prev, viscosidad: newVisc, tecnologia: newTec };
+    });
+  };
+
   // ── Derived values (memoized) ─────────────────────────────────────────────
   const availableLines = useMemo(
     () => ALL_LINES.filter(l => bujia[LINE_CONFIG[l].field]?.tipo),
@@ -127,9 +165,9 @@ export default function KitCard({ bujia }) {
         : 200;
     }
     
-    const oilCost = aceiteSelected ? 400 : 0;
+    const oilCost = aceiteSelected ? calculateOilPrice(bujia.anio_inicio, aceiteSelected.tecnologia, aceiteSelected.litros) : 0;
     return filtersCost + plugsCost + oilCost;
-  }, [kit, noBujias, selectedLine, aceiteSelected]);
+  }, [kit, noBujias, selectedLine, aceiteSelected, bujia.anio_inicio]);
 
   // WhatsApp — bujías individuales only
   const whatsappBujiasUrl = useMemo(() => {
@@ -224,7 +262,7 @@ export default function KitCard({ bujia }) {
       color: '#eab308',
       glowColor: 'rgba(234, 179, 8, 0.4)',
       icon: Droplet,
-      sku: aceiteSelected ? `${aceiteSelected.marca} ${aceiteSelected.viscosidad}` : 'Sin aceite',
+      sku: aceiteSelected ? formatOilName(aceiteSelected.tecnologia, aceiteSelected.viscosidad) : 'Sin aceite',
       status: aceiteSelected ? 'Seleccionado' : 'No incluido',
     }
   ];
@@ -608,7 +646,27 @@ export default function KitCard({ bujia }) {
           </header>
 
           <div className="kit-oil-card">
-            <div className="kit-oil-fields-grid">
+            <div className="kit-oil-fields-grid" style={{ gridTemplateColumns: '1fr 1fr 1fr 1.2fr' }}>
+              {/* Tipo */}
+              <div className="oil-field-group">
+                <label className="oil-field-label">Tipo</label>
+                <select
+                  className="oil-field-select"
+                  value={aceiteSelected?.tecnologia || ''}
+                  onChange={(e) => handleTechChange(e.target.value)}
+                  disabled={anioVehiculo <= 2009}
+                >
+                  {anioVehiculo >= 2010 ? (
+                    <>
+                      <option value="Semisintético">Semi-Sintético</option>
+                      <option value="Sintético">Sintético</option>
+                    </>
+                  ) : (
+                    <option value="Mineral">Multigrado</option>
+                  )}
+                </select>
+              </div>
+
               {/* Marca */}
               <div className="oil-field-group">
                 <label className="oil-field-label">Marca</label>
@@ -629,17 +687,24 @@ export default function KitCard({ bujia }) {
                 <select
                   className="oil-field-select"
                   value={aceiteSelected?.viscosidad || ''}
-                  onChange={(e) => {
-                    const newVisc = e.target.value;
-                    let newTec = 'Sintético';
-                    if (newVisc === '10W-30' || newVisc === '5W-20') newTec = 'Semisintético';
-                    else if (newVisc === '15W-40' || newVisc === '20W-50') newTec = 'Mineral';
-                    setAceiteSelected(prev => ({ ...prev, viscosidad: newVisc, tecnologia: newTec }));
-                  }}
+                  onChange={(e) => handleViscosityChange(e.target.value)}
                 >
-                  {MOTOR_OIL_VISCOSITIES.map(v => (
-                    <option key={v} value={v}>{v}</option>
-                  ))}
+                  {anioVehiculo >= 2010 ? (
+                    aceiteSelected?.tecnologia === 'Sintético' ? (
+                      <option value="5W-30">5W-30</option>
+                    ) : (
+                      <>
+                        <option value="5W-30">5W-30</option>
+                        <option value="10W-30">10W-30</option>
+                        <option value="10W-40">10W-40</option>
+                      </>
+                    )
+                  ) : (
+                    <>
+                      <option value="20W-50">20W-50</option>
+                      <option value="25W-50">25W-50</option>
+                    </>
+                  )}
                 </select>
               </div>
 
@@ -657,7 +722,7 @@ export default function KitCard({ bujia }) {
                     setAceiteSelected(prev => ({ ...prev, litros: l, presentacion: pres }));
                   }}
                 >
-                  <option value={4}>4 Litros (Estándar)</option>
+                  <option value={4}>4 Litros</option>
                   <option value={5}>5 Litros</option>
                   <option value={6}>6 Litros</option>
                   <option value={7}>7 Litros</option>
@@ -668,7 +733,7 @@ export default function KitCard({ bujia }) {
 
             <div className="kit-oil-summary-row">
               <span className="oil-summary-tech-badge">
-                Tecnología: {aceiteSelected?.tecnologia}
+                Tecnología: {aceiteSelected?.tecnologia === 'Mineral' ? 'Multigrado' : aceiteSelected?.tecnologia === 'Semisintético' ? 'Semi-Sintético' : aceiteSelected?.tecnologia}
               </span>
               <span className="oil-summary-pres">
                 {aceiteSelected?.presentacion}
@@ -766,10 +831,10 @@ export default function KitCard({ bujia }) {
                     <div className="blueprint-drawer-sku-box">
                       <span className="blueprint-drawer-label">Aceite Seleccionado</span>
                       <span className="blueprint-drawer-value">
-                        {aceiteSelected ? `${aceiteSelected.marca} ${aceiteSelected.viscosidad}` : 'Sin aceite'}
+                        {aceiteSelected ? formatOilName(aceiteSelected.tecnologia, aceiteSelected.viscosidad) : 'Sin aceite'}
                       </span>
                       <span className="oil-summary-tech-badge" style={{ marginTop: '0.25rem', width: 'fit-content' }}>
-                        {aceiteSelected?.tecnologia}
+                        {aceiteSelected?.tecnologia === 'Mineral' ? 'Multigrado' : aceiteSelected?.tecnologia === 'Semisintético' ? 'Semi-Sintético' : aceiteSelected?.tecnologia}
                       </span>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.6rem', borderTop: '1px dashed rgba(255,255,255,0.06)', paddingTop: '0.5rem', fontSize: '0.65rem' }}>
                         <span className="text-slate-500 font-mono">DISPONIBILIDAD:</span>
@@ -777,7 +842,26 @@ export default function KitCard({ bujia }) {
                       </div>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                      <div className="oil-field-group">
+                        <label className="oil-field-label">Tipo</label>
+                        <select
+                          className="oil-field-select"
+                          value={aceiteSelected?.tecnologia || ''}
+                          onChange={(e) => handleTechChange(e.target.value)}
+                          disabled={anioVehiculo <= 2009}
+                        >
+                          {anioVehiculo >= 2010 ? (
+                            <>
+                              <option value="Semisintético">Semi-Sintético</option>
+                              <option value="Sintético">Sintético</option>
+                            </>
+                          ) : (
+                            <option value="Mineral">Multigrado</option>
+                          )}
+                        </select>
+                      </div>
+
                       <div className="oil-field-group">
                         <label className="oil-field-label">Marca</label>
                         <select
@@ -790,46 +874,55 @@ export default function KitCard({ bujia }) {
                           ))}
                         </select>
                       </div>
+                    </div>
 
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
                       <div className="oil-field-group">
                         <label className="oil-field-label">Viscosidad</label>
                         <select
                           className="oil-field-select"
                           value={aceiteSelected?.viscosidad || ''}
-                          onChange={(e) => {
-                            const newVisc = e.target.value;
-                            let newTec = 'Sintético';
-                            if (newVisc === '10W-30' || newVisc === '5W-20') newTec = 'Semisintético';
-                            else if (newVisc === '15W-40' || newVisc === '20W-50') newTec = 'Mineral';
-                            setAceiteSelected(prev => ({ ...prev, viscosidad: newVisc, tecnologia: newTec }));
-                          }}
+                          onChange={(e) => handleViscosityChange(e.target.value)}
                         >
-                          {MOTOR_OIL_VISCOSITIES.map(v => (
-                            <option key={v} value={v}>{v}</option>
-                          ))}
+                          {anioVehiculo >= 2010 ? (
+                            aceiteSelected?.tecnologia === 'Sintético' ? (
+                              <option value="5W-30">5W-30</option>
+                            ) : (
+                              <>
+                                <option value="5W-30">5W-30</option>
+                                <option value="10W-30">10W-30</option>
+                                <option value="10W-40">10W-40</option>
+                              </>
+                            )
+                          ) : (
+                            <>
+                              <option value="20W-50">20W-50</option>
+                              <option value="25W-50">25W-50</option>
+                            </>
+                          )}
                         </select>
                       </div>
-                    </div>
 
-                    <div className="oil-field-group">
-                      <label className="oil-field-label">Cantidad</label>
-                      <select
-                        className="oil-field-select"
-                        value={aceiteSelected?.litros || 4}
-                        onChange={(e) => {
-                          const l = parseInt(e.target.value, 10);
-                          let pres = 'Garrafa (4 Litros)';
-                          if (l === 5) pres = 'Garrafa (5 Litros)';
-                          else if (l > 5) pres = `Garrafa (4L) + ${l - 4} Botella(s) (1L)`;
-                          setAceiteSelected(prev => ({ ...prev, litros: l, presentacion: pres }));
-                        }}
-                      >
-                        <option value={4}>4 Litros (Estándar)</option>
-                        <option value={5}>5 Litros</option>
-                        <option value={6}>6 Litros</option>
-                        <option value={7}>7 Litros</option>
-                        <option value={8}>8 Litros</option>
-                      </select>
+                      <div className="oil-field-group">
+                        <label className="oil-field-label">Cantidad</label>
+                        <select
+                          className="oil-field-select"
+                          value={aceiteSelected?.litros || 4}
+                          onChange={(e) => {
+                            const l = parseInt(e.target.value, 10);
+                            let pres = 'Garrafa (4 Litros)';
+                            if (l === 5) pres = 'Garrafa (5 Litros)';
+                            else if (l > 5) pres = `Garrafa (4L) + ${l - 4} Botella(s) (1L)`;
+                            setAceiteSelected(prev => ({ ...prev, litros: l, presentacion: pres }));
+                          }}
+                        >
+                          <option value={4}>4 Litros</option>
+                          <option value={5}>5 Litros</option>
+                          <option value={6}>6 Litros</option>
+                          <option value={7}>7 Litros</option>
+                          <option value={8}>8 Litros</option>
+                        </select>
+                      </div>
                     </div>
                   </>
                 )}

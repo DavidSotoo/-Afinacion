@@ -29,6 +29,7 @@ import {
   PAYMENT_METHODS,
   STORE_PUBLIC_EMAIL,
 } from '../lib/constants';
+import { formatOilName } from '../lib/kitHelpers';
 
 /* ─── Helpers ─────────────────────────────────────────────────────────────── */
 
@@ -119,7 +120,7 @@ function buildConsolidatedMessage(items, deliveryOpt, paymentOpt, shipping, gran
       const oilMsg = aceite_motor
         ? (isExcluded('aceite_motor')
           ? `~6️⃣ *Aceite de Motor:* (❌ Removido por el cliente)~`
-          : `6️⃣ *Aceite de Motor:* ${aceite_motor.marca} ${aceite_motor.viscosidad} ${aceite_motor.tecnologia} (${aceite_motor.presentacion})`)
+          : `6️⃣ *Aceite de Motor:* ${formatOilName(aceite_motor.tecnologia, aceite_motor.viscosidad)} (${aceite_motor.presentacion})`)
         : null;
 
       lines.push(

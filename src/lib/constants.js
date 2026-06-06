@@ -108,10 +108,10 @@ export const MOTOR_OIL_BRANDS = [
   { id: 'roshfrans',    label: 'Roshfrans' }
 ];
 
-export const MOTOR_OIL_VISCOSITIES = ['0W-20', '5W-30', '5W-20', '10W-30', '15W-40', '20W-50'];
+export const MOTOR_OIL_VISCOSITIES = ['0W-20', '5W-30', '5W-20', '10W-30', '15W-40', '20W-50', '25W-50'];
 
 export const MOTOR_OIL_TECHNOLOGIES = [
   { id: 'sintetico',     label: 'Sintético' },
   { id: 'semisintetico', label: 'Semisintético' },
-  { id: 'mineral',       label: 'Mineral' }
+  { id: 'mineral',       label: 'Multigrado' }
 ];

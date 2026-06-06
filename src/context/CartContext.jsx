@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useCallback, useMemo } from 'react';
 import { DELIVERY_OPTIONS, FREE_SHIPPING_THRESHOLD } from '../lib/constants';
+import { calculateOilPrice } from '../lib/kitHelpers';
 
 /**
  * Precio de referencia por tipo de ítem (MXN).
@@ -148,7 +149,7 @@ export function CartProvider({ children }) {
         }
 
         if (item.aceite_motor && !item.excludedParts.includes('aceite_motor')) {
-          kitPrice += 400; // Engine oil base price in kit
+          kitPrice += calculateOilPrice(item.bujia.anio_inicio, item.aceite_motor.tecnologia, item.aceite_motor.litros);
         }
 
         return sum + kitPrice * item.qty;
