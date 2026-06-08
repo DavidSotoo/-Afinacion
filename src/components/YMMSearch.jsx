@@ -14,12 +14,25 @@ export default function YMMSearch({ onSearch, onReset }) {
 
   // Fetch unique brands on mount
   useEffect(() => {
+    const cachedBrands = sessionStorage.getItem('ymm_brands');
+    if (cachedBrands) {
+      try {
+        setMarcas(JSON.parse(cachedBrands));
+        return;
+      } catch (e) {
+        console.warn('Failed to parse cached brands, fetching fresh data...', e);
+      }
+    }
+
     fetch('http://localhost:5000/api/vehiculos/brands')
       .then(res => {
         if (!res.ok) throw new Error('Failed to load brands');
         return res.json();
       })
-      .then(data => setMarcas(data))
+      .then(data => {
+        setMarcas(data);
+        sessionStorage.setItem('ymm_brands', JSON.stringify(data));
+      })
       .catch(err => console.error("Error loading brands:", err));
   }, []);
 
@@ -35,6 +48,23 @@ export default function YMMSearch({ onSearch, onReset }) {
     if (!selectedMarca) return;
 
     let active = true;
+    
+    // Check session storage cache first
+    const cacheKey = `ymm_brand_${selectedMarca}`;
+    const cachedBrandData = sessionStorage.getItem(cacheKey);
+    if (cachedBrandData) {
+      try {
+        const records = JSON.parse(cachedBrandData);
+        const mappedRecords = records.map(r => ({ ...r, id: r._id || r.id }));
+        setBrandRecords(mappedRecords);
+        const uniqueModels = [...new Set(mappedRecords.map(item => item.modelo))].sort();
+        setModelos(uniqueModels);
+        return;
+      } catch (e) {
+        console.warn(`Failed to parse cached data for brand ${selectedMarca}, fetching fresh data...`, e);
+      }
+    }
+
     setLoadingBrand(true);
     
     fetch(`http://localhost:5000/api/vehiculos/brand/${selectedMarca}`)
@@ -44,6 +74,7 @@ export default function YMMSearch({ onSearch, onReset }) {
       })
       .then(records => {
         if (!active) return;
+        sessionStorage.setItem(cacheKey, JSON.stringify(records));
         // Map _id to id for backwards compatibility
         const mappedRecords = records.map(r => ({ ...r, id: r._id || r.id }));
         setBrandRecords(mappedRecords);
