@@ -22,7 +22,7 @@ const KitAfinacionSchema = new mongoose.Schema({
 }, { _id: false });
 
 const VehiculoSchema = new mongoose.Schema({
-  marca: { type: String, required: true, index: true },
+  marca: { type: String, required: true },
   modelo: { type: String, required: true, index: true },
   anio_inicio: { type: Number, required: true },
   anio_fin: { type: Number, required: true },
@@ -52,6 +52,9 @@ const VehiculoSchema = new mongoose.Schema({
   kit_afinacion: KitAfinacionSchema
 
 }, { timestamps: true });
+
+// Optimize query performance with a compound index
+VehiculoSchema.index({ marca: 1, modelo: 1, anio_inicio: 1, anio_fin: 1 });
 
 // Ensure virtual fields (like id) are serialized
 VehiculoSchema.set('toJSON', { virtuals: true });
