@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '.env') });
-const PrecioUnifil = require('./models/PrecioUnifil');
+const PrecioFiltro = require('./models/PrecioFiltro');
 
 async function main() {
   await mongoose.connect(process.env.MONGO_URI);
   console.log('Connected.');
 
   // Find any records that start with JA or JA- in preciounifils
-  const joeRecords = await PrecioUnifil.find({
+  const joeRecords = await PrecioFiltro.find({
     clave: { $regex: /^JA/i }
   }).lean();
 

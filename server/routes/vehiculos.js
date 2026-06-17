@@ -2,11 +2,39 @@ const express = require('express');
 const router = express.Router();
 const auth = require('../middleware/auth');
 const antiscaping = require('../middleware/antiscaping');
+const rateLimit = require('express-rate-limit');
 const path = require('path');
 const fs = require('fs');
 const Vehiculo = require('../models/Vehiculo');
-const PrecioUnifil = require('../models/PrecioUnifil');
+const PrecioFiltro = require('../models/PrecioFiltro');
 const PrecioBujia = require('../models/PrecioBujia');
+const Balata = require('../models/Balata');
+const { getFullModelSearchKeys } = require('../models/modelNormalizer');
+
+const escapeRegExp = (string) => string ? string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') : '';
+const YEAR_HORIZON = 2035;
+
+const TIPO_FILTRO = {
+  filtro_aceite:   'Intercambiable / Cartucho',
+  filtro_aire:     'Panel / Cilíndrico',
+  filtro_gasolina: 'Línea',
+  filtro_cabina:   'Polen',
+};
+
+let priceCache = {
+  preciosMap: null,
+  bujiasMap: null,
+  balatasList: null,
+  lastUpdated: 0
+};
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+
+function invalidatePriceCache() {
+  priceCache.preciosMap = null;
+  priceCache.bujiasMap = null;
+  priceCache.balatasList = null;
+  priceCache.lastUpdated = 0;
+}
 
 // Cargar la base de datos de filtros de VW de Interfil en el servidor
 let vwFiltrosData = [];
@@ -220,11 +248,14 @@ function normalizeChevroletModelo(modelo) {
   if (m.startsWith('AVALANCHE')) {
     return 'AVALANCHE';
   }
-  if (m.startsWith('SILVERADO') && !m.includes('3500')) {
-    return 'SILVERADO 1500';
+  if (m.startsWith('SILVERADO') && m.includes('2500')) {
+    return 'SILVERADO 2500';
   }
   if (m.startsWith('SILVERADO') && m.includes('3500')) {
     return 'SILVERADO 3500';
+  }
+  if (m.startsWith('SILVERADO')) {
+    return 'SILVERADO 1500';
   }
   if (m.startsWith('SUBURBAN')) {
     return 'SUBURBAN';
@@ -448,7 +479,7 @@ function normalizeMazdaModelo(modelo) {
   if (/^\d$/.test(m)) return `MAZDA ${m}`;
   const cxFull = m.match(/^CX-(\d+)$/i);
   if (cxFull) {
-    const num = cxFull[1].length > 1 ? cxFull[1][0] : cxFull[1];
+    const num = cxFull[1];
     return `CX${num}`;
   }
   const bMatch = m.match(/^B(\d{4})$/i);
@@ -842,13 +873,13 @@ function lookupNissanAireJoe(vehiculo) {
         end = parseInt(parts[1], 10);
       } else if (r.anio.includes('>')) {
         start = parseInt(r.anio.replace('>', ''), 10);
-        end = 2030;
+        end = YEAR_HORIZON;
       } else {
         start = parseInt(r.anio, 10);
         end = start;
       }
 
-      if (start && !isNaN(start)) {
+      if (start !== null && !isNaN(start)) {
         if (!end || isNaN(end)) end = start;
         if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
       }
@@ -889,13 +920,13 @@ function lookupNissanUnifil(vehiculo) {
         end = parseInt(parts[1], 10);
       } else if (r.anio.includes('>')) {
         start = parseInt(r.anio.replace('>', ''), 10);
-        end = 2030;
+        end = YEAR_HORIZON;
       } else {
         start = parseInt(r.anio, 10);
         end = start;
       }
 
-      if (start && !isNaN(start)) {
+      if (start !== null && !isNaN(start)) {
         if (!end || isNaN(end)) end = start;
         if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
       }
@@ -911,13 +942,6 @@ function lookupNissanUnifil(vehiculo) {
  */
 async function syncNissanUnifil() {
   try {
-    const TIPO_FILTRO = {
-      filtro_aceite:   'Intercambiable / Cartucho',
-      filtro_aire:     'Panel / Cilíndrico',
-      filtro_gasolina: 'Línea',
-      filtro_cabina:   'Polen',
-    };
-
     const nissans = await Vehiculo.find({ marca: /nissan/i });
     let updatedCount = 0;
     const keys = ['filtro_aceite', 'filtro_aire', 'filtro_gasolina', 'filtro_cabina'];
@@ -937,7 +961,7 @@ async function syncNissanUnifil() {
           const currentFiltro = nissan.kit_afinacion?.[key];
           let interfilSku = null;
           if (currentFiltro) {
-            if (currentFiltro.marca && currentFiltro.marca !== 'UNIFIL') {
+            if (currentFiltro.marca && currentFiltro.marca.toUpperCase() === 'INTERFIL') {
               interfilSku = currentFiltro.sku;
             } else if (currentFiltro.alternos && Array.isArray(currentFiltro.alternos)) {
               const found = currentFiltro.alternos.find(a => a.marca && a.marca.toUpperCase() === 'INTERFIL');
@@ -1059,13 +1083,13 @@ function lookupVolkswagenUnifil(vehiculo) {
         end = parseInt(parts[1], 10);
       } else if (r.anio.includes('>')) {
         start = parseInt(r.anio.replace('>', ''), 10);
-        end = 2030;
+        end = YEAR_HORIZON;
       } else {
         start = parseInt(r.anio, 10);
         end = start;
       }
 
-      if (start && !isNaN(start)) {
+      if (start !== null && !isNaN(start)) {
         if (!end || isNaN(end)) end = start;
         if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
       }
@@ -1081,13 +1105,6 @@ function lookupVolkswagenUnifil(vehiculo) {
  */
 async function syncVolkswagenUnifil() {
   try {
-    const TIPO_FILTRO = {
-      filtro_aceite:   'Intercambiable / Cartucho',
-      filtro_aire:     'Panel / Cilíndrico',
-      filtro_gasolina: 'Línea',
-      filtro_cabina:   'Polen',
-    };
-
     const vws = await Vehiculo.find({ marca: /volkswagen/i });
     let updatedCount = 0;
     const keys = ['filtro_aceite', 'filtro_aire', 'filtro_gasolina', 'filtro_cabina'];
@@ -1107,7 +1124,7 @@ async function syncVolkswagenUnifil() {
           const currentFiltro = vw.kit_afinacion?.[key];
           let interfilSku = null;
           if (currentFiltro) {
-            if (currentFiltro.marca && currentFiltro.marca !== 'UNIFIL') {
+            if (currentFiltro.marca && currentFiltro.marca.toUpperCase() === 'INTERFIL') {
               interfilSku = currentFiltro.sku;
             } else if (currentFiltro.alternos && Array.isArray(currentFiltro.alternos)) {
               const found = currentFiltro.alternos.find(a => a.marca && a.marca.toUpperCase() === 'INTERFIL');
@@ -1244,13 +1261,13 @@ function lookupVWAireJoe(vehiculo) {
         end = parseInt(parts[1], 10);
       } else if (r.anio.includes('>')) {
         start = parseInt(r.anio.replace('>', ''), 10);
-        end = 2030;
+        end = YEAR_HORIZON;
       } else {
         start = parseInt(r.anio, 10);
         end = start;
       }
 
-      if (start && !isNaN(start)) {
+      if (start !== null && !isNaN(start)) {
         if (!end || isNaN(end)) end = start;
         if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
       }
@@ -1321,13 +1338,13 @@ function lookupChevroletAireJoe(vehiculo) {
         end = parseInt(parts[1], 10);
       } else if (r.anio.includes('>')) {
         start = parseInt(r.anio.replace('>', ''), 10);
-        end = 2030;
+        end = YEAR_HORIZON;
       } else {
         start = parseInt(r.anio, 10);
         end = start;
       }
 
-      if (start && !isNaN(start)) {
+      if (start !== null && !isNaN(start)) {
         if (!end || isNaN(end)) end = start;
         if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
       }
@@ -1398,13 +1415,13 @@ function lookupFordAireJoe(vehiculo) {
         end   = parseInt(parts[1], 10);
       } else if (r.anio.includes('>')) {
         start = parseInt(r.anio.replace('>', ''), 10);
-        end   = 2030;
+        end = YEAR_HORIZON;
       } else {
         start = parseInt(r.anio, 10);
-        end   = start;
+        end = start;
       }
 
-      if (start && !isNaN(start)) {
+      if (start !== null && !isNaN(start)) {
         if (!end || isNaN(end)) end = start;
         if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
       }
@@ -1475,13 +1492,13 @@ function lookupHondaAireJoe(vehiculo) {
         end   = parseInt(parts[1], 10);
       } else if (r.anio.includes('>')) {
         start = parseInt(r.anio.replace('>', ''), 10);
-        end   = 2030;
+        end = YEAR_HORIZON;
       } else {
         start = parseInt(r.anio, 10);
-        end   = start;
+        end = start;
       }
 
-      if (start && !isNaN(start)) {
+      if (start !== null && !isNaN(start)) {
         if (!end || isNaN(end)) end = start;
         if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
       }
@@ -1552,13 +1569,13 @@ function lookupToyotaAireJoe(vehiculo) {
         end   = parseInt(parts[1], 10);
       } else if (r.anio.includes('>')) {
         start = parseInt(r.anio.replace('>', ''), 10);
-        end   = 2030;
+        end = YEAR_HORIZON;
       } else {
         start = parseInt(r.anio, 10);
-        end   = start;
+        end = start;
       }
 
-      if (start && !isNaN(start)) {
+      if (start !== null && !isNaN(start)) {
         if (!end || isNaN(end)) end = start;
         if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
       }
@@ -1629,13 +1646,13 @@ function lookupMazdaAireJoe(vehiculo) {
         end   = parseInt(parts[1], 10);
       } else if (r.anio.includes('>')) {
         start = parseInt(r.anio.replace('>', ''), 10);
-        end   = 2030;
+        end = YEAR_HORIZON;
       } else {
         start = parseInt(r.anio, 10);
-        end   = start;
+        end = start;
       }
 
-      if (start && !isNaN(start)) {
+      if (start !== null && !isNaN(start)) {
         if (!end || isNaN(end)) end = start;
         if (vehiculo.anio_fin < start || vehiculo.anio_inicio > end) return false;
       }
@@ -1679,31 +1696,90 @@ async function syncMazdaAireJoe() {
 
 
 /**
- * Helper to dynamically enrich vehicles' kit_afinacion with costs from PrecioUnifil.
+ * Helper to dynamically enrich vehicles' kit_afinacion with costs from PrecioFiltro.
  * Calculates costs for UNIFIL items and provides a fallback for other brands.
  */
 async function enrichVehiculosWithPrices(vehiculos) {
   try {
-    const preciosList = await PrecioUnifil.find({});
-    const preciosMap = new Map();
-    preciosList.forEach(p => {
-      if (p.clave) {
-        preciosMap.set(p.clave.trim().toUpperCase(), p.precio);
-      }
-    });
+    const now = Date.now();
+    if (!priceCache.preciosMap || !priceCache.bujiasMap || !priceCache.balatasList || (now - priceCache.lastUpdated > CACHE_TTL)) {
+      const [preciosList, bujiasList, balatasList] = await Promise.all([
+        PrecioFiltro.find({}),
+        PrecioBujia.find({}),
+        Balata.find({})
+      ]);
 
-    const bujiasList = await PrecioBujia.find({});
-    const bujiasMap = new Map();
-    bujiasList.forEach(b => {
-      if (b.sku) {
-        bujiasMap.set(b.sku.trim().toUpperCase(), b.precio_cliente);
-      }
-    });
+      const preciosMap = new Map();
+      preciosList.forEach(p => {
+        if (p.clave) {
+          const brand = (p.marca || 'UNIFIL').trim().toUpperCase();
+          const clave = p.clave.trim().toUpperCase();
+          preciosMap.set(`${brand}_${clave}`, p.precio);
+          if (brand === 'UNIFIL') {
+            preciosMap.set(clave, p.precio); // fallback
+          }
+        }
+      });
 
+      const bujiasMap = new Map();
+      bujiasList.forEach(b => {
+        if (b.sku) {
+          bujiasMap.set(b.sku.trim().toUpperCase(), b.precio_cliente);
+        }
+      });
+
+      priceCache = {
+        preciosMap,
+        bujiasMap,
+        balatasList,
+        lastUpdated: now
+      };
+    }
+
+    const { preciosMap, bujiasMap, balatasList } = priceCache;
     const DEFAULT_COST = 80;
 
     return vehiculos.map(v => {
       const vObj = v.toObject();
+      
+      const vehicleModelUpper = (vObj.modelo || '').trim().toUpperCase();
+      const vehicleBrandUpper = (vObj.marca || '').trim().toUpperCase();
+
+      // Build all candidate search keys including aliases (BUG 1 fix)
+      const candidateKeys = getFullModelSearchKeys(vehicleBrandUpper, vehicleModelUpper);
+
+      const matchingBalatas = balatasList.filter(b => {
+        return b.vehiculos_compatibles.some(vc => {
+          const vcModelUpper = (vc.modelo || '').toUpperCase().trim();
+          const isModelMatch = candidateKeys.includes(vcModelUpper);
+          if (!isModelMatch) return false;
+
+          const yearOverlap = !(vObj.anio_fin < vc.anio_inicio || vObj.anio_inicio > vc.anio_fin);
+          return yearOverlap;
+        });
+      });
+
+      // Flag vehicles whose model is known but all year ranges are exhausted (BUG 2)
+      const nameOnlyMatches = balatasList.filter(b =>
+        b.vehiculos_compatibles.some(vc =>
+          candidateKeys.includes((vc.modelo || '').toUpperCase().trim())
+        )
+      );
+      const hasNameMatch = nameOnlyMatches.length > 0;
+      const hasYearMatch = matchingBalatas.length > 0;
+
+      vObj.balatas = matchingBalatas.map(b => ({
+        sku_dynamic: b.sku_dynamic,
+        sku_equivalente_wagner: b.sku_equivalente_wagner,
+        fmsi: b.fmsi,
+        posicion: b.posicion
+      }));
+
+      // Metadata: helps UI decide messaging ("en catálogo pero años sin datos" vs "sin datos")
+      vObj.balatas_meta = {
+        tiene_nombre_en_catalogo: hasNameMatch,
+        tiene_cobertura_en_anio: hasYearMatch,
+      };
       
       // Parse cylinders/spark plugs count
       const matchCyl = (vObj.cilindros_config || '').match(/\d+/);
@@ -1730,12 +1806,13 @@ async function enrichVehiculosWithPrices(vehiculos) {
               filtro.costo = 0;
             } else {
               let costo = DEFAULT_COST;
-              const nameUpper = (filtro.marca || '').trim().toUpperCase();
+              const nameUpper = (filtro.marca || 'UNIFIL').trim().toUpperCase();
+              const lookupKey = `${nameUpper}_${skuUpper}`;
               
-              if (nameUpper === 'UNIFIL') {
-                if (preciosMap.has(skuUpper)) {
-                  costo = preciosMap.get(skuUpper);
-                }
+              if (preciosMap.has(lookupKey)) {
+                costo = preciosMap.get(lookupKey);
+              } else if (preciosMap.has(skuUpper)) {
+                costo = preciosMap.get(skuUpper);
               }
               filtro.costo = costo;
               costoTotal += costo;
@@ -1781,6 +1858,12 @@ async function enrichVehiculosWithPrices(vehiculos) {
     console.error('Error enriching vehicles with prices:', err.message);
     return vehiculos.map(v => {
       const vObj = v.toObject();
+      
+      const matchCyl = (vObj.cilindros_config || '').match(/\d+/);
+      const numCilindros = matchCyl ? parseInt(matchCyl[0], 10) : 4;
+      const fallbackUnit = 50;
+      const fallbackTotal = fallbackUnit * numCilindros;
+
       if (vObj.kit_afinacion) {
         let costoTotal = 0;
         const keys = ['filtro_aceite', 'filtro_aire', 'filtro_gasolina', 'filtro_cabina'];
@@ -1796,10 +1879,10 @@ async function enrichVehiculosWithPrices(vehiculos) {
         vObj.kit_afinacion.costo_total = costoTotal;
         // Fallback spark plug pricing structures
         vObj.kit_afinacion.bujias = {
-          iridium: { sku: vObj.bujia_iridium_ix?.tipo || null, precio_unitario: 50, precio_total: 200 },
-          platino: { sku: vObj.bujia_g_power?.tipo || null, precio_unitario: 50, precio_total: 200 },
-          vpower: { sku: vObj.bujia_v_power?.tipo || null, precio_unitario: 50, precio_total: 200 },
-          stock: { sku: vObj.bujia_stock?.tipo || null, precio_unitario: 50, precio_total: 200 }
+          iridium: { sku: vObj.bujia_iridium_ix?.tipo || null, precio_unitario: fallbackUnit, precio_total: fallbackTotal },
+          platino: { sku: vObj.bujia_g_power?.tipo || null, precio_unitario: fallbackUnit, precio_total: fallbackTotal },
+          vpower: { sku: vObj.bujia_v_power?.tipo || null, precio_unitario: fallbackUnit, precio_total: fallbackTotal },
+          stock: { sku: vObj.bujia_stock?.tipo || null, precio_unitario: fallbackUnit, precio_total: fallbackTotal }
         };
       }
       return vObj;
@@ -1807,8 +1890,28 @@ async function enrichVehiculosWithPrices(vehiculos) {
   }
 }
 
+// Rate limiter specifically for catalog stats (BUG API-04)
+const statsLimiter = rateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 30, // Limit each IP to 30 requests per minute
+  message: { error: 'Demasiadas solicitudes a las estadísticas. Por favor intente más tarde.' },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+// GET /api/vehiculos/stats — Declarado arriba de rutas dinámicas (BUG LOGIC-02)
+router.get('/stats', statsLimiter, async (req, res) => {
+  try {
+    const total = await Vehiculo.countDocuments();
+    const brandsCount = (await Vehiculo.distinct('marca')).length;
+    res.json({ total, brands: brandsCount });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // GET /api/vehiculos/brands
-router.get('/brands', async (req, res) => {
+router.get('/brands', antiscaping, async (req, res) => {
   try {
     const brands = await Vehiculo.distinct('marca');
     res.json(brands.sort());
@@ -1817,11 +1920,26 @@ router.get('/brands', async (req, res) => {
   }
 });
 
+// GET /api/vehiculos/models-autocomplete
+router.get('/models-autocomplete', antiscaping, async (req, res) => {
+  try {
+    const list = await Vehiculo.aggregate([
+      { $group: { _id: { marca: '$marca', modelo: '$modelo' } } },
+      { $project: { _id: 0, text: { $concat: ['$_id.marca', ' ', '$_id.modelo'] } } }
+    ]);
+    const result = list.map(item => item.text).sort();
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
 // GET /api/vehiculos/brand/:marca
-router.get('/brand/:marca', async (req, res) => {
+router.get('/brand/:marca', antiscaping, async (req, res) => {
   try {
     const { marca } = req.params;
-    const vehiculos = await Vehiculo.find({ marca: { $regex: new RegExp(`^${marca}$`, 'i') } });
+    const vehiculos = await Vehiculo.find({ marca: { $regex: new RegExp(`^${escapeRegExp(marca)}$`, 'i') } });
     const enriched = await enrichVehiculosWithPrices(vehiculos);
     res.json(enriched);
   } catch (err) {
@@ -1832,31 +1950,60 @@ router.get('/brand/:marca', async (req, res) => {
 // GET /api/vehiculos
 router.get('/', antiscaping, async (req, res) => {
   try {
-    const { marca, modelo, anio } = req.query;
+    const { marca, modelo, filterBrand, anio } = req.query;
+    const page = req.query.page ? parseInt(req.query.page, 10) : null;
+    const limit = req.query.limit ? parseInt(req.query.limit, 10) : null;
+    
     const filter = {};
     
-    if (marca) filter.marca = { $regex: new RegExp(`^${marca}$`, 'i') };
-    if (modelo) filter.modelo = { $regex: new RegExp(`^${modelo}$`, 'i') };
+    if (marca) {
+      if (page) {
+        filter.marca = { $regex: new RegExp(escapeRegExp(marca), 'i') };
+      } else {
+        filter.marca = { $regex: new RegExp(`^${escapeRegExp(marca)}$`, 'i') };
+      }
+    }
+    
+    if (filterBrand && filterBrand !== 'all') {
+      filter.marca = { $regex: new RegExp(`^${escapeRegExp(filterBrand)}$`, 'i') };
+    }
+    
+    if (modelo) {
+      if (page) {
+        filter.modelo = { $regex: new RegExp(escapeRegExp(modelo), 'i') };
+      } else {
+        filter.modelo = { $regex: new RegExp(`^${escapeRegExp(modelo)}$`, 'i') };
+      }
+    }
+    
     if (anio) {
       const a = parseInt(anio, 10);
       filter.anio_inicio = { $lte: a };
       filter.anio_fin = { $gte: a };
     }
 
-    const vehiculos = await Vehiculo.find(filter).sort({ modelo: 1, anio_inicio: 1 });
-    const enriched = await enrichVehiculosWithPrices(vehiculos);
-    res.json(enriched);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
+    if (page && limit) {
+      const skip = (page - 1) * limit;
+      const totalCount = await Vehiculo.countDocuments(filter);
+      const vehiculos = await Vehiculo.find(filter)
+        .sort({ modelo: 1, anio_inicio: 1 })
+        .skip(skip)
+        .limit(limit);
 
-// GET /api/vehiculos/stats
-router.get('/stats', async (req, res) => {
-  try {
-    const total = await Vehiculo.countDocuments();
-    const brandsCount = (await Vehiculo.distinct('marca')).length;
-    res.json({ total, brands: brandsCount });
+      const enriched = await enrichVehiculosWithPrices(vehiculos);
+      
+      res.json({
+        ok: true,
+        vehiculos: enriched,
+        totalCount,
+        totalPages: Math.ceil(totalCount / limit),
+        currentPage: page
+      });
+    } else {
+      const vehiculos = await Vehiculo.find(filter).sort({ modelo: 1, anio_inicio: 1 });
+      const enriched = await enrichVehiculosWithPrices(vehiculos);
+      res.json(enriched);
+    }
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -1864,10 +2011,14 @@ router.get('/stats', async (req, res) => {
 
 // POST /api/vehiculos/seed
 router.post('/seed', auth, async (req, res) => {
+  if (process.env.NODE_ENV === 'production') {
+    return res.status(403).json({ error: 'Operación de seed deshabilitada en el entorno de producción.' });
+  }
+
   try {
     const records = req.body;
-    if (!Array.isArray(records)) {
-      return res.status(400).json({ error: 'Body must be an array of records' });
+    if (!Array.isArray(records) || records.length === 0) {
+      return res.status(400).json({ error: 'Body must be a non-empty array of records' });
     }
     
     await Vehiculo.deleteMany({});
@@ -1914,12 +2065,15 @@ router.post('/seed', auth, async (req, res) => {
 router.put('/:id', auth, async (req, res) => {
   try {
     const { id } = req.params;
-    const { kit_afinacion, referencias_alternas } = req.body;
+    const {
+      marca, modelo, anio_inicio, anio_fin, motor, litros, cilindros_config, aspiracion,
+      bujia_stock, bujia_iridium_ix, bujia_g_power, bujia_v_power, calibracion_mm,
+      kit_afinacion, referencias_alternas
+    } = req.body;
 
-    // Validate that at least one field to update was provided
-    if (!kit_afinacion && !referencias_alternas) {
+    if (Object.keys(req.body).length === 0) {
       return res.status(400).json({
-        error: 'Se requiere al menos un campo a actualizar: kit_afinacion o referencias_alternas.'
+        error: 'Se requiere al menos un campo a actualizar.'
       });
     }
 
@@ -1928,6 +2082,23 @@ router.put('/:id', auth, async (req, res) => {
     if (!vehiculo) {
       return res.status(404).json({ error: 'Vehículo no encontrado.' });
     }
+
+    // Update standard fields
+    if (marca !== undefined) vehiculo.marca = marca;
+    if (modelo !== undefined) vehiculo.modelo = modelo;
+    if (anio_inicio !== undefined) vehiculo.anio_inicio = Number(anio_inicio);
+    if (anio_fin !== undefined) vehiculo.anio_fin = Number(anio_fin);
+    if (motor !== undefined) vehiculo.motor = motor;
+    if (litros !== undefined) vehiculo.litros = litros === '' || litros === null ? null : Number(litros);
+    if (cilindros_config !== undefined) vehiculo.cilindros_config = cilindros_config;
+    if (aspiracion !== undefined) vehiculo.aspiracion = aspiracion;
+    if (calibracion_mm !== undefined) vehiculo.calibracion_mm = calibracion_mm === '' || calibracion_mm === null ? null : Number(calibracion_mm);
+
+    // Spark plugs
+    if (bujia_stock !== undefined) vehiculo.bujia_stock = bujia_stock;
+    if (bujia_iridium_ix !== undefined) vehiculo.bujia_iridium_ix = bujia_iridium_ix;
+    if (bujia_g_power !== undefined) vehiculo.bujia_g_power = bujia_g_power;
+    if (bujia_v_power !== undefined) vehiculo.bujia_v_power = bujia_v_power;
 
     // Merge kit_afinacion field-by-field to preserve existing structure
     if (kit_afinacion) {
@@ -1938,6 +2109,10 @@ router.put('/:id', auth, async (req, res) => {
         if (kit_afinacion[key] !== undefined) {
           const incoming = kit_afinacion[key];
           const current  = currentKit[key] || {};
+
+          if (incoming.alternos !== undefined && !Array.isArray(incoming.alternos)) {
+            return res.status(400).json({ error: 'El campo alternos debe ser un arreglo.' });
+          }
 
           // Build updated filtro preserving tipo field from original
           currentKit[key] = {
@@ -1956,22 +2131,106 @@ router.put('/:id', auth, async (req, res) => {
 
     // Merge referencias_alternas if provided
     if (referencias_alternas) {
+      const whitelist = ['filtro_aire_joe', 'filtro_aceite_joe', 'filtro_gasolina_joe', 'filtro_cabina_joe'];
+      const filteredAlternas = {};
+      for (const key of whitelist) {
+        if (referencias_alternas[key] !== undefined) {
+          filteredAlternas[key] = referencias_alternas[key];
+        }
+      }
       vehiculo.referencias_alternas = {
         ...(vehiculo.referencias_alternas || {}),
-        ...referencias_alternas,
+        ...filteredAlternas,
       };
       vehiculo.markModified('referencias_alternas');
     }
 
     await vehiculo.save();
 
+    // Enrich the updated vehicle to return the full calculated fields
+    const enrichedList = await enrichVehiculosWithPrices([vehiculo]);
+    const enrichedVehiculo = enrichedList[0];
+
     return res.json({
       ok: true,
       message: 'Vehículo actualizado correctamente.',
-      vehiculo,
+      vehiculo: enrichedVehiculo,
     });
   } catch (err) {
     console.error('Error updating vehiculo:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// POST /api/vehiculos — PROTEGIDO (JWT requerido)
+// Crear un nuevo vehículo
+router.post('/', auth, async (req, res) => {
+  try {
+    const {
+      marca, modelo, anio_inicio, anio_fin, motor, litros, cilindros_config, aspiracion,
+      bujia_stock, bujia_iridium_ix, bujia_g_power, bujia_v_power, calibracion_mm,
+      kit_afinacion, referencias_alternas
+    } = req.body;
+
+    if (!marca || !modelo || anio_inicio === undefined || anio_fin === undefined) {
+      return res.status(400).json({ error: 'Marca, modelo, anio_inicio y anio_fin son obligatorios.' });
+    }
+
+    const defaultFiltro = () => ({ tipo: null, marca: null, sku: null, hasData: false, alternos: [] });
+    const finalKit = kit_afinacion || {
+      filtro_aceite: defaultFiltro(),
+      filtro_aire: defaultFiltro(),
+      filtro_gasolina: defaultFiltro(),
+      filtro_cabina: defaultFiltro()
+    };
+
+    const nuevoVehiculo = new Vehiculo({
+      marca: marca.trim(),
+      modelo: modelo.trim(),
+      anio_inicio: Number(anio_inicio),
+      anio_fin: Number(anio_fin),
+      motor: motor ? motor.trim() : '',
+      litros: litros === '' || litros === null || litros === undefined ? null : Number(litros),
+      cilindros_config: cilindros_config ? cilindros_config.trim() : '',
+      aspiracion: aspiracion ? aspiracion.trim() : '',
+      calibracion_mm: calibracion_mm === '' || calibracion_mm === null || calibracion_mm === undefined ? null : Number(calibracion_mm),
+      bujia_stock: bujia_stock || { tipo: '', codigo: '' },
+      bujia_iridium_ix: bujia_iridium_ix || { tipo: '', codigo: '' },
+      bujia_g_power: bujia_g_power || { tipo: '', codigo: '' },
+      bujia_v_power: bujia_v_power || { tipo: '', codigo: '' },
+      referencias_alternas: referencias_alternas || {},
+      kit_afinacion: finalKit
+    });
+
+    await nuevoVehiculo.save();
+    
+    // Enrich before returning
+    const enrichedList = await enrichVehiculosWithPrices([nuevoVehiculo]);
+    const enrichedVehiculo = enrichedList[0];
+
+    res.status(201).json({
+      ok: true,
+      message: 'Vehículo creado correctamente.',
+      vehiculo: enrichedVehiculo
+    });
+  } catch (err) {
+    console.error('Error creating vehiculo:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// DELETE /api/vehiculos/:id — PROTEGIDO (JWT requerido)
+// Eliminar un vehículo
+router.delete('/:id', auth, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const vehiculo = await Vehiculo.findByIdAndDelete(id);
+    if (!vehiculo) {
+      return res.status(404).json({ error: 'Vehículo no encontrado.' });
+    }
+    res.json({ ok: true, message: 'Vehículo eliminado correctamente.' });
+  } catch (err) {
+    console.error('Error deleting vehiculo:', err.message);
     res.status(500).json({ error: err.message });
   }
 });
@@ -1991,4 +2250,5 @@ router.syncFordAireJoe                = syncFordAireJoe;
 router.syncHondaAireJoe               = syncHondaAireJoe;
 router.syncToyotaAireJoe              = syncToyotaAireJoe;
 router.syncMazdaAireJoe               = syncMazdaAireJoe;
+router.invalidatePriceCache           = invalidatePriceCache;
 module.exports = router;

@@ -2,7 +2,7 @@ require('dotenv').config({ path: require('path').resolve(__dirname, '../../.env'
 const fs = require('fs');
 const path = require('path');
 const mongoose = require('mongoose');
-const PrecioUnifil = require('../../models/PrecioUnifil');
+const PrecioFiltro = require('../../models/PrecioFiltro');
 
 const CSV_DIR = path.resolve(__dirname, '../../../public/data');
 const CSV_FILES = [
@@ -105,7 +105,7 @@ async function runMigration() {
 
   if (bulkOps.length > 0) {
     console.log(`Executing bulkWrite with ${bulkOps.length} operations...`);
-    const result = await PrecioUnifil.bulkWrite(bulkOps);
+    const result = await PrecioFiltro.bulkWrite(bulkOps);
     console.log('Bulk upsert finished.');
     console.log(`- Matched: ${result.matchedCount}`);
     console.log(`- Modified: ${result.modifiedCount}`);
@@ -114,7 +114,7 @@ async function runMigration() {
     console.log('No valid operations to execute.');
   }
 
-  const activeCount = await PrecioUnifil.countDocuments();
+  const activeCount = await PrecioFiltro.countDocuments();
   console.log(`Total active UNIFIL prices in database: ${activeCount}`);
 
   await mongoose.disconnect();

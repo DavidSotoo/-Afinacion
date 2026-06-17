@@ -1,5 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { Search, RefreshCw } from 'lucide-react';
+import { API_BASE } from '../lib/config';
+
+const CACHE_TTL = 15 * 60 * 1000; // 15 minutos en ms
+
+function getCachedItem(key) {
+  const itemStr = sessionStorage.getItem(key);
+  if (!itemStr) return null;
+  try {
+    const item = JSON.parse(itemStr);
+    if (Date.now() - item.timestamp > CACHE_TTL) {
+      sessionStorage.removeItem(key);
+      return null;
+    }
+    return item.data;
+  } catch (e) {
+    return null;
+  }
+}
+
+function setCachedItem(key, data) {
+  try {
+    const item = { data, timestamp: Date.now() };
+    sessionStorage.setItem(key, JSON.stringify(item));
+  } catch (e) {
+    console.warn('Failed to set sessionStorage cache:', e);
+  }
+}
 
 export default function YMMSearch({ onSearch, onReset }) {
   const [marcas, setMarcas] = useState([]);
@@ -14,67 +41,59 @@ export default function YMMSearch({ onSearch, onReset }) {
 
   // Fetch unique brands on mount
   useEffect(() => {
-    const cachedBrands = sessionStorage.getItem('ymm_brands');
+    const cachedBrands = getCachedItem('ymm_brands');
     if (cachedBrands) {
-      try {
-        setMarcas(JSON.parse(cachedBrands));
-        return;
-      } catch (e) {
-        console.warn('Failed to parse cached brands, fetching fresh data...', e);
-      }
+      setMarcas(cachedBrands);
+      return;
     }
 
-    fetch('http://localhost:5000/api/vehiculos/brands')
+    fetch(`${API_BASE}/api/vehiculos/brands`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to load brands');
         return res.json();
       })
       .then(data => {
         setMarcas(data);
-        sessionStorage.setItem('ymm_brands', JSON.stringify(data));
+        setCachedItem('ymm_brands', data);
       })
       .catch(err => console.error("Error loading brands:", err));
   }, []);
 
-  // Filter models by selected brand — also clears stale results
+  // Filter models by selected brand — also clears stale results (BUG FE-H6)
   useEffect(() => {
     setModelos([]);
     setSelectedModelo('');
     setAnios([]);
     setSelectedAnio('');
     setBrandRecords([]);
-    onReset();
 
     if (!selectedMarca) return;
+    onReset();
 
     let active = true;
     
-    // Check session storage cache first
+    // Check session storage cache first (BUG FE-M8)
     const cacheKey = `ymm_brand_${selectedMarca}`;
-    const cachedBrandData = sessionStorage.getItem(cacheKey);
+    const cachedBrandData = getCachedItem(cacheKey);
     if (cachedBrandData) {
-      try {
-        const records = JSON.parse(cachedBrandData);
-        const mappedRecords = records.map(r => ({ ...r, id: r._id || r.id }));
-        setBrandRecords(mappedRecords);
-        const uniqueModels = [...new Set(mappedRecords.map(item => item.modelo))].sort();
-        setModelos(uniqueModels);
-        return;
-      } catch (e) {
-        console.warn(`Failed to parse cached data for brand ${selectedMarca}, fetching fresh data...`, e);
-      }
+      const mappedRecords = cachedBrandData.map(r => ({ ...r, id: r._id || r.id }));
+      setBrandRecords(mappedRecords);
+      const uniqueModels = [...new Set(mappedRecords.map(item => item.modelo))].sort();
+      setModelos(uniqueModels);
+      return;
     }
 
     setLoadingBrand(true);
     
-    fetch(`http://localhost:5000/api/vehiculos/brand/${selectedMarca}`)
+    // Encode parameter (BUG FE-L8)
+    fetch(`${API_BASE}/api/vehiculos/brand/${encodeURIComponent(selectedMarca)}`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to load models');
         return res.json();
       })
       .then(records => {
         if (!active) return;
-        sessionStorage.setItem(cacheKey, JSON.stringify(records));
+        setCachedItem(cacheKey, records);
         // Map _id to id for backwards compatibility
         const mappedRecords = records.map(r => ({ ...r, id: r._id || r.id }));
         setBrandRecords(mappedRecords);
@@ -90,7 +109,7 @@ export default function YMMSearch({ onSearch, onReset }) {
     return () => { active = false; };
   }, [selectedMarca, onReset]);
 
-  // Update years when a model is selected
+  // Update years when a model is selected (BUG FE-M9)
   useEffect(() => {
     if (!selectedModelo) {
       setAnios([]);
@@ -100,8 +119,12 @@ export default function YMMSearch({ onSearch, onReset }) {
     const matches = brandRecords.filter(item => item.modelo === selectedModelo);
     const yearsSet = new Set();
     matches.forEach(match => {
-      for (let y = match.anio_inicio; y <= match.anio_fin; y++) {
-        yearsSet.add(y);
+      const start = parseInt(match.anio_inicio, 10);
+      const end = parseInt(match.anio_fin, 10);
+      if (!isNaN(start) && !isNaN(end)) {
+        for (let y = start; y <= end; y++) {
+          yearsSet.add(y);
+        }
       }
     });
     const yearsArray = [...yearsSet].sort((a, b) => b - a);
@@ -213,8 +236,9 @@ export default function YMMSearch({ onSearch, onReset }) {
               className="btn-search"
               id="btn-buscar"
               onClick={handleSearch}
-              disabled={!selectedMarca}
-              title={!selectedMarca ? 'Selecciona una marca para buscar' : undefined}
+              disabled={!selectedMarca || !selectedModelo}
+              title={!selectedMarca || !selectedModelo ? 'Selecciona marca y modelo para buscar' : undefined}
+              aria-label="Buscar vehículos"
             >
               <Search size={16} />
               BUSCAR

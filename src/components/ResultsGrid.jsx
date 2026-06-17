@@ -26,7 +26,7 @@ const FILTER_CHIPS = [
  *  'kits'   → one KitCard per bujia record (full tune-up dashboard)
  *  'piezas' → one ProductCard per NGK line (original behavior)
  */
-export default function ResultsGrid({ results, activeFilter, onFilterChange, hasSearched, isLoading, error }) {
+export default function ResultsGrid({ results = [], activeFilter, onFilterChange, hasSearched, isLoading, error }) {
   const [viewMode, setViewMode] = useState('kits');
 
   /** Expand records into individual line cards (pieza mode).
@@ -88,18 +88,6 @@ export default function ResultsGrid({ results, activeFilter, onFilterChange, has
             ))}
           </div>
         </div>
-        
-        <style>{`
-          @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-          }
-          @keyframes pulse-glow {
-            0% { opacity: 0.4; }
-            50% { opacity: 0.8; }
-            100% { opacity: 0.4; }
-          }
-        `}</style>
       </section>
     );
   }

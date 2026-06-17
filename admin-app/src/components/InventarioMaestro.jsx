@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import api from '../services/api';
 import {
   Search, RotateCcw, Filter, AlertTriangle, Pencil, CheckCircle2,
-  ChevronLeft, ChevronRight
+  ChevronLeft, ChevronRight, Plus, Trash2
 } from 'lucide-react';
-import ModalEditarKit from './ModalEditarKit';
+import ModalEditarVehiculo from './ModalEditarVehiculo';
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 const PAGE_SIZE = 50;
@@ -64,26 +64,74 @@ export default function InventarioMaestro() {
   const [vehiculos,    setVehiculos]    = useState([]);
   const [loading,      setLoading]      = useState(true);
   const [error,        setError]        = useState('');
+  
+  // Search inputs (immediate typing state)
+  const [inputMarca,   setInputMarca]   = useState('');
+  const [inputModelo,  setInputModelo]  = useState('');
+  
+  // Debounced search queries used for API calls
   const [searchMarca,  setSearchMarca]  = useState('');
   const [searchModelo, setSearchModelo] = useState('');
+  
   const [filterBrand,  setFilterBrand]  = useState('all');
   const [brands,       setBrands]       = useState([]);
+  
+  // Pagination State
   const [page,         setPage]         = useState(1);
+  const [totalPages,   setTotalPages]   = useState(1);
+  const [totalCount,   setTotalCount]   = useState(0);
 
   // Modal & toast state
   const [editVehiculo, setEditVehiculo] = useState(null);
+  const [showCreateModal, setShowCreateModal] = useState(false);
   const [toast,        setToast]        = useState('');
 
-  // ── Fetch data ─────────────────────────────────────────────────────────────
+  // ── Debouncing Search Inputs ───────────────────────────────────────────────
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSearchMarca(inputMarca);
+      setPage(1);
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [inputMarca]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSearchModelo(inputModelo);
+      setPage(1);
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [inputModelo]);
+
+  // ── Load Unique Brands once on mount ───────────────────────────────────────
+  useEffect(() => {
+    const fetchBrands = async () => {
+      try {
+        const brandsRes = await api.get('/vehiculos/brands');
+        setBrands(brandsRes.data || []);
+      } catch (err) {
+        console.error('Error loading brand filter list:', err);
+      }
+    };
+    fetchBrands();
+  }, []);
+
+  // ── Fetch paginated and filtered data from backend ────────────────────────
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
-      const [vehiclesRes, brandsRes] = await Promise.all([
-        api.get('/vehiculos'),
-        api.get('/vehiculos/brands'),
-      ]);
-      setVehiculos(vehiclesRes.data || []);
-      setBrands(brandsRes.data || []);
+      const res = await api.get('/vehiculos', {
+        params: {
+          marca: searchMarca,
+          modelo: searchModelo,
+          filterBrand,
+          page,
+          limit: PAGE_SIZE
+        }
+      });
+      setVehiculos(res.data.vehiculos || []);
+      setTotalPages(res.data.totalPages || 1);
+      setTotalCount(res.data.totalCount || 0);
       setError('');
     } catch (err) {
       console.error('Error loading inventory:', err);
@@ -91,43 +139,51 @@ export default function InventarioMaestro() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [searchMarca, searchModelo, filterBrand, page]);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { fetchData(); }, [fetchData]);
 
   // ── Filters ────────────────────────────────────────────────────────────────
   const handleReset = () => {
+    setInputMarca('');
+    setInputModelo('');
     setSearchMarca('');
     setSearchModelo('');
     setFilterBrand('all');
     setPage(1);
   };
 
-  const filteredVehiculos = vehiculos.filter(v => {
-    const matchMarca  = (v.marca  || '').toLowerCase().includes(searchMarca.toLowerCase());
-    const matchModelo = (v.modelo || '').toLowerCase().includes(searchModelo.toLowerCase());
-    const matchBrand  = filterBrand === 'all' || (v.marca || '').toLowerCase() === filterBrand.toLowerCase();
-    return matchMarca && matchModelo && matchBrand;
-  });
-
-  // ── Pagination ─────────────────────────────────────────────────────────────
-  const totalPages  = Math.max(1, Math.ceil(filteredVehiculos.length / PAGE_SIZE));
-  const currentPage = Math.min(page, totalPages);
-  const paginated   = filteredVehiculos.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
-
   const handleFilterChange = () => setPage(1);
 
   // ── Modal callbacks ────────────────────────────────────────────────────────
   const handleOpenEdit = (v) => setEditVehiculo(v);
 
-  const handleSaved = useCallback((updatedVehiculo) => {
-    // Merge the updated record back into state without full refetch
-    setVehiculos(prev =>
-      prev.map(v => (v._id === updatedVehiculo._id ? updatedVehiculo : v))
-    );
+  const handleSaved = useCallback((savedVehiculo) => {
+    fetchData(); // Reload current page
     setEditVehiculo(null);
-    setToast(`✅ ${updatedVehiculo.marca} ${updatedVehiculo.modelo} actualizado en Atlas.`);
-  }, []);
+    setShowCreateModal(false);
+    setToast(`✅ ${savedVehiculo.marca} ${savedVehiculo.modelo} guardado en Atlas.`);
+    
+    setBrands(current => {
+      if (!current.includes(savedVehiculo.marca)) {
+        return [...current, savedVehiculo.marca].sort();
+      }
+      return current;
+    });
+  }, [fetchData]);
+
+  const handleDeleteVehiculo = async (id, name) => {
+    if (!window.confirm(`¿Estás seguro de que deseas eliminar el vehículo "${name}"?`)) return;
+    try {
+      await api.delete(`/vehiculos/${id}`);
+      setToast(`🗑️ Vehículo "${name}" eliminado de Atlas.`);
+      fetchData(); // Reload current page
+    } catch (err) {
+      console.error('Error deleting vehicle:', err);
+      setError('Error al eliminar el vehículo.');
+    }
+  };
 
   // ── Loading state ──────────────────────────────────────────────────────────
   if (loading) {
@@ -148,13 +204,20 @@ export default function InventarioMaestro() {
         </div>
         <div className="flex items-center gap-3">
           <span className="text-xs text-slate-500 font-mono bg-slate-900 border border-slate-800 px-3.5 py-2 rounded-xl">
-            {filteredVehiculos.length} / {vehiculos.length} registros
+            {totalCount} registros
           </span>
           <button
             onClick={fetchData}
-            className="text-xs text-slate-400 hover:text-white bg-slate-900 border border-slate-800 hover:border-slate-700 px-3.5 py-2 rounded-xl transition-colors cursor-pointer"
+            className="text-xs text-slate-400 hover:text-white bg-slate-900 border border-slate-800 hover:border-slate-700 px-3.5 py-2.5 rounded-xl transition-colors cursor-pointer"
           >
             Recargar
+          </button>
+          <button
+            onClick={() => setShowCreateModal(true)}
+            className="flex items-center gap-1.5 text-xs font-semibold bg-violet-600 hover:bg-violet-500 text-white px-4 py-2.5 rounded-xl transition-all shadow-md shadow-violet-600/10 cursor-pointer"
+          >
+            <Plus className="w-3.5 h-3.5" />
+            Agregar Vehículo
           </button>
         </div>
       </div>
@@ -174,8 +237,8 @@ export default function InventarioMaestro() {
             <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              value={searchMarca}
-              onChange={e => { setSearchMarca(e.target.value); handleFilterChange(); }}
+              value={inputMarca}
+              onChange={e => setInputMarca(e.target.value)}
               placeholder="Buscar marca…"
               className="w-full bg-slate-950 border border-slate-800 focus:border-violet-500 focus:ring-1 focus:ring-violet-500/20 rounded-xl pl-9 pr-4 py-2.5 text-sm text-slate-200 outline-none transition-all"
             />
@@ -184,8 +247,8 @@ export default function InventarioMaestro() {
             <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              value={searchModelo}
-              onChange={e => { setSearchModelo(e.target.value); handleFilterChange(); }}
+              value={inputModelo}
+              onChange={e => setInputModelo(e.target.value)}
               placeholder="Buscar modelo…"
               className="w-full bg-slate-950 border border-slate-800 focus:border-violet-500 focus:ring-1 focus:ring-violet-500/20 rounded-xl pl-9 pr-4 py-2.5 text-sm text-slate-200 outline-none transition-all"
             />
@@ -231,14 +294,14 @@ export default function InventarioMaestro() {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-800 text-sm text-slate-300">
-              {paginated.length === 0 ? (
+              {vehiculos.length === 0 ? (
                 <tr>
                   <td colSpan="9" className="text-center py-10 text-slate-500 text-sm">
                     No se encontraron vehículos con los filtros actuales.
                   </td>
                 </tr>
               ) : (
-                paginated.map(v => {
+                vehiculos.map(v => {
                   const oemBujias = !v.bujia_iridium_ix?.tipo && !v.bujia_g_power?.tipo
                     && !v.bujia_v_power?.tipo && !v.bujia_stock?.tipo;
 
@@ -309,14 +372,23 @@ export default function InventarioMaestro() {
 
                       {/* Acciones */}
                       <td className="py-3 px-4 text-center">
-                        <button
-                          onClick={() => handleOpenEdit(v)}
-                          title="Editar filtros de este vehículo"
-                          className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-950 border border-slate-700 hover:border-violet-500/60 hover:text-violet-400 text-slate-400 transition-all cursor-pointer opacity-0 group-hover:opacity-100"
-                        >
-                          <Pencil className="w-3.5 h-3.5" />
-                          Editar
-                        </button>
+                        <div className="flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <button
+                            onClick={() => handleOpenEdit(v)}
+                            title="Editar datos y filtros de este vehículo"
+                            className="inline-flex items-center justify-center gap-1 px-2.5 py-1.5 text-xs font-medium rounded-lg bg-slate-950 border border-slate-700 hover:border-violet-500/60 hover:text-violet-400 text-slate-400 transition-all cursor-pointer"
+                          >
+                            <Pencil className="w-3.5 h-3.5" />
+                            Editar
+                          </button>
+                          <button
+                            onClick={() => handleDeleteVehiculo(v._id, `${v.marca} ${v.modelo}`)}
+                             title="Eliminar este vehículo"
+                            className="inline-flex items-center justify-center p-1.5 rounded-lg bg-slate-950 border border-slate-700 hover:border-red-500/60 hover:text-red-400 text-slate-400 transition-all cursor-pointer"
+                          >
+                            <Trash2 className="w-3.5 h-3.5" />
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   );
@@ -331,26 +403,26 @@ export default function InventarioMaestro() {
       {totalPages > 1 && (
         <div className="flex items-center justify-between text-sm text-slate-400">
           <span className="font-mono text-xs">
-            Página {currentPage} de {totalPages} · {filteredVehiculos.length} registros
+            Página {page} de {totalPages} · {totalCount} registros
           </span>
           <div className="flex items-center gap-2">
             <button
               onClick={() => setPage(p => Math.max(1, p - 1))}
-              disabled={currentPage === 1}
+              disabled={page === 1}
               className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 disabled:opacity-30 transition-colors cursor-pointer disabled:cursor-not-allowed"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
             {/* Page number chips */}
             {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
-              const start = Math.max(1, Math.min(currentPage - 2, totalPages - 4));
+              const start = Math.max(1, Math.min(page - 2, totalPages - 4));
               const p = start + i;
               return (
                 <button
                   key={p}
                   onClick={() => setPage(p)}
                   className={`w-9 h-9 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                    p === currentPage
+                    p === page
                       ? 'bg-violet-600 text-white border border-violet-500'
                       : 'bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-400'
                   }`}
@@ -361,7 +433,7 @@ export default function InventarioMaestro() {
             })}
             <button
               onClick={() => setPage(p => Math.min(totalPages, p + 1))}
-              disabled={currentPage === totalPages}
+              disabled={page === totalPages}
               className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 disabled:opacity-30 transition-colors cursor-pointer disabled:cursor-not-allowed"
             >
               <ChevronRight className="w-4 h-4" />
@@ -370,11 +442,18 @@ export default function InventarioMaestro() {
         </div>
       )}
 
-      {/* ── Edit Modal ──────────────────────────────────────────────────────── */}
+      {/* ── Edit & Create Modals ────────────────────────────────────────────── */}
       {editVehiculo && (
-        <ModalEditarKit
+        <ModalEditarVehiculo
           vehiculo={editVehiculo}
           onClose={() => setEditVehiculo(null)}
+          onSaved={handleSaved}
+        />
+      )}
+
+      {showCreateModal && (
+        <ModalEditarVehiculo
+          onClose={() => setShowCreateModal(false)}
           onSaved={handleSaved}
         />
       )}

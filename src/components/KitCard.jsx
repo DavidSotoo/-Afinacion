@@ -12,9 +12,10 @@ import {
   CheckCircle,
   MessageCircle,
   X,
+  Disc,
 } from 'lucide-react';
 import { useCart }             from '../context/CartContext';
-import { WHATSAPP_NUMBER, MOTOR_OIL_BRANDS, MOTOR_OIL_VISCOSITIES } from '../lib/constants';
+import { WHATSAPP_NUMBER, MOTOR_OIL_BRANDS } from '../lib/constants';
 import { filtroTieneSkuReal, recomendarAceiteDefault, calculateOilPrice, formatOilName }  from '../lib/kitHelpers';
 
 /* ─── Static config ───────────────────────────────────────────────────────── */
@@ -80,6 +81,11 @@ export default function KitCard({ bujia }) {
   const [hoveredNode,   setHoveredNode]   = useState(null);
   const [tooltipPos,    setTooltipPos]    = useState({ x: 0, y: 0 });
 
+  // Reset selectedLine when bujia.id changes (BUG FE-H5)
+  useEffect(() => {
+    setSelectedLine(defaultLine);
+  }, [bujia.id, defaultLine]);
+
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     setTooltipPos({
@@ -89,12 +95,13 @@ export default function KitCard({ bujia }) {
   };
 
   // ── Motor Oil state ───────────────────────────────────────────────────────
-  const recomendacionAceite = useMemo(() => recomendarAceiteDefault(bujia), [bujia]);
+  // Use bujia.id to prevent resets on parent re-renders (BUG FE-H4)
+  const recomendacionAceite = useMemo(() => recomendarAceiteDefault(bujia), [bujia.id]);
   const [aceiteSelected, setAceiteSelected] = useState(recomendacionAceite);
 
   useEffect(() => {
     setAceiteSelected(recomendacionAceite);
-  }, [recomendacionAceite]);
+  }, [bujia.id, recomendacionAceite]);
 
   const anioVehiculo = parseInt(bujia.anio_inicio, 10) || 2015;
 
@@ -149,13 +156,20 @@ export default function KitCard({ bujia }) {
 
   const kitItemInCart = useMemo(() => items.find(i => i.id === kitCartId), [items, kitCartId]);
   const kitInCart   = !!kitItemInCart;
+  
+  // Track ONLY FILTROS separately (BUG FE-H3)
+  const filtersCartId = useMemo(() => `kit-${bujia.id}-${selectedLine}-filtros`, [bujia.id, selectedLine]);
+  const filtersItemInCart = useMemo(() => items.find(i => i.id === filtersCartId), [items, filtersCartId]);
+  const filtersInCart = !!filtersItemInCart;
+
   const piezaInCart = useMemo(() => items.some(i => i.id === piezaCartId), [items, piezaCartId]);
 
   const noBujias = availableLines.length === 0;
   
   const totalCost = useMemo(() => {
     if (!kit) return 0;
-    const filtersCost = kit.costo_total || 340;
+    // Falsy check bug fix (BUG FE-H2)
+    const filtersCost = kit.costo_total ?? 340;
     
     let plugsCost = 0;
     if (!noBujias) {
@@ -169,7 +183,7 @@ export default function KitCard({ bujia }) {
     return filtersCost + plugsCost + oilCost;
   }, [kit, noBujias, selectedLine, aceiteSelected, bujia.anio_inicio]);
 
-  // WhatsApp — bujías individuales only
+  // WhatsApp — bujías individuales only (BUG FE-L7: use bujia.id dependency)
   const whatsappBujiasUrl = useMemo(() => {
     if (noBujias || !bujiaData?.tipo) return '#';
     const msg = [
@@ -187,18 +201,31 @@ export default function KitCard({ bujia }) {
       `Por favor, confirmen disponibilidad y precio. ¡Gracias!`,
     ].join('\n');
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-  }, [bujia, lineConfig, bujiaData]);
+  }, [bujia.id, lineConfig, bujiaData]);
 
   // ── Handlers ──────────────────────────────────────────────────────────────
+  const addedTimeoutRef = React.useRef(null);
+
+  // Clear timeout on unmount (BUG FE-M4)
+  useEffect(() => {
+    return () => {
+      if (addedTimeoutRef.current) {
+        clearTimeout(addedTimeoutRef.current);
+      }
+    };
+  }, []);
+
   const handleAddKit = () => {
     addKit(bujia, selectedLine, [], aceiteSelected);
     setJustAdded(true);
-    setTimeout(() => setJustAdded(false), 2500);
+    if (addedTimeoutRef.current) clearTimeout(addedTimeoutRef.current);
+    addedTimeoutRef.current = setTimeout(() => setJustAdded(false), 2500);
   };
 
   const handleAddBujia = () => addItem(bujia, selectedLine);
 
-  const NODES = [
+  // Memoize NODES to avoid recreation on every render (BUG FE-M5)
+  const NODES = useMemo(() => [
     {
       id: 'bujias',
       label: 'Bujías NGK',
@@ -265,7 +292,7 @@ export default function KitCard({ bujia }) {
       sku: aceiteSelected ? formatOilName(aceiteSelected.tecnologia, aceiteSelected.viscosidad) : 'Sin aceite',
       status: aceiteSelected ? 'Seleccionado' : 'No incluido',
     }
-  ];
+  ], [bujiaData, noBujias, kit, aceiteSelected]);
 
   const vehicleLabel = `${bujia.marca} ${bujia.modelo}`;
   const motorLabel   = `${bujia.litros}L ${bujia.cilindros_config}${bujia.motor ? ` (${bujia.motor})` : ''}`;
@@ -329,6 +356,7 @@ export default function KitCard({ bujia }) {
             onClick={() => { setViewMode('list'); setActiveComponent(null); }}
             className={`blueprint-toggle-btn${viewMode === 'list' ? ' active' : ''}`}
             type="button"
+            aria-pressed={viewMode === 'list'}
           >
             📋 Lista
           </button>
@@ -336,6 +364,7 @@ export default function KitCard({ bujia }) {
             onClick={() => { setViewMode('visual'); setActiveComponent(null); }}
             className={`blueprint-toggle-btn${viewMode === 'visual' ? ' active' : ''}`}
             type="button"
+            aria-pressed={viewMode === 'visual'}
           >
             🛠️ Visual
           </button>
@@ -484,40 +513,64 @@ export default function KitCard({ bujia }) {
               {availableLines.length > 1 && (
                 <div className="kit-selector-wrap">
                   <button
-                className={`kit-selector-btn card-badge ${lineConfig.badge}`}
-                onClick={() => setLineDropOpen(o => !o)}
-                aria-haspopup="listbox"
-                aria-expanded={lineDropOpen}
-                aria-label="Seleccionar línea NGK"
-              >
-                <span className="dot" aria-hidden="true" />
-                <span>{lineConfig.label}</span>
-                <ChevronDown
-                  size={12}
-                  aria-hidden="true"
-                  className={`kit-chevron${lineDropOpen ? ' rotated' : ''}`}
-                />
-              </button>
-              {lineDropOpen && (
-                <ul
-                  className="kit-dropdown"
-                  role="listbox"
-                  aria-label="Línea de bujía NGK"
-                >
-                  {availableLines.map(l => (
-                    <li
-                      key={l}
-                      role="option"
-                      aria-selected={selectedLine === l}
-                      className={`kit-drop-item${selectedLine === l ? ' selected' : ''}`}
-                      onClick={() => { setSelectedLine(l); setLineDropOpen(false); }}
+                    className={`kit-selector-btn card-badge ${lineConfig.badge}`}
+                    onClick={() => setLineDropOpen(o => !o)}
+                    aria-haspopup="listbox"
+                    aria-expanded={lineDropOpen}
+                    aria-label="Seleccionar línea NGK"
+                    onKeyDown={(e) => {
+                      if (!lineDropOpen) {
+                        if (e.key === 'ArrowDown' || e.key === 'ArrowUp' || e.key === ' ' || e.key === 'Enter') {
+                          e.preventDefault();
+                          setLineDropOpen(true);
+                        }
+                        return;
+                      }
+                      const currentIndex = availableLines.indexOf(selectedLine);
+                      if (e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        const nextIndex = (currentIndex + 1) % availableLines.length;
+                        setSelectedLine(availableLines[nextIndex]);
+                      } else if (e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        const prevIndex = (currentIndex - 1 + availableLines.length) % availableLines.length;
+                        setSelectedLine(availableLines[prevIndex]);
+                      } else if (e.key === 'Escape' || e.key === 'Tab') {
+                        setLineDropOpen(false);
+                      } else if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        setLineDropOpen(false);
+                      }
+                    }}
+                  >
+                    <span className="dot" aria-hidden="true" />
+                    <span>{lineConfig.label}</span>
+                    <ChevronDown
+                      size={12}
+                      aria-hidden="true"
+                      className={`kit-chevron${lineDropOpen ? ' rotated' : ''}`}
+                    />
+                  </button>
+                  {lineDropOpen && (
+                    <ul
+                      className="kit-dropdown"
+                      role="listbox"
+                      aria-label="Línea de bujía NGK"
                     >
-                      <span className={`dot dot--${LINE_CONFIG[l].badge}`} aria-hidden="true" />
-                      {LINE_CONFIG[l].label}
-                    </li>
-                  ))}
-                </ul>
-              )}
+                      {availableLines.map(l => (
+                        <li
+                          key={l}
+                          role="option"
+                          aria-selected={selectedLine === l}
+                          className={`kit-drop-item${selectedLine === l ? ' selected' : ''}`}
+                          onClick={() => { setSelectedLine(l); setLineDropOpen(false); }}
+                        >
+                          <span className={`dot dot--${LINE_CONFIG[l].badge}`} aria-hidden="true" />
+                          {LINE_CONFIG[l].label}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               )}
             </>
@@ -548,7 +601,7 @@ export default function KitCard({ bujia }) {
                   <div
                     key={key}
                     className={`kit-filter-card kit-filter-card--${color}${tienesku ? ' kit-filter-card--confirmed' : ''}`}
-                    aria-label={`${label}: ${filtro?.tipo}`}
+                    aria-label={`${label}${filtro?.tipo ? `: ${filtro.tipo}` : ''}`}
                   >
                     <div className="kit-filter-card-header">
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', flex: 1 }}>
@@ -632,7 +685,66 @@ export default function KitCard({ bujia }) {
                 </div>
               );
             })}
-          </div>
+            </div>
+          )}
+        </section>
+
+        {/* ▸ BLOQUE BALATAS DYNAMIC ─────────────────────── */}
+        <section className="kit-section-block kit-section-block--brakes" aria-label="Balatas Dynamic">
+          <header className="kit-section-label">
+            <Disc size={13} aria-hidden="true" className="kit-section-icon" style={{ color: 'var(--primary)' }} />
+            <span>Balatas Dynamic</span>
+            <span className="kit-section-numbers">Eje Delantero / Trasero</span>
+          </header>
+          
+          {!bujia.balatas || bujia.balatas.length === 0 ? (
+            <div className="kit-alert-oem" style={{ padding: '0.75rem', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '4px', borderLeft: `3px solid ${bujia.balatas_meta?.tiene_nombre_en_catalogo ? 'var(--primary)' : 'var(--text-3)'}`, marginTop: '0.2rem' }}>
+              <span className="kit-alert-text" style={{ fontSize: '0.75rem', color: 'var(--text-2)', lineHeight: '1.4', display: 'block' }}>
+                {bujia.balatas_meta?.tiene_nombre_en_catalogo
+                  ? '📅 Modelo en catálogo · Consultar disponibilidad para este año'
+                  : '🔄 Balatas en verificación · Próximamente'}
+              </span>
+            </div>
+          ) : (
+            <div className="kit-filter-grid" style={{ marginTop: '0.2rem' }}>
+              {['Delantero', 'Trasero'].map(pos => {
+                const parts = bujia.balatas.filter(b => b.posicion === pos);
+                if (parts.length === 0) return null;
+                
+                return (
+                  <div
+                    key={pos}
+                    className="kit-filter-card kit-filter-card--teal kit-filter-card--confirmed"
+                    style={{ padding: '0.7rem' }}
+                  >
+                    <div className="kit-filter-card-header">
+                      <span className="kit-filter-name" style={{ color: 'var(--primary)', fontWeight: 'bold' }}>
+                        💥 EJE {pos.toUpperCase()}
+                      </span>
+                    </div>
+                    
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '0.4rem' }}>
+                      {parts.map((part, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', flexDirection: 'column', gap: '3px', borderBottom: pIdx < parts.length - 1 ? '1px dashed rgba(255,255,255,0.06)' : 'none', paddingBottom: pIdx < parts.length - 1 ? '6px' : '0' }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', flexWrap: 'wrap' }}>
+                            <span className="kit-filter-marca" style={{ color: 'var(--primary)', borderColor: 'var(--border-primary)', background: 'var(--primary-glow-sm)', fontSize: '0.55rem', padding: '1px 4px' }}>
+                              DYNAMIC
+                            </span>
+                            <span className="kit-filter-sku-code" style={{ fontFamily: 'var(--mono)', fontSize: '0.75rem', fontWeight: 'bold' }}>
+                              {part.sku_dynamic}
+                            </span>
+                          </div>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.62rem', color: 'var(--text-3)', fontFamily: 'var(--mono)', marginTop: '2px' }}>
+                            <span>FMSI: {part.fmsi}</span>
+                            <span>Ref: {part.sku_equivalente_wagner}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           )}
         </section>
 
@@ -791,7 +903,7 @@ export default function KitCard({ bujia }) {
                           </span>
                           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.6rem', borderTop: '1px dashed rgba(255,255,255,0.06)', paddingTop: '0.5rem', fontSize: '0.65rem' }}>
                             <span className="text-slate-500 font-mono">DISPONIBILIDAD:</span>
-                            <span className="text-emerald-400 font-bold font-mono">EN EXISTENCIA (10+ pzas)</span>
+                            <span className="text-emerald-400 font-bold font-mono">DISPONIBLE</span>
                           </div>
                         </div>
 
@@ -838,7 +950,7 @@ export default function KitCard({ bujia }) {
                       </span>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.6rem', borderTop: '1px dashed rgba(255,255,255,0.06)', paddingTop: '0.5rem', fontSize: '0.65rem' }}>
                         <span className="text-slate-500 font-mono">DISPONIBILIDAD:</span>
-                        <span className="text-emerald-400 font-bold font-mono">EN EXISTENCIA (DISPONIBLE)</span>
+                        <span className="text-emerald-400 font-bold font-mono">DISPONIBLE</span>
                       </div>
                     </div>
 
@@ -966,7 +1078,7 @@ export default function KitCard({ bujia }) {
                           {filtro?.sku === 'SELLADO' ? (
                             <span className="text-violet-400 font-bold font-mono">NO REQUIERE CAMBIO</span>
                           ) : tienesku ? (
-                            <span className="text-emerald-400 font-bold font-mono">EN EXISTENCIA (8 pzas)</span>
+                            <span className="text-emerald-400 font-bold font-mono">DISPONIBLE</span>
                           ) : (
                             <span className="text-amber-500 font-bold font-mono">BAJO PEDIDO</span>
                           )}
@@ -1046,14 +1158,14 @@ export default function KitCard({ bujia }) {
               </button>
               {kit && (
                 <button
-                  className={`btn-cart-pieza${kitInCart ? ' btn-cart-pieza--added' : ''}`}
+                  className={`btn-cart-pieza${filtersInCart ? ' btn-cart-pieza--added' : ''}`}
                   style={{ marginLeft: 0 }}
-                  onClick={() => !kitInCart && addKit(bujia, selectedLine, ['bujias'])}
-                  disabled={kitInCart}
-                  aria-label={kitInCart ? 'Filtros ya en carrito' : 'Agregar solo filtros al carrito'}
-                  aria-pressed={kitInCart}
+                  onClick={() => !filtersInCart && addKit(bujia, selectedLine, ['bujias'], null, true)}
+                  disabled={filtersInCart}
+                  aria-label={filtersInCart ? 'Filtros ya en carrito' : 'Agregar solo filtros al carrito'}
+                  aria-pressed={filtersInCart}
                 >
-                  <Filter size={13} /> {kitInCart ? 'Agregados' : '+ Solo Filtros'}
+                  <Filter size={13} /> {filtersInCart ? 'Agregados' : '+ Solo Filtros'}
                 </button>
               )}
             </div>

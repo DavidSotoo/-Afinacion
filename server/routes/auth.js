@@ -1,12 +1,18 @@
 const express = require('express');
 const router  = express.Router();
 const jwt     = require('jsonwebtoken');
+const bcrypt  = require('bcryptjs');
 const Config  = require('../models/Config');
 const auth    = require('../middleware/auth');
 
 /**
  * Mapa de intentos fallidos por IP.
  * { [ip]: { count: number, blockedUntil: number | null } }
+ *
+ * NOTE (SEC-04): This lockout map is held in process memory.
+ * In multi-instance clustering or upon server restarts, the rate-limiting
+ * lockout counters will reset. For a full production clustering system,
+ * persist these counters in a database or Redis store.
  */
 const intentosFallidos = new Map();
 
@@ -20,22 +26,35 @@ function getEstadoIP(ip) {
   return intentosFallidos.get(ip);
 }
 
+function isBcryptHash(str) {
+  return typeof str === 'string' && str.length === 60 && str.startsWith('$2');
+}
+
 /**
- * Obtiene el PIN actual de MongoDB.
+ * Obtiene el PIN actual de MongoDB en formato hash.
  * Si no existe, lo crea usando el valor del .env como semilla.
+ * Si existe en texto plano, lo migra a hash.
  */
 async function getAdminPin() {
   let pinDoc = await Config.findOne({ key: 'admin_pin' });
   if (pinDoc) {
-    return pinDoc.value;
+    let pinVal = pinDoc.value;
+    if (!isBcryptHash(pinVal)) {
+      const hashed = await bcrypt.hash(pinVal, 10);
+      pinDoc.value = hashed;
+      await pinDoc.save();
+      return hashed;
+    }
+    return pinVal;
   } else {
     const fallbackPin = process.env.ADMIN_PIN || '1234';
+    const hashed = await bcrypt.hash(fallbackPin, 10);
     try {
-      await Config.create({ key: 'admin_pin', value: fallbackPin });
+      await Config.create({ key: 'admin_pin', value: hashed });
     } catch (e) {
       // Ignorar error si se intentaron crear dos simultáneamente
     }
-    return fallbackPin;
+    return hashed;
   }
 }
 
@@ -66,16 +85,20 @@ router.post('/login', async (req, res) => {
 
     // ── Validar PIN ────────────────────────────────────────────────────────────
     const { pin } = req.body;
-    const pinCorrecto = await getAdminPin();
-
     if (!pin) {
       return res.status(400).json({ ok: false, message: 'PIN requerido' });
     }
 
-    if (pin === pinCorrecto) {
+    const hashedPin = await getAdminPin();
+    const pinCorrecto = await bcrypt.compare(String(pin), hashedPin);
+
+    if (pinCorrecto) {
       estado.count = 0;
       estado.blockedUntil = null;
-      const secret = process.env.JWT_SECRET || 'afinacion-jwt-super-secret-key-2026';
+      const secret = process.env.JWT_SECRET;
+      if (!secret) {
+        return res.status(500).json({ ok: false, message: 'Falta configurar JWT_SECRET en las variables de entorno.' });
+      }
       const token = jwt.sign({ role: 'admin' }, secret, { expiresIn: '24h' });
       return res.json({ ok: true, token });
     }
@@ -122,15 +145,18 @@ router.put('/change-pin', auth, async (req, res) => {
       return res.status(400).json({ ok: false, message: 'El PIN debe tener entre 4 y 8 caracteres.' });
     }
 
-    const pinCorrecto = await getAdminPin();
+    const hashedPin = await getAdminPin();
+    const pinCorrecto = await bcrypt.compare(String(currentPin), hashedPin);
     
-    if (currentPin !== pinCorrecto) {
+    if (!pinCorrecto) {
       return res.status(401).json({ ok: false, message: 'El PIN actual es incorrecto.' });
     }
 
+    const hashedNewPin = await bcrypt.hash(String(newPin), 10);
+
     await Config.findOneAndUpdate(
       { key: 'admin_pin' },
-      { value: newPin },
+      { value: hashedNewPin },
       { upsert: true, new: true }
     );
 

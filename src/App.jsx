@@ -5,6 +5,7 @@ import ResultsGrid from './components/ResultsGrid';
 import StoreSection from './components/StoreSection';
 import CartDrawer  from './components/CartDrawer';
 import { STORE_PUBLIC_EMAIL } from './lib/constants';
+import { API_BASE } from './lib/config';
 
 /**
  * App — root component.
@@ -49,7 +50,7 @@ function App() {
     if (params.modelo) queryParams.append('modelo', params.modelo);
     if (params.anio) queryParams.append('anio', params.anio);
 
-    fetch(`http://localhost:5000/api/vehiculos?${queryParams.toString()}`)
+    fetch(`${API_BASE}/api/vehiculos?${queryParams.toString()}`)
       .then(async res => {
         if (!res.ok) {
           if (res.status === 429) {

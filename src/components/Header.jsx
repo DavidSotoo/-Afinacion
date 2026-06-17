@@ -5,7 +5,7 @@ import { useCart } from '../context/CartContext';
 import { WHATSAPP_NUMBER } from '../lib/constants';
 
 export default function Header() {
-  const { totalItems, openCart, items } = useCart();
+  const { totalItems, openCart } = useCart();
   const location = useLocation();
 
   const handleScrollToStore = (e) => {

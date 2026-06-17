@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useAuth } from './context/AuthContext';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import InventarioMaestro from './components/InventarioMaestro';
+import PanelCatalogos from './components/PanelCatalogos';
 import PanelCotizaciones from './components/PanelCotizaciones';
 import PanelEnvios from './components/PanelEnvios';
-import { LayoutDashboard, Table, ClipboardList, LogOut, Truck } from 'lucide-react';
+import { LayoutDashboard, Table, ClipboardList, LogOut, Truck, Database } from 'lucide-react';
 
 function App() {
   const { isAuthenticated, logout } = useAuth();
@@ -19,6 +20,8 @@ function App() {
     switch (activeTab) {
       case 'inventario':
         return <InventarioMaestro />;
+      case 'catalogos':
+        return <PanelCatalogos />;
       case 'cotizaciones':
         return <PanelCotizaciones />;
       case 'envios':
@@ -64,6 +67,17 @@ function App() {
               >
                 <Table className="w-4 h-4" />
                 <span>Inventario Maestro</span>
+              </button>
+              <button
+                onClick={() => setActiveTab('catalogos')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all cursor-pointer ${
+                  activeTab === 'catalogos'
+                    ? 'bg-violet-600 text-white'
+                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                }`}
+              >
+                <Database className="w-4 h-4" />
+                <span>Catálogos</span>
               </button>
               <button
                 onClick={() => setActiveTab('cotizaciones')}

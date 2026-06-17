@@ -2,17 +2,8 @@ import React, { createContext, useContext, useState, useCallback, useMemo } from
 import { DELIVERY_OPTIONS, FREE_SHIPPING_THRESHOLD } from '../lib/constants';
 import { calculateOilPrice } from '../lib/kitHelpers';
 
-/**
- * Precio de referencia por tipo de ítem (MXN).
- * Estos son precios orientativos para calcular el subtotal y
- * activar el umbral de envío gratis. El precio real se confirma
- * con el asesor vía WhatsApp.
- */
-const ITEM_PRICES = {
-  kit:    899,   // Kit de Afinación Completo (precio base orientativo)
-  pieza:  120,   // Bujía individual
-  filtro:  85,   // Filtro individual
-};
+// ID helper (BUG FE-L4)
+const makeId = (type, bujiaId, tipoLinea) => `${type}-${bujiaId}-${tipoLinea}`;
 
 const CartContext = createContext(null);
 
@@ -43,7 +34,6 @@ export function CartProvider({ children }) {
   const closeCart = useCallback(() => setIsOpen(false), []);
 
   // ── ID helpers ─────────────────────────────────────────────────────────────
-  const makeId = (type, bujiaId, tipoLinea) => `${type}-${bujiaId}-${tipoLinea}`;
 
   // ── Pieza individual (bujías only) ─────────────────────────────────────────
   const addItem = useCallback((bujia, tipoLinea) => {
@@ -82,9 +72,11 @@ export function CartProvider({ children }) {
    * @param {Object} bujia      - Catalog record (must have kit_afinacion)
    * @param {string} tipoLinea  - NGK line key ('iridium' | 'platino' | 'vpower' | 'stock')
    */
-  const addKit = useCallback((bujia, tipoLinea, initialExcluded = [], aceiteSelected = null) => {
+  const addKit = useCallback((bujia, tipoLinea, initialExcluded = [], aceiteSelected = null, isOnlyFilters = false) => {
     setItems(prev => {
-      const id = makeId('kit', bujia.id, tipoLinea);
+      const id = isOnlyFilters 
+        ? `${makeId('kit', bujia.id, tipoLinea)}-filtros`
+        : makeId('kit', bujia.id, tipoLinea);
       if (prev.some(i => i.id === id)) return prev;
 
       const kitItem = {

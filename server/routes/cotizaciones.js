@@ -2,33 +2,76 @@ const express = require('express');
 const router = express.Router();
 const auth = require('../middleware/auth');
 const Cotizacion = require('../models/Cotizacion');
+const rateLimit = require('express-rate-limit');
 
-// Generador de folio único e.g. AF-8392
+// Rate limiter specifically for creating quotes
+const cotizacionLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 10, // Max 10 requests per window per IP
+  message: { error: 'Demasiadas cotizaciones creadas desde esta IP. Por favor intente más tarde.' },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+// Generador de folio único e.g. AF-8392 (Evita bucles infinitos - BUG LOGIC-04)
 async function generarFolioUnico() {
-  let existe = true;
-  let folio = '';
+  let intentos = 0;
+  const maxIntentos = 50;
   
-  while (existe) {
+  while (intentos < maxIntentos) {
     const numRandom = Math.floor(1000 + Math.random() * 9000); // 4 dígitos
-    folio = `AF-${numRandom}`;
+    const folio = `AF-${numRandom}`;
     
     // Verificamos si existe en DB
     const coincidencia = await Cotizacion.findOne({ folio });
     if (!coincidencia) {
-      existe = false;
+      return folio;
     }
+    intentos++;
   }
-  return folio;
+  
+  // Fallback seguro: número de 6 dígitos si el pool de 4 dígitos está lleno
+  const numRandomLarge = Math.floor(100000 + Math.random() * 900000);
+  return `AF-${numRandomLarge}`;
 }
 
 // @route   POST api/cotizaciones
 // @desc    Crear una nueva cotización y generar folio
-router.post('/', async (req, res) => {
+router.post('/', cotizacionLimiter, async (req, res) => {
   try {
     const { vehiculo, tipoBujia, bujiaSku, piezas, aceite, servicioTaller, metodoPago, detallesPago, direccionEnvio } = req.body;
     
     if (!vehiculo || !vehiculo.marca || !vehiculo.modelo) {
       return res.status(400).json({ error: 'Falta información esencial del vehículo' });
+    }
+
+    // Validate shipping address if provided
+    if (direccionEnvio) {
+      const { nombreRecibe, telefono, calleNumero, colonia, codigoPostal, municipio, estado } = direccionEnvio;
+      
+      if (!nombreRecibe || !telefono || !calleNumero || !colonia || !codigoPostal || !municipio || !estado) {
+        return res.status(400).json({ error: 'Por favor, completa todos los campos requeridos de la dirección de envío.' });
+      }
+      
+      const nRecibe = String(nombreRecibe).trim();
+      if (nRecibe.length < 5 || !nRecibe.includes(' ')) {
+        return res.status(400).json({ error: 'Por favor, ingresa el nombre y apellido completos de quien recibe (mínimo 5 letras con un espacio).' });
+      }
+      
+      const cleanPhone = String(telefono).replace(/\D/g, '');
+      if (cleanPhone.length !== 10) {
+        return res.status(400).json({ error: 'El teléfono de contacto debe tener exactamente 10 dígitos.' });
+      }
+      
+      if (!/\d/.test(String(calleNumero))) {
+        return res.status(400).json({ error: 'La calle y número debe incluir al menos un número para indicar el número exterior (ej. Juárez 123).' });
+      }
+      
+      const cleanCP = String(codigoPostal).replace(/\D/g, '');
+      const cpNum = parseInt(cleanCP, 10);
+      if (cleanCP.length !== 5 || isNaN(cpNum) || cpNum < 1000 || cpNum > 99999) {
+        return res.status(400).json({ error: 'El código postal debe tener exactamente 5 dígitos y estar dentro del rango oficial de México (01000 a 99999).' });
+      }
     }
 
     const folio = await generarFolioUnico();

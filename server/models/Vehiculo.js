@@ -6,7 +6,7 @@ const BujiaSchema = new mongoose.Schema({
 }, { _id: false });
 
 const FiltroSchema = new mongoose.Schema({
-  _id: { type: mongoose.Schema.Types.ObjectId, ref: 'PrecioUnifil' },
+  _id: { type: mongoose.Schema.Types.ObjectId, ref: 'PrecioFiltro' },
   tipo: String,
   sku: String,
   marca: String,

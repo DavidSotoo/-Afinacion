@@ -18,7 +18,10 @@ module.exports = function(req, res, next) {
   const token = parts[1];
 
   try {
-    const secret = process.env.JWT_SECRET || 'afinacion-jwt-super-secret-key-2026';
+    const secret = process.env.JWT_SECRET;
+    if (!secret) {
+      return res.status(500).json({ ok: false, message: 'Falta configurar JWT_SECRET en las variables de entorno.' });
+    }
     const decoded = jwt.verify(token, secret);
     req.user = decoded;
     next();

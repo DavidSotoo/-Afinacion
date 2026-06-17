@@ -3,7 +3,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const PrecioUnifil = require('./models/PrecioUnifil');
+const PrecioFiltro = require('./models/PrecioFiltro');
 const Vehiculo = require('./models/Vehiculo');
 
 const files = [
@@ -63,7 +63,7 @@ async function main() {
     console.log('Connected to MongoDB Atlas.\n');
 
     // 1. Fetch all prices currently in DB
-    const dbPrices = await PrecioUnifil.find({}).lean();
+    const dbPrices = await PrecioFiltro.find({}).lean();
     const dbPriceMap = new Map();
     dbPrices.forEach(p => {
       dbPriceMap.set(p.clave.toUpperCase(), p);

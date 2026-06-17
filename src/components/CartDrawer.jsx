@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -30,6 +30,31 @@ const SKU_FIELD = {
 };
 
 const getSkuData = (bujia, tipoLinea) => bujia[SKU_FIELD[tipoLinea]] ?? null;
+
+/* ─── Styling Constants (FE-L6) ───────────────────────────────────────────── */
+
+const STYLE_KIT_BANNER = { display: 'flex', justifyContent: 'space-between', width: '100%' };
+const STYLE_HEADER_INNER = { display: 'flex', alignItems: 'center', gap: '4px' };
+const STYLE_BADGES_WRAP = { display: 'flex', alignItems: 'center', gap: '6px' };
+const STYLE_PIECES_BADGE = { margin: 0 };
+const STYLE_PRICE_BADGE = {
+  background: 'var(--primary-glow-sm, rgba(98, 168, 29, 0.15))',
+  color: 'var(--primary)',
+  fontSize: '0.65rem',
+  fontWeight: 'bold',
+  padding: '1px 6px',
+  borderRadius: '4px',
+  border: '1px solid rgba(98, 168, 29, 0.2)'
+};
+const STYLE_ITEM_ROW = { marginTop: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' };
+const STYLE_BADGE_STOCK = { display: 'flex', alignItems: 'center', gap: '4px' };
+const STYLE_SKU_WRAP = { display: 'flex', alignItems: 'center', gap: '6px' };
+const STYLE_SKU_PRICE = { fontSize: '0.7rem', color: 'var(--primary)', fontWeight: 'bold' };
+const STYLE_ORDER_SUMMARY = { marginTop: 0, borderTop: 'none', paddingTop: 0 };
+const STYLE_SUMMARY_ROW = { marginBottom: '1rem' };
+const STYLE_SUMMARY_LABEL = { fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' };
+const STYLE_SUMMARY_VALUE = { fontSize: '1.1rem', fontWeight: 'bold', color: 'var(--primary)' };
+const STYLE_CONFIRM_BTN = { border: 'none', clipPath: 'polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%)' };
 
 /* ─── KitDrawerItem ───────────────────────────────────────────────────────── */
 
@@ -71,29 +96,21 @@ function KitDrawerItem({ item, onRemove, onTogglePart }) {
     }
 
     return price;
-  }, [bujia, excludedParts, item.aceite_motor]);
+  }, [bujia, excludedParts, item.aceite_motor, tipoLinea]);
 
   return (
     <li className="drawer-item drawer-item--kit" role="listitem">
       {/* Kit banner */}
-      <div className="drawer-kit-banner" style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+      <div className="drawer-kit-banner" style={STYLE_KIT_BANNER}>
+        <div style={STYLE_HEADER_INNER}>
           <ShoppingBag size={11} aria-hidden="true" />
           <span>Kit de Afinación Completo</span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <span className="drawer-kit-pieces-badge" style={{ margin: 0 }}>
+        <div style={STYLE_BADGES_WRAP}>
+          <span className="drawer-kit-pieces-badge" style={STYLE_PIECES_BADGE}>
             {item.aceite_motor ? 6 - excludedParts.length : 5 - excludedParts.length} Piezas
           </span>
-          <span className="drawer-kit-price-badge" style={{
-            background: 'var(--primary-glow-sm, rgba(98, 168, 29, 0.15))',
-            color: 'var(--primary)',
-            fontSize: '0.65rem',
-            fontWeight: 'bold',
-            padding: '1px 6px',
-            borderRadius: '4px',
-            border: '1px solid rgba(98, 168, 29, 0.2)'
-          }}>
+          <span className="drawer-kit-price-badge" style={STYLE_PRICE_BADGE}>
             ${kitPrice.toLocaleString('es-MX')}
           </span>
         </div>
@@ -118,7 +135,7 @@ function KitDrawerItem({ item, onRemove, onTogglePart }) {
           </div>
 
           <p className="drawer-item-meta">
-            {bujia.anio_inicio}–{bujia.anio_fin} · {bujia.litros}L {bujia.cilindros_config}
+            {(bujia.anio_inicio ?? 'N/D')}–{(bujia.anio_fin ?? 'N/D')} · {(bujia.litros ?? 'N/D')}L {(bujia.cilindros_config ?? 'N/D')}
             {bujia.motor ? ` · ${bujia.motor}` : ''}
           </p>
 
@@ -220,7 +237,7 @@ function PiezaDrawerItem({ item, onRemove }) {
           </button>
         </div>
         <p className="drawer-item-meta">
-          {bujia.anio_inicio}–{bujia.anio_fin} · {bujia.litros}L {bujia.cilindros_config}
+          {(bujia.anio_inicio ?? 'N/D')}–{(bujia.anio_fin ?? 'N/D')} · {(bujia.litros ?? 'N/D')}L {(bujia.cilindros_config ?? 'N/D')}
           {bujia.motor ? ` · ${bujia.motor}` : ''}
         </p>
         <div className="drawer-item-row">
@@ -246,7 +263,7 @@ function FiltroDrawerItem({ item, onRemove }) {
 
   return (
     <li className="drawer-item" role="listitem">
-      <div className={`drawer-item-bar stock`} aria-hidden="true" />
+      <div className="drawer-item-bar stock" aria-hidden="true" />
       <div className="drawer-item-content">
         <div className="drawer-item-top">
           <span className="drawer-item-vehicle">{bujia.marca} {bujia.modelo}</span>
@@ -259,17 +276,17 @@ function FiltroDrawerItem({ item, onRemove }) {
           </button>
         </div>
         <p className="drawer-item-meta">
-          {bujia.anio_inicio}–{bujia.anio_fin} · {bujia.litros}L {bujia.cilindros_config}
+          {(bujia.anio_inicio ?? 'N/D')}–{(bujia.anio_fin ?? 'N/D')} · {(bujia.litros ?? 'N/D')}L {(bujia.cilindros_config ?? 'N/D')}
           {bujia.motor ? ` · ${bujia.motor}` : ''}
         </p>
-        <div className="drawer-item-row" style={{ marginTop: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <span className="drawer-item-badge stock" style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+        <div className="drawer-item-row" style={STYLE_ITEM_ROW}>
+          <span className="drawer-item-badge stock" style={STYLE_BADGE_STOCK}>
             <Icon size={10} /> Filtro de {labelTxt}
           </span>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <div style={STYLE_SKU_WRAP}>
             <span className="drawer-item-sku">{f?.sku && f.sku !== 'SELLADO' ? f.sku : 'Cotizar'}</span>
             {f?.sku !== 'SELLADO' && (
-              <span style={{ fontSize: '0.7rem', color: 'var(--primary)', fontWeight: 'bold' }}>
+              <span style={STYLE_SKU_PRICE}>
                 ${(f && f.costo !== undefined) ? f.costo : 85}
               </span>
             )}
@@ -290,6 +307,8 @@ export default function CartDrawer() {
     isOpen, closeCart,
   } = useCart();
 
+  const drawerRef = useRef(null);
+
   // Lock body scroll when open
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -303,14 +322,63 @@ export default function CartDrawer() {
     return () => window.removeEventListener('keydown', onKey);
   }, [isOpen, closeCart]);
 
+  // Focus trap behavior (A11Y-01)
+  useEffect(() => {
+    if (!isOpen) return;
+    const element = drawerRef.current;
+    if (!element) return;
+    
+    // Find all focusable elements
+    const focusableElements = element.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusableElements.length === 0) return;
+    
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+    
+    // Focus the first element initially
+    firstElement.focus();
+    
+    const handleTab = (e) => {
+      if (e.key !== 'Tab') return;
+      
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          lastElement.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          firstElement.focus();
+          e.preventDefault();
+        }
+      }
+    };
+    
+    element.addEventListener('keydown', handleTab);
+    return () => {
+      element.removeEventListener('keydown', handleTab);
+    };
+  }, [isOpen]);
+
   const handleProceedToCheckout = () => {
     closeCart();
     navigate('/checkout');
   };
 
-  const kitCount      = useMemo(() => items.filter(i => i.type === 'kit').length,   [items]);
-  const piezaCount    = useMemo(() => items.filter(i => i.type === 'pieza').length, [items]);
-  const filtrosCount  = useMemo(() => items.filter(i => i.type === 'filtro').length, [items]);
+  // Combine 3 distinct count scans into 1 linear loop (A11Y-04)
+  const { kitCount, piezaCount, filtrosCount } = useMemo(() => {
+    let kit = 0;
+    let pieza = 0;
+    let filtro = 0;
+    for (const item of items) {
+      if (item.type === 'kit') kit++;
+      else if (item.type === 'pieza') pieza++;
+      else if (item.type === 'filtro') filtro++;
+    }
+    return { kitCount: kit, piezaCount: pieza, filtrosCount: filtro };
+  }, [items]);
 
   return (
     <AnimatePresence>
@@ -329,6 +397,7 @@ export default function CartDrawer() {
 
           {/* Drawer panel */}
           <motion.aside
+            ref={drawerRef}
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
@@ -337,7 +406,6 @@ export default function CartDrawer() {
             role="dialog"
             aria-label="Resumen de pedido"
             aria-modal="true"
-            aria-hidden={false}
           >
             {/* ── Header ── */}
             <div className="drawer-header">
@@ -429,10 +497,10 @@ export default function CartDrawer() {
             {items.length > 0 && (
               <div className="drawer-footer">
                 {/* ── Order Summary ── */}
-                <div className="drawer-order-summary" style={{ marginTop: 0, borderTop: 'none', paddingTop: 0 }}>
-                  <div className="drawer-summary-row" style={{ marginBottom: '1rem' }}>
-                    <span className="drawer-summary-label" style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Subtotal estimado</span>
-                    <span className="drawer-summary-value" style={{ fontSize: '1.1rem', fontWeight: 'bold', color: 'var(--primary)' }}>
+                <div className="drawer-order-summary" style={STYLE_ORDER_SUMMARY}>
+                  <div className="drawer-summary-row" style={STYLE_SUMMARY_ROW}>
+                    <span className="drawer-summary-label" style={STYLE_SUMMARY_LABEL}>Subtotal estimado</span>
+                    <span className="drawer-summary-value" style={STYLE_SUMMARY_VALUE}>
                       ${subtotal.toLocaleString('es-MX')}
                     </span>
                   </div>
@@ -442,10 +510,10 @@ export default function CartDrawer() {
                 </div>
 
                 <button
-                  className="w-full bg-[#62A81D] hover:bg-[#4e8717] text-white font-bold py-3.5 px-6 uppercase tracking-wider text-sm flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg active:scale-[0.98] select-none"
+                  className="drawer-confirm-btn"
                   onClick={handleProceedToCheckout}
                   aria-label="Proceder al checkout para completar datos"
-                  style={{ border: 'none', clipPath: 'polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%)' }}
+                  style={STYLE_CONFIRM_BTN}
                 >
                   Continuar con el Pago
                   <ChevronRight size={16} />
