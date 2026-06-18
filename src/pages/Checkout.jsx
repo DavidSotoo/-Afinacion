@@ -30,6 +30,7 @@ import {
   STORE_PUBLIC_EMAIL,
 } from '../lib/constants';
 import { formatOilName } from '../lib/kitHelpers';
+import { API_BASE } from '../lib/config';
 
 /* ─── Helpers ─────────────────────────────────────────────────────────────── */
 
@@ -504,7 +505,7 @@ export default function Checkout() {
         direccionEnvio: (selectedDelivery === 'zmg' || selectedDelivery === 'foraneo') ? datosEnvio : null
       };
 
-      const res = await fetch('http://localhost:5000/api/cotizaciones', {
+      const res = await fetch(`${API_BASE}/api/cotizaciones`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -534,7 +535,7 @@ export default function Checkout() {
         localStorage.setItem('mas_afinacion_last_order_msg', msg);
 
         // Call Mercado Pago preference creation endpoint
-        const mpRes = await fetch('http://localhost:5000/api/checkout/create-preference', {
+        const mpRes = await fetch(`${API_BASE}/api/checkout/create-preference`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
