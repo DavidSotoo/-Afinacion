@@ -62,9 +62,16 @@ export default function PanelCatalogos() {
     }
   }, []);
 
-  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => {
-    fetchData();
+    let active = true;
+    const load = async () => {
+      await new Promise(resolve => setTimeout(resolve, 0));
+      if (active) {
+        fetchData();
+      }
+    };
+    load();
+    return () => { active = false; };
   }, [fetchData]);
 
   // Mostrar Notificación Toast
@@ -290,7 +297,7 @@ export default function PanelCatalogos() {
                     <th className="py-3.5 px-6">Marca</th>
                     <th className="py-3.5 px-6">Clave / SKU</th>
                     <th className="py-3.5 px-6">Descripción</th>
-                    <th className="py-3.5 px-6">Costo</th>
+                    <th className="py-3.5 px-6">Precio Cliente</th>
                     <th className="py-3.5 px-6 text-center">Acciones</th>
                   </tr>
                 </thead>
@@ -396,13 +403,14 @@ export default function PanelCatalogos() {
                     <th className="py-3.5 px-4">Marca / Eq. Wagner</th>
                     <th className="py-3.5 px-4">Posición / FMSI</th>
                     <th className="py-3.5 px-6">Compatibilidades</th>
+                    <th className="py-3.5 px-4">Precio Cliente</th>
                     <th className="py-3.5 px-6 text-center">Acciones</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-800 text-sm text-slate-300">
                   {paginatedBalatas.length === 0 ? (
                     <tr>
-                      <td colSpan="5" className="text-center py-10 text-slate-500 text-sm">
+                      <td colSpan="6" className="text-center py-10 text-slate-500 text-sm">
                         No se encontraron balatas en el catálogo.
                       </td>
                     </tr>
@@ -439,6 +447,9 @@ export default function PanelCatalogos() {
                               <span className="text-xs text-slate-600 italic">Sin compatibilidades</span>
                             )}
                           </div>
+                        </td>
+                        <td className="py-4 px-4 font-mono font-bold text-white">
+                          ${(b.precio || 0).toFixed(2)}
                         </td>
                         <td className="py-4 px-6 text-center">
                           <div className="flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -1010,6 +1021,7 @@ function ModalBalata({ mode, item, sugerenciasModelos = [], onClose, onSuccess }
   const [skuWagner, setSkuWagner] = useState(item?.sku_equivalente_wagner || '');
   const [fmsi, setFmsi] = useState(item?.fmsi || '');
   const [posicion, setPosicion] = useState(item?.posicion || 'Delantero');
+  const [precio, setPrecio] = useState(item?.precio ? String(item.precio) : '');
   const [compatibles, setCompatibles] = useState(item?.vehiculos_compatibles || []);
   const [saving, setSaving] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
@@ -1059,6 +1071,7 @@ function ModalBalata({ mode, item, sugerenciasModelos = [], onClose, onSuccess }
         sku_equivalente_wagner: skuWagner.trim().toUpperCase(),
         fmsi: fmsi.trim(),
         posicion,
+        precio: precio.trim() ? Number(precio) : 0,
         vehiculos_compatibles: compatibles.map(c => ({
           modelo: c.modelo.trim(),
           anio_inicio: Number(c.anio_inicio),
@@ -1149,8 +1162,8 @@ function ModalBalata({ mode, item, sugerenciasModelos = [], onClose, onSuccess }
             </div>
           </div>
 
-          {/* Fila 2: Posición y FMSI */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Fila 2: Posición, FMSI y Precio */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
               <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
                 Posición <span className="text-red-500">*</span>
@@ -1174,6 +1187,19 @@ function ModalBalata({ mode, item, sugerenciasModelos = [], onClose, onSuccess }
                 value={fmsi}
                 onChange={e => setFmsi(e.target.value)}
                 placeholder="Ej: 7890-D1234"
+                className="w-full bg-slate-950 border border-slate-800 focus:border-violet-500 rounded-lg px-3 py-1.5 text-xs text-slate-200 outline-none font-mono"
+              />
+            </div>
+            <div>
+              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                Precio Cliente
+              </label>
+              <input
+                type="number"
+                step="0.01"
+                value={precio}
+                onChange={e => setPrecio(e.target.value)}
+                placeholder="0.00"
                 className="w-full bg-slate-950 border border-slate-800 focus:border-violet-500 rounded-lg px-3 py-1.5 text-xs text-slate-200 outline-none font-mono"
               />
             </div>

@@ -369,33 +369,37 @@ body::before {
   background: var(--border);
 }
 
-/* ── PRODUCT CARD (Glassmorphism Dark) ── */
+/* ── PRODUCT CARD (Glassmorphism Light) ── */
 .product-card {
-  background: rgba(10, 10, 10, 0.7);
-  backdrop-filter: blur(8px);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
   padding: 1.5rem;
   display: flex; flex-direction: column; gap: 0;
   position: relative; overflow: hidden;
-  transition: background 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.product-card:hover { background: rgba(17, 17, 17, 0.9); }
+.product-card:hover {
+  background: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(98, 168, 29, 0.12);
+}
 
 .product-card::after {
   content: ''; position: absolute; inset: 0;
   border: 1px solid transparent;
   pointer-events: none; transition: border-color 0.2s;
 }
-.product-card:hover::after { border-color: var(--border-primary); }
+.product-card:hover::after { border-color: rgba(98,168,29,0.3); }
 
 .card-type-bar {
   height: 2px; margin: -1.5rem -1.5rem 1.25rem;
-  background: var(--bg-4);
+  background: #e5e7eb;
 }
 .card-type-bar.iridium    { background: linear-gradient(90deg, #4FC3F7, #B39DDB); }
 .card-type-bar.platino    { background: linear-gradient(90deg, #D4AF37, #F5E96C); }
 .card-type-bar.stock      { background: linear-gradient(90deg, #888, #bbb); }
-/* Note: keeping vpower red because it's the brand color of NGK V-Power */
 .card-type-bar.vpower     { background: linear-gradient(90deg, #FF0000, #ff5252); }
 
 .card-badge {
@@ -406,45 +410,45 @@ body::before {
   border: 1px solid; margin-bottom: 0.85rem; width: fit-content;
 }
 
-.card-badge.iridium    { color: #4FC3F7; border-color: rgba(79,195,247,0.3); background: rgba(79,195,247,0.06); }
-.card-badge.platino    { color: #D4AF37; border-color: rgba(212,175,55,0.3);  background: rgba(212,175,55,0.06); }
-.card-badge.stock      { color: var(--text-2); border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.04); }
-/* keeping vpower badge red for NGK V-Power specific color */
-.card-badge.vpower     { color: #FF0000; border-color: rgba(255, 0, 0, 0.35); background: rgba(255, 0, 0, 0.08); }
+.card-badge.iridium    { color: #0284c7; border-color: rgba(2,132,199,0.3); background: rgba(2,132,199,0.06); }
+.card-badge.platino    { color: #b45309; border-color: rgba(180,83,9,0.3);  background: rgba(180,83,9,0.06); }
+.card-badge.stock      { color: #4b5563; border-color: rgba(75,85,99,0.25); background: rgba(75,85,99,0.04); }
+.card-badge.vpower     { color: #dc2626; border-color: rgba(220,38,38,0.3); background: rgba(220,38,38,0.06); }
 .card-badge .dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
 
 .card-model {
-  font-family: var(--display); font-size: 1.4rem; font-weight: 800;
+  font-family: var(--display); font-size: 1.45rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.1;
+  color: #111827;
   margin-bottom: 0.2rem;
 }
 
 .card-engine {
-  font-family: var(--mono); font-size: 0.72rem; color: var(--text-3);
+  font-family: var(--mono); font-size: 0.72rem; color: #4b5563;
   letter-spacing: 0.06em; margin-bottom: 1rem;
 }
 
 .card-specs {
   display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem;
-  padding: 0.85rem 0; border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  padding: 0.85rem 0; border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
   margin-bottom: 1rem;
 }
 
 .spec-item { display: flex; flex-direction: column; gap: 2px; }
-.spec-label { font-family: var(--mono); font-size: 0.6rem; color: var(--text-3); letter-spacing: 0.08em; text-transform: uppercase; }
-.spec-value { font-family: var(--mono); font-size: 0.82rem; color: var(--text); font-weight: 600; }
+.spec-label { font-family: var(--mono); font-size: 0.6rem; color: #6b7280; letter-spacing: 0.08em; text-transform: uppercase; }
+.spec-value { font-family: var(--mono); font-size: 0.82rem; color: #111827; font-weight: 600; }
 
 .card-sku {
   display: flex; align-items: center; justify-content: space-between;
   margin-bottom: 1.25rem;
 }
 
-.sku-label { font-family: var(--mono); font-size: 0.6rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; }
+.sku-label { font-family: var(--mono); font-size: 0.6rem; color: #4b5563; text-transform: uppercase; letter-spacing: 0.08em; }
 .sku-value {
   font-family: var(--mono); font-size: 0.85rem; font-weight: 600;
-  color: var(--primary); letter-spacing: 0.04em;
-  background: var(--primary-glow-sm); border: 1px solid var(--border-primary);
+  color: var(--primary-dim); letter-spacing: 0.04em;
+  background: rgba(98, 168, 29, 0.08); border: 1px solid rgba(98, 168, 29, 0.25);
   padding: 0.2rem 0.55rem;
 }
 
@@ -1221,46 +1225,12 @@ select option {
 .drawer-summary-value--grand {
   font-family: var(--display); font-size: 1.4rem; font-weight: 900;
   color: var(--primary); line-height: 1;
-  text-shadow: 0 0 20px rgba(98,168,29,0.4);
+  text-shadow: 0 0 20px var(--primary-glow);
 }
-.drawer-summary-note {
-  font-size: 0.6rem; color: var(--text-3);
-}
-.drawer-summary-disclaimer {
-  font-family: var(--mono); font-size: 0.57rem; color: var(--text-3);
-  letter-spacing: 0.03em; line-height: 1.4;
-  border-top: 1px dashed var(--border); padding-top: 0.4rem;
-  margin-top: 0.1rem;
-}
-
-/* ═══════════════════════════════════
-   RESULTS CONTROLS — View Toggle
-═══════════════════════════════════ */
-.results-controls {
-  display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem;
-}
-
-.view-toggle {
-  display: inline-flex; border: 1px solid var(--border); overflow: hidden;
-  width: fit-content;
-}
-.view-toggle-btn {
-  display: flex; align-items: center; gap: 0.45rem;
-  background: transparent; border: none; cursor: pointer;
-  font-family: var(--mono); font-size: 0.72rem; font-weight: 600;
-  letter-spacing: 0.07em; text-transform: uppercase;
-  color: var(--text-3); padding: 0.5rem 1rem;
-  transition: all 0.15s; white-space: nowrap;
-}
-.view-toggle-btn + .view-toggle-btn { border-left: 1px solid var(--border); }
-.view-toggle-btn.active {
-  background: var(--primary); color: #000;
-}
-.view-toggle-btn:not(.active):hover { color: var(--primary); }
 
 /* Kit grid — wider columns */
 .cards-grid--kit {
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
 }
 
 .cards-grid--single {
@@ -1271,12 +1241,14 @@ select option {
 
 /* ═══════════════════════════════════
    KIT CARD — 5-Piece Design
-═══════════════════════════════════ */
+   (Premium Light Theme)
+   ═══════════════════════════════════ */
 
 /* ── Card container ── */
 .kit-card {
-  background: var(--bg-1);
-  border: 1px solid var(--border);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
   display: flex; flex-direction: column;
   animation: fadeSlideUp 0.3s ease both;
   position: relative;
@@ -1284,10 +1256,10 @@ select option {
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .kit-card:hover {
-  border-color: var(--border-primary);
-  box-shadow: 0 0 32px rgba(98,168,29, 0.08);
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(98, 168, 29, 0.12);
 }
-.kit-card--in-cart { border-color: var(--border-primary); }
+.kit-card--in-cart { border-color: var(--primary); }
 
 /* Neon top accent bar */
 .kit-card-top-bar {
@@ -1298,86 +1270,86 @@ select option {
 
 /* ── Header ── */
 .kit-card-header {
-  padding: 1rem 1.15rem 0.8rem;
-  border-bottom: 1px solid var(--border);
+  padding: 1.15rem 1.3rem 0.9rem;
+  border-bottom: 1px solid #e5e7eb;
   display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem;
 }
-.kit-card-title-wrap { display: flex; flex-direction: column; gap: 0.3rem; }
+.kit-card-title-wrap { display: flex; flex-direction: column; gap: 0.35rem; }
 
 /* 5-Pieces pill badge */
 .kit-pieces-pill {
   display: inline-flex; align-items: center;
   font-family: var(--mono); font-size: 0.57rem; font-weight: 700;
   letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--primary); border: 1px solid var(--border-primary);
-  background: var(--primary-glow-sm);
+  color: var(--primary-dim); border: 1px solid rgba(98, 168, 29, 0.3);
+  background: rgba(98, 168, 29, 0.08);
   padding: 0.18rem 0.55rem; width: fit-content;
 }
 
 .kit-card-title {
-  font-family: var(--display); font-size: 1.15rem; font-weight: 800;
-  text-transform: uppercase; letter-spacing: 0.02em; color: var(--text); line-height: 1.15;
+  font-family: var(--display); font-size: 1.35rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.02em; color: #111827; line-height: 1.15;
 }
 .kit-card-meta {
-  font-family: var(--mono); font-size: 0.67rem; color: var(--text-3); letter-spacing: 0.04em;
+  font-family: var(--mono); font-size: 0.67rem; color: #4b5563; letter-spacing: 0.04em;
 }
 .kit-in-cart-badge {
   display: flex; align-items: center; gap: 0.3rem; flex-shrink: 0;
   font-family: var(--mono); font-size: 0.6rem; font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--primary); border: 1px solid var(--border-primary);
-  background: var(--primary-glow-sm); padding: 0.18rem 0.5rem;
+  color: var(--primary-dim); border: 1px solid rgba(98, 168, 29, 0.3);
+  background: rgba(98, 168, 29, 0.08); padding: 0.18rem 0.5rem;
 }
 
 /* ── Sections (2-block stacked layout) ── */
 .kit-sections {
   display: flex; flex-direction: column;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #e5e7eb;
   flex: 1;
 }
 
 .kit-section-block {
-  padding: 0.85rem 1.1rem;
-  display: flex; flex-direction: column; gap: 0.55rem;
+  padding: 1rem 1.3rem;
+  display: flex; flex-direction: column; gap: 0.65rem;
 }
 .kit-section-block + .kit-section-block {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #e5e7eb;
 }
 
 .kit-section-label {
-  font-family: var(--mono); font-size: 0.6rem; font-weight: 700;
+  font-family: var(--mono); font-size: 0.62rem; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--text-3);
+  color: #4b5563;
   display: flex; align-items: center; gap: 0.35rem;
 }
 .kit-section-number,
 .kit-section-numbers {
   margin-left: auto;
-  font-size: 0.68rem; opacity: 0.5;
+  font-size: 0.68rem; opacity: 0.6;
   letter-spacing: 0.04em;
 }
 .kit-section-icon { flex-shrink: 0; }
-.kit-section-icon--spark  { color: #facc15; }
-.kit-section-icon--filter { color: var(--primary); }
+.kit-section-icon--spark  { color: #d97706; }
+.kit-section-icon--filter { color: var(--primary-dim); }
 
 /* ── Spark plug row ── */
 .kit-spark-row { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
 
 .kit-sku-chip {
-  font-family: var(--mono); font-size: 0.7rem; font-weight: 600;
-  color: var(--primary); background: var(--primary-glow-sm);
-  border: 1px solid var(--border-primary); padding: 0.1rem 0.5rem;
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 600;
+  color: var(--primary-dim); background: rgba(98, 168, 29, 0.08);
+  border: 1px solid rgba(98, 168, 29, 0.25); padding: 0.12rem 0.55rem;
 }
-.kit-sku-chip--main { font-size: 0.78rem; }
+.kit-sku-chip--main { font-size: 0.8rem; }
 
 .kit-cal-badge {
   font-family: var(--mono); font-size: 0.65rem;
-  color: var(--text-3); border: 1px solid var(--border); padding: 0.1rem 0.4rem;
+  color: #4b5563; border: 1px solid #e5e7eb; padding: 0.12rem 0.45rem;
 }
 .kit-code-badge {
   font-family: var(--mono); font-size: 0.63rem;
-  color: var(--text-3); padding: 0.1rem 0.35rem;
-  background: var(--bg-3);
+  color: #4b5563; padding: 0.12rem 0.4rem;
+  background: #f3f4f6;
 }
 
 /* NGK line selector button — reuses card-badge styles for color, extends for dropdown */
@@ -1395,43 +1367,43 @@ select option {
 
 .kit-dropdown {
   position: absolute; top: calc(100% + 3px); left: 0; z-index: 20;
-  min-width: 150px;
-  background: var(--bg-2); border: 1px solid var(--border-primary);
+  min-width: 160px;
+  background: #ffffff; border: 1px solid #d1d5db;
   list-style: none; padding: 0.25rem 0;
-  box-shadow: 0 12px 32px rgba(0,0,0,0.55);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
 }
 .kit-drop-item {
-  font-family: var(--mono); font-size: 0.68rem; color: var(--text-2);
+  font-family: var(--mono); font-size: 0.68rem; color: #374151;
   padding: 0.45rem 0.75rem; cursor: pointer;
   display: flex; align-items: center; gap: 0.4rem;
   transition: background 0.1s, color 0.1s;
 }
-.kit-drop-item:hover    { background: var(--bg-1); color: var(--text); }
-.kit-drop-item.selected { color: var(--primary); background: var(--primary-glow-sm); }
-.dot--iridium { background: #4FC3F7; }
-.dot--platino { background: #D4AF37; }
-.dot--vpower  { background: #FF0000; }
-.dot--stock   { background: #999; }
+.kit-drop-item:hover    { background: #f3f4f6; color: #111827; }
+.kit-drop-item.selected { color: var(--primary-dim); background: rgba(98, 168, 29, 0.08); }
+.dot--iridium { background: #0284c7; }
+.dot--platino { background: #b45309; }
+.dot--vpower  { background: #dc2626; }
+.dot--stock   { background: #4b5563; }
 
 /* ── Filtros — 4-card grid ── */
 .kit-filter-grid {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 /* ── ACEITE DE MOTOR ── */
 .kit-section-block--oil {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #e5e7eb;
   padding-top: 1.25rem;
   margin-top: 0.5rem;
 }
 .kit-section-icon--oil {
-  color: var(--primary) !important;
-  filter: drop-shadow(0 0 4px rgba(98, 168, 29, 0.4));
+  color: var(--primary-dim) !important;
+  filter: drop-shadow(0 0 4px rgba(98, 168, 29, 0.2));
 }
 .kit-oil-card {
-  background: var(--bg-2);
-  border: 1px solid var(--border);
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
   padding: 1rem;
   border-radius: 4px;
   position: relative;
@@ -1462,13 +1434,13 @@ select option {
   font-size: 0.58rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--text-3);
+  color: #4b5563;
   letter-spacing: 0.05em;
 }
 .oil-field-select {
-  background: var(--bg-1);
-  border: 1px solid var(--border);
-  color: var(--text);
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #111827;
   font-family: var(--mono);
   font-size: 0.72rem;
   font-weight: 600;
@@ -1486,13 +1458,13 @@ select option {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px dashed var(--border);
+  border-top: 1px dashed #e5e7eb;
   padding-top: 0.75rem;
 }
 .oil-summary-tech-badge {
-  background: var(--primary-glow-sm);
-  color: var(--primary);
-  border: 1px solid var(--border-primary);
+  background: rgba(98, 168, 29, 0.08);
+  color: var(--primary-dim);
+  border: 1px solid rgba(98, 168, 29, 0.3);
   padding: 0.2rem 0.6rem;
   font-size: 0.65rem;
   font-weight: 600;
@@ -1504,7 +1476,7 @@ select option {
 .oil-summary-pres {
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--text-2);
+  color: #374151;
   font-family: var(--body);
 }
 
@@ -1516,12 +1488,12 @@ select option {
 }
 
 .kit-filter-card {
-  background: var(--bg-2);
-  border: 1px solid var(--border);
-  padding: 0.6rem 0.7rem;
-  display: flex; flex-direction: column; gap: 0.3rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 0.7rem 0.8rem;
+  display: flex; flex-direction: column; gap: 0.35rem;
   position: relative; overflow: hidden;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
 .kit-filter-card::before {
   content: ''; position: absolute; top: 0; left: 0;
@@ -1532,33 +1504,33 @@ select option {
 .kit-filter-card--purple::before{ background: linear-gradient(90deg, #a78bfa, transparent); }
 .kit-filter-card--teal::before  { background: linear-gradient(90deg, #2dd4bf, transparent); }
 
-.kit-filter-card:hover { border-color: rgba(255,255,255,0.15); }
+.kit-filter-card:hover { border-color: #d1d5db; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
 
 .kit-filter-card-header {
   display: flex; align-items: center; gap: 0.3rem;
 }
-.kit-filter-icon { color: var(--text-3); flex-shrink: 0; }
-.kit-filter-card--amber .kit-filter-icon { color: #f59e0b; }
-.kit-filter-card--sky   .kit-filter-icon { color: #38bdf8; }
-.kit-filter-card--purple .kit-filter-icon { color: #a78bfa; }
-.kit-filter-card--teal  .kit-filter-icon { color: #2dd4bf; }
+.kit-filter-icon { color: #9ca3af; flex-shrink: 0; }
+.kit-filter-card--amber .kit-filter-icon { color: #d97706; }
+.kit-filter-card--sky   .kit-filter-icon { color: #0284c7; }
+.kit-filter-card--purple .kit-filter-icon { color: #7c3aed; }
+.kit-filter-card--teal  .kit-filter-icon { color: #0d9488; }
 
 .kit-filter-name {
-  font-family: var(--mono); font-size: 0.58rem; font-weight: 600;
-  letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-2);
+  font-family: var(--mono); font-size: 0.58rem; font-weight: 700;
+  letter-spacing: 0.07em; text-transform: uppercase; color: #4b5563;
   flex: 1; line-height: 1.2;
 }
 .kit-filter-number {
-  font-size: 0.65rem; opacity: 0.5;
+  font-size: 0.65rem; opacity: 0.6;
 }
 .kit-filter-tipo {
   font-family: var(--mono); font-size: 0.64rem; font-weight: 600;
-  color: var(--text); padding-left: 0.05rem;
+  color: #111827; padding-left: 0.05rem;
 }
 .kit-filter-sku-tag {
   font-family: var(--mono); font-size: 0.55rem;
-  color: var(--text-3); letter-spacing: 0.04em;
-  border: 1px dashed rgba(255,255,255,0.1);
+  color: #6b7280; letter-spacing: 0.04em;
+  border: 1px dashed #d1d5db;
   padding: 0.1rem 0.35rem; line-height: 1.3;
 }
 
@@ -1741,7 +1713,7 @@ select option {
 
 /* -- Card with a real SKU confirmed -- */
 .kit-filter-card--confirmed {
-  border-color: rgba(98,168,29,0.35);
+  border-color: rgba(98,168,29,0.3);
 }
 .kit-filter-card--confirmed::after {
   content: '';
@@ -1760,7 +1732,7 @@ select option {
 }
 /* Badge de marca ganadora — prominente, cambia según la marca activa */
 .kit-filter-marca {
-  font-family: var(--mono); font-size: 0.54rem; font-weight: 800;
+  font-family: var(--mono); font-size: 0.54rem; font-weight: 850;
   letter-spacing: 0.1em; text-transform: uppercase;
   padding: 0.1rem 0.4rem;
   border: 1px solid;
@@ -1768,31 +1740,31 @@ select option {
 }
 /* Colores por marca ganadora */
 .kit-filter-marca--interfil {
-  color: #60a5fa;
-  background: rgba(96,165,250,0.1);
-  border-color: rgba(96,165,250,0.4);
+  color: #1d4ed8;
+  background: rgba(30,64,175,0.06);
+  border-color: rgba(30,64,175,0.25);
 }
 .kit-filter-marca--joe {
-  color: #f43f5e;
-  background: rgba(244,63,94,0.08);
-  border-color: rgba(244,63,94,0.4);
+  color: #be123c;
+  background: rgba(190,18,60,0.06);
+  border-color: rgba(190,18,60,0.25);
 }
 .kit-filter-marca--unifil {
-  color: var(--primary);
-  background: var(--primary-glow-sm);
-  border-color: var(--border-primary);
+  color: var(--primary-dim);
+  background: rgba(98, 168, 29, 0.08);
+  border-color: rgba(98, 168, 29, 0.35);
 }
 /* Fallback para cualquier otra marca */
 .kit-filter-marca--default {
-  color: var(--text-2);
-  background: rgba(255,255,255,0.04);
-  border-color: var(--border);
+  color: #4b5563;
+  background: #f3f4f6;
+  border-color: #d1d5db;
 }
 .kit-filter-sku-code {
   font-family: var(--mono); font-size: 0.72rem; font-weight: 800;
-  color: var(--primary);
-  background: var(--primary-glow-sm);
-  border: 1px solid var(--border-primary);
+  color: var(--primary-dim);
+  background: rgba(98, 168, 29, 0.08);
+  border: 1px solid rgba(98, 168, 29, 0.25);
   padding: 0.12rem 0.45rem;
   letter-spacing: 0.06em;
 }
@@ -1821,8 +1793,8 @@ select option {
 .kit-filter-alterno-chip {
   display: flex; align-items: center; justify-content: space-between;
   padding: 0.25rem 0.45rem;
-  background: var(--bg-2);
-  border: 1px solid var(--border);
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
   border-radius: 4px;
   font-family: var(--mono);
   font-size: 0.62rem;
@@ -1830,47 +1802,47 @@ select option {
   cursor: pointer;
 }
 .kit-filter-alterno-chip:hover {
-  background: rgba(255,255,255,0.04);
-  border-color: rgba(255,255,255,0.15);
+  background: #f3f4f6;
+  border-color: #d1d5db;
 }
 .alterno-marca {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-3);
+  color: #4b5563;
 }
 .alterno-sku {
-  color: var(--text-2);
+  color: #111827;
   font-weight: 600;
   letter-spacing: 0.04em;
 }
 
 /* Colores por marca (estado base + hover) */
 .alterno-interfil {
-  border-color: rgba(96,165,250,0.25);
-  background: rgba(96,165,250,0.03);
+  border-color: rgba(96,165,250,0.3);
+  background: rgba(96,165,250,0.06);
 }
 .alterno-interfil:hover {
-  border-color: rgba(96, 165, 250, 0.5);
-  background: rgba(96, 165, 250, 0.08);
+  border-color: rgba(96, 165, 250, 0.6);
+  background: rgba(96, 165, 250, 0.1);
 }
-.alterno-interfil .alterno-marca { color: #60a5fa; }
-.alterno-interfil .alterno-sku { color: #93c5fd; }
-.alterno-interfil:hover .alterno-marca { color: #60a5fa; }
-.alterno-interfil:hover .alterno-sku { color: #93c5fd; }
+.alterno-interfil .alterno-marca { color: #1d4ed8; }
+.alterno-interfil .alterno-sku { color: #1e3a8a; }
+.alterno-interfil:hover .alterno-marca { color: #1d4ed8; }
+.alterno-interfil:hover .alterno-sku { color: #1e3a8a; }
 
 .alterno-joe {
-  border-color: rgba(244,63,94,0.25);
-  background: rgba(244,63,94,0.03);
+  border-color: rgba(244,63,94,0.3);
+  background: rgba(244,63,94,0.06);
 }
 .alterno-joe:hover {
-  border-color: rgba(244, 63, 94, 0.5);
-  background: rgba(244, 63, 94, 0.08);
+  border-color: rgba(244, 63, 94, 0.6);
+  background: rgba(244, 63, 94, 0.1);
 }
-.alterno-joe .alterno-marca { color: #f43f5e; }
-.alterno-joe .alterno-sku { color: #fb7185; }
-.alterno-joe:hover .alterno-marca { color: #f43f5e; }
-.alterno-joe:hover .alterno-sku { color: #fb7185; }
+.alterno-joe .alterno-marca { color: #be123c; }
+.alterno-joe .alterno-sku { color: #881337; }
+.alterno-joe:hover .alterno-marca { color: #be123c; }
+.alterno-joe:hover .alterno-sku { color: #881337; }
 
 /* -----------------------------------
    ADMIN � Columnas de Filtros

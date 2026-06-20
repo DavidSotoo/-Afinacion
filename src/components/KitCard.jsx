@@ -27,7 +27,7 @@ const LINE_CONFIG = {
   vpower:  { label: 'V-Power',         field: 'bujia_v_power',    badge: 'vpower'  },
   stock:   { label: 'Stock / OEM',     field: 'bujia_stock',      badge: 'stock'   },
 };
-const ALL_LINES = ['iridium', 'platino', 'vpower', 'stock'];
+const ALL_LINES = ['stock', 'vpower', 'platino', 'iridium'];
 
 /** The 4 filtros that complete the kit */
 const FILTRO_CONFIG = [
@@ -327,7 +327,7 @@ export default function KitCard({ bujia }) {
                 padding: '2px 8px',
                 borderRadius: '999px',
               }}>
-                Est. ${totalCost.toLocaleString('es-MX')}
+                Est. ${totalCost.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </span>
             )}
           </div>
@@ -609,7 +609,7 @@ export default function KitCard({ bujia }) {
                         <span className="kit-filter-name">{label}</span>
                         {filtro?.sku !== 'SELLADO' && filtro?.costo !== undefined && (
                           <span style={{ fontSize: '0.65rem', color: 'var(--text-muted, #71717a)', marginLeft: 'auto', marginRight: '4px', fontWeight: 'bold' }}>
-                            ${filtro.costo}
+                            ${filtro.costo.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                           </span>
                         )}
                       </div>
@@ -1070,7 +1070,7 @@ export default function KitCard({ bujia }) {
                         )}
                         {filtro?.costo !== undefined && filtro?.sku !== 'SELLADO' && (
                           <span style={{ fontSize: '0.7rem', color: 'var(--text-2)', marginTop: '0.25rem' }}>
-                            Costo: <strong>${filtro.costo} MXN</strong>
+                            Costo: <strong>${filtro.costo.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} MXN</strong>
                           </span>
                         )}
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.6rem', borderTop: '1px dashed rgba(255,255,255,0.06)', paddingTop: '0.5rem', fontSize: '0.65rem' }}>

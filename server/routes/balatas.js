@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 // POST /api/balatas - Crear una balata (requiere auth)
 router.post('/', auth, async (req, res) => {
   try {
-    const { marca, sku_dynamic, sku_equivalente_wagner, fmsi, posicion, vehiculos_compatibles } = req.body;
+    const { marca, sku_dynamic, sku_equivalente_wagner, fmsi, posicion, vehiculos_compatibles, precio } = req.body;
     
     if (!sku_dynamic || !sku_equivalente_wagner || !fmsi || !posicion) {
       return res.status(400).json({ error: 'SKU Dynamic, SKU Equivalente Wagner, FMSI y Posición son obligatorios.' });
@@ -58,7 +58,8 @@ router.post('/', auth, async (req, res) => {
       sku_equivalente_wagner: sku_equivalente_wagner.trim().toUpperCase(),
       fmsi: fmsi.trim(),
       posicion,
-      vehiculos_compatibles: compatibles
+      vehiculos_compatibles: compatibles,
+      precio: precio !== undefined ? Number(precio) : 0
     });
 
     await nuevaBalata.save();
@@ -73,7 +74,7 @@ router.post('/', auth, async (req, res) => {
 router.put('/:id', auth, async (req, res) => {
   try {
     const { id } = req.params;
-    const { marca, sku_dynamic, sku_equivalente_wagner, fmsi, posicion, vehiculos_compatibles } = req.body;
+    const { marca, sku_dynamic, sku_equivalente_wagner, fmsi, posicion, vehiculos_compatibles, precio } = req.body;
 
     const balata = await Balata.findById(id);
     if (!balata) {
@@ -97,6 +98,7 @@ router.put('/:id', auth, async (req, res) => {
 
     if (fmsi !== undefined) balata.fmsi = fmsi.trim();
     if (marca !== undefined) balata.marca = marca || 'Dynamic';
+    if (precio !== undefined) balata.precio = Number(precio);
     
     if (posicion) {
       if (!['Delantero', 'Trasero'].includes(posicion)) {

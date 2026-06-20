@@ -183,7 +183,7 @@ function buildConsolidatedMessage(items, deliveryOpt, paymentOpt, shipping, gran
     const brandName = paymentDetails.brand === 'visa' ? 'Visa' : paymentDetails.brand === 'mastercard' ? 'Mastercard' : paymentDetails.brand === 'amex' ? 'American Express' : 'Tarjeta';
     pagoMsg += ` (Pago en Línea con ${brandName} terminada en •••• ${paymentDetails.last4})`;
   } else if (paymentOpt?.id === 'efectivo' && paymentDetails.cashPaidWith) {
-    pagoMsg += ` (Paga con: $${paymentDetails.cashPaidWith.toLocaleString('es-MX')} · Cambio: $${paymentDetails.changeAmount.toLocaleString('es-MX')})`;
+    pagoMsg += ` (Paga con: $${paymentDetails.cashPaidWith.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} · Cambio: $${paymentDetails.changeAmount.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })})`;
   } else if (paymentOpt?.id === 'transferencia') {
     pagoMsg += ` (Se solicita CLABE para transferencia)`;
   } else if (paymentOpt?.id === 'deposito') {
@@ -196,7 +196,7 @@ function buildConsolidatedMessage(items, deliveryOpt, paymentOpt, shipping, gran
     pagoMsg,
     servicioTaller !== 'ninguno' ? `🛠️ *Servicio en Taller:* Deseo agendar Servicio ${serviceNames[servicioTaller]} de instalación en sucursal Oblatos` : '',
     `🚚 *Envío:* ${shipping?.isFree ? '¡GRATIS!' : `$${shipping?.cost || 0}`}`,
-    `💰 *Total Estimado:* $${grandTotal?.toLocaleString('es-MX') || 0}`
+    `💰 *Total Estimado:* $${grandTotal?.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || '0.00'}`
   );
 
   if (datosEnvio && (deliveryOpt?.id === 'zmg' || deliveryOpt?.id === 'foraneo')) {
@@ -382,7 +382,7 @@ export default function Checkout() {
     if (selectedPayment === 'efectivo' && cashPaidWith) {
       const paid = parseFloat(cashPaidWith);
       if (isNaN(paid) || paid < grandTotal) {
-        setErrorMsg(`El monto para pagar en efectivo debe ser igual o mayor a $${grandTotal.toLocaleString('es-MX')}`);
+        setErrorMsg(`El monto para pagar en efectivo debe ser igual o mayor a $${grandTotal.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`);
         setIsSubmitting(false);
         return;
       }
@@ -1067,7 +1067,7 @@ export default function Checkout() {
                         </p>
                       ) : cashPaidWith ? (
                         <p className="mt-2 text-red-500 text-[11px]">
-                          ⚠️ El monto de pago debe cubrir el total de ${grandTotal.toLocaleString('es-MX')}
+                          ⚠️ El monto de pago debe cubrir el total de ${grandTotal.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                         </p>
                       ) : null}
                     </div>
@@ -1186,7 +1186,7 @@ export default function Checkout() {
               <div className="border-t border-gray-850 pt-4 flex flex-col gap-3">
                 <div className="flex justify-between items-center text-xs font-mono">
                   <span className="text-gray-500">Subtotal Estimado</span>
-                  <span className="text-white">${subtotal.toLocaleString('es-MX')}</span>
+                  <span className="text-white">${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 </div>
                 
                 <div className="flex justify-between items-center text-xs font-mono">
@@ -1206,7 +1206,7 @@ export default function Checkout() {
                 <div className="flex justify-between items-center border-t border-gray-850 pt-3">
                   <span className="font-display font-bold text-sm uppercase tracking-wide text-white">Total Estimado</span>
                   <span className="font-mono text-base font-extrabold text-primary">
-                    ${grandTotal.toLocaleString('es-MX')}
+                    ${grandTotal.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </span>
                 </div>
               </div>

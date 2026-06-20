@@ -111,7 +111,7 @@ function KitDrawerItem({ item, onRemove, onTogglePart }) {
             {item.aceite_motor ? 6 - excludedParts.length : 5 - excludedParts.length} Piezas
           </span>
           <span className="drawer-kit-price-badge" style={STYLE_PRICE_BADGE}>
-            ${kitPrice.toLocaleString('es-MX')}
+            ${kitPrice.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </span>
         </div>
       </div>
@@ -287,7 +287,7 @@ function FiltroDrawerItem({ item, onRemove }) {
             <span className="drawer-item-sku">{f?.sku && f.sku !== 'SELLADO' ? f.sku : 'Cotizar'}</span>
             {f?.sku !== 'SELLADO' && (
               <span style={STYLE_SKU_PRICE}>
-                ${(f && f.costo !== undefined) ? f.costo : 85}
+                ${((f && f.costo !== undefined) ? f.costo : 85).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </span>
             )}
           </div>
@@ -501,7 +501,7 @@ export default function CartDrawer() {
                   <div className="drawer-summary-row" style={STYLE_SUMMARY_ROW}>
                     <span className="drawer-summary-label" style={STYLE_SUMMARY_LABEL}>Subtotal estimado</span>
                     <span className="drawer-summary-value" style={STYLE_SUMMARY_VALUE}>
-                      ${subtotal.toLocaleString('es-MX')}
+                      ${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                     </span>
                   </div>
                   <p className="drawer-summary-disclaimer">

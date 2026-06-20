@@ -13,10 +13,10 @@ const LINE_CONFIG = {
 
 const FILTER_CHIPS = [
   { key: 'all',     label: 'Todas'      },
-  { key: 'iridium', label: 'Iridium IX' },
-  { key: 'platino', label: 'G-Power'    },
-  { key: 'vpower',  label: 'V-Power'    },
   { key: 'stock',   label: 'Stock'      },
+  { key: 'vpower',  label: 'V-Power'    },
+  { key: 'platino', label: 'G-Power'    },
+  { key: 'iridium', label: 'Iridium IX' },
 ];
 
 /**

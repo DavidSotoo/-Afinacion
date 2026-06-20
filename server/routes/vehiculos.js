@@ -1739,7 +1739,19 @@ async function enrichVehiculosWithPrices(vehiculos) {
     const { preciosMap, bujiasMap, balatasList } = priceCache;
     const DEFAULT_COST = 80;
 
-    return vehiculos.map(v => {
+    // Deduplicate vehicle results list before enrichment
+    let listToEnrich = vehiculos;
+    if (vehiculos.length > 1) {
+      const seen = new Set();
+      listToEnrich = vehiculos.filter(v => {
+        const key = `${v.marca}-${v.modelo}-${v.anio_inicio}-${v.anio_fin}-${v.motor || ''}-${v.litros || ''}-${v.cilindros_config || ''}`.toUpperCase();
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    }
+
+    return listToEnrich.map(v => {
       const vObj = v.toObject();
       
       const vehicleModelUpper = (vObj.modelo || '').trim().toUpperCase();
@@ -1772,7 +1784,8 @@ async function enrichVehiculosWithPrices(vehiculos) {
         sku_dynamic: b.sku_dynamic,
         sku_equivalente_wagner: b.sku_equivalente_wagner,
         fmsi: b.fmsi,
-        posicion: b.posicion
+        posicion: b.posicion,
+        precio: b.precio || 0
       }));
 
       // Metadata: helps UI decide messaging ("en catálogo pero años sin datos" vs "sin datos")
@@ -1801,18 +1814,43 @@ async function enrichVehiculosWithPrices(vehiculos) {
         keys.forEach(key => {
           const filtro = vObj.kit_afinacion[key];
           if (filtro && filtro.sku) {
+            // Swap UNIFIL brand from alternos if available to prefer UNIFIL
+            if (filtro.marca && filtro.marca.trim().toUpperCase() !== 'UNIFIL' && Array.isArray(filtro.alternos)) {
+              const unifilAltIdx = filtro.alternos.findIndex(alt => alt && alt.marca && alt.marca.trim().toUpperCase() === 'UNIFIL');
+              if (unifilAltIdx !== -1) {
+                const unifilAlt = filtro.alternos[unifilAltIdx];
+                const originalFiltro = {
+                  marca: filtro.marca,
+                  sku: filtro.sku
+                };
+                filtro.marca = unifilAlt.marca;
+                filtro.sku = unifilAlt.sku;
+                filtro.alternos[unifilAltIdx] = originalFiltro;
+              }
+            }
+
             const skuUpper = (filtro.sku || '').trim().toUpperCase();
             if (skuUpper === 'SELLADO') {
               filtro.costo = 0;
             } else {
               let costo = DEFAULT_COST;
               const nameUpper = (filtro.marca || 'UNIFIL').trim().toUpperCase();
-              const lookupKey = `${nameUpper}_${skuUpper}`;
               
-              if (preciosMap.has(lookupKey)) {
-                costo = preciosMap.get(lookupKey);
-              } else if (preciosMap.has(skuUpper)) {
-                costo = preciosMap.get(skuUpper);
+              // Handle combined SKUs separated by '/' (split and try to find any key)
+              const skus = skuUpper.split('/').map(s => s.trim());
+              let priceFound = false;
+              for (const singleSku of skus) {
+                if (!singleSku) continue;
+                const lookupKey = `${nameUpper}_${singleSku}`;
+                if (preciosMap.has(lookupKey)) {
+                  costo = preciosMap.get(lookupKey);
+                  priceFound = true;
+                  break;
+                } else if (preciosMap.has(singleSku)) {
+                  costo = preciosMap.get(singleSku);
+                  priceFound = true;
+                  break;
+                }
               }
               filtro.costo = costo;
               costoTotal += costo;
@@ -1856,7 +1894,17 @@ async function enrichVehiculosWithPrices(vehiculos) {
     });
   } catch (err) {
     console.error('Error enriching vehicles with prices:', err.message);
-    return vehiculos.map(v => {
+    let listToEnrich = vehiculos;
+    if (vehiculos.length > 1) {
+      const seen = new Set();
+      listToEnrich = vehiculos.filter(v => {
+        const key = `${v.marca}-${v.modelo}-${v.anio_inicio}-${v.anio_fin}-${v.motor || ''}-${v.litros || ''}-${v.cilindros_config || ''}`.toUpperCase();
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    }
+    return listToEnrich.map(v => {
       const vObj = v.toObject();
       
       const matchCyl = (vObj.cilindros_config || '').match(/\d+/);
@@ -1869,9 +1917,28 @@ async function enrichVehiculosWithPrices(vehiculos) {
         const keys = ['filtro_aceite', 'filtro_aire', 'filtro_gasolina', 'filtro_cabina'];
         keys.forEach(key => {
           const filtro = vObj.kit_afinacion[key];
-          if (filtro && filtro.sku && filtro.sku !== 'SELLADO') {
-            filtro.costo = 80;
-            costoTotal += 80;
+          if (filtro && filtro.sku) {
+            // Swap UNIFIL brand from alternos if available to prefer UNIFIL in fallback
+            if (filtro.marca && filtro.marca.trim().toUpperCase() !== 'UNIFIL' && Array.isArray(filtro.alternos)) {
+              const unifilAltIdx = filtro.alternos.findIndex(alt => alt && alt.marca && alt.marca.trim().toUpperCase() === 'UNIFIL');
+              if (unifilAltIdx !== -1) {
+                const unifilAlt = filtro.alternos[unifilAltIdx];
+                const originalFiltro = {
+                  marca: filtro.marca,
+                  sku: filtro.sku
+                };
+                filtro.marca = unifilAlt.marca;
+                filtro.sku = unifilAlt.sku;
+                filtro.alternos[unifilAltIdx] = originalFiltro;
+              }
+            }
+
+            if (filtro.sku !== 'SELLADO') {
+              filtro.costo = 80;
+              costoTotal += 80;
+            } else {
+              filtro.costo = 0;
+            }
           } else if (filtro) {
             filtro.costo = 0;
           }

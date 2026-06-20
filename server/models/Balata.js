@@ -34,7 +34,11 @@ const BalataSchema = new mongoose.Schema({
       anio_fin: { type: Number, required: true },
       especificaciones: { type: String }
     }
-  ]
+  ],
+  precio: {
+    type: Number,
+    default: 0
+  }
 }, { timestamps: true });
 
 module.exports = mongoose.model('Balata', BalataSchema);
