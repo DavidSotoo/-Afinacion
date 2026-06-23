@@ -78,19 +78,47 @@ export default function LandingPage() {
       </main>
 
       <footer className="site-footer" aria-label="Pie de página">
-        <span className="footer-logo">
-          <img src="/logo.jpeg" alt="A+ MÁS AFINACIÓN" style={{ height: '24px' }} />
-        </span>
-        <span className="footer-copy">
-          KITS EXACTOS PARA TU AUTO BY RAIO
-          <br />
-          <a href={`mailto:${STORE_PUBLIC_EMAIL}`} style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.9em', marginTop: '4px', display: 'inline-block' }}>
-            {STORE_PUBLIC_EMAIL}
-          </a>
-        </span>
-        <span className="footer-right">
-          <span className="footer-tag">MX · Jalisco</span>
-        </span>
+        <div className="footer-columns">
+          {/* Columna 1: Brand & Trust */}
+          <div className="footer-col">
+            <img src="/logo.jpeg" alt="A+ MÁS AFINACIÓN" className="footer-logo-img" />
+            <p className="footer-about">
+              Especialistas en kits de afinación automotriz exactos por marca, modelo y año. Tu auto en manos de expertos.
+            </p>
+            <div className="footer-payments">
+              <span className="payment-badge">VISA</span>
+              <span className="payment-badge">MC</span>
+              <span className="payment-badge">MERCADOPAGO</span>
+              <span className="payment-badge">SSL SECURE</span>
+            </div>
+          </div>
+          
+          {/* Columna 2: Links */}
+          <div className="footer-col">
+            <h4 className="footer-col-title">Enlaces Útiles</h4>
+            <ul className="footer-links">
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/catalogo">Catálogo de Kits</a></li>
+              <li><a href="/catalogo#tienda">Ubicación y Horarios</a></li>
+            </ul>
+          </div>
+          
+          {/* Columna 3: Contact & Warranty */}
+          <div className="footer-col">
+            <h4 className="footer-col-title">Contacto & Garantía</h4>
+            <p className="footer-contact-info">
+              Jalisco, México<br/>
+              <a href={`mailto:${STORE_PUBLIC_EMAIL}`} className="footer-email-link">{STORE_PUBLIC_EMAIL}</a>
+            </p>
+            <div className="warranty-badge">
+              🛡️ GARANTÍA DE AJUSTE EXACTO 100%
+            </div>
+          </div>
+        </div>
+        
+        <div className="footer-bottom">
+          <p>© {new Date().getFullYear()} +AFINACIÓN · KITS EXACTOS PARA TU AUTO BY RAIO</p>
+        </div>
       </footer>
     </>
   );

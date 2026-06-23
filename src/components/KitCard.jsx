@@ -340,9 +340,48 @@ export default function KitCard({ bujia }) {
         </div>
         {kitInCart && (
           <span className="kit-in-cart-badge" aria-label="Kit ya en carrito">
-            <CheckCircle size={13} aria-hidden="true" /> En carrito
+            <CheckCircle size={16} aria-hidden="true" /> En carrito
           </span>
         )}
+      </div>
+
+      {/* ── Progress & Checklist Bar ── */}
+      <div className="kit-checklist-bar">
+        <div className="kit-checklist-title">
+          <span>Componentes de Afinación:</span>
+          <strong className="kit-checklist-count">
+            {((noBujias ? 0 : 1) + 
+              (kit?.filtro_aceite ? 1 : 0) + 
+              (kit?.filtro_aire ? 1 : 0) + 
+              ((kit?.filtro_cabina && kit.filtro_cabina.sku !== 'SELLADO') ? 1 : 0) + 
+              ((kit?.filtro_gasolina && kit.filtro_gasolina.sku !== 'SELLADO') ? 1 : 0) +
+              (aceiteSelected ? 1 : 0))} Piezas Confirmadas
+          </strong>
+        </div>
+        <div className="kit-checklist-items">
+          <span className={`checklist-item${!noBujias ? ' checked' : ' disabled'}`}>
+            {!noBujias ? '✓ Bujías' : '✗ Bujías'}
+          </span>
+          <span className={`checklist-item${kit?.filtro_aceite ? ' checked' : ' disabled'}`}>
+            {kit?.filtro_aceite ? '✓ F. Aceite' : '✗ F. Aceite'}
+          </span>
+          <span className={`checklist-item${kit?.filtro_aire ? ' checked' : ' disabled'}`}>
+            {kit?.filtro_aire ? '✓ F. Aire' : '✗ F. Aire'}
+          </span>
+          {kit?.filtro_cabina && (
+            <span className={`checklist-item ${kit.filtro_cabina.sku === 'SELLADO' ? 'info-tag' : 'checked'}`}>
+              {kit.filtro_cabina.sku === 'SELLADO' ? '○ Cabina Sellada' : '✓ F. Cabina'}
+            </span>
+          )}
+          {kit?.filtro_gasolina && (
+            <span className={`checklist-item ${kit.filtro_gasolina.sku === 'SELLADO' ? 'info-tag' : 'checked'}`}>
+              {kit.filtro_gasolina.sku === 'SELLADO' ? '○ Gasolina Sellada' : '✓ F. Gasolina'}
+            </span>
+          )}
+          <span className={`checklist-item${aceiteSelected ? ' checked' : ' disabled'}`}>
+            {aceiteSelected ? '✓ Aceite' : '✗ Aceite'}
+          </span>
+        </div>
       </div>
 
       {/* ── Visual/List View Header ── */}
@@ -488,7 +527,7 @@ export default function KitCard({ bujia }) {
             {/* ▸ BLOQUE 1 — Bujías NGK ──────────────────────────────── */}
         <section className="kit-section-block kit-section-block--spark" aria-label="Bujías NGK">
           <header className="kit-section-label">
-            <Zap size={13} aria-hidden="true" className="kit-section-icon kit-section-icon--spark" />
+            <Zap size={18} aria-hidden="true" className="kit-section-icon kit-section-icon--spark" />
             <span>Bujías NGK</span>
             <span className="kit-section-number">①</span>
           </header>
@@ -546,7 +585,7 @@ export default function KitCard({ bujia }) {
                     <span className="dot" aria-hidden="true" />
                     <span>{lineConfig.label}</span>
                     <ChevronDown
-                      size={12}
+                      size={14}
                       aria-hidden="true"
                       className={`kit-chevron${lineDropOpen ? ' rotated' : ''}`}
                     />
@@ -580,7 +619,7 @@ export default function KitCard({ bujia }) {
         {/* ▸ BLOQUE 2 — Filtros (4 piezas) ─────────────────────── */}
         <section className="kit-section-block kit-section-block--filters" aria-label="Filtros del kit">
           <header className="kit-section-label">
-            <Filter size={13} aria-hidden="true" className="kit-section-icon kit-section-icon--filter" />
+            <Filter size={18} aria-hidden="true" className="kit-section-icon kit-section-icon--filter" />
             <span>Filtros del Kit</span>
             <span className="kit-section-numbers">② ③ ④ ⑤</span>
           </header>
@@ -605,7 +644,7 @@ export default function KitCard({ bujia }) {
                   >
                     <div className="kit-filter-card-header">
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', flex: 1 }}>
-                        <Icon size={12} aria-hidden="true" className="kit-filter-icon" />
+                        <Icon size={16} aria-hidden="true" className="kit-filter-icon" />
                         <span className="kit-filter-name">{label}</span>
                         {filtro?.sku !== 'SELLADO' && filtro?.costo !== undefined && (
                           <span style={{ fontSize: '0.65rem', color: 'var(--text-muted, #71717a)', marginLeft: 'auto', marginRight: '4px', fontWeight: 'bold' }}>
@@ -632,7 +671,7 @@ export default function KitCard({ bujia }) {
                             padding: '2px 4px',
                           }}
                         >
-                          <ShoppingBag size={10} />
+                          <ShoppingBag size={14} />
                           <span style={{ fontSize: '0.6rem', marginLeft: '2px' }}>{isFiltroInCart ? '✓' : '+'}</span>
                         </button>
                       </div>
@@ -692,7 +731,7 @@ export default function KitCard({ bujia }) {
         {/* ▸ BLOQUE BALATAS DYNAMIC ─────────────────────── */}
         <section className="kit-section-block kit-section-block--brakes" aria-label="Balatas Dynamic">
           <header className="kit-section-label">
-            <Disc size={13} aria-hidden="true" className="kit-section-icon" style={{ color: 'var(--primary)' }} />
+            <Disc size={18} aria-hidden="true" className="kit-section-icon" style={{ color: 'var(--primary)' }} />
             <span>Balatas Dynamic</span>
             <span className="kit-section-numbers">Eje Delantero / Trasero</span>
           </header>
@@ -752,7 +791,7 @@ export default function KitCard({ bujia }) {
         {kit && (
         <section className="kit-section-block kit-section-block--oil" aria-label="Aceite de motor recomendado">
           <header className="kit-section-label">
-            <Droplet size={13} aria-hidden="true" className="kit-section-icon kit-section-icon--oil" style={{ color: 'var(--primary)' }} />
+            <Droplet size={18} aria-hidden="true" className="kit-section-icon kit-section-icon--oil" style={{ color: 'var(--primary)' }} />
             <span>⑥ Aceite de Motor</span>
             <span className="kit-section-numbers">Recomendado</span>
           </header>
@@ -1142,7 +1181,7 @@ export default function KitCard({ bujia }) {
               rel="noopener noreferrer"
               aria-label={`Cotizar bujías ${lineConfig.label} por WhatsApp`}
             >
-              <MessageCircle size={13} aria-hidden="true" />
+              <MessageCircle size={16} aria-hidden="true" />
               Cotizar Bujías
             </a>
             <div style={{ display: 'flex', gap: '0.4rem', marginLeft: 'auto' }}>
@@ -1165,7 +1204,7 @@ export default function KitCard({ bujia }) {
                   aria-label={filtersInCart ? 'Filtros ya en carrito' : 'Agregar solo filtros al carrito'}
                   aria-pressed={filtersInCart}
                 >
-                  <Filter size={13} /> {filtersInCart ? 'Agregados' : '+ Solo Filtros'}
+                  <Filter size={16} /> {filtersInCart ? 'Agregados' : '+ Solo Filtros'}
                 </button>
               )}
             </div>
@@ -1180,7 +1219,7 @@ export default function KitCard({ bujia }) {
             disabled={kitInCart}
             aria-label={kitInCart ? 'Kit completo ya en carrito' : 'Agregar Kit de Afinación Completo (6 Piezas) al carrito'}
           >
-            <ShoppingBag size={17} aria-hidden="true" />
+            <ShoppingBag size={19} aria-hidden="true" />
             {justAdded
               ? '¡Kit Agregado! ✓'
               : kitInCart

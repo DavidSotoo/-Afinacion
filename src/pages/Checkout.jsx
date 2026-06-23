@@ -583,19 +583,19 @@ export default function Checkout() {
       <>
         <Header />
         <main className="page flex flex-col items-center justify-center text-center px-4 py-20" style={{ minHeight: '75vh' }}>
-          <div className="bg-[#0a0a0a] border border-primary/20 border-t-4 border-t-primary p-8 md:p-12 max-w-xl w-full shadow-2xl relative overflow-hidden text-center flex flex-col items-center">
+          <div className="bg-[var(--bg-1)] border border-[var(--border-primary)] border-t-4 border-t-primary p-8 md:p-12 max-w-xl w-full shadow-2xl relative overflow-hidden text-center flex flex-col items-center">
             <div className="w-16 h-16 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center mb-6">
               <Check className="text-primary w-8 h-8" />
             </div>
             
-            <h1 className="font-display font-extrabold text-2xl md:text-3xl uppercase tracking-wider text-white mb-2">
+            <h1 className="font-display font-extrabold text-2xl md:text-3xl uppercase tracking-wider text-[var(--text)] mb-2">
               ¡Pago Aprobado!
             </h1>
             <p className="text-primary font-mono text-sm font-bold uppercase tracking-wider mb-6">
               Folio: #{paymentFolio}
             </p>
             
-            <p className="text-gray-450 text-sm font-mono leading-relaxed mb-8">
+            <p className="text-[var(--text-2)] text-sm font-mono leading-relaxed mb-8">
               Tu cotización ha sido pagada con éxito a través de Mercado Pago. Hemos reservado tu kit de afinación y las refacciones seleccionadas en nuestra base de datos.
             </p>
 
@@ -675,10 +675,10 @@ export default function Checkout() {
           <div className="lg:col-span-2 flex flex-col gap-8">
             
             {/* Delivery Methods Section */}
-            <div className="bg-[#0a0a0a] border border-gray-800 border-t-2 border-t-primary p-6 md:p-8 rounded-none relative overflow-hidden backdrop-blur-md">
+            <div className="bg-[var(--bg-1)] border border-[var(--border)] border-t-2 border-t-primary p-6 md:p-8 rounded-none relative overflow-hidden backdrop-blur-md">
               <div className="flex items-center gap-2.5 mb-6">
                 <Truck className="text-primary" size={20} />
-                <h2 className="font-display font-bold text-lg uppercase tracking-wide text-white">Método de Entrega</h2>
+                <h2 className="font-display font-bold text-lg uppercase tracking-wide text-[var(--text)]">Método de Entrega</h2>
               </div>
 
               <div className="flex flex-col gap-4">
@@ -689,7 +689,7 @@ export default function Checkout() {
                     <label
                       key={opt.id}
                       onClick={() => setSelectedDelivery(opt.id)}
-                      className={`flex items-start gap-4 p-4 border border-gray-800 hover:border-gray-700 bg-[#111111] transition-all cursor-pointer select-none relative ${
+                      className={`flex items-start gap-4 p-4 border border-[var(--border)] hover:border-[var(--border-primary)] bg-[var(--bg-2)] transition-all cursor-pointer select-none relative ${
                         isSelected ? 'border-primary/50 bg-primary/5' : ''
                       }`}
                     >
@@ -705,19 +705,19 @@ export default function Checkout() {
                       <div className="text-xl flex-shrink-0">{opt.icon}</div>
                       
                       <div className="flex-1">
-                        <span className="block font-bold text-sm text-white">{opt.label}</span>
+                        <span className="block font-bold text-sm text-[var(--text)]">{opt.label}</span>
                         {opt.address && (
-                          <span className="flex items-center gap-1 text-gray-500 font-mono text-[10px] mt-1">
+                          <span className="flex items-center gap-1 text-[var(--text-3)] font-mono text-[10px] mt-1">
                             <MapPin size={10} /> {opt.address}
                           </span>
                         )}
                         {opt.note && (
-                          <span className="block text-gray-500 font-mono text-[10px] mt-1">{opt.note}</span>
+                          <span className="block text-[var(--text-3)] font-mono text-[10px] mt-1">{opt.note}</span>
                         )}
                       </div>
 
                       <div className="text-right flex flex-col items-end gap-1">
-                        <span className={`font-mono text-xs font-bold ${sh.isFree ? 'text-primary' : 'text-white'}`}>
+                        <span className={`font-mono text-xs font-bold ${sh.isFree ? 'text-primary' : 'text-[var(--text)]'}`}>
                           {sh.cost === 0 ? (
                             sh.isFree && opt.id === 'zmg' ? '¡GRATIS!' : 'Gratis'
                           ) : (
@@ -765,106 +765,106 @@ export default function Checkout() {
                   transition={{ duration: 0.3 }}
                   className="overflow-hidden"
                 >
-                  <div className="bg-[#0a0a0a] border border-gray-800 border-t-2 border-t-primary p-6 md:p-8 rounded-none relative overflow-hidden backdrop-blur-md">
+                  <div className="bg-[var(--bg-1)] border border-[var(--border)] border-t-2 border-t-primary p-6 md:p-8 rounded-none relative overflow-hidden backdrop-blur-md">
                     <div className="flex items-center gap-2.5 mb-6">
                       <MapPin className="text-primary" size={20} />
-                      <h2 className="font-display font-bold text-lg uppercase tracking-wide text-white">Datos de Envío</h2>
+                      <h2 className="font-display font-bold text-lg uppercase tracking-wide text-[var(--text)]">Datos de Envío</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-gray-400 text-[10px] uppercase tracking-wider mb-1">Nombre de quién recibe *</label>
+                        <label className="block text-[var(--text-3)] text-[10px] uppercase tracking-wider mb-1">Nombre de quién recibe *</label>
                         <input
                           type="text"
                           value={datosEnvio.nombreRecibe}
                           onChange={(e) => setDatosEnvio({ ...datosEnvio, nombreRecibe: e.target.value })}
                           onBlur={(e) => setDatosEnvio({ ...datosEnvio, nombreRecibe: capitalizeWords(e.target.value) })}
-                          className="w-full bg-[#0a0a0a] border border-gray-800 focus:border-primary/50 text-white font-mono text-xs p-2.5 outline-none transition-colors"
+                          className="w-full bg-[var(--bg-1)] border border-[var(--border)] focus:border-primary/50 text-[var(--text)] font-mono text-xs p-2.5 outline-none transition-colors"
                           placeholder="Ej. Juan Pérez"
                           required
                         />
                       </div>
 
                       <div>
-                        <label className="block text-gray-400 text-[10px] uppercase tracking-wider mb-1">Teléfono de contacto *</label>
+                        <label className="block text-[var(--text-3)] text-[10px] uppercase tracking-wider mb-1">Teléfono de contacto *</label>
                         <input
                           type="tel"
                           value={datosEnvio.telefono}
                           onChange={(e) => setDatosEnvio({ ...datosEnvio, telefono: e.target.value.replace(/\D/g, '').slice(0, 10) })}
-                          className="w-full bg-[#0a0a0a] border border-gray-800 focus:border-primary/50 text-white font-mono text-xs p-2.5 outline-none transition-colors"
+                          className="w-full bg-[var(--bg-1)] border border-[var(--border)] focus:border-primary/50 text-[var(--text)] font-mono text-xs p-2.5 outline-none transition-colors"
                           placeholder="Ej. 3312345678"
                           required
                         />
                       </div>
 
                       <div className="md:col-span-2">
-                        <label className="block text-gray-400 text-[10px] uppercase tracking-wider mb-1">Calle y Número *</label>
+                        <label className="block text-[var(--text-3)] text-[10px] uppercase tracking-wider mb-1">Calle y Número *</label>
                         <input
                           type="text"
                           value={datosEnvio.calleNumero}
                           onChange={(e) => setDatosEnvio({ ...datosEnvio, calleNumero: e.target.value })}
-                          className="w-full bg-[#0a0a0a] border border-gray-800 focus:border-primary/50 text-white font-mono text-xs p-2.5 outline-none transition-colors"
+                          className="w-full bg-[var(--bg-1)] border border-[var(--border)] focus:border-primary/50 text-[var(--text)] font-mono text-xs p-2.5 outline-none transition-colors"
                           placeholder="Ej. Av. Juárez 123 Int. 4"
                           required
                         />
                       </div>
 
                       <div>
-                        <label className="block text-gray-400 text-[10px] uppercase tracking-wider mb-1">Colonia *</label>
+                        <label className="block text-[var(--text-3)] text-[10px] uppercase tracking-wider mb-1">Colonia *</label>
                         <input
                           type="text"
                           value={datosEnvio.colonia}
                           onChange={(e) => setDatosEnvio({ ...datosEnvio, colonia: e.target.value })}
-                          className="w-full bg-[#0a0a0a] border border-gray-800 focus:border-primary/50 text-white font-mono text-xs p-2.5 outline-none transition-colors"
+                          className="w-full bg-[var(--bg-1)] border border-[var(--border)] focus:border-primary/50 text-[var(--text)] font-mono text-xs p-2.5 outline-none transition-colors"
                           placeholder="Ej. Centro"
                           required
                         />
                       </div>
 
                       <div>
-                        <label className="block text-gray-400 text-[10px] uppercase tracking-wider mb-1">Código Postal *</label>
+                        <label className="block text-[var(--text-3)] text-[10px] uppercase tracking-wider mb-1">Código Postal *</label>
                         <input
                           type="text"
                           value={datosEnvio.codigoPostal}
                           onChange={(e) => setDatosEnvio({ ...datosEnvio, codigoPostal: e.target.value.replace(/\D/g, '').slice(0, 5) })}
-                          className="w-full bg-[#0a0a0a] border border-gray-800 focus:border-primary/50 text-white font-mono text-xs p-2.5 outline-none transition-colors"
+                          className="w-full bg-[var(--bg-1)] border border-[var(--border)] focus:border-primary/50 text-[var(--text)] font-mono text-xs p-2.5 outline-none transition-colors"
                           placeholder="Ej. 44100"
                           required
                         />
                       </div>
 
                       <div>
-                        <label className="block text-gray-400 text-[10px] uppercase tracking-wider mb-1">Municipio / Delegación *</label>
+                        <label className="block text-[var(--text-3)] text-[10px] uppercase tracking-wider mb-1">Municipio / Delegación *</label>
                         <input
                           type="text"
                           value={datosEnvio.municipio}
                           onChange={(e) => setDatosEnvio({ ...datosEnvio, municipio: e.target.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '') })}
                           onBlur={(e) => setDatosEnvio({ ...datosEnvio, municipio: capitalizeWords(e.target.value) })}
-                          className="w-full bg-[#0a0a0a] border border-gray-800 focus:border-primary/50 text-white font-mono text-xs p-2.5 outline-none transition-colors"
+                          className="w-full bg-[var(--bg-1)] border border-[var(--border)] focus:border-primary/50 text-[var(--text)] font-mono text-xs p-2.5 outline-none transition-colors"
                           placeholder="Ej. Guadalajara"
                           required
                         />
                       </div>
 
                       <div>
-                        <label className="block text-gray-400 text-[10px] uppercase tracking-wider mb-1">Estado *</label>
+                        <label className="block text-[var(--text-3)] text-[10px] uppercase tracking-wider mb-1">Estado *</label>
                         <input
                           type="text"
                           value={datosEnvio.estado}
                           onChange={(e) => setDatosEnvio({ ...datosEnvio, estado: e.target.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '') })}
                           onBlur={(e) => setDatosEnvio({ ...datosEnvio, estado: capitalizeWords(e.target.value) })}
-                          className="w-full bg-[#0a0a0a] border border-gray-800 focus:border-primary/50 text-white font-mono text-xs p-2.5 outline-none transition-colors"
+                          className="w-full bg-[var(--bg-1)] border border-[var(--border)] focus:border-primary/50 text-[var(--text)] font-mono text-xs p-2.5 outline-none transition-colors"
                           placeholder="Ej. Jalisco"
                           required
                         />
                       </div>
 
                       <div className="md:col-span-2">
-                        <label className="block text-gray-400 text-[10px] uppercase tracking-wider mb-1">Referencias de entrega (opcional)</label>
+                        <label className="block text-[var(--text-3)] text-[10px] uppercase tracking-wider mb-1">Referencias de entrega (opcional)</label>
                         <textarea
                           value={datosEnvio.referencias}
                           onChange={(e) => setDatosEnvio({ ...datosEnvio, referencias: e.target.value })}
-                          className="w-full bg-[#0a0a0a] border border-gray-800 focus:border-primary/50 text-white font-mono text-xs p-2.5 outline-none transition-colors min-h-[60px]"
+                          className="w-full bg-[var(--bg-1)] border border-[var(--border)] focus:border-primary/50 text-[var(--text)] font-mono text-xs p-2.5 outline-none transition-colors min-h-[60px]"
                           placeholder="Ej. Portón negro, entre calle Independencia y Libertad..."
                         />
                       </div>
@@ -875,10 +875,10 @@ export default function Checkout() {
             </AnimatePresence>
 
             {/* Payment Methods Section */}
-            <div className="bg-[#0a0a0a] border border-gray-800 border-t-2 border-t-primary p-6 md:p-8 rounded-none relative overflow-hidden backdrop-blur-md">
+            <div className="bg-[var(--bg-1)] border border-[var(--border)] border-t-2 border-t-primary p-6 md:p-8 rounded-none relative overflow-hidden backdrop-blur-md">
               <div className="flex items-center gap-2.5 mb-6">
                 <CreditCard className="text-primary" size={20} />
-                <h2 className="font-display font-bold text-lg uppercase tracking-wide text-white">Método de Pago</h2>
+                <h2 className="font-display font-bold text-lg uppercase tracking-wide text-[var(--text)]">Método de Pago</h2>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -888,7 +888,7 @@ export default function Checkout() {
                     <label
                       key={pm.id}
                       onClick={() => setSelectedPayment(pm.id)}
-                      className={`flex items-center justify-between p-4 border border-gray-800 hover:border-gray-700 bg-[#111111] transition-all cursor-pointer select-none ${
+                      className={`flex items-center justify-between p-4 border border-[var(--border)] hover:border-[var(--border-primary)] bg-[var(--bg-2)] transition-all cursor-pointer select-none ${
                         isSelected ? 'border-primary/50 bg-primary/5' : ''
                       }`}
                     >
@@ -903,9 +903,9 @@ export default function Checkout() {
                       
                       <div className="flex items-center gap-3">
                         <span className="text-lg">{pm.icon}</span>
-                        <span className="font-bold text-xs text-white uppercase tracking-wider">{pm.label}</span>
+                        <span className="font-bold text-xs text-[var(--text)] uppercase tracking-wider">{pm.label}</span>
                       </div>
-
+ 
                       {isSelected && (
                         <div className="bg-primary/20 text-primary border border-primary/30 p-0.5 rounded-full">
                           <Check size={10} />
@@ -915,65 +915,65 @@ export default function Checkout() {
                   );
                 })}
               </div>
-
+ 
               {/* Dynamic Payment Details/Form */}
-              <div className="mt-6 border-t border-gray-800 pt-6">
+              <div className="mt-6 border-t border-[var(--border)] pt-6">
                 
                 {selectedPayment === 'tarjeta' && (
-                  <div className="bg-[#111111] border border-gray-850 p-6 flex flex-col gap-4 rounded-lg text-gray-400">
-                    <div className="flex justify-between items-center border-b border-gray-800 pb-3">
+                  <div className="bg-[var(--bg-2)] border border-[var(--border)] p-6 flex flex-col gap-4 rounded-lg text-[var(--text-2)]">
+                    <div className="flex justify-between items-center border-b border-[var(--border)] pb-3">
                       <div className="flex items-center gap-2">
                         <CreditCard className="text-primary" size={18} />
-                        <span className="text-white font-bold text-xs uppercase tracking-wider">Pago en Línea Seguro</span>
+                        <span className="text-[var(--text)] font-bold text-xs uppercase tracking-wider">Pago en Línea Seguro</span>
                       </div>
                       <span className="bg-sky-500/10 text-sky-400 text-[10px] px-2 py-0.5 rounded font-semibold border border-sky-500/20 font-mono">MERCADO PAGO</span>
                     </div>
-
+ 
                     <div className="space-y-3 leading-relaxed text-xs">
                       <p>
                         Serás redirigido a la plataforma oficial de <strong>Mercado Pago</strong> para completar tu transacción de manera 100% segura.
                       </p>
                       
                       <div className="grid grid-cols-2 gap-3 pt-2">
-                        <div className="p-3 bg-neutral-900 border border-gray-800 flex flex-col items-center justify-center text-center">
+                        <div className="p-3 bg-[var(--bg-3)] border border-[var(--border)] flex flex-col items-center justify-center text-center">
                           <span className="text-lg">💳</span>
-                          <span className="font-bold text-[10px] text-white uppercase tracking-wider mt-1">Tarjetas</span>
-                          <span className="text-[9px] text-gray-500 mt-0.5">Crédito y Débito</span>
+                          <span className="font-bold text-[10px] text-[var(--text)] uppercase tracking-wider mt-1">Tarjetas</span>
+                          <span className="text-[9px] text-[var(--text-3)] mt-0.5">Crédito y Débito</span>
                         </div>
-                        <div className="p-3 bg-neutral-900 border border-gray-800 flex flex-col items-center justify-center text-center">
+                        <div className="p-3 bg-[var(--bg-3)] border border-[var(--border)] flex flex-col items-center justify-center text-center">
                           <span className="text-lg">🏪</span>
-                          <span className="font-bold text-[10px] text-white uppercase tracking-wider mt-1">Efectivo</span>
-                          <span className="text-[9px] text-gray-500 mt-0.5">OXXO y Bancos</span>
+                          <span className="font-bold text-[10px] text-[var(--text)] uppercase tracking-wider mt-1">Efectivo</span>
+                          <span className="text-[9px] text-[var(--text-3)] mt-0.5">OXXO y Bancos</span>
                         </div>
                       </div>
-
+ 
                       <div className="bg-primary/5 text-primary border border-primary/10 p-3 text-[11px] font-mono leading-normal mt-2">
                         🔒 Tus datos financieros están protegidos por el cifrado nativo de Mercado Pago. +AFINACIÓN no almacena tu información de tarjeta.
                       </div>
                     </div>
                   </div>
                 )}
-
+ 
                 {selectedPayment === 'transferencia' && (
-                  <div className="bg-[#111111] border border-gray-850 p-4 flex flex-col gap-4 font-mono text-xs text-gray-450">
-                    <div className="border-b border-gray-850 pb-2 flex justify-between items-center">
-                      <span className="text-white font-bold uppercase tracking-wider">Datos de Transferencia</span>
+                  <div className="bg-[var(--bg-2)] border border-[var(--border)] p-4 flex flex-col gap-4 font-mono text-xs text-[var(--text-2)]">
+                    <div className="border-b border-[var(--border)] pb-2 flex justify-between items-center">
+                      <span className="text-[var(--text)] font-bold uppercase tracking-wider">Datos de Transferencia</span>
                       <span className="bg-primary/10 text-primary text-[10px] px-2 py-0.5 rounded font-semibold border border-primary/20">Mercado Pago</span>
                     </div>
-
+ 
                     <div className="space-y-2">
-                      <div className="flex justify-between items-center py-1 border-b border-gray-900">
+                      <div className="flex justify-between items-center py-1 border-b border-[var(--border)]">
                         <span>Banco:</span>
-                        <strong className="text-white">Mercado Pago</strong>
+                        <strong className="text-[var(--text)]">Mercado Pago</strong>
                       </div>
-                      <div className="flex justify-between items-center py-1 border-b border-gray-900">
+                      <div className="flex justify-between items-center py-1 border-b border-[var(--border)]">
                         <span>Beneficiario:</span>
-                        <strong className="text-white">A+ MÁS AFINACIÓN</strong>
+                        <strong className="text-[var(--text)]">A+ MÁS AFINACIÓN</strong>
                       </div>
-                      <div className="flex justify-between items-center py-1 border-b border-gray-900">
+                      <div className="flex justify-between items-center py-1 border-b border-[var(--border)]">
                         <span>CLABE:</span>
                         <div className="flex items-center gap-2">
-                          <strong className="text-white">722969010894981197</strong>
+                          <strong className="text-[var(--text)]">722969010894981197</strong>
                           <button
                             type="button"
                             onClick={() => handleCopy('722969010894981197', 'clabe')}
@@ -989,7 +989,7 @@ export default function Checkout() {
                       </div>
                       <div className="flex justify-between items-center py-1">
                         <span>Concepto:</span>
-                        <strong className="text-white">Compra +AFINACIÓN</strong>
+                        <strong className="text-[var(--text)]">Compra +AFINACIÓN</strong>
                       </div>
                     </div>
 
@@ -1000,21 +1000,21 @@ export default function Checkout() {
                 )}
 
                 {selectedPayment === 'deposito' && (
-                  <div className="bg-[#111111] border border-gray-850 p-4 flex flex-col gap-4 font-mono text-xs text-gray-450">
-                    <div className="border-b border-gray-850 pb-2 flex justify-between items-center">
-                      <span className="text-white font-bold uppercase tracking-wider">Depósito Bancario / OXXO</span>
+                  <div className="bg-[var(--bg-2)] border border-[var(--border)] p-4 flex flex-col gap-4 font-mono text-xs text-[var(--text-2)]">
+                    <div className="border-b border-[var(--border)] pb-2 flex justify-between items-center">
+                      <span className="text-[var(--text)] font-bold uppercase tracking-wider">Depósito Bancario / OXXO</span>
                       <span className="bg-emerald-500/10 text-emerald-400 text-[10px] px-2 py-0.5 rounded font-semibold border border-emerald-500/20">OXXO Pay & Ventanilla</span>
                     </div>
 
                     <div className="space-y-2">
-                      <div className="flex justify-between items-center py-1 border-b border-gray-900">
+                      <div className="flex justify-between items-center py-1 border-b border-[var(--border)]">
                         <span>Establecimiento:</span>
-                        <strong className="text-white">OXXO, 7-Eleven o Ventanilla BBVA</strong>
+                        <strong className="text-[var(--text)]">OXXO, 7-Eleven o Ventanilla BBVA</strong>
                       </div>
-                      <div className="flex justify-between items-center py-1 border-b border-gray-900">
+                      <div className="flex justify-between items-center py-1 border-b border-[var(--border)]">
                         <span>Tarjeta BBVA:</span>
                         <div className="flex items-center gap-2">
-                          <strong className="text-white">4152 3134 5678 9012</strong>
+                          <strong className="text-[var(--text)]">4152 3134 5678 9012</strong>
                           <button
                             type="button"
                             onClick={() => handleCopy('4152313456789012', 'tarjeta')}
@@ -1039,9 +1039,9 @@ export default function Checkout() {
                 )}
 
                 {selectedPayment === 'efectivo' && (
-                  <div className="bg-[#111111] border border-gray-850 p-4 flex flex-col gap-4 font-mono text-xs text-gray-450">
-                    <div className="border-b border-gray-850 pb-2 flex justify-between items-center">
-                      <span className="text-white font-bold uppercase tracking-wider">Pago en Efectivo</span>
+                  <div className="bg-[var(--bg-2)] border border-[var(--border)] p-4 flex flex-col gap-4 font-mono text-xs text-[var(--text-2)]">
+                    <div className="border-b border-[var(--border)] pb-2 flex justify-between items-center">
+                      <span className="text-[var(--text)] font-bold uppercase tracking-wider">Pago en Efectivo</span>
                       <span className="bg-primary/10 text-primary text-[10px] px-2 py-0.5 rounded font-semibold border border-primary/20">Pago Contra Entrega</span>
                     </div>
 
@@ -1050,7 +1050,7 @@ export default function Checkout() {
                     </p>
 
                     <div className="mt-2">
-                      <label className="block text-gray-400 text-[10px] uppercase tracking-wider mb-1">¿Con cuánto vas a pagar? (Opcional)</label>
+                      <label className="block text-[var(--text-3)] text-[10px] uppercase tracking-wider mb-1">¿Con cuánto vas a pagar? (Opcional)</label>
                       <div className="relative flex items-center">
                         <span className="absolute left-3 text-gray-500 text-xs">$</span>
                         <input
@@ -1058,7 +1058,7 @@ export default function Checkout() {
                           placeholder="Ej. 500, 1000, 1500"
                           value={cashPaidWith}
                           onChange={(e) => setCashPaidWith(e.target.value.replace(/\D/g, ''))}
-                          className="w-full bg-[#0a0a0a] border border-gray-800 focus:border-primary/50 text-white font-mono text-xs p-2 pl-7 outline-none transition-colors"
+                          className="w-full bg-[var(--bg-1)] border border-[var(--border)] focus:border-primary/50 text-[var(--text)] font-mono text-xs p-2 pl-7 outline-none transition-colors"
                         />
                       </div>
                       {cashPaidWith && parseFloat(cashPaidWith) >= grandTotal ? (
@@ -1077,10 +1077,10 @@ export default function Checkout() {
             </div>
 
             {/* Taller Services Section */}
-            <div className="bg-[#0a0a0a] border border-gray-800 border-t-2 border-t-primary p-6 md:p-8 rounded-none relative overflow-hidden backdrop-blur-md">
+            <div className="bg-[var(--bg-1)] border border-[var(--border)] border-t-2 border-t-primary p-6 md:p-8 rounded-none relative overflow-hidden backdrop-blur-md">
               <div className="flex items-center gap-2.5 mb-6">
                 <Wrench className="text-primary" size={20} />
-                <h2 className="font-display font-bold text-lg uppercase tracking-wide text-white">Servicio en Taller</h2>
+                <h2 className="font-display font-bold text-lg uppercase tracking-wide text-[var(--text)]">Servicio en Taller</h2>
               </div>
 
               <div className="flex flex-col gap-4">
@@ -1090,7 +1090,7 @@ export default function Checkout() {
                     <label
                       key={opt.id}
                       onClick={() => setServicioTaller(opt.id)}
-                      className={`flex items-start gap-4 p-4 border border-gray-800 hover:border-gray-700 bg-[#111111] transition-all cursor-pointer select-none relative ${
+                      className={`flex items-start gap-4 p-4 border border-[var(--border)] hover:border-[var(--border-primary)] bg-[var(--bg-2)] transition-all cursor-pointer select-none relative ${
                         isSelected ? 'border-primary/50 bg-primary/5' : ''
                       }`}
                     >
@@ -1137,8 +1137,8 @@ export default function Checkout() {
           {/* Right Column: Order Summary & Checkout sticky card */}
           <div className="lg:sticky lg:top-24 flex flex-col gap-6">
             
-            <div className="bg-[#0a0a0a] border border-gray-800 border-t-2 border-t-primary p-6 rounded-none backdrop-blur-md">
-              <h2 className="font-display font-bold text-base uppercase tracking-wider text-white mb-4 border-bottom border-gray-800 pb-3">
+            <div className="bg-[var(--bg-1)] border border-[var(--border)] border-t-2 border-t-primary p-6 rounded-none backdrop-blur-md">
+              <h2 className="font-display font-bold text-base uppercase tracking-wider text-[var(--text)] mb-4 border-b border-[var(--border)] pb-3">
                 Resumen de Compra
               </h2>
 
@@ -1149,14 +1149,14 @@ export default function Checkout() {
                   const getKitName = () => `${item.bujia.marca} ${item.bujia.modelo}`;
                   
                   return (
-                    <div key={item.id} className="p-3 bg-[#111111] border border-gray-800/60 flex flex-col gap-1">
+                    <div key={item.id} className="p-3 bg-[var(--bg-2)] border border-[var(--border)] flex flex-col gap-1">
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex items-center gap-1.5">
                           {item.type === 'kit' && <ShoppingBag size={12} className="text-primary" />}
                           {item.type === 'pieza' && <Zap size={12} className="text-sky-400" />}
                           {item.type === 'filtro' && <Filter size={12} className="text-yellow-500" />}
                           
-                          <span className="font-bold text-xs text-white truncate max-w-[150px]">
+                          <span className="font-bold text-xs text-[var(--text)] truncate max-w-[150px]">
                             {item.type === 'kit' ? getKitName() : `${item.bujia.marca} ${item.bujia.modelo}`}
                           </span>
                         </div>
@@ -1165,14 +1165,14 @@ export default function Checkout() {
                         </span>
                       </div>
                       
-                      <div className="flex items-center justify-between text-[10px] text-gray-500 font-mono mt-1">
+                      <div className="flex items-center justify-between text-[10px] text-[var(--text-3)] font-mono mt-1">
                         <span>
                           {item.type === 'kit' && `Kit Completo (${label})`}
                           {item.type === 'pieza' && `Bujía Individual (${label})`}
                           {item.type === 'filtro' && `Filtro de ${item.filterKey.replace('filtro_', '')}`}
                         </span>
                         {item.type === 'kit' && (
-                          <span className="text-gray-400">
+                          <span className="text-[var(--text-2)]">
                             {item.aceite_motor ? 6 - item.excludedParts.length : 5 - item.excludedParts.length} pzs
                           </span>
                         )}
@@ -1183,28 +1183,28 @@ export default function Checkout() {
               </div>
 
               {/* Cost Summary Breakdown */}
-              <div className="border-t border-gray-850 pt-4 flex flex-col gap-3">
+              <div className="border-t border-[var(--border)] pt-4 flex flex-col gap-3">
                 <div className="flex justify-between items-center text-xs font-mono">
-                  <span className="text-gray-500">Subtotal Estimado</span>
-                  <span className="text-white">${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                  <span className="text-[var(--text-3)]">Subtotal Estimado</span>
+                  <span className="text-[var(--text)]">${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 </div>
                 
                 <div className="flex justify-between items-center text-xs font-mono">
-                  <span className="text-gray-500">Costo de Envío</span>
-                  <span className={`font-bold ${shipping.isFree ? 'text-primary' : 'text-white'}`}>
+                  <span className="text-[var(--text-3)]">Costo de Envío</span>
+                  <span className={`font-bold ${shipping.isFree ? 'text-primary' : 'text-[var(--text)]'}`}>
                     {shipping.isFree ? '¡GRATIS!' : `$${shipping.cost}`}
                   </span>
                 </div>
 
                 {servicioTaller !== 'ninguno' && (
                   <div className="flex justify-between items-center text-xs font-mono">
-                    <span className="text-gray-500">Servicio en Taller ({servicioTaller === 'basico' ? 'Básico' : servicioTaller === 'medio' ? 'Medio' : 'Completo'})</span>
-                    <span className="text-white font-bold">+${serviceCost}</span>
+                    <span className="text-[var(--text-3)]">Servicio en Taller ({servicioTaller === 'basico' ? 'Básico' : servicioTaller === 'medio' ? 'Medio' : 'Completo'})</span>
+                    <span className="text-[var(--text)] font-bold">+${serviceCost}</span>
                   </div>
                 )}
 
-                <div className="flex justify-between items-center border-t border-gray-850 pt-3">
-                  <span className="font-display font-bold text-sm uppercase tracking-wide text-white">Total Estimado</span>
+                <div className="flex justify-between items-center border-t border-[var(--border)] pt-3">
+                  <span className="font-display font-bold text-sm uppercase tracking-wide text-[var(--text)]">Total Estimado</span>
                   <span className="font-mono text-base font-extrabold text-primary">
                     ${grandTotal.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </span>
@@ -1212,7 +1212,7 @@ export default function Checkout() {
               </div>
 
               {/* Disclaimer */}
-              <p className="text-[10px] text-gray-500 leading-normal font-mono mt-4 pt-3 border-t border-gray-850">
+              <p className="text-[10px] text-[var(--text-3)] leading-normal font-mono mt-4 pt-3 border-t border-[var(--border)]">
                 * Los precios son orientativos y se confirmarán con el asesor vía WhatsApp antes de procesar el cobro real.
               </p>
 
@@ -1238,7 +1238,7 @@ export default function Checkout() {
                 
                 <button
                   onClick={() => navigate('/catalogo')}
-                  className="w-full bg-transparent border border-gray-800 hover:border-gray-700 text-gray-400 hover:text-white font-mono text-xs py-2 px-4 uppercase tracking-wider transition-colors cursor-pointer"
+                  className="w-full bg-transparent border border-[var(--border)] hover:border-[var(--border-primary)] text-[var(--text-2)] hover:text-[var(--text)] font-mono text-xs py-2 px-4 uppercase tracking-wider transition-colors cursor-pointer"
                 >
                   Seguir Comprando
                 </button>

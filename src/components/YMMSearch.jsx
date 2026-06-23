@@ -38,15 +38,19 @@ export default function YMMSearch({ onSearch, onReset }) {
   const [selectedLinea, setSelectedLinea] = useState('');
   const [loadingBrand, setLoadingBrand] = useState(false);
   const [brandRecords, setBrandRecords] = useState([]);
+  const [loadingBrands, setLoadingBrands] = useState(false);
+  const [errorBrands, setErrorBrands] = useState(false);
 
   // Fetch unique brands on mount
   useEffect(() => {
     const cachedBrands = getCachedItem('ymm_brands');
-    if (cachedBrands) {
+    if (cachedBrands && cachedBrands.length > 0) {
       setMarcas(cachedBrands);
       return;
     }
 
+    setLoadingBrands(true);
+    setErrorBrands(false);
     fetch(`${API_BASE}/api/vehiculos/brands`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to load brands');
@@ -55,8 +59,13 @@ export default function YMMSearch({ onSearch, onReset }) {
       .then(data => {
         setMarcas(data);
         setCachedItem('ymm_brands', data);
+        setLoadingBrands(false);
       })
-      .catch(err => console.error("Error loading brands:", err));
+      .catch(err => {
+        console.error("Error loading brands:", err);
+        setErrorBrands(true);
+        setLoadingBrands(false);
+      });
   }, []);
 
   // Filter models by selected brand — also clears stale results (BUG FE-H6)
@@ -184,8 +193,15 @@ export default function YMMSearch({ onSearch, onReset }) {
               id="sel-marca"
               value={selectedMarca}
               onChange={(e) => setSelectedMarca(e.target.value)}
+              disabled={loadingBrands}
             >
-              <option value="">— Seleccionar —</option>
+              <option value="">
+                {loadingBrands 
+                  ? 'Cargando marcas (iniciando servidor)...' 
+                  : errorBrands 
+                  ? 'Error al cargar marcas. Recarga la página.' 
+                  : '— Seleccionar —'}
+              </option>
               {marcas.map(m => (
                 <option key={m} value={m}>{m.toUpperCase()}</option>
               ))}

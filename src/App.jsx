@@ -51,11 +51,12 @@ function App() {
     if (params.anio) queryParams.append('anio', params.anio);
 
     fetch(`${API_BASE}/api/vehiculos?${queryParams.toString()}`)
-      .then(async res => {
+      .then(res => {
         if (!res.ok) {
           if (res.status === 429) {
-            const errData = await res.json();
-            throw new Error(errData.error || 'Actividad inusual detectada.');
+            return res.json().then(errData => {
+              throw new Error(errData.error || 'Actividad inusual detectada.');
+            });
           }
           throw new Error('Network response was not ok');
         }
@@ -91,22 +92,44 @@ function App() {
     setActiveFilter(filter);
   }, []);
 
+  /** Scroll smoothly to store section. */
+  const handleScrollToStore = useCallback((e) => {
+    e.preventDefault();
+    const storeSec = document.querySelector('.store-section');
+    if (storeSec) {
+      storeSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
   return (
     <>
       <Header />
       <CartDrawer />
 
-      <main className="page" style={{ paddingTop: '2rem' }}>
-        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          <h1 style={{ fontFamily: 'var(--display)', fontSize: '2rem', textTransform: 'uppercase', color: 'var(--primary)', letterSpacing: '0.05em' }}>
-            Catálogo de Kits
-          </h1>
-          <p style={{ color: 'var(--text-3)', fontSize: '0.85rem' }}>Selecciona tu vehículo para encontrar el kit exacto.</p>
-        </div>
-        <YMMSearch
-          onSearch={handleSearch}
-          onReset={handleReset}
-        />
+      <main className="page" style={{ paddingTop: 0 }}>
+        {/* Cabecera Hero con Buscador */}
+        <section className="hero-section">
+          <div className="hero-grid-overlay" />
+          <div className="hero-content">
+            <h1 className="hero-title">
+              SISTEMA DE KITS DE AFINACIÓN EXACTOS
+            </h1>
+            <p className="hero-subtitle">
+              Encuentra el kit de afinación exacto para tu vehículo en segundos con compatibilidad técnica 100% garantizada.
+            </p>
+            <YMMSearch
+              onSearch={handleSearch}
+              onReset={handleReset}
+            />
+            <div className="hero-features">
+              <span className="hero-feature-pill">✓ NGK Oficial</span>
+              <span className="hero-feature-pill">✓ Filtros Premium</span>
+              <span className="hero-feature-pill">✓ Aceite Recomendado</span>
+              <span className="hero-feature-pill">✓ Envío Seguro</span>
+            </div>
+          </div>
+        </section>
+
         <ResultsGrid
           results={filteredResults}
           activeFilter={activeFilter}
@@ -120,19 +143,47 @@ function App() {
       <StoreSection />
 
       <footer className="site-footer" aria-label="Pie de página">
-        <span className="footer-logo">
-          <img src="/logo.jpeg" alt="A+ MÁS AFINACIÓN" style={{ height: '24px' }} />
-        </span>
-        <span className="footer-copy">
-          KITS EXACTOS PARA TU AUTO BY RAIO
-          <br />
-          <a href={`mailto:${STORE_PUBLIC_EMAIL}`} style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.9em', marginTop: '4px', display: 'inline-block' }}>
-            {STORE_PUBLIC_EMAIL}
-          </a>
-        </span>
-        <span className="footer-right">
-          <span className="footer-tag">MX · Jalisco</span>
-        </span>
+        <div className="footer-columns">
+          {/* Columna 1: Brand & Trust */}
+          <div className="footer-col">
+            <img src="/logo.jpeg" alt="A+ MÁS AFINACIÓN" className="footer-logo-img" />
+            <p className="footer-about">
+              Especialistas en kits de afinación automotriz exactos por marca, modelo y año. Tu auto en manos de expertos.
+            </p>
+            <div className="footer-payments">
+              <span className="payment-badge">VISA</span>
+              <span className="payment-badge">MC</span>
+              <span className="payment-badge">MERCADOPAGO</span>
+              <span className="payment-badge">SSL SECURE</span>
+            </div>
+          </div>
+          
+          {/* Columna 2: Links */}
+          <div className="footer-col">
+            <h4 className="footer-col-title">Enlaces Útiles</h4>
+            <ul className="footer-links">
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/catalogo">Catálogo de Kits</a></li>
+              <li><a href="#contacto" onClick={handleScrollToStore}>Ubicación y Horarios</a></li>
+            </ul>
+          </div>
+          
+          {/* Columna 3: Contact & Warranty */}
+          <div className="footer-col">
+            <h4 className="footer-col-title">Contacto & Garantía</h4>
+            <p className="footer-contact-info">
+              Jalisco, México<br/>
+              <a href={`mailto:${STORE_PUBLIC_EMAIL}`} className="footer-email-link">{STORE_PUBLIC_EMAIL}</a>
+            </p>
+            <div className="warranty-badge">
+              🛡️ GARANTÍA DE AJUSTE EXACTO 100%
+            </div>
+          </div>
+        </div>
+        
+        <div className="footer-bottom">
+          <p>© {new Date().getFullYear()} +AFINACIÓN · KITS EXACTOS PARA TU AUTO BY RAIO</p>
+        </div>
       </footer>
     </>
   );

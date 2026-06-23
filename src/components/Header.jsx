@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingCart, MessageCircle } from 'lucide-react';
+import { ShoppingCart, MessageCircle, Sun, Moon } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { useTheme } from '../context/ThemeContext';
 import { WHATSAPP_NUMBER } from '../lib/constants';
 
 export default function Header() {
   const { totalItems, openCart } = useCart();
+  const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
   const handleScrollToStore = (e) => {
@@ -37,6 +39,16 @@ export default function Header() {
       </nav>
 
       <div className="header-actions">
+        {/* Toggle Theme button */}
+        <button
+          className="cart-btn"
+          onClick={toggleTheme}
+          aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+          title={theme === 'dark' ? 'Modo Claro' : 'Modo Oscuro'}
+        >
+          {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+        </button>
+
         {/* Cart button — opens the drawer */}
         <button
           className="cart-btn"
@@ -53,7 +65,9 @@ export default function Header() {
           className="header-badge" 
           onClick={handleGeneralWhatsapp}
           aria-label="Solicitar cotización por WhatsApp"
+          style={{ position: 'relative', display: 'inline-flex', alignItems: 'center' }}
         >
+          <span className="pulse-indicator" />
           <MessageCircle size={14} style={{ marginRight: '6px' }} />
           Contacto
         </button>
