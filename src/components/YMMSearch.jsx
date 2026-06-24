@@ -43,7 +43,10 @@ export default function YMMSearch({ onSearch, onReset }) {
   const [loadingBrands, setLoadingBrands] = useState(false);
   const [errorBrands, setErrorBrands] = useState(false);
 
-  // Fetch unique brands on mount
+  // Retry counter for manual retry button
+  const [retryCount, setRetryCount] = useState(0);
+
+  // Fetch unique brands on mount — with auto-retry for Render cold starts
   useEffect(() => {
     const cachedBrands = getCachedItem('ymm_brands');
     if (cachedBrands && cachedBrands.length > 0) {
@@ -51,24 +54,44 @@ export default function YMMSearch({ onSearch, onReset }) {
       return;
     }
 
-    setLoadingBrands(true);
-    setErrorBrands(false);
-    fetch(`${API_BASE}/api/vehiculos/brands`)
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to load brands');
-        return res.json();
-      })
-      .then(data => {
-        setMarcas(data);
-        setCachedItem('ymm_brands', data);
-        setLoadingBrands(false);
-      })
-      .catch(err => {
-        console.error("Error loading brands:", err);
-        setErrorBrands(true);
-        setLoadingBrands(false);
-      });
-  }, []);
+    let cancelled = false;
+    const MAX_ATTEMPTS = 3;
+    const TIMEOUT_MS = 30000; // 30s — enough time for Render free tier cold start
+
+    async function fetchWithRetry(attempt) {
+      if (cancelled) return;
+      setLoadingBrands(true);
+      setErrorBrands(false);
+      try {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+        const res = await fetch(`${API_BASE}/api/vehiculos/brands`, { signal: controller.signal });
+        clearTimeout(timer);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        if (!cancelled) {
+          setMarcas(data);
+          setCachedItem('ymm_brands', data);
+          setLoadingBrands(false);
+        }
+      } catch (err) {
+        if (cancelled) return;
+        console.warn(`Intento ${attempt}/${MAX_ATTEMPTS} de cargar marcas falló:`, err.message);
+        if (attempt < MAX_ATTEMPTS) {
+          // Exponential backoff: 2s, 4s
+          const delay = 2000 * attempt;
+          setTimeout(() => fetchWithRetry(attempt + 1), delay);
+        } else {
+          console.error('No se pudieron cargar las marcas tras varios intentos.');
+          setErrorBrands(true);
+          setLoadingBrands(false);
+        }
+      }
+    }
+
+    fetchWithRetry(1);
+    return () => { cancelled = true; };
+  }, [retryCount]);
 
   // Filter models by selected brand — also clears stale results (BUG FE-H6)
   useEffect(() => {
@@ -195,19 +218,33 @@ export default function YMMSearch({ onSearch, onReset }) {
               id="sel-marca"
               value={selectedMarca}
               onChange={(e) => setSelectedMarca(e.target.value)}
-              disabled={loadingBrands}
+              disabled={loadingBrands || errorBrands}
             >
               <option value="">
                 {loadingBrands 
-                  ? 'Cargando marcas (iniciando servidor)...' 
+                  ? 'Cargando marcas...' 
                   : errorBrands 
-                  ? 'Error al cargar marcas. Recarga la página.' 
+                  ? 'Sin conexión al servidor' 
                   : '— Seleccionar —'}
               </option>
               {marcas.map(m => (
                 <option key={m} value={m}>{m.toUpperCase()}</option>
               ))}
             </select>
+            {errorBrands && (
+              <button
+                type="button"
+                className="ymm-retry-btn"
+                onClick={() => {
+                  // Clear bad cache entry and trigger re-fetch
+                  safeSessionStorage.removeItem('ymm_brands');
+                  setRetryCount(c => c + 1);
+                }}
+                aria-label="Reintentar cargar marcas"
+              >
+                ↻ Reintentar conexión
+              </button>
+            )}
           </div>
 
           {/* MODELO */}

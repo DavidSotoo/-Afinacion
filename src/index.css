@@ -442,6 +442,32 @@ body::before {
 .ymm-reset:hover { color: var(--primary); }
 .ymm-reset svg { width: 12px; height: 12px; }
 
+/* Retry button shown under the brands select on connection error */
+.ymm-retry-btn {
+  margin-top: 0.4rem;
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--border-primary);
+  color: var(--primary);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.ymm-retry-btn:hover {
+  background: var(--primary-glow-sm);
+  color: var(--text);
+}
+
 /* ═══════════════════════════════════
    RESULTS SECTION
 ═══════════════════════════════════ */
