@@ -16,6 +16,9 @@ const helmet = require('helmet');
 
 const app = express();
 
+// Trust proxy headers (needed for rate limiters behind Cloudflare/Render)
+app.set('trust proxy', 1);
+
 // Set secure HTTP headers
 app.use(helmet());
 

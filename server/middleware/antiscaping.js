@@ -9,7 +9,7 @@ const rateLimit = require('express-rate-limit');
  */
 const catalogRateLimiter = rateLimit({
   windowMs: 5 * 60 * 1000, // 5 minutes (300,000 ms)
-  max: 15, // Limit each IP to 15 requests per windowMs
+  max: 150, // Limit each IP to 150 requests per windowMs
   statusCode: 429,
   message: {
     error: 'Actividad inusual detectada. Por seguridad, las consultas se han congelado temporalmente. Intenta más tarde.'
