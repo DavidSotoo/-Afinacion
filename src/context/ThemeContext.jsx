@@ -1,10 +1,11 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { safeLocalStorage } from '../lib/storage';
 
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem('theme');
+    const saved = safeLocalStorage.getItem('theme');
     if (saved) return saved;
     // Default to dark mode if no user preference is saved
     return 'dark';
@@ -19,8 +20,9 @@ export function ThemeProvider({ children }) {
       root.classList.add('dark-theme');
       root.classList.remove('light-theme');
     }
-    localStorage.setItem('theme', theme);
+    safeLocalStorage.setItem('theme', theme);
   }, [theme]);
+
 
   const toggleTheme = () => {
     setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));

@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Search, RefreshCw } from 'lucide-react';
 import { API_BASE } from '../lib/config';
+import { safeSessionStorage } from '../lib/storage';
 
 const CACHE_TTL = 15 * 60 * 1000; // 15 minutos en ms
 
 function getCachedItem(key) {
-  const itemStr = sessionStorage.getItem(key);
-  if (!itemStr) return null;
   try {
+    const itemStr = safeSessionStorage.getItem(key);
+    if (!itemStr) return null;
     const item = JSON.parse(itemStr);
     if (Date.now() - item.timestamp > CACHE_TTL) {
-      sessionStorage.removeItem(key);
+      safeSessionStorage.removeItem(key);
       return null;
     }
     return item.data;
@@ -22,11 +23,12 @@ function getCachedItem(key) {
 function setCachedItem(key, data) {
   try {
     const item = { data, timestamp: Date.now() };
-    sessionStorage.setItem(key, JSON.stringify(item));
+    safeSessionStorage.setItem(key, JSON.stringify(item));
   } catch (e) {
     console.warn('Failed to set sessionStorage cache:', e);
   }
 }
+
 
 export default function YMMSearch({ onSearch, onReset }) {
   const [marcas, setMarcas] = useState([]);

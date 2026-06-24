@@ -3,6 +3,8 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from '../components/Header';
 import { useCart } from '../context/CartContext';
+import { safeLocalStorage } from '../lib/storage';
+
 import {
   MapPin,
   CreditCard,
@@ -532,7 +534,7 @@ export default function Checkout() {
 
       if (selectedPayment === 'tarjeta') {
         // Backup message to localStorage before redirect
-        localStorage.setItem('mas_afinacion_last_order_msg', msg);
+        safeLocalStorage.setItem('mas_afinacion_last_order_msg', msg);
 
         // Call Mercado Pago preference creation endpoint
         const mpRes = await fetch(`${API_BASE}/api/checkout/create-preference`, {
@@ -571,11 +573,11 @@ export default function Checkout() {
 
   if (paymentStatus === 'approved') {
     const handleSendWhatsAppSuccess = () => {
-      const lastMsg = localStorage.getItem('mas_afinacion_last_order_msg') || '';
+      const lastMsg = safeLocalStorage.getItem('mas_afinacion_last_order_msg') || '';
       const finalMsg = `[PAGADO POR MERCADO PAGO - FOLIO #${paymentFolio}]\n\n` + lastMsg;
       const targetUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(finalMsg)}`;
       window.open(targetUrl, '_blank', 'noopener,noreferrer');
-      localStorage.removeItem('mas_afinacion_last_order_msg');
+      safeLocalStorage.removeItem('mas_afinacion_last_order_msg');
       navigate('/catalogo');
     };
 
@@ -611,7 +613,7 @@ export default function Checkout() {
               
               <button
                 onClick={() => {
-                  localStorage.removeItem('mas_afinacion_last_order_msg');
+                  safeLocalStorage.removeItem('mas_afinacion_last_order_msg');
                   navigate('/catalogo');
                 }}
                 className="w-full bg-transparent border border-gray-800 hover:border-gray-700 text-gray-500 hover:text-white font-mono text-[10px] py-2.5 uppercase tracking-wider transition-colors cursor-pointer"

@@ -1,16 +1,18 @@
 import React, { createContext, useContext, useState, useCallback, useMemo } from 'react';
 import { DELIVERY_OPTIONS, FREE_SHIPPING_THRESHOLD } from '../lib/constants';
 import { calculateOilPrice } from '../lib/kitHelpers';
+import { safeLocalStorage } from '../lib/storage';
 
 // ID helper (BUG FE-L4)
 const makeId = (type, bujiaId, tipoLinea) => `${type}-${bujiaId}-${tipoLinea}`;
 
 const CartContext = createContext(null);
 
+
 export function CartProvider({ children }) {
   const [items,  setItems]  = useState(() => {
     try {
-      const saved = localStorage.getItem('mas_afinacion_cart');
+      const saved = safeLocalStorage.getItem('mas_afinacion_cart');
       return saved ? JSON.parse(saved) : [];
     } catch (e) {
       console.error("Error reading cart from localStorage", e);
@@ -23,11 +25,12 @@ export function CartProvider({ children }) {
   // Sync with localStorage
   React.useEffect(() => {
     try {
-      localStorage.setItem('mas_afinacion_cart', JSON.stringify(items));
+      safeLocalStorage.setItem('mas_afinacion_cart', JSON.stringify(items));
     } catch (e) {
       console.error("Error saving cart to localStorage", e);
     }
   }, [items]);
+
 
   // ── Drawer controls ────────────────────────────────────────────────────────
   const openCart  = useCallback(() => setIsOpen(true),  []);
