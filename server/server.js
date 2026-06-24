@@ -20,7 +20,12 @@ const app = express();
 app.set('trust proxy', 1);
 
 // Set secure HTTP headers
-app.use(helmet());
+// crossOriginResourcePolicy must be 'cross-origin' to allow the frontend
+// (masafinacion.com) to consume API responses from this backend (onrender.com).
+// Without this, mobile browsers with strict CORP enforcement block the response.
+app.use(helmet({
+  crossOriginResourcePolicy: { policy: 'cross-origin' }
+}));
 
 // Configure CORS restrictions
 const allowedOrigins = [

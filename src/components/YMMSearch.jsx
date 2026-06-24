@@ -5,6 +5,15 @@ import { safeSessionStorage } from '../lib/storage';
 
 const CACHE_TTL = 15 * 60 * 1000; // 15 minutos en ms
 
+// Silent warm-up ping: fires as soon as this module is loaded (before component mounts).
+// This wakes up the Render free-tier server so the brands fetch has a head start.
+// Uses keepalive so it completes even if the component unmounts quickly.
+if (typeof window !== 'undefined') {
+  fetch(`${API_BASE}/api/vehiculos/brands`, { method: 'GET', keepalive: true })
+    .catch(() => { /* silent — just waking the server */ });
+}
+
+
 function getCachedItem(key) {
   try {
     const itemStr = safeSessionStorage.getItem(key);
@@ -56,7 +65,7 @@ export default function YMMSearch({ onSearch, onReset }) {
 
     let cancelled = false;
     const MAX_ATTEMPTS = 3;
-    const TIMEOUT_MS = 30000; // 30s — enough time for Render free tier cold start
+    const TIMEOUT_MS = 65000; // 65s — Render free tier can take up to 60s on cold start
 
     async function fetchWithRetry(attempt) {
       if (cancelled) return;
@@ -78,8 +87,8 @@ export default function YMMSearch({ onSearch, onReset }) {
         if (cancelled) return;
         console.warn(`Intento ${attempt}/${MAX_ATTEMPTS} de cargar marcas falló:`, err.message);
         if (attempt < MAX_ATTEMPTS) {
-          // Exponential backoff: 2s, 4s
-          const delay = 2000 * attempt;
+          // Exponential backoff: 3s, 6s — give the cold-starting server more time
+          const delay = 3000 * attempt;
           setTimeout(() => fetchWithRetry(attempt + 1), delay);
         } else {
           console.error('No se pudieron cargar las marcas tras varios intentos.');
@@ -222,7 +231,7 @@ export default function YMMSearch({ onSearch, onReset }) {
             >
               <option value="">
                 {loadingBrands 
-                  ? 'Cargando marcas...' 
+                  ? 'Iniciando servidor, espere...' 
                   : errorBrands 
                   ? 'Sin conexión al servidor' 
                   : '— Seleccionar —'}
