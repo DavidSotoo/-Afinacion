@@ -790,14 +790,14 @@ export default function KitCard({ bujia }) {
         {/* ▸ BLOQUE 3 — Aceite de Motor (6ta pieza) ─────────────────────── */}
         {kit && (
         <section className="kit-section-block kit-section-block--oil" aria-label="Aceite de motor recomendado">
-          <header className="kit-section-label">
-            <Droplet size={18} aria-hidden="true" className="kit-section-icon kit-section-icon--oil" style={{ color: 'var(--primary)' }} />
-            <span>⑥ Aceite de Motor</span>
-            <span className="kit-section-numbers">Recomendado</span>
+          <header className="kit-section-label kit-section-label--oil">
+            <Droplet size={16} aria-hidden="true" className="kit-section-icon kit-section-icon--oil" style={{ color: 'var(--primary)', flexShrink: 0 }} />
+            <span style={{ flexShrink: 0 }}>⑥ Aceite de Motor</span>
+            <span className="oil-rec-badge">Recomendado</span>
           </header>
 
           <div className="kit-oil-card">
-            <div className="kit-oil-fields-grid" style={{ gridTemplateColumns: '1fr 1fr 1fr 1.2fr' }}>
+            <div className="kit-oil-fields-grid">
               {/* Tipo */}
               <div className="oil-field-group">
                 <label className="oil-field-label">Tipo</label>

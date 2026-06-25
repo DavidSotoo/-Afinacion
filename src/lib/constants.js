@@ -21,9 +21,9 @@ export const STORE_ADMIN_EMAIL = 'administracion@masafinaciones.com';
 
 /** Estadísticas del catálogo de bujías y marcas */
 export const CATALOG_STATS = {
-  total:  1651,
-  models: 350,
-  brands: 10,
+  total:  1705,
+  models: 368,
+  brands: 12,
 };
 
 /** NGK spark plug lines — label map used by ProductCard, CartDrawer, AdminPage */
