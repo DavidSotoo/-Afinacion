@@ -7,10 +7,16 @@ const CACHE_TTL = 15 * 60 * 1000; // 15 minutos en ms
 
 // Silent warm-up ping: fires as soon as this module is loaded (before component mounts).
 // This wakes up the Render free-tier server so the brands fetch has a head start.
-// Uses keepalive so it completes even if the component unmounts quickly.
+// NOTE: We avoid keepalive + AbortController conflicts; instead we use a simple 30s timeout.
+let _warmupFiredAt = 0;
 if (typeof window !== 'undefined') {
-  fetch(`${API_BASE}/api/vehiculos/brands`, { method: 'GET', keepalive: true })
-    .catch(() => { /* silent — just waking the server */ });
+  const warmupController = new AbortController();
+  const warmupTimer = setTimeout(() => warmupController.abort(), 30000);
+  _warmupFiredAt = Date.now();
+  // Use /health for warm-up so it doesn't consume rate-limiter quota on the real API
+  fetch(`${API_BASE}/health`, { method: 'GET', signal: warmupController.signal })
+    .then(() => clearTimeout(warmupTimer))
+    .catch(() => clearTimeout(warmupTimer)); // silent — just waking the server
 }
 
 
@@ -64,16 +70,26 @@ export default function YMMSearch({ onSearch, onReset }) {
     }
 
     let cancelled = false;
-    const MAX_ATTEMPTS = 3;
-    const TIMEOUT_MS = 65000; // 65s — Render free tier can take up to 60s on cold start
+    const MAX_ATTEMPTS = 4;
+    // On mobile, long-held connections get killed by the OS/browser.
+    // We use shorter per-attempt timeouts and more retries instead.
+    const ATTEMPT_TIMEOUT_MS = 45000; // 45s per attempt (safe for mobile)
 
     async function fetchWithRetry(attempt) {
       if (cancelled) return;
       setLoadingBrands(true);
       setErrorBrands(false);
       try {
+        // If the warm-up ping fired very recently (< 2s ago), wait briefly
+        // so we don't race with it and double-hit a waking server.
+        const msSinceWarmup = Date.now() - _warmupFiredAt;
+        if (attempt === 1 && msSinceWarmup < 2000) {
+          await new Promise(r => setTimeout(r, 2000 - msSinceWarmup));
+        }
+        if (cancelled) return;
+
         const controller = new AbortController();
-        const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+        const timer = setTimeout(() => controller.abort(), ATTEMPT_TIMEOUT_MS);
         const res = await fetch(`${API_BASE}/api/vehiculos/brands`, { signal: controller.signal });
         clearTimeout(timer);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -87,8 +103,9 @@ export default function YMMSearch({ onSearch, onReset }) {
         if (cancelled) return;
         console.warn(`Intento ${attempt}/${MAX_ATTEMPTS} de cargar marcas falló:`, err.message);
         if (attempt < MAX_ATTEMPTS) {
-          // Exponential backoff: 3s, 6s — give the cold-starting server more time
-          const delay = 3000 * attempt;
+          // Backoff: 5s, 10s, 20s — give the cold-starting server time to wake
+          const delay = 5000 * attempt;
+          console.log(`Reintentando en ${delay / 1000}s...`);
           setTimeout(() => fetchWithRetry(attempt + 1), delay);
         } else {
           console.error('No se pudieron cargar las marcas tras varios intentos.');
