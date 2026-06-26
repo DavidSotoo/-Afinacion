@@ -11,6 +11,7 @@ const webhooksRoutes     = require('./routes/webhooks');
 const filtrosRoutes      = require('./routes/filtros');
 const balatasRoutes      = require('./routes/balatas');
 const bujiasRoutes       = require('./routes/bujias');
+const productosRoutes    = require('./routes/productos');
 
 const helmet = require('helmet');
 
@@ -77,6 +78,7 @@ app.use('/api/webhooks',     webhooksRoutes);
 app.use('/api/filtros',      filtrosRoutes);
 app.use('/api/balatas',      balatasRoutes);
 app.use('/api/bujias',       bujiasRoutes);
+app.use('/api/productos',    productosRoutes);
 
 const PORT = process.env.PORT || 5000;
 

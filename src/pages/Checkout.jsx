@@ -23,6 +23,10 @@ import {
   Package,
   Wrench,
   Copy,
+  User,
+  Phone,
+  Mail,
+  FileText,
 } from 'lucide-react';
 import {
   WHATSAPP_NUMBER,
@@ -91,7 +95,7 @@ const detectCardBrand = (number) => {
 
 /* ─── WhatsApp message builder ────────────────────────────────────────────── */
 
-function buildConsolidatedMessage(items, deliveryOpt, paymentOpt, shipping, grandTotal, folio = null, servicioTaller = 'ninguno', paymentDetails = {}, datosEnvio = null) {
+function buildConsolidatedMessage(items, deliveryOpt, paymentOpt, shipping, grandTotal, folio = null, servicioTaller = 'ninguno', paymentDetails = {}, datosEnvio = null, datosCliente = null) {
   const kits   = items.filter(i => i.type === 'kit');
   const piezas = items.filter(i => i.type === 'pieza');
   const filtrosSueltos = items.filter(i => i.type === 'filtro');
@@ -99,6 +103,18 @@ function buildConsolidatedMessage(items, deliveryOpt, paymentOpt, shipping, gran
 
   if (folio) {
     lines.push(`📋 *FOLIO DE COTIZACIÓN: #${folio}*`, ``);
+  }
+
+  // ── Datos del Cliente ──────────────────────────────────────────────────────
+  if (datosCliente?.nombre) {
+    lines.push(
+      `👤 *DATOS DEL CLIENTE:*`,
+      `Nombre: ${datosCliente.nombre}`,
+      `Tel: ${datosCliente.telefono}`,
+    );
+    if (datosCliente.email) lines.push(`Email: ${datosCliente.email}`);
+    if (datosCliente.notas) lines.push(`Notas: ${datosCliente.notas}`);
+    lines.push(``);
   }
 
   // ── Kits ──────────────────────────────────────────────────────────────────
@@ -240,6 +256,14 @@ export default function Checkout() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState(null);
 
+  // Datos del cliente (obligatorios para TODOS los métodos de entrega)
+  const [datosCliente, setDatosCliente] = useState({
+    nombre: '',
+    telefono: '',
+    email: '',
+    notas: '',
+  });
+
   const [datosEnvio, setDatosEnvio] = useState({
     nombreRecibe: '',
     telefono: '',
@@ -348,6 +372,24 @@ export default function Checkout() {
     if (isSubmitting) return;
     setIsSubmitting(true);
     setErrorMsg(null);
+
+    // Validation: customer data is always required
+    const nombreTrimmed = datosCliente.nombre.trim();
+    if (!nombreTrimmed || !nombreTrimmed.includes(' ') || nombreTrimmed.length < 5) {
+      setErrorMsg('Por favor, ingresa tu nombre y apellido completos (mínimo nombre + apellido).');
+      setIsSubmitting(false);
+      return;
+    }
+    if (datosCliente.telefono.replace(/\D/g, '').length !== 10) {
+      setErrorMsg('El teléfono de contacto debe tener exactamente 10 dígitos.');
+      setIsSubmitting(false);
+      return;
+    }
+    if (datosCliente.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(datosCliente.email.trim())) {
+      setErrorMsg('El correo electrónico ingresado no es válido.');
+      setIsSubmitting(false);
+      return;
+    }
 
     // Validation for shipping details if selectedDelivery is zmg or foraneo
     if (selectedDelivery === 'zmg' || selectedDelivery === 'foraneo') {
@@ -504,7 +546,13 @@ export default function Checkout() {
         servicioTaller,
         metodoPago: selectedPayment,
         detallesPago,
-        direccionEnvio: (selectedDelivery === 'zmg' || selectedDelivery === 'foraneo') ? datosEnvio : null
+        direccionEnvio: (selectedDelivery === 'zmg' || selectedDelivery === 'foraneo') ? datosEnvio : null,
+        datosCliente: {
+          nombre: datosCliente.nombre.trim(),
+          telefono: datosCliente.telefono.trim(),
+          email: datosCliente.email.trim() || undefined,
+          notas: datosCliente.notas.trim() || undefined,
+        },
       };
 
       const res = await fetch(`${API_BASE}/api/cotizaciones`, {
@@ -529,7 +577,8 @@ export default function Checkout() {
         folio,
         servicioTaller,
         paymentDetails,
-        (selectedDelivery === 'zmg' || selectedDelivery === 'foraneo') ? datosEnvio : null
+        (selectedDelivery === 'zmg' || selectedDelivery === 'foraneo') ? datosEnvio : null,
+        datosCliente
       );
 
       if (selectedPayment === 'tarjeta') {
@@ -675,7 +724,90 @@ export default function Checkout() {
           
           {/* Left Column: Delivery & Payment options */}
           <div className="lg:col-span-2 flex flex-col gap-8">
-            
+
+            {/* ── Datos del Cliente ─────────────────────────────────────────── */}
+            <div className="bg-[var(--bg-1)] border border-[var(--border)] border-t-2 border-t-primary p-6 md:p-8 rounded-none relative overflow-hidden backdrop-blur-md">
+              <div className="flex items-center gap-2.5 mb-6">
+                <User className="text-primary" size={20} />
+                <h2 className="font-display font-bold text-lg uppercase tracking-wide text-[var(--text)]">Datos del Cliente</h2>
+                <span className="ml-auto text-[10px] font-mono text-primary bg-primary/10 border border-primary/20 px-2 py-0.5">REQUERIDO</span>
+              </div>
+              <p className="text-[var(--text-3)] font-mono text-[11px] mb-5 leading-relaxed">
+                Necesitamos tus datos para identificar tu pedido y avisarte cuando esté listo, especialmente si pasas a recogerlo en tienda.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                {/* Nombre completo */}
+                <div className="md:col-span-2">
+                  <label className="flex items-center gap-1.5 text-[var(--text-3)] text-[10px] uppercase tracking-wider mb-1">
+                    <User size={10} /> Nombre completo *
+                  </label>
+                  <input
+                    type="text"
+                    id="cliente-nombre"
+                    value={datosCliente.nombre}
+                    onChange={(e) => setDatosCliente({ ...datosCliente, nombre: e.target.value })}
+                    onBlur={(e) => setDatosCliente({ ...datosCliente, nombre: capitalizeWords(e.target.value) })}
+                    className="w-full bg-[var(--bg-1)] border border-[var(--border)] focus:border-primary/50 text-[var(--text)] font-mono text-xs p-2.5 outline-none transition-colors"
+                    placeholder="Ej. Juan Pérez García"
+                    autoComplete="name"
+                    required
+                  />
+                  <p className="text-[9px] font-mono text-[var(--text-3)] mt-1">Nombre y apellido — para identificar quién recoge el pedido</p>
+                </div>
+
+                {/* Teléfono */}
+                <div>
+                  <label className="flex items-center gap-1.5 text-[var(--text-3)] text-[10px] uppercase tracking-wider mb-1">
+                    <Phone size={10} /> Teléfono de contacto *
+                  </label>
+                  <input
+                    type="tel"
+                    id="cliente-telefono"
+                    value={datosCliente.telefono}
+                    onChange={(e) => setDatosCliente({ ...datosCliente, telefono: e.target.value.replace(/\D/g, '').slice(0, 10) })}
+                    className="w-full bg-[var(--bg-1)] border border-[var(--border)] focus:border-primary/50 text-[var(--text)] font-mono text-xs p-2.5 outline-none transition-colors"
+                    placeholder="Ej. 3312345678"
+                    autoComplete="tel"
+                    required
+                  />
+                  <p className="text-[9px] font-mono text-[var(--text-3)] mt-1">10 dígitos sin espacios ni guiones</p>
+                </div>
+
+                {/* Email (opcional) */}
+                <div>
+                  <label className="flex items-center gap-1.5 text-[var(--text-3)] text-[10px] uppercase tracking-wider mb-1">
+                    <Mail size={10} /> Correo electrónico (opcional)
+                  </label>
+                  <input
+                    type="email"
+                    id="cliente-email"
+                    value={datosCliente.email}
+                    onChange={(e) => setDatosCliente({ ...datosCliente, email: e.target.value })}
+                    className="w-full bg-[var(--bg-1)] border border-[var(--border)] focus:border-primary/50 text-[var(--text)] font-mono text-xs p-2.5 outline-none transition-colors"
+                    placeholder="Ej. juan@correo.com"
+                    autoComplete="email"
+                  />
+                </div>
+
+                {/* Notas (opcional) */}
+                <div className="md:col-span-2">
+                  <label className="flex items-center gap-1.5 text-[var(--text-3)] text-[10px] uppercase tracking-wider mb-1">
+                    <FileText size={10} /> Notas o comentarios (opcional)
+                  </label>
+                  <textarea
+                    id="cliente-notas"
+                    value={datosCliente.notas}
+                    onChange={(e) => setDatosCliente({ ...datosCliente, notas: e.target.value })}
+                    className="w-full bg-[var(--bg-1)] border border-[var(--border)] focus:border-primary/50 text-[var(--text)] font-mono text-xs p-2.5 outline-none transition-colors min-h-[60px] resize-none"
+                    placeholder="Ej. Llego a las 5pm, favor de apartar el kit..."
+                  />
+                </div>
+
+              </div>
+            </div>
+
             {/* Delivery Methods Section */}
             <div className="bg-[var(--bg-1)] border border-[var(--border)] border-t-2 border-t-primary p-6 md:p-8 rounded-none relative overflow-hidden backdrop-blur-md">
               <div className="flex items-center gap-2.5 mb-6">
