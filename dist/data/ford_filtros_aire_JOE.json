@@ -1,0 +1,821 @@
+[
+  {
+    "modelo": "CROWN VICTORIA / MAVERICK / FAIRMONT / COUGAR / MUSTANG 302",
+    "motor": "8 CIL. 351",
+    "anio": "1973-1992",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA74"
+    }
+  },
+  {
+    "modelo": "BRONCO / CROWN VICTORIA / CUSTOM / ECONOLINE / LTD / SERIES F / THUNDERBIRD",
+    "motor": "8 CIL. 351",
+    "anio": "1972-1985",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA75"
+    }
+  },
+  {
+    "modelo": "CUSTOM / GALAXIE / FALCON / LTD / MUSTANG",
+    "motor": "V8 4.7L, 5.0L, 5.8L Y 7.0L",
+    "anio": "1965-1973",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA78"
+    }
+  },
+  {
+    "modelo": "BRONCO / ECONOLINE / FAIRLANE / FALCON RANCH WAGON",
+    "motor": "8 CIL. 4.3L Y 4.7L",
+    "anio": "1965-1974",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA80"
+    }
+  },
+  {
+    "modelo": "CAMIONETAS SERIES E Y F / BRONCO",
+    "motor": "ALL",
+    "anio": "1968-1990",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA85"
+    }
+  },
+  {
+    "modelo": "PICK UP SERIES F150 / F250 / F350",
+    "motor": "6 Y 8 CIL. 4.9L, 5.0L Y 5.8L",
+    "anio": "1986-1996",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA174"
+    }
+  },
+  {
+    "modelo": "TOPAZ / TEMPO / SABLE / GUIA",
+    "motor": "4 Y 6 CIL. 2.3L Y 3.0L",
+    "anio": "1993-1995",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA217"
+    }
+  },
+  {
+    "modelo": "RANGER / EXPLORER / AEROSTAR / TAURUS / WINDSTAR / BRONCO",
+    "motor": "V6 3.0L, 3.3L Y 4.0L",
+    "anio": "1991-1998",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA273"
+    }
+  },
+  {
+    "modelo": "TOPAZ / TEMPO / SABLE / GUIA",
+    "motor": "4 CIL. 2.3L",
+    "anio": "1990-1992",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA274"
+    }
+  },
+  {
+    "modelo": "THUNDERBIRD / COUGAR / PICK UP",
+    "motor": "6 Y 8 CIL.",
+    "anio": "1990-1997",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA275"
+    }
+  },
+  {
+    "modelo": "FIESTA HATCHBACK / FIESTA FLAIR / COURIER / IKON",
+    "motor": "1.3L Y 1.6L",
+    "anio": "1998-2006",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA580"
+    }
+  },
+  {
+    "modelo": "TOPAZ / ESCORT",
+    "motor": "4 CIL. 1.6L, 1.9L Y 2.3L",
+    "anio": "1984-1989",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA734"
+    }
+  },
+  {
+    "modelo": "CAMIONETAS (CEPILLO BOCA CHICA)",
+    "motor": "ALL",
+    "anio": "1985-1991",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA1047"
+    }
+  },
+  {
+    "modelo": "CAMIONETAS (CEPILLO BOCA GRANDE)",
+    "motor": "ALL",
+    "anio": "1992-1997",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA1048"
+    }
+  },
+  {
+    "modelo": "FIGO / EcoSport",
+    "motor": "4 CIL. 1.5L Y 2.0L",
+    "anio": "2017-2020",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA1501"
+    }
+  },
+  {
+    "modelo": "EXPLORER / RANGER / WINDSTAR",
+    "motor": "2.0L, 3.0L Y 4.0L",
+    "anio": "1994-1997",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA1616"
+    }
+  },
+  {
+    "modelo": "FOCUS / ZX3",
+    "motor": "4 CIL. 2.0L 16V",
+    "anio": "2000-2005",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA1688"
+    }
+  },
+  {
+    "modelo": "RANGER",
+    "motor": "4 CIL. 2.2L, 2.5L Y 3.2L",
+    "anio": "2012-2014",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA2013"
+    }
+  },
+  {
+    "modelo": "BRONCO / RANGER",
+    "motor": "2.3L Y 2.7L TURBO",
+    "anio": "2021-2025",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA2022"
+    }
+  },
+  {
+    "modelo": "RANGER / BRONCO",
+    "motor": "2.3L, 2.7L Y 3.0L",
+    "anio": "2021-2025",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA2058"
+    }
+  },
+  {
+    "modelo": "TERRITORY",
+    "motor": "1.8L TURBO",
+    "anio": "2023",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA2082"
+    }
+  },
+  {
+    "modelo": "ECOSPORT",
+    "motor": "2.0L",
+    "anio": "2007-2010",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA2295"
+    }
+  },
+  {
+    "modelo": "FIESTA IKON HATCH",
+    "motor": "4 CIL. 1.6L DURATEC DOHC",
+    "anio": "2012",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA2861"
+    }
+  },
+  {
+    "modelo": "PICK UP / BRONCO / LTD / MUSTANG / MAVERICK",
+    "motor": "6 Y 8 CIL. 3.3L, 4.1L Y 4.9L",
+    "anio": "1970-1985",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA3300"
+    }
+  },
+  {
+    "modelo": "FAIRMONT / LTD / MAVERICK (USA)",
+    "motor": "4.2L Y 5.0L",
+    "anio": "1976-1982",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA3424"
+    }
+  },
+  {
+    "modelo": "AEROSTAR / PINTO / RANGER / MERCURY",
+    "motor": "V6 2.8L",
+    "anio": "1977-1985",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA3425"
+    }
+  },
+  {
+    "modelo": "TRUCK SUPER DUTY DIESEL (AMBULANCIAS)",
+    "motor": "V8 7.3L DIESEL",
+    "anio": "1988-1994",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA3501"
+    }
+  },
+  {
+    "modelo": "MONDEO",
+    "motor": "2.0L Y 2.5L 16V Y 20V",
+    "anio": "2001-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA3880"
+    }
+  },
+  {
+    "modelo": "FOCUS",
+    "motor": "1.6L, 1.8L Y 2.0L",
+    "anio": "2003-2012",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA3974"
+    }
+  },
+  {
+    "modelo": "GRAND MARQUIS / CROWN VICTORIA / LINCOLN / LINCOLN TOWNCAR",
+    "motor": "4.6L Y 5.0L",
+    "anio": "1986-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA5056"
+    }
+  },
+  {
+    "modelo": "MERCURY / LINCOLN / TAURUS / THUNDERBIRD (USA)",
+    "motor": "6 CIL. Y V8 3.0L, 5.0L Y 5.7L",
+    "anio": "1986-1993",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA5057"
+    }
+  },
+  {
+    "modelo": "ESCORT GT",
+    "motor": "1.8L",
+    "anio": "1993-1997",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6828N"
+    }
+  },
+  {
+    "modelo": "ESCORT GT",
+    "motor": "1.8L",
+    "anio": "1993-1997",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6828I"
+    }
+  },
+  {
+    "modelo": "DIESEL TURBO",
+    "motor": "V8 7.3L",
+    "anio": "1993-1994",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7403"
+    }
+  },
+  {
+    "modelo": "SERIES F",
+    "motor": "V8 7.3L TURBO DIESEL",
+    "anio": "1994-1998",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7438"
+    }
+  },
+  {
+    "modelo": "ECONOLINE SERIES E CLUB WAGON",
+    "motor": "V8 7.3L DIESEL TURBO",
+    "anio": "1995-2004",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7614"
+    }
+  },
+  {
+    "modelo": "LINCOLN MARK VIII",
+    "motor": "8 CIL. 4.6L",
+    "anio": "1994-1996",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7666"
+    }
+  },
+  {
+    "modelo": "MUSTANG / MERCURY CONTOUR",
+    "motor": "V8 5.0L Y 2.5L",
+    "anio": "1998-2000",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7730"
+    }
+  },
+  {
+    "modelo": "MYSTIQUE / CONTOUR / SABLE GS WAGON",
+    "motor": "6 CIL. 2.5L",
+    "anio": "1995-2000",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7737"
+    }
+  },
+  {
+    "modelo": "MYSTIQUE / CONTOUR / MERCURY",
+    "motor": "4 CIL. 2.0L",
+    "anio": "ALL",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7738"
+    }
+  },
+  {
+    "modelo": "FIESTA Z3",
+    "motor": "4 CIL.",
+    "anio": "2010-2011",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7929"
+    }
+  },
+  {
+    "modelo": "LOBO / EXPEDITION / ECONOLINE / F150 / F250",
+    "motor": "6 Y 8 CIL.",
+    "anio": "1997-2005",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8039"
+    }
+  },
+  {
+    "modelo": "EXPLORER",
+    "motor": "6 Y 8 CIL. 4.0L Y 5.0L",
+    "anio": "1997-1998",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8141"
+    }
+  },
+  {
+    "modelo": "ESCORT Z2",
+    "motor": "2.0L Y 2.2L 16V",
+    "anio": "1998-2002",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8142"
+    }
+  },
+  {
+    "modelo": "RANGER / EXPLORER",
+    "motor": "4 Y 6 CIL. 2.3L, 3.0L, 4.0L Y 5.0L",
+    "anio": "1997-2004",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8243"
+    }
+  },
+  {
+    "modelo": "EXCURSION / F150 / F350 / F450 / F550 SUPER DUTY",
+    "motor": "V8 7.3L DIESEL",
+    "anio": "2001-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8925"
+    }
+  },
+  {
+    "modelo": "FREESTAR / THUNDERBIRD",
+    "motor": "6 CIL. Y 8 CIL. 3.9L 32V",
+    "anio": "2004-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8956"
+    }
+  },
+  {
+    "modelo": "HARLEY DAVIDSON / FORD GT",
+    "motor": "V8 5.4L",
+    "anio": "1999-2005",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8958"
+    }
+  },
+  {
+    "modelo": "ESCAPE / SABLE / TAURUS",
+    "motor": "4 CIL. 2.3L Y 6 CIL. 3.0L 24V",
+    "anio": "2000-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8997"
+    }
+  },
+  {
+    "modelo": "EXPLORER XLT / EXPLORER SPORT / NAVIGATOR",
+    "motor": "V6 Y V8 4.0L Y 4.6L",
+    "anio": "2000-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9332"
+    }
+  },
+  {
+    "modelo": "EXCURSION / F150 / F350 / F450 / F550 SUPER DUTY",
+    "motor": "V8 7.3L DIESEL",
+    "anio": "2001-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9400"
+    }
+  },
+  {
+    "modelo": "FIESTA SEDAN / FIESTA HATCHBACK",
+    "motor": "4 CIL. 1.8L",
+    "anio": "2003-2006",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9511"
+    }
+  },
+  {
+    "modelo": "EXCURSION DIESEL / KRYSTAL BUS / F150 / F250 / F350 / F450",
+    "motor": "V8 6.0L DIESEL",
+    "anio": "2003-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9516"
+    }
+  },
+  {
+    "modelo": "TRANSIT",
+    "motor": "2.4L",
+    "anio": "2008-2014",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9562"
+    }
+  },
+  {
+    "modelo": "KA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2000-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9601"
+    }
+  },
+  {
+    "modelo": "LOBO / EXPEDITION / MARK LT / NAVIGATOR",
+    "motor": "5.4L 16V Y 24V",
+    "anio": "2004-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9687"
+    }
+  },
+  {
+    "modelo": "ECOSPORT",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2003-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9833"
+    }
+  },
+  {
+    "modelo": "MUSTANG GT",
+    "motor": "4 CIL., V6 Y V8 4.0L",
+    "anio": "2005-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9895"
+    }
+  },
+  {
+    "modelo": "FIVE HUNDRED / FREESTYLE",
+    "motor": "4 Y 6 CIL. 2.0L, 2.3L, 3.0L Y 3.5L",
+    "anio": "2005-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9944"
+    }
+  },
+  {
+    "modelo": "PICK UP F250 / F350 / F550 CUTAWAY CHASSIS",
+    "motor": "10 CIL. 6.8L",
+    "anio": "2004-2006",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10071"
+    }
+  },
+  {
+    "modelo": "FUSION / MERCURY MILAN",
+    "motor": "V6 3.0L",
+    "anio": "2006-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10092"
+    }
+  },
+  {
+    "modelo": "FUSION / CAMIONETAS F450 / F550",
+    "motor": "4 CIL. 2.3L Y V8 5.4L",
+    "anio": "2006-2009",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10094"
+    }
+  },
+  {
+    "modelo": "ESCAPE",
+    "motor": "4 CIL. 2.3L 16V",
+    "anio": "2005-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10170"
+    }
+  },
+  {
+    "modelo": "EXPLORER SPORT / SPORT TRAC",
+    "motor": "V8 4.6L 24V",
+    "anio": "2006-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10173"
+    }
+  },
+  {
+    "modelo": "EDGE / FIVE HUNDRED / CX9",
+    "motor": "6 CIL. 3.5L Y 3.7L 24V",
+    "anio": "2007-2009",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10242"
+    }
+  },
+  {
+    "modelo": "FOCUS",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2007-2011",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10253"
+    }
+  },
+  {
+    "modelo": "EXPEDITION / NAVIGATOR / F150",
+    "motor": "V8 Y V10 4.6L, 5.4L Y 6.8L",
+    "anio": "2006-2009",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10262"
+    }
+  },
+  {
+    "modelo": "F150 / F350 / F450 / F550 SUPER DUTY",
+    "motor": "V8 6.4L DIESEL",
+    "anio": "2007-2011",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10270"
+    }
+  },
+  {
+    "modelo": "TRANSIT",
+    "motor": "4 CIL. 2.2L",
+    "anio": "2007-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10290"
+    }
+  },
+  {
+    "modelo": "ECOSPORT",
+    "motor": "4 CIL.",
+    "anio": "2009-2011",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10293"
+    }
+  },
+  {
+    "modelo": "FOCUS",
+    "motor": "4 CIL. 2.0L 16V",
+    "anio": "2008-2009",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10488"
+    }
+  },
+  {
+    "modelo": "FOCUS EUROPA",
+    "motor": "4 CIL. 2.0L DURATEC",
+    "anio": "2008-2010",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10521"
+    }
+  },
+  {
+    "modelo": "ESCAPE",
+    "motor": "V6 3.0L",
+    "anio": "2009-2010",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10616"
+    }
+  },
+  {
+    "modelo": "MUSTANG",
+    "motor": "V6 Y V8 3.7L, 4.6L Y 5.0L",
+    "anio": "2010-2013",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10781"
+    }
+  },
+  {
+    "modelo": "TRANSIT CONNECT",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2010-2013",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10834"
+    }
+  },
+  {
+    "modelo": "F150 / F350 / F450 / F550 SUPER DUTY DIESEL",
+    "motor": "ALL",
+    "anio": "2011",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10888"
+    }
+  },
+  {
+    "modelo": "FIESTA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2010-2011",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10997"
+    }
+  },
+  {
+    "modelo": "ESCAPE / TRANSIT CONNECT",
+    "motor": "4 CIL. 2.5L 16V",
+    "anio": "2013-2015",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11456"
+    }
+  },
+  {
+    "modelo": "FUSION",
+    "motor": "1.5L, 1.6L, 2.0L Y 2.5L 16V",
+    "anio": "2013-2015",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11480"
+    }
+  },
+  {
+    "modelo": "C-MAX / FUSION / LINCOLN",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2013-2019",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11482"
+    }
+  },
+  {
+    "modelo": "TRANSIT DIESEL",
+    "motor": "4 CIL. 2.2L",
+    "anio": "2012-2013",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11488"
+    }
+  },
+  {
+    "modelo": "TRANSIT 150 / 250 / 350 DIESEL",
+    "motor": "5 Y 6 CIL.",
+    "anio": "2015-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11946"
+    }
+  },
+  {
+    "modelo": "MUSTANG",
+    "motor": "V6 Y V8 2.3L, 3.7L Y 5.0L",
+    "anio": "2015-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11958"
+    }
+  },
+  {
+    "modelo": "SUPER DUTY F250 / F350 / F450 / F550",
+    "motor": "6.7L DIESEL",
+    "anio": "2017-2019",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12182"
+    }
+  },
+  {
+    "modelo": "F250 / F350 / F450 / F550",
+    "motor": "6 Y 10 CIL. 6.2L Y 6.8L",
+    "anio": "2017-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12183"
+    }
+  },
+  {
+    "modelo": "RANGER TKE",
+    "motor": "2.0L DIESEL",
+    "anio": "2019-2023",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12535"
+    }
+  },
+  {
+    "modelo": "F250 / F350 / F450 / F550 SUPER DUTY",
+    "motor": "8 CIL. 6.2L Y 7.3L GASOLINA",
+    "anio": "2017-2024",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12665"
+    }
+  },
+  {
+    "modelo": "F250 / F350 / F450 / F550 SUPER DUTY",
+    "motor": "8 CIL. 6.7L TURBO DIESEL",
+    "anio": "2017-2024",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12666"
+    }
+  },
+  {
+    "modelo": "ESCAPE / MAVERICK / BRONCO SPORT",
+    "motor": "3 CIL. 1.5L Y 2.0L",
+    "anio": "2020-2025",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12778"
+    }
+  },
+  {
+    "modelo": "ECOSPORT",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2013-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA159601"
+    }
+  },
+  {
+    "modelo": "TRANSIT CUSTOM TURBO DIESEL",
+    "motor": "2.0L Y 2.2L",
+    "anio": "2013>",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA319601"
+    }
+  }
+]

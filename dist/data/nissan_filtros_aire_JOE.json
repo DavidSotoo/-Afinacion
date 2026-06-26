@@ -1,0 +1,362 @@
+[
+  {
+    "modelo": "DATSUN SEDAN / PICK UP / GUAYIN",
+    "motor": "4 Y 6 CIL. 1.8L",
+    "anio": "1966-1992",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JAD1"
+    }
+  },
+  {
+    "modelo": "TSURU I SEDAN / SAMURAI / HIKARI / DATSUN",
+    "motor": "1.6L Y 1.8L",
+    "anio": "1979-1992",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JAD3"
+    }
+  },
+  {
+    "modelo": "ICHI VAN Y PANEL / MONTACARGAS",
+    "motor": "DIESEL 1.8L Y 2.4L",
+    "anio": "ALL",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JAD30"
+    }
+  },
+  {
+    "modelo": "URVAN",
+    "motor": "DIESEL 4 CIL. 2.5L Y 3.0L",
+    "anio": "2008-2010",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JAD253"
+    }
+  },
+  {
+    "modelo": "MARCH / VERSA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2011",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA1011"
+    }
+  },
+  {
+    "modelo": "PLATINA",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2002-2005",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA1052"
+    }
+  },
+  {
+    "modelo": "PLATINA",
+    "motor": "4 CIL. 1.6L Y 2.0L",
+    "anio": "2002-2005",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA1858"
+    }
+  },
+  {
+    "modelo": "MICRA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2005>",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA2207"
+    }
+  },
+  {
+    "modelo": "TIIDA HATCHBACK / TIIDA SEDAN",
+    "motor": "1.8L",
+    "anio": "2006-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA2208"
+    }
+  },
+  {
+    "modelo": "TSURU II / MAXIMA / INFINITI / PATHFINDER / TSUBAME / X-TRAIL / MURANO",
+    "motor": "4 Y 6 CIL.",
+    "anio": "1993-2008",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA4309"
+    }
+  },
+  {
+    "modelo": "TURBO 300ZX / SENTRA / TSURU GS1 / GS2",
+    "motor": "V6",
+    "anio": "1990-2005",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA4310"
+    }
+  },
+  {
+    "modelo": "URVAN TWIN CAR",
+    "motor": "4 CIL. 2.4L",
+    "anio": "1990-2002",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA4607"
+    }
+  },
+  {
+    "modelo": "TSURU II",
+    "motor": "4 CIL. 1.6L",
+    "anio": "1992",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6619"
+    }
+  },
+  {
+    "modelo": "TSURU USA DOS ORIFICIOS",
+    "motor": "4 CIL. 1.6L",
+    "anio": "1992",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6619C"
+    }
+  },
+  {
+    "modelo": "PICK UP / FRONTIER / X-TERRA",
+    "motor": "4 CIL. 2.4L D21 16V",
+    "anio": "1993-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6850N"
+    }
+  },
+  {
+    "modelo": "PICK UP / FRONTIER / X-TERRA",
+    "motor": "4 CIL. 2.4L D21 16V",
+    "anio": "1993-2007",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA6850I"
+    }
+  },
+  {
+    "modelo": "ARMADA / TITAN / FRONTIER / X-TERRA",
+    "motor": "6 Y 8 CIL. 4.0L Y 4.7L",
+    "anio": "1993-2005",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7440"
+    }
+  },
+  {
+    "modelo": "QUEST",
+    "motor": "6 CIL. 3.0L Y 3.3L",
+    "anio": "1993-2003",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7628"
+    }
+  },
+  {
+    "modelo": "APRIO",
+    "motor": "4 CIL. 1.6L 16V",
+    "anio": "2010-2012",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA7701"
+    }
+  },
+  {
+    "modelo": "PICK UP D22",
+    "motor": "2.7L DIESEL",
+    "anio": "ALL",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8110"
+    }
+  },
+  {
+    "modelo": "SENTRA",
+    "motor": "4 CIL. 2.0L",
+    "anio": "2007-2012",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA8200"
+    }
+  },
+  {
+    "modelo": "FRONTIER",
+    "motor": "4 CIL. 2.5L TURBO DIESEL",
+    "anio": "2015-2018",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9562"
+    }
+  },
+  {
+    "modelo": "URVAN TWIN CAM",
+    "motor": "4 CIL. 2.4L",
+    "anio": "2002-2005",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA9888"
+    }
+  },
+  {
+    "modelo": "FRONTIER",
+    "motor": "4 CIL. 16V",
+    "anio": "2005-2011",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10254"
+    }
+  },
+  {
+    "modelo": "MURANO / PATHFINDER",
+    "motor": "2.5L ELECTRIC/GAS DOHC SUPERCHARGED",
+    "anio": "2014-2019",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10267"
+    }
+  },
+  {
+    "modelo": "ALTIMA / ALTIMA HYBRID",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2007-2009",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10349"
+    }
+  },
+  {
+    "modelo": "350Z / 370Z",
+    "motor": "V6 3.5L",
+    "anio": "2006-2011",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10544"
+    }
+  },
+  {
+    "modelo": "X-TRAIL",
+    "motor": "2.0L Y 2.5L",
+    "anio": "2019-2022",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA10654"
+    }
+  },
+  {
+    "modelo": "ARMADA",
+    "motor": "8 CIL. 5.6L",
+    "anio": "2017-2022",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11002"
+    }
+  },
+  {
+    "modelo": "ALTIMA / MURANO",
+    "motor": "2.0L TURBO",
+    "anio": "2019-2026",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11225"
+    }
+  },
+  {
+    "modelo": "ALTIMA",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2013-2016",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11450"
+    }
+  },
+  {
+    "modelo": "X-TRAIL / ROGUE",
+    "motor": "4 CIL. 2.5L",
+    "anio": "2014-2016",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA11858"
+    }
+  },
+  {
+    "modelo": "TITAN / TITAN XD",
+    "motor": "V8 5.0L",
+    "anio": "2016-2019",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12076"
+    }
+  },
+  {
+    "modelo": "ALTIMA",
+    "motor": "2.5L",
+    "anio": "2019-2021",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12551"
+    }
+  },
+  {
+    "modelo": "ROGUE / X-TRAIL",
+    "motor": "1.5L TURBO / 2.5L",
+    "anio": "2021-2024",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA12967"
+    }
+  },
+  {
+    "modelo": "KICKS / VERSA",
+    "motor": "4 CIL. 1.6L",
+    "anio": "2017-2020",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA16546"
+    }
+  },
+  {
+    "modelo": "CABSTAR",
+    "motor": "DIESEL 2.5L",
+    "anio": "2008-2009",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA18149"
+    }
+  },
+  {
+    "modelo": "PICK UP NP300",
+    "motor": "4 CIL. DIESEL Y GASOLINA",
+    "anio": "2014-2019",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA21001"
+    }
+  },
+  {
+    "modelo": "SENTRA",
+    "motor": "2.0L",
+    "anio": "2020-2025",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "JA99575"
+    }
+  },
+  {
+    "modelo": "TSURU PICK UP (ANTI SMOG - HACHA)",
+    "motor": "ALL",
+    "anio": "1995-2002",
+    "filtro_aire": {
+      "marca": "JOE",
+      "sku": "1656573C00"
+    }
+  }
+]

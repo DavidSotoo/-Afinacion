@@ -1,0 +1,3653 @@
+{
+  "fuente": "NGK Catálogo Máster 2025 - 1ra Edición",
+  "marca": "Toyota",
+  "id_inicio": 1045,
+  "registros": [
+    {
+      "id": 1045,
+      "marca": "Toyota",
+      "modelo": "4Runner",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 4.0,
+      "motor": "1GR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR5T11",
+        "codigo": 96779
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR5AIX-11",
+        "codigo": 4469
+      },
+      "bujia_g_power": {
+        "tipo": "LFR5AGP",
+        "codigo": 5018
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1046,
+      "marca": "Toyota",
+      "modelo": "4Runner",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 4.0,
+      "motor": "1GR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1047,
+      "marca": "Toyota",
+      "modelo": "4Runner",
+      "origen": "Nac.",
+      "anio_inicio": 2005,
+      "anio_fin": 2008,
+      "litros": 4.7,
+      "motor": "2UZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1048,
+      "marca": "Toyota",
+      "modelo": "4Runner",
+      "origen": "Nac.",
+      "anio_inicio": 2008,
+      "anio_fin": 2009,
+      "litros": 4.7,
+      "motor": "2UZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6EP-11",
+        "codigo": 2978
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1049,
+      "marca": "Toyota",
+      "modelo": "Avalon",
+      "origen": "Imp.",
+      "anio_inicio": 2013,
+      "anio_fin": 2014,
+      "litros": 2.5,
+      "motor": "2AR-FXE",
+      "bujia_stock": {
+        "tipo": "DF5B-8A",
+        "codigo": 94697
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1050,
+      "marca": "Toyota",
+      "modelo": "Avalon",
+      "origen": "Imp.",
+      "anio_inicio": 2003,
+      "anio_fin": 2004,
+      "litros": 3.0,
+      "motor": "1MZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6EP-11",
+        "codigo": 2978
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1051,
+      "marca": "Toyota",
+      "modelo": "Avalon",
+      "origen": "Imp.",
+      "anio_inicio": 1995,
+      "anio_fin": 2002,
+      "litros": 3.0,
+      "motor": "1MZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1052,
+      "marca": "Toyota",
+      "modelo": "Avalon",
+      "origen": "Imp.",
+      "anio_inicio": 1998,
+      "anio_fin": 1999,
+      "litros": 3.0,
+      "motor": "1MZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6EKPB-11",
+        "codigo": 3452
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6EYA",
+        "codigo": 7990
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1053,
+      "marca": "Toyota",
+      "modelo": "Avalon",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1997,
+      "litros": 3.0,
+      "motor": "1MZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6E11",
+        "codigo": 6741
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6EYA",
+        "codigo": 7990
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1054,
+      "marca": "Toyota",
+      "modelo": "Avalon",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2014,
+      "litros": 3.5,
+      "motor": "2GRFE",
+      "bujia_stock": {
+        "tipo": "DILFR6D11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1055,
+      "marca": "Toyota",
+      "modelo": "Avanza",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2023,
+      "litros": 1.5,
+      "motor": null,
+      "bujia_stock": {
+        "tipo": "DF6H-11B",
+        "codigo": 95993
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1056,
+      "marca": "Toyota",
+      "modelo": "Avanza",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2022,
+      "litros": 1.5,
+      "motor": "2NR-VE",
+      "bujia_stock": {
+        "tipo": "DF6H-11B",
+        "codigo": 95993
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1057,
+      "marca": "Toyota",
+      "modelo": "Avanza",
+      "origen": "Nac.",
+      "anio_inicio": 2007,
+      "anio_fin": 2015,
+      "litros": 1.5,
+      "motor": "3SZ-VE",
+      "bujia_stock": {
+        "tipo": "DCPR7EA-9",
+        "codigo": 6651
+      },
+      "bujia_iridium_ix": {
+        "tipo": "DCPR7EIX",
+        "codigo": 6046
+      },
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.036,
+      "calibracion_mm": 0.9
+    },
+    {
+      "id": 1058,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Imp.",
+      "anio_inicio": 1997,
+      "anio_fin": 2001,
+      "litros": 2.2,
+      "motor": "5S-FE",
+      "bujia_stock": {
+        "tipo": "BKR6EKPB-11",
+        "codigo": 3452
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6EYA",
+        "codigo": 7990
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1059,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 1996,
+      "litros": 2.2,
+      "motor": "5S-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1060,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1995,
+      "litros": 2.2,
+      "motor": "5SFE",
+      "bujia_stock": {
+        "tipo": "BKR6EP-11",
+        "codigo": 2978
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1061,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Nac.",
+      "anio_inicio": 2003,
+      "anio_fin": 2009,
+      "litros": 2.4,
+      "motor": "2AZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6ES-11",
+        "codigo": 5553
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1062,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2009,
+      "litros": 2.4,
+      "motor": "2AZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1063,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Imp.",
+      "anio_inicio": 2002,
+      "anio_fin": 2004,
+      "litros": 2.4,
+      "motor": "2AZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1064,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Nac.",
+      "anio_inicio": 2018,
+      "anio_fin": 2023,
+      "litros": 2.5,
+      "motor": "A25A-FKS",
+      "bujia_stock": {
+        "tipo": "DILKAR6T8",
+        "codigo": 96210
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1065,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Nac.",
+      "anio_inicio": 2014,
+      "anio_fin": 2017,
+      "litros": 2.5,
+      "motor": "2AR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR5T11",
+        "codigo": 96779
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR5AIX-11",
+        "codigo": 4469
+      },
+      "bujia_g_power": {
+        "tipo": "LFR5AGP",
+        "codigo": 5018
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1066,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2014,
+      "litros": 2.5,
+      "motor": "2AR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR5T11",
+        "codigo": 96779
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR5AIX-11",
+        "codigo": 4469
+      },
+      "bujia_g_power": {
+        "tipo": "LFR5AGP",
+        "codigo": 5018
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1067,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Imp.",
+      "anio_inicio": 1994,
+      "anio_fin": 2006,
+      "litros": 3.0,
+      "motor": "1MZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1068,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Imp.",
+      "anio_inicio": 2003,
+      "anio_fin": 2004,
+      "litros": 3.0,
+      "motor": "1MZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6ES-11",
+        "codigo": 5553
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1069,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Imp.",
+      "anio_inicio": 1996,
+      "anio_fin": 2001,
+      "litros": 3.0,
+      "motor": "1MZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6EKPB-11",
+        "codigo": 3452
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6EYA",
+        "codigo": 7990
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1070,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1995,
+      "litros": 3.0,
+      "motor": "1MZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6EKPB-11",
+        "codigo": 3452
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6EYA",
+        "codigo": 7990
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1071,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Nac.",
+      "anio_inicio": 2017,
+      "anio_fin": 2017,
+      "litros": 3.5,
+      "motor": "2GR-FE",
+      "bujia_stock": {
+        "tipo": "DILFR6D11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1072,
+      "marca": "Toyota",
+      "modelo": "Camry",
+      "origen": "Imp.",
+      "anio_inicio": 2007,
+      "anio_fin": 2014,
+      "litros": 3.5,
+      "motor": "2GRFE",
+      "bujia_stock": {
+        "tipo": "DILFR6D11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1073,
+      "marca": "Toyota",
+      "modelo": "Camry Hybrid",
+      "origen": "Imp.",
+      "anio_inicio": 2011,
+      "anio_fin": 2012,
+      "litros": 2.4,
+      "motor": "2AZ-FXE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1074,
+      "marca": "Toyota",
+      "modelo": "Camry Hybrid",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2011,
+      "litros": 2.4,
+      "motor": "2AZ-FXE",
+      "bujia_stock": {
+        "tipo": "BKR6ES-11",
+        "codigo": 5553
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1075,
+      "marca": "Toyota",
+      "modelo": "Camry Hybrid",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2014,
+      "litros": 2.5,
+      "motor": "2AR-FXE",
+      "bujia_stock": {
+        "tipo": "DF5B-8A",
+        "codigo": 94697
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1076,
+      "marca": "Toyota",
+      "modelo": "Camry Hybrid",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2014,
+      "litros": 2.5,
+      "motor": "A25A-FKS",
+      "bujia_stock": {
+        "tipo": "DILKAR6T8",
+        "codigo": 96210
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1077,
+      "marca": "Toyota",
+      "modelo": "Camry Hybrid",
+      "origen": "Nac.",
+      "anio_inicio": 2019,
+      "anio_fin": 2023,
+      "litros": 2.5,
+      "motor": "A25A-FKS",
+      "bujia_stock": {
+        "tipo": "DILKAR6T8",
+        "codigo": 96210
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1078,
+      "marca": "Toyota",
+      "modelo": "C-HR",
+      "origen": "Nac.",
+      "anio_inicio": 2018,
+      "anio_fin": 2020,
+      "litros": 2.0,
+      "motor": "3ZR-FAE",
+      "bujia_stock": {
+        "tipo": "DF6H-11B",
+        "codigo": 95993
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1079,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1997,
+      "litros": 1.6,
+      "motor": "4AFE",
+      "bujia_stock": {
+        "tipo": "BKR5EYA",
+        "codigo": 2087
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX",
+        "codigo": 6341
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5EYA",
+        "codigo": 2087
+      },
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1080,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Nac.",
+      "anio_inicio": 2020,
+      "anio_fin": 2022,
+      "litros": 1.8,
+      "motor": "2ZR-FAE",
+      "bujia_stock": {
+        "tipo": "DILKAR6T8",
+        "codigo": 96210
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1081,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Nac.",
+      "anio_inicio": 2017,
+      "anio_fin": 2019,
+      "litros": 1.8,
+      "motor": "2ZR-FAE",
+      "bujia_stock": {
+        "tipo": "DF6H-11B",
+        "codigo": 95993
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1082,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2016,
+      "litros": 1.8,
+      "motor": "2ZR-FE",
+      "bujia_stock": {
+        "tipo": "DF6H-11B",
+        "codigo": 95993
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1083,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Nac.",
+      "anio_inicio": 2009,
+      "anio_fin": 2015,
+      "litros": 1.8,
+      "motor": "2ZR-FE",
+      "bujia_stock": {
+        "tipo": "ILKAR7B11",
+        "codigo": 4912
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1084,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Imp.",
+      "anio_inicio": 2009,
+      "anio_fin": 2014,
+      "litros": 1.8,
+      "motor": "2ZR-FE",
+      "bujia_stock": {
+        "tipo": "ILKAR7B11",
+        "codigo": 4912
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1085,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Imp.",
+      "anio_inicio": 2003,
+      "anio_fin": 2008,
+      "litros": 1.8,
+      "motor": "1ZZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR5T11",
+        "codigo": 4996
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1086,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Imp.",
+      "anio_inicio": 2006,
+      "anio_fin": 2008,
+      "litros": 1.8,
+      "motor": "1ZZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR5T11",
+        "codigo": 4996
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1087,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2005,
+      "litros": 1.8,
+      "motor": "2ZZGE",
+      "bujia_stock": {
+        "tipo": "BKR6EP-11",
+        "codigo": 2978
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1088,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Imp.",
+      "anio_inicio": 2003,
+      "anio_fin": 2004,
+      "litros": 1.8,
+      "motor": "1ZZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR5T11",
+        "codigo": 4996
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1089,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Imp.",
+      "anio_inicio": 2000,
+      "anio_fin": 2002,
+      "litros": 1.8,
+      "motor": "1ZZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR5T11",
+        "codigo": 4996
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1090,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Imp.",
+      "anio_inicio": 1998,
+      "anio_fin": 1999,
+      "litros": 1.8,
+      "motor": "1ZZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR5EKB-11",
+        "codigo": 3967
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1091,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1997,
+      "litros": 1.8,
+      "motor": "7AFE",
+      "bujia_stock": {
+        "tipo": "BKR5EYA",
+        "codigo": 2087
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX",
+        "codigo": 6341
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5EYA",
+        "codigo": 2087
+      },
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1092,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Nac.",
+      "anio_inicio": 2020,
+      "anio_fin": 2022,
+      "litros": 2.0,
+      "motor": "M20A-FKS",
+      "bujia_stock": {
+        "tipo": "DILKAR7S8",
+        "codigo": 97939
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1093,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Nac.",
+      "anio_inicio": 2009,
+      "anio_fin": 2013,
+      "litros": 2.4,
+      "motor": "2AZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6ES-11",
+        "codigo": 5553
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1094,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "origen": "Imp.",
+      "anio_inicio": 2009,
+      "anio_fin": 2009,
+      "litros": 2.4,
+      "motor": "2AZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1095,
+      "marca": "Toyota",
+      "modelo": "FJ Cruiser",
+      "origen": "Nac.",
+      "anio_inicio": 2011,
+      "anio_fin": 2014,
+      "litros": 4.0,
+      "motor": "1GR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1096,
+      "marca": "Toyota",
+      "modelo": "FJ Cruiser",
+      "origen": "Imp.",
+      "anio_inicio": 2013,
+      "anio_fin": 2014,
+      "litros": 4.0,
+      "motor": "1GR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR5T11",
+        "codigo": 96779
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR5AIX-11",
+        "codigo": 4469
+      },
+      "bujia_g_power": {
+        "tipo": "LFR5AGP",
+        "codigo": 5018
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1097,
+      "marca": "Toyota",
+      "modelo": "FJ Cruiser",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2013,
+      "litros": 4.0,
+      "motor": "1GR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1098,
+      "marca": "Toyota",
+      "modelo": "FJ Cruiser",
+      "origen": "Imp.",
+      "anio_inicio": 2008,
+      "anio_fin": 2010,
+      "litros": 4.0,
+      "motor": "1GR-FE",
+      "bujia_stock": {
+        "tipo": "LFR6C-11",
+        "codigo": 5788
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1099,
+      "marca": "Toyota",
+      "modelo": "Hiace",
+      "origen": "Nac.",
+      "anio_inicio": 2006,
+      "anio_fin": 2019,
+      "litros": 2.7,
+      "motor": "2TR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1100,
+      "marca": "Toyota",
+      "modelo": "Hiace",
+      "origen": "Nac.",
+      "anio_inicio": 2020,
+      "anio_fin": 2024,
+      "litros": 3.5,
+      "motor": "2GR-FKS",
+      "bujia_stock": {
+        "tipo": "DFH6B-11A",
+        "codigo": 6858
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1101,
+      "marca": "Toyota",
+      "modelo": "Highlander",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2014,
+      "litros": 2.7,
+      "motor": "1AR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR5T11",
+        "codigo": 96779
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR5AIX-11",
+        "codigo": 4469
+      },
+      "bujia_g_power": {
+        "tipo": "LFR5AGP",
+        "codigo": 5018
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1102,
+      "marca": "Toyota",
+      "modelo": "Highlander",
+      "origen": "Nac.",
+      "anio_inicio": 2017,
+      "anio_fin": 2022,
+      "litros": 3.5,
+      "motor": "2GR-FKS",
+      "bujia_stock": {
+        "tipo": "DFH6B-11A",
+        "codigo": 6858
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1103,
+      "marca": "Toyota",
+      "modelo": "Highlander",
+      "origen": "Nac.",
+      "anio_inicio": 2008,
+      "anio_fin": 2016,
+      "litros": 3.5,
+      "motor": "2GR-FE",
+      "bujia_stock": {
+        "tipo": "DILFR6D11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1104,
+      "marca": "Toyota",
+      "modelo": "Highlander",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2012,
+      "litros": 3.5,
+      "motor": "2GR-FE",
+      "bujia_stock": {
+        "tipo": "DILFR6D11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1105,
+      "marca": "Toyota",
+      "modelo": "Hilux",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2021,
+      "litros": 2.7,
+      "motor": "2TR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1106,
+      "marca": "Toyota",
+      "modelo": "Hilux",
+      "origen": "Nac.",
+      "anio_inicio": 2007,
+      "anio_fin": 2015,
+      "litros": 2.7,
+      "motor": "2TR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1107,
+      "marca": "Toyota",
+      "modelo": "Hilux",
+      "origen": "Nac.",
+      "anio_inicio": 2004,
+      "anio_fin": 2006,
+      "litros": 2.7,
+      "motor": "2TR-FE",
+      "bujia_stock": {
+        "tipo": "BKR5EYA",
+        "codigo": 2087
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX",
+        "codigo": 6341
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5EYA",
+        "codigo": 2087
+      },
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1108,
+      "marca": "Toyota",
+      "modelo": "Land Cruiser",
+      "origen": "Nac.",
+      "anio_inicio": 2008,
+      "anio_fin": 2020,
+      "litros": 5.7,
+      "motor": "3UR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1109,
+      "marca": "Toyota",
+      "modelo": "Land Cruiser",
+      "origen": "Imp.",
+      "anio_inicio": 2013,
+      "anio_fin": 2014,
+      "litros": 5.7,
+      "motor": "3UR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1110,
+      "marca": "Toyota",
+      "modelo": "Matrix",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2012,
+      "litros": 1.8,
+      "motor": "2ZR-FE",
+      "bujia_stock": {
+        "tipo": "ILKAR7B11",
+        "codigo": 4912
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1111,
+      "marca": "Toyota",
+      "modelo": "Matrix",
+      "origen": "Nac.",
+      "anio_inicio": 2009,
+      "anio_fin": 2010,
+      "litros": 1.8,
+      "motor": "2ZR-FE",
+      "bujia_stock": {
+        "tipo": "ILKAR7B11",
+        "codigo": 4912
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1112,
+      "marca": "Toyota",
+      "modelo": "Matrix",
+      "origen": "Nac.",
+      "anio_inicio": 2009,
+      "anio_fin": 2010,
+      "litros": 2.4,
+      "motor": "2AZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6ES-11",
+        "codigo": 5553
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1113,
+      "marca": "Toyota",
+      "modelo": "Matrix",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2010,
+      "litros": 2.4,
+      "motor": "2AZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1114,
+      "marca": "Toyota",
+      "modelo": "MR2 Spyder",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2006,
+      "litros": 1.8,
+      "motor": "1ZZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR5T11",
+        "codigo": 4996
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1115,
+      "marca": "Toyota",
+      "modelo": "Pickup",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1995,
+      "litros": 2.4,
+      "motor": "22RE",
+      "bujia_stock": {
+        "tipo": "BPR5EYA",
+        "codigo": 5057
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BPR5EIX",
+        "codigo": 6597
+      },
+      "bujia_g_power": {
+        "tipo": "BPR5EGP",
+        "codigo": 7082
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1116,
+      "marca": "Toyota",
+      "modelo": "Pickup",
+      "origen": "Imp.",
+      "anio_inicio": 1993,
+      "anio_fin": 1995,
+      "litros": 3.0,
+      "motor": "3VZ-E",
+      "bujia_stock": {
+        "tipo": "BKR5EYA",
+        "codigo": 2087
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX",
+        "codigo": 6341
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5EYA",
+        "codigo": 2087
+      },
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1117,
+      "marca": "Toyota",
+      "modelo": "Prius",
+      "origen": "Nac.",
+      "anio_inicio": 2018,
+      "anio_fin": 2023,
+      "litros": 1.8,
+      "motor": "2ZR-FXE",
+      "bujia_stock": {
+        "tipo": "ILKAR7B11",
+        "codigo": 4912
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1118,
+      "marca": "Toyota",
+      "modelo": "Prius",
+      "origen": "Nac.",
+      "anio_inicio": 2012,
+      "anio_fin": 2014,
+      "litros": 1.8,
+      "motor": "2ZR-FXE",
+      "bujia_stock": {
+        "tipo": "ILKAR7B11",
+        "codigo": 4912
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1119,
+      "marca": "Toyota",
+      "modelo": "Prius C",
+      "origen": "Nac.",
+      "anio_inicio": 2018,
+      "anio_fin": 2020,
+      "litros": 1.5,
+      "motor": "1NZ-FXE",
+      "bujia_stock": {
+        "tipo": "DIFR5C",
+        "codigo": 90911
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1120,
+      "marca": "Toyota",
+      "modelo": "Prius C",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2014,
+      "litros": 1.5,
+      "motor": "1NZ-FXE",
+      "bujia_stock": {
+        "tipo": "DIFR5C",
+        "codigo": 90911
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1121,
+      "marca": "Toyota",
+      "modelo": "Prius Plug-In",
+      "origen": "Nac.",
+      "anio_inicio": 2012,
+      "anio_fin": 2013,
+      "litros": 1.8,
+      "motor": "2ZR-FXE",
+      "bujia_stock": {
+        "tipo": "ILKAR7B11",
+        "codigo": 4912
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1122,
+      "marca": "Toyota",
+      "modelo": "Prius V",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2014,
+      "litros": 1.8,
+      "motor": "2ZR-FXE",
+      "bujia_stock": {
+        "tipo": "ILKAR7B11",
+        "codigo": 4912
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LKAR7BIX-11S",
+        "codigo": 93501
+      },
+      "bujia_g_power": {
+        "tipo": "LKAR7BGP",
+        "codigo": 94297
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1123,
+      "marca": "Toyota",
+      "modelo": "Raize",
+      "origen": "Nac.",
+      "anio_inicio": 2022,
+      "anio_fin": 2023,
+      "litros": 1.0,
+      "motor": null,
+      "bujia_stock": {
+        "tipo": "SILKAR7G8G",
+        "codigo": null
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1124,
+      "marca": "Toyota",
+      "modelo": "RAV4",
+      "origen": "Nac.",
+      "anio_inicio": 2005,
+      "anio_fin": 2008,
+      "litros": 2.4,
+      "motor": "2AZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6ES-11",
+        "codigo": 5553
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1125,
+      "marca": "Toyota",
+      "modelo": "RAV4",
+      "origen": "Nac.",
+      "anio_inicio": 2020,
+      "anio_fin": 2024,
+      "litros": 2.5,
+      "motor": "A25A-FKS",
+      "bujia_stock": {
+        "tipo": "DILKAR6T8",
+        "codigo": 96210
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1126,
+      "marca": "Toyota",
+      "modelo": "RAV4",
+      "origen": "Nac.",
+      "anio_inicio": 2022,
+      "anio_fin": 2022,
+      "litros": 2.5,
+      "motor": "A25A-FKS",
+      "bujia_stock": {
+        "tipo": "DILKAR6T8",
+        "codigo": 96210
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1127,
+      "marca": "Toyota",
+      "modelo": "RAV4",
+      "origen": "Nac.",
+      "anio_inicio": 2019,
+      "anio_fin": 2019,
+      "litros": 2.5,
+      "motor": "2AR-FE",
+      "bujia_stock": {
+        "tipo": "DILKAR6T8",
+        "codigo": 96210
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1128,
+      "marca": "Toyota",
+      "modelo": "RAV4",
+      "origen": "Imp.",
+      "anio_inicio": 2009,
+      "anio_fin": 2014,
+      "litros": 2.5,
+      "motor": "2AR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR5T11",
+        "codigo": 96779
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR5AIX-11",
+        "codigo": 4469
+      },
+      "bujia_g_power": {
+        "tipo": "LFR5AGP",
+        "codigo": 5018
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1129,
+      "marca": "Toyota",
+      "modelo": "RAV4",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2018,
+      "litros": 2.5,
+      "motor": "2AR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR5T11",
+        "codigo": 96779
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR5AIX-11",
+        "codigo": 4469
+      },
+      "bujia_g_power": {
+        "tipo": "LFR5AGP",
+        "codigo": 5018
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1130,
+      "marca": "Toyota",
+      "modelo": "RAV4",
+      "origen": "Imp.",
+      "anio_inicio": 2009,
+      "anio_fin": 2012,
+      "litros": 3.5,
+      "motor": "2GRFE",
+      "bujia_stock": {
+        "tipo": "DILFR6D11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1131,
+      "marca": "Toyota",
+      "modelo": "RAV4",
+      "origen": "Nac.",
+      "anio_inicio": 2009,
+      "anio_fin": 2011,
+      "litros": 3.5,
+      "motor": "2GRFE",
+      "bujia_stock": {
+        "tipo": "DILFR6D11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1132,
+      "marca": "Toyota",
+      "modelo": "RAV4 Hybrid",
+      "origen": "Nac.",
+      "anio_inicio": 2020,
+      "anio_fin": 2023,
+      "litros": 2.5,
+      "motor": "A25A-FXS",
+      "bujia_stock": {
+        "tipo": "DILKAR6T8",
+        "codigo": 96210
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1133,
+      "marca": "Toyota",
+      "modelo": "RAV4 Hybrid",
+      "origen": "Nac.",
+      "anio_inicio": 2019,
+      "anio_fin": 2019,
+      "litros": 2.5,
+      "motor": "2AR-FE",
+      "bujia_stock": {
+        "tipo": "DILKAR6T8",
+        "codigo": 96210
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1134,
+      "marca": "Toyota",
+      "modelo": "Rush",
+      "origen": "Nac.",
+      "anio_inicio": 2009,
+      "anio_fin": 2014,
+      "litros": 1.5,
+      "motor": "1NZ-FE",
+      "bujia_stock": {
+        "tipo": "DCPR7EA-9",
+        "codigo": 6651
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.04,
+      "calibracion_mm": 1.0
+    },
+    {
+      "id": 1135,
+      "marca": "Toyota",
+      "modelo": "Sequoia",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2011,
+      "litros": 4.6,
+      "motor": "1UR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1136,
+      "marca": "Toyota",
+      "modelo": "Sequoia",
+      "origen": "Imp.",
+      "anio_inicio": 2008,
+      "anio_fin": 2012,
+      "litros": 4.7,
+      "motor": "2UZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1137,
+      "marca": "Toyota",
+      "modelo": "Sequoia",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2009,
+      "litros": 4.7,
+      "motor": "2UZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1138,
+      "marca": "Toyota",
+      "modelo": "Sequoia",
+      "origen": "Imp.",
+      "anio_inicio": 2003,
+      "anio_fin": 2004,
+      "litros": 4.7,
+      "motor": "2UZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6EP-8",
+        "codigo": 2215
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX",
+        "codigo": 6418
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6EYA",
+        "codigo": 7990
+      },
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1139,
+      "marca": "Toyota",
+      "modelo": "Sequoia",
+      "origen": "Imp.",
+      "anio_inicio": 2001,
+      "anio_fin": 2002,
+      "litros": 4.7,
+      "motor": "2UZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6EYA",
+        "codigo": null
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX",
+        "codigo": 6418
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6EYA",
+        "codigo": 7990
+      },
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1140,
+      "marca": "Toyota",
+      "modelo": "Sequoia",
+      "origen": "Imp.",
+      "anio_inicio": 2000,
+      "anio_fin": 2002,
+      "litros": 4.7,
+      "motor": "2UZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6EKPB-11",
+        "codigo": 3452
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6EYA",
+        "codigo": 7990
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1141,
+      "marca": "Toyota",
+      "modelo": "Sequoia",
+      "origen": "Imp.",
+      "anio_inicio": 2009,
+      "anio_fin": 2021,
+      "litros": 5.7,
+      "motor": "3UR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1142,
+      "marca": "Toyota",
+      "modelo": "Sequoia",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2014,
+      "litros": 5.7,
+      "motor": "3UR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1143,
+      "marca": "Toyota",
+      "modelo": "Sequoia",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2021,
+      "litros": 5.7,
+      "motor": "3UR-FBE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1144,
+      "marca": "Toyota",
+      "modelo": "Sienna",
+      "origen": "Imp.",
+      "anio_inicio": 2011,
+      "anio_fin": 2012,
+      "litros": 2.7,
+      "motor": "1AR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR5T11",
+        "codigo": 96779
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR5AIX-11",
+        "codigo": 4469
+      },
+      "bujia_g_power": {
+        "tipo": "LFR5AGP",
+        "codigo": 5018
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1145,
+      "marca": "Toyota",
+      "modelo": "Sienna",
+      "origen": "Imp.",
+      "anio_inicio": 2001,
+      "anio_fin": 2003,
+      "litros": 3.0,
+      "motor": "1MZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1146,
+      "marca": "Toyota",
+      "modelo": "Sienna",
+      "origen": "Imp.",
+      "anio_inicio": 1998,
+      "anio_fin": 2000,
+      "litros": 3.0,
+      "motor": "1MZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6EKPB-11",
+        "codigo": 3452
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6EYA",
+        "codigo": 7990
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1147,
+      "marca": "Toyota",
+      "modelo": "Sienna",
+      "origen": "Imp.",
+      "anio_inicio": 2004,
+      "anio_fin": 2010,
+      "litros": 3.3,
+      "motor": "3MZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1148,
+      "marca": "Toyota",
+      "modelo": "Sienna",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2006,
+      "litros": 3.3,
+      "motor": "3MZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1149,
+      "marca": "Toyota",
+      "modelo": "Sienna",
+      "origen": "Nac.",
+      "anio_inicio": 2017,
+      "anio_fin": 2020,
+      "litros": 3.5,
+      "motor": "2GR-FKS",
+      "bujia_stock": {
+        "tipo": "DFH6B-11A",
+        "codigo": 6858
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1150,
+      "marca": "Toyota",
+      "modelo": "Sienna",
+      "origen": "Nac.",
+      "anio_inicio": 2011,
+      "anio_fin": 2016,
+      "litros": 3.5,
+      "motor": "2GR-FE",
+      "bujia_stock": {
+        "tipo": "DILFR6D11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1151,
+      "marca": "Toyota",
+      "modelo": "Sienna",
+      "origen": "Imp.",
+      "anio_inicio": 2011,
+      "anio_fin": 2016,
+      "litros": 3.5,
+      "motor": "2GR-FE",
+      "bujia_stock": {
+        "tipo": "DILFR6D11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1152,
+      "marca": "Toyota",
+      "modelo": "Sienna Hybrid",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2023,
+      "litros": 2.5,
+      "motor": null,
+      "bujia_stock": {
+        "tipo": "DILKAR6T8",
+        "codigo": 96210
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1153,
+      "marca": "Toyota",
+      "modelo": "Sienna Hybrid",
+      "origen": "Nac.",
+      "anio_inicio": 2021,
+      "anio_fin": 2022,
+      "litros": 2.5,
+      "motor": "A25A-FXS",
+      "bujia_stock": {
+        "tipo": "DILKAR6T8",
+        "codigo": 96210
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1154,
+      "marca": "Toyota",
+      "modelo": "Solara",
+      "origen": "Nac.",
+      "anio_inicio": 2005,
+      "anio_fin": 2006,
+      "litros": 3.3,
+      "motor": "3MZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1155,
+      "marca": "Toyota",
+      "modelo": "Supra",
+      "origen": "Nac.",
+      "anio_inicio": 2022,
+      "anio_fin": 2022,
+      "litros": 3.0,
+      "motor": "B58B3001",
+      "bujia_stock": {
+        "tipo": "SILZKG8RE8S",
+        "codigo": 96206
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1156,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Imp.",
+      "anio_inicio": 2003,
+      "anio_fin": 2004,
+      "litros": 2.4,
+      "motor": "2ZR-FE",
+      "bujia_stock": {
+        "tipo": "BKR5EYA-11",
+        "codigo": 2526
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1157,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Imp.",
+      "anio_inicio": 1999,
+      "anio_fin": 2001,
+      "litros": 2.4,
+      "motor": "2ZR-FE",
+      "bujia_stock": {
+        "tipo": "BKR5EYA-11",
+        "codigo": 2526
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1158,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Imp.",
+      "anio_inicio": 1995,
+      "anio_fin": 1998,
+      "litros": 2.4,
+      "motor": "2ZR-FE",
+      "bujia_stock": {
+        "tipo": "BKR5EYA",
+        "codigo": 2087
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX",
+        "codigo": 6341
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5EYA",
+        "codigo": 2087
+      },
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1159,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Imp.",
+      "anio_inicio": 2015,
+      "anio_fin": 2023,
+      "litros": 2.7,
+      "motor": "2TR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1160,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2015,
+      "litros": 2.7,
+      "motor": "2TR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1161,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Imp.",
+      "anio_inicio": 2003,
+      "anio_fin": 2004,
+      "litros": 2.7,
+      "motor": "2TR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1162,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Imp.",
+      "anio_inicio": 1999,
+      "anio_fin": 2000,
+      "litros": 2.7,
+      "motor": "3RZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR5EYA-11",
+        "codigo": 2526
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1163,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Imp.",
+      "anio_inicio": 1999,
+      "anio_fin": 2001,
+      "litros": 2.7,
+      "motor": "3RZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR5EYA",
+        "codigo": 2087
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX",
+        "codigo": 6341
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5EYA",
+        "codigo": 2087
+      },
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1164,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Imp.",
+      "anio_inicio": 2015,
+      "anio_fin": 2023,
+      "litros": 3.4,
+      "motor": "5VZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR5EKB-11",
+        "codigo": 3967
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1165,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Nac.",
+      "anio_inicio": 2020,
+      "anio_fin": 2021,
+      "litros": 3.5,
+      "motor": "2GR-FKS",
+      "bujia_stock": {
+        "tipo": "DILFR6D11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1166,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Imp.",
+      "anio_inicio": 2016,
+      "anio_fin": 2019,
+      "litros": 3.5,
+      "motor": "2GR-FKS",
+      "bujia_stock": {
+        "tipo": "DILFR6D11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1167,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Imp.",
+      "anio_inicio": 2016,
+      "anio_fin": 2019,
+      "litros": 3.5,
+      "motor": "2GR-FXE",
+      "bujia_stock": {
+        "tipo": "DILFR6D11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1168,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2019,
+      "litros": 3.5,
+      "motor": "2GR-FKS",
+      "bujia_stock": {
+        "tipo": "DFH6B-11A",
+        "codigo": 6858
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1169,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Imp.",
+      "anio_inicio": 2007,
+      "anio_fin": 2015,
+      "litros": 4.0,
+      "motor": "1GR-FE",
+      "bujia_stock": {
+        "tipo": "LFR6C-11",
+        "codigo": 5788
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1170,
+      "marca": "Toyota",
+      "modelo": "Tacoma",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2006,
+      "litros": 4.0,
+      "motor": "1GR-FE",
+      "bujia_stock": {
+        "tipo": "LFR6C-11",
+        "codigo": 5788
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1171,
+      "marca": "Toyota",
+      "modelo": "Tundra",
+      "origen": "Imp.",
+      "anio_inicio": 2000,
+      "anio_fin": 2004,
+      "litros": 3.4,
+      "motor": "5VZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR5EKB-11",
+        "codigo": 3967
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1172,
+      "marca": "Toyota",
+      "modelo": "Tundra",
+      "origen": "Imp.",
+      "anio_inicio": 2014,
+      "anio_fin": 2014,
+      "litros": 4.0,
+      "motor": "1GR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR5T11",
+        "codigo": 96779
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR5AIX-11",
+        "codigo": 4469
+      },
+      "bujia_g_power": {
+        "tipo": "LFR5AGP",
+        "codigo": 5018
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1173,
+      "marca": "Toyota",
+      "modelo": "Tundra",
+      "origen": "Imp.",
+      "anio_inicio": 2011,
+      "anio_fin": 2011,
+      "litros": 4.0,
+      "motor": "1GR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1174,
+      "marca": "Toyota",
+      "modelo": "Tundra",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2010,
+      "litros": 4.0,
+      "motor": "1GR-FE",
+      "bujia_stock": {
+        "tipo": "LFR6C-11",
+        "codigo": 5788
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1175,
+      "marca": "Toyota",
+      "modelo": "Tundra",
+      "origen": "Nac./Imp.",
+      "anio_inicio": 2007,
+      "anio_fin": 2007,
+      "litros": 4.0,
+      "motor": "1GR-FE",
+      "bujia_stock": {
+        "tipo": "LFR6C-11",
+        "codigo": 5788
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1176,
+      "marca": "Toyota",
+      "modelo": "Tundra",
+      "origen": "Imp.",
+      "anio_inicio": 2010,
+      "anio_fin": 2014,
+      "litros": 4.6,
+      "motor": "1UR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1177,
+      "marca": "Toyota",
+      "modelo": "Tundra",
+      "origen": "Nac.",
+      "anio_inicio": 2008,
+      "anio_fin": 2009,
+      "litros": 4.7,
+      "motor": "2UZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6E-11",
+        "codigo": 96326
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1178,
+      "marca": "Toyota",
+      "modelo": "Tundra",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2009,
+      "litros": 4.7,
+      "motor": "2UZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR6T11",
+        "codigo": 4589
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX-11",
+        "codigo": 3764
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1179,
+      "marca": "Toyota",
+      "modelo": "Tundra",
+      "origen": "Imp.",
+      "anio_inicio": 2003,
+      "anio_fin": 2004,
+      "litros": 4.7,
+      "motor": "2UZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6EP-8",
+        "codigo": 2215
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX",
+        "codigo": 6418
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6EYA",
+        "codigo": 7990
+      },
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1180,
+      "marca": "Toyota",
+      "modelo": "Tundra",
+      "origen": "Imp.",
+      "anio_inicio": 2000,
+      "anio_fin": 2002,
+      "litros": 4.7,
+      "motor": "2UZ-FE",
+      "bujia_stock": {
+        "tipo": "BKR6EYA",
+        "codigo": null
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR6EIX",
+        "codigo": 6418
+      },
+      "bujia_g_power": {
+        "tipo": "BKR6EGP",
+        "codigo": 7092
+      },
+      "bujia_v_power": {
+        "tipo": "BKR6EYA",
+        "codigo": 7990
+      },
+      "calibracion_pulgadas": 0.032,
+      "calibracion_mm": 0.8
+    },
+    {
+      "id": 1181,
+      "marca": "Toyota",
+      "modelo": "Tundra",
+      "origen": "Nac.",
+      "anio_inicio": 2015,
+      "anio_fin": 2015,
+      "litros": 5.7,
+      "motor": "3UR-FE",
+      "bujia_stock": {
+        "tipo": "DILFRD11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1182,
+      "marca": "Toyota",
+      "modelo": "Tundra",
+      "origen": "Nac.",
+      "anio_inicio": 2007,
+      "anio_fin": 2021,
+      "litros": 5.7,
+      "motor": "3UR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1183,
+      "marca": "Toyota",
+      "modelo": "Tundra",
+      "origen": "Imp.",
+      "anio_inicio": 2005,
+      "anio_fin": 2009,
+      "litros": 5.7,
+      "motor": "3UR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR6T11",
+        "codigo": 4904
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1184,
+      "marca": "Toyota",
+      "modelo": "Venza",
+      "origen": "Imp.",
+      "anio_inicio": 2009,
+      "anio_fin": 2014,
+      "litros": 2.7,
+      "motor": "1AR-FE",
+      "bujia_stock": {
+        "tipo": "ILFR5T11",
+        "codigo": 96779
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR5AIX-11",
+        "codigo": 4469
+      },
+      "bujia_g_power": {
+        "tipo": "LFR5AGP",
+        "codigo": 5018
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1185,
+      "marca": "Toyota",
+      "modelo": "Venza",
+      "origen": "Imp.",
+      "anio_inicio": 2009,
+      "anio_fin": 2014,
+      "litros": 3.5,
+      "motor": "2GRFE",
+      "bujia_stock": {
+        "tipo": "DILFR6D11",
+        "codigo": 6176
+      },
+      "bujia_iridium_ix": {
+        "tipo": "LFR6AIX-11",
+        "codigo": 6619
+      },
+      "bujia_g_power": {
+        "tipo": "LFR6CGP",
+        "codigo": 1483
+      },
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1186,
+      "marca": "Toyota",
+      "modelo": "Yaris",
+      "origen": "Nac.",
+      "anio_inicio": 2023,
+      "anio_fin": 2023,
+      "litros": 1.5,
+      "motor": "2NR-VE",
+      "bujia_stock": {
+        "tipo": "DF6H-11B",
+        "codigo": 95993
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1187,
+      "marca": "Toyota",
+      "modelo": "Yaris",
+      "origen": "Nac.",
+      "anio_inicio": 2022,
+      "anio_fin": 2022,
+      "litros": 1.5,
+      "motor": null,
+      "bujia_stock": {
+        "tipo": "DF6H-11B",
+        "codigo": 95993
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1188,
+      "marca": "Toyota",
+      "modelo": "Yaris",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2020,
+      "litros": 1.5,
+      "motor": "2NR-FE",
+      "bujia_stock": {
+        "tipo": "ILKAR7B11",
+        "codigo": 4912
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1189,
+      "marca": "Toyota",
+      "modelo": "Yaris",
+      "origen": "Nac.",
+      "anio_inicio": 2016,
+      "anio_fin": 2020,
+      "litros": 1.5,
+      "motor": "1NZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR5T11",
+        "codigo": 4996
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1190,
+      "marca": "Toyota",
+      "modelo": "Yaris",
+      "origen": "Imp.",
+      "anio_inicio": 2012,
+      "anio_fin": 2014,
+      "litros": 1.5,
+      "motor": "1NZ-FE",
+      "bujia_stock": {
+        "tipo": "IFR5T11",
+        "codigo": 4996
+      },
+      "bujia_iridium_ix": {
+        "tipo": "BKR5EIX-11",
+        "codigo": 5464
+      },
+      "bujia_g_power": {
+        "tipo": "BKR5EGP",
+        "codigo": 7090
+      },
+      "bujia_v_power": {
+        "tipo": "BKR5E-11",
+        "codigo": 5101
+      },
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    },
+    {
+      "id": 1191,
+      "marca": "Toyota",
+      "modelo": "Yaris R",
+      "origen": "Nac.",
+      "anio_inicio": 2017,
+      "anio_fin": 2020,
+      "litros": 1.5,
+      "motor": "P5",
+      "bujia_stock": {
+        "tipo": "ILKAR7L11",
+        "codigo": 94124
+      },
+      "bujia_iridium_ix": null,
+      "bujia_g_power": null,
+      "bujia_v_power": null,
+      "calibracion_pulgadas": 0.044,
+      "calibracion_mm": 1.1
+    }
+  ],
+  "total_registros": 147
+}

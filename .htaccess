@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Direct root or index.html to dist/index.html
+  RewriteRule ^$ dist/index.html [L]
+  RewriteRule ^index\.html$ dist/index.html [L]
+
+  # 2. If it's already requesting something in dist, do nothing
+  RewriteCond %{REQUEST_URI} ^/dist/ [NC]
+  RewriteRule ^ - [L]
+
+  # 3. If the file exists inside dist/, serve it
+  RewriteCond %{DOCUMENT_ROOT}/dist/$1 -f
+  RewriteRule ^(.*)$ dist/$1 [L]
+
+  # 4. If the request is for a file or directory that exists in the root, serve it directly
+  # (e.g. root level assets, scripts, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 5. Otherwise, rewrite to dist/index.html for React SPA client-side routing
+  RewriteRule ^(.*)$ dist/index.html [L]
+</IfModule>
