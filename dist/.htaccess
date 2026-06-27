@@ -4,7 +4,7 @@
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /dist/index.html [L]
+  RewriteRule . /index.html [L]
 </IfModule>
 
 # Prevent caching of HTML files (so index.html is always fresh and points to new JS/CSS hashes)
