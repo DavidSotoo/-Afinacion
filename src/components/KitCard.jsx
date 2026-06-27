@@ -765,13 +765,20 @@ export default function KitCard({ bujia }) {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '0.4rem' }}>
                       {parts.map((part, pIdx) => (
                         <div key={pIdx} style={{ display: 'flex', flexDirection: 'column', gap: '3px', borderBottom: pIdx < parts.length - 1 ? '1px dashed rgba(255,255,255,0.06)' : 'none', paddingBottom: pIdx < parts.length - 1 ? '6px' : '0' }}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', flexWrap: 'wrap' }}>
-                            <span className="kit-filter-marca" style={{ color: 'var(--primary)', borderColor: 'var(--border-primary)', background: 'var(--primary-glow-sm)', fontSize: '0.55rem', padding: '1px 4px' }}>
-                              DYNAMIC
-                            </span>
-                            <span className="kit-filter-sku-code" style={{ fontFamily: 'var(--mono)', fontSize: '0.75rem', fontWeight: 'bold' }}>
-                              {part.sku_dynamic}
-                            </span>
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.3rem', flexWrap: 'wrap' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                              <span className="kit-filter-marca" style={{ color: 'var(--primary)', borderColor: 'var(--border-primary)', background: 'var(--primary-glow-sm)', fontSize: '0.55rem', padding: '1px 4px' }}>
+                                DYNAMIC
+                              </span>
+                              <span className="kit-filter-sku-code" style={{ fontFamily: 'var(--mono)', fontSize: '0.75rem', fontWeight: 'bold' }}>
+                                {part.sku_dynamic}
+                              </span>
+                            </div>
+                            {part.precio !== undefined && part.precio > 0 && (
+                              <span style={{ fontSize: '0.75rem', color: 'var(--primary)', fontFamily: 'var(--mono)', fontWeight: 'bold' }}>
+                                ${part.precio.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                              </span>
+                            )}
                           </div>
                           <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.62rem', color: 'var(--text-3)', fontFamily: 'var(--mono)', marginTop: '2px' }}>
                             <span>FMSI: {part.fmsi}</span>
