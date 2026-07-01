@@ -10,7 +10,7 @@
  * The balata vc.modelo is already in the canonical form.
  */
 
-/** @type {Record<string, Record<string, string>>} brand → { alias → canonical } */
+/** @type {Record<string, Record<string, string | string[]>>} brand → { alias → canonical } */
 const MODEL_ALIASES = {
   CHEVROLET: {
     // Aveo variants
@@ -40,6 +40,10 @@ const MODEL_ALIASES = {
     'SONIC RS':                 'SONIC',
     // Impala trim
     'IMPALA LIMITED':           'IMPALA',
+    // Lumina / Chevy
+    'LUMINA':                   'LUMINA VAN',
+    'LUMINA APV':               'LUMINA VAN',
+    'CHEVY':                    ['CHEVY MONZA', 'CHEVY PICKUP'],
   },
   NISSAN: {
     // Nismo trims collapse to base
@@ -49,8 +53,8 @@ const MODEL_ALIASES = {
     'KICKS E-POWER':            'KICKS',
     // X-Trail e-Power
     'X-TRAIL E-POWER':          'X-TRAIL',
-    // Z (2023) is the same as 370Z successor — no catalog entry
-    // 200SX covered in older pages — no alias available yet
+    // Frontier
+    'FRONTIER':                 'NP300 FRONTIER',
   },
   VOLKSWAGEN: {
     // GLI variants → base model
@@ -69,6 +73,8 @@ const MODEL_ALIASES = {
     'PASSAT CC':                'CC',
     // Up! — different from "Up" but same entry
     'UP!':                      'UP',
+    // Beetle
+    'BEETLE':                   'BEETLE CABRIO',
   },
   HONDA: {
     // Accord variants
@@ -89,6 +95,8 @@ const MODEL_ALIASES = {
     'HIGHLANDER HYBRID':        'HIGHLANDER',
     '4RUNNER':                  '4RUNNER',
     'FJ CRUISER':               'FJ CRUISER',
+    // Corolla
+    'COROLLA':                  'COROLLA CROSS',
   },
   MAZDA: {
     // Numeric model names in vehiculos DB ('3', '6', '5') map to
@@ -104,6 +112,10 @@ const MODEL_ALIASES = {
     'CX3':                      'CX-3',
     'CX7':                      'CX-7',
     'CX9':                      'CX-9',
+  },
+  FORD: {
+    'E-150 ECONOLINE':          'ECONOLINE',
+    'RANGER':                   'F-100 RANGER',
   },
   DODGE: {
     'GRAND CARAVAN':            'CARAVAN',
@@ -132,8 +144,13 @@ function getCandidateModels(brand, model) {
   const candidates = new Set([modelUpper]);
 
   const aliases = MODEL_ALIASES[brandUpper] || {};
-  if (aliases[modelUpper]) {
-    candidates.add(aliases[modelUpper]);
+  const match = aliases[modelUpper];
+  if (match) {
+    if (Array.isArray(match)) {
+      match.forEach(a => candidates.add(a));
+    } else {
+      candidates.add(match);
+    }
   }
 
   // Secondary strip: remove common trailing descriptors

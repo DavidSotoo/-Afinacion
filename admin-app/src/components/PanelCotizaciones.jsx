@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import api from '../services/api';
-import { Calendar, Trash2, CheckCircle2, XCircle, AlertCircle, ShoppingBag } from 'lucide-react';
+import { Calendar, Trash2, CheckCircle2, XCircle, AlertCircle } from 'lucide-react';
 
 export default function PanelCotizaciones() {
   const [cotizaciones, setCotizaciones] = useState([]);
@@ -8,7 +8,7 @@ export default function PanelCotizaciones() {
   const [error, setError] = useState('');
   const [actionLoading, setActionLoading] = useState(false);
 
-  async function fetchQuotes() {
+  const fetchQuotes = useCallback(async () => {
     try {
       const res = await api.get('/cotizaciones');
       setCotizaciones(res.data || []);
@@ -19,11 +19,19 @@ export default function PanelCotizaciones() {
     } finally {
       setLoading(false);
     }
-  }
+  }, []);
 
   useEffect(() => {
-    fetchQuotes();
-  }, []);
+    let active = true;
+    const load = async () => {
+      await Promise.resolve();
+      if (active) {
+        await fetchQuotes();
+      }
+    };
+    load();
+    return () => { active = false; };
+  }, [fetchQuotes]);
 
   const handleStatusChange = async (id, newStatus) => {
     setActionLoading(true);
@@ -77,7 +85,7 @@ export default function PanelCotizaciones() {
         hour: '2-digit',
         minute: '2-digit'
       });
-    } catch (e) {
+    } catch {
       return dateString;
     }
   };

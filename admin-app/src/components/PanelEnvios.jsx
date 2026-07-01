@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import api from '../services/api';
 import { Calendar, Trash2, CheckCircle2, XCircle, AlertCircle, MapPin, Phone, User, Copy, Check, ExternalLink, Map, Route, ChevronDown, ChevronUp, CheckSquare, Square, Navigation } from 'lucide-react';
 
@@ -47,10 +47,36 @@ export default function PanelEnvios() {
   const envios = cotizaciones.filter(q => q.direccionEnvio && q.direccionEnvio.nombreRecibe);
   const pendingEnvios = envios.filter(q => q.estatus === 'Pendiente' || q.estatus === 'Pagado / Listo para surtir');
 
-  // Auto-select pending envios on load
+  const fetchQuotes = useCallback(async () => {
+    try {
+      const res = await api.get('/cotizaciones');
+      const data = res.data || [];
+      setCotizaciones(data);
+      const ids = data
+        .filter(q => q.direccionEnvio && q.direccionEnvio.nombreRecibe)
+        .filter(q => q.estatus === 'Pendiente' || q.estatus === 'Pagado / Listo para surtir')
+        .map(q => q._id);
+      setSelectedOrderIds(ids);
+      setError('');
+    } catch (err) {
+      console.error("Error loading quotes:", err);
+      setError('Error al conectar con la base de datos para obtener cotizaciones.');
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
   useEffect(() => {
-    setSelectedOrderIds(pendingEnvios.map(q => q._id));
-  }, [cotizaciones]);
+    let active = true;
+    const load = async () => {
+      await Promise.resolve();
+      if (active) {
+        await fetchQuotes();
+      }
+    };
+    load();
+    return () => { active = false; };
+  }, [fetchQuotes]);
 
   async function calculateOptimalRoute() {
     if (selectedOrderIds.length === 0) {
@@ -159,23 +185,6 @@ export default function PanelEnvios() {
     }
   }
 
-  async function fetchQuotes() {
-    try {
-      const res = await api.get('/cotizaciones');
-      setCotizaciones(res.data || []);
-      setError('');
-    } catch (err) {
-      console.error("Error loading quotes:", err);
-      setError('Error al conectar con la base de datos para obtener cotizaciones.');
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    fetchQuotes();
-  }, []);
-
   const handleStatusChange = async (id, newStatus) => {
     setActionLoading(true);
     try {
@@ -238,7 +247,7 @@ export default function PanelEnvios() {
         hour: '2-digit',
         minute: '2-digit'
       });
-    } catch (e) {
+    } catch {
       return dateString;
     }
   };

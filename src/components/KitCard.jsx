@@ -642,18 +642,17 @@ export default function KitCard({ bujia }) {
                     className={`kit-filter-card kit-filter-card--${color}${tienesku ? ' kit-filter-card--confirmed' : ''}`}
                     aria-label={`${label}${filtro?.tipo ? `: ${filtro.tipo}` : ''}`}
                   >
-                    <div className="kit-filter-card-header">
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', flex: 1 }}>
-                        <Icon size={16} aria-hidden="true" className="kit-filter-icon" />
-                        <span className="kit-filter-name">{label}</span>
+                    <div className="kit-filter-top-bar">
+                      <div className="kit-filter-top-left">
+                        <Icon size={18} aria-hidden="true" className="kit-filter-icon" />
+                        <span className="kit-filter-number">{['②','③','④','⑤'][idx]}</span>
+                      </div>
+                      <div className="kit-filter-top-right">
                         {filtro?.sku !== 'SELLADO' && filtro?.costo !== undefined && (
-                          <span style={{ fontSize: '0.65rem', color: 'var(--text-muted, #71717a)', marginLeft: 'auto', marginRight: '4px', fontWeight: 'bold' }}>
+                          <span className="kit-filter-price-tag">
                             ${filtro.costo.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                           </span>
                         )}
-                      </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                        <span className="kit-filter-number">{['②','③','④','⑤'][idx]}</span>
                         <button
                           className="kit-filter-add-btn"
                           onClick={() => addFiltro(bujia, key)}
@@ -662,20 +661,22 @@ export default function KitCard({ bujia }) {
                           style={{
                             background: isFiltroInCart ? 'var(--bg-3)' : 'var(--bg-2)',
                             border: '1px solid var(--border-subtle)',
-                            borderRadius: '4px',
+                            borderRadius: '6px',
                             color: isFiltroInCart ? 'var(--primary)' : 'var(--text-2)',
                             cursor: isFiltroInCart ? 'default' : 'pointer',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            padding: '2px 4px',
+                            padding: '3px 6px',
+                            transition: 'all 0.2s ease',
                           }}
                         >
                           <ShoppingBag size={14} />
-                          <span style={{ fontSize: '0.6rem', marginLeft: '2px' }}>{isFiltroInCart ? '✓' : '+'}</span>
+                          <span style={{ fontSize: '0.65rem', marginLeft: '3px', fontWeight: 'bold' }}>{isFiltroInCart ? '✓' : '+'}</span>
                         </button>
                       </div>
                     </div>
+                    <h4 className="kit-filter-name">{label}</h4>
                     <span className="kit-filter-tipo">{filtro?.tipo}</span>
 
                   {filtro?.sku === 'SELLADO' ? (

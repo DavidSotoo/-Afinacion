@@ -1,0 +1,938 @@
+[
+  {
+    "modelo": "Serie 1",
+    "motor": "N20/CABA",
+    "litros": 2,
+    "anio": "2012-2014",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 110
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A22",
+      "costo": 120
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "FGI-326",
+      "costo": 95
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-2425CA",
+      "costo": 130
+    }
+  },
+  {
+    "modelo": "Serie 1",
+    "motor": "B38B15",
+    "litros": 1.5,
+    "anio": "2015-2021",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-2425CA",
+      "costo": 130
+    }
+  },
+  {
+    "modelo": "Serie 1",
+    "motor": "B48B20",
+    "litros": 2,
+    "anio": "2015-2021",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-2425CA",
+      "costo": 130
+    }
+  },
+  {
+    "modelo": "Serie 2",
+    "motor": "B38B15",
+    "litros": 1.5,
+    "anio": "2014-2022",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-2425CA",
+      "costo": 130
+    }
+  },
+  {
+    "modelo": "Serie 2",
+    "motor": "B48B20",
+    "litros": 2,
+    "anio": "2014-2022",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-2425CA",
+      "costo": 130
+    }
+  },
+  {
+    "modelo": "Serie 2",
+    "motor": "B58B30",
+    "litros": 3,
+    "anio": "2015-2022",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 120
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-105A79",
+      "costo": 140
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-2425CA",
+      "costo": 130
+    }
+  },
+  {
+    "modelo": "Serie 3",
+    "motor": "N20B20-S",
+    "litros": 2,
+    "anio": "2012-2015",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 110
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A22",
+      "costo": 120
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "FGI-326",
+      "costo": 95
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 135
+    }
+  },
+  {
+    "modelo": "Serie 3",
+    "motor": "N20B20",
+    "litros": 2,
+    "anio": "2012-2018",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 110
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A22",
+      "costo": 120
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "FGI-326",
+      "costo": 95
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 135
+    }
+  },
+  {
+    "modelo": "Serie 3",
+    "motor": "B46B20",
+    "litros": 2,
+    "anio": "2016-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 135
+    }
+  },
+  {
+    "modelo": "Serie 3",
+    "motor": "B58B30",
+    "litros": 3,
+    "anio": "2016-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 120
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-105A79",
+      "costo": 140
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 135
+    }
+  },
+  {
+    "modelo": "Serie 3",
+    "motor": "B48B20",
+    "litros": 2,
+    "anio": "2019-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 135
+    }
+  },
+  {
+    "modelo": "Serie 4",
+    "motor": "N20B20",
+    "litros": 2,
+    "anio": "2013-2020",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 110
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A22",
+      "costo": 120
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "FGI-326",
+      "costo": 95
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 135
+    }
+  },
+  {
+    "modelo": "Serie 4",
+    "motor": "B58B30",
+    "litros": 3,
+    "anio": "2016-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 120
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-105A79",
+      "costo": 140
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 135
+    }
+  },
+  {
+    "modelo": "Serie 4",
+    "motor": "B48B20",
+    "litros": 2,
+    "anio": "2020-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 135
+    }
+  },
+  {
+    "modelo": "Serie 5",
+    "motor": "N20B20",
+    "litros": 2,
+    "anio": "2011-2016",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 110
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A22",
+      "costo": 120
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "FGI-326",
+      "costo": 95
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6629CA",
+      "costo": 145
+    }
+  },
+  {
+    "modelo": "Serie 5",
+    "motor": "N55B30",
+    "litros": 3,
+    "anio": "2011-2016",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 120
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-105A79",
+      "costo": 140
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6629CA",
+      "costo": 145
+    }
+  },
+  {
+    "modelo": "Serie 5",
+    "motor": "B46B20",
+    "litros": 2,
+    "anio": "2016-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6629CA",
+      "costo": 145
+    }
+  },
+  {
+    "modelo": "Serie 5",
+    "motor": "B48B20",
+    "litros": 2,
+    "anio": "2017-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6629CA",
+      "costo": 145
+    }
+  },
+  {
+    "modelo": "Serie 5",
+    "motor": "B58B30",
+    "litros": 3,
+    "anio": "2017-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 120
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-105A79",
+      "costo": 140
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6629CA",
+      "costo": 145
+    }
+  },
+  {
+    "modelo": "X1",
+    "motor": "N20B20",
+    "litros": 2,
+    "anio": "2011-2015",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 110
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A22",
+      "costo": 120
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "FGI-326",
+      "costo": 95
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6411CA",
+      "costo": 135
+    }
+  },
+  {
+    "modelo": "X1",
+    "motor": "B38B15",
+    "litros": 1.5,
+    "anio": "2015-2022",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6411CA",
+      "costo": 135
+    }
+  },
+  {
+    "modelo": "X1",
+    "motor": "B48B20",
+    "litros": 2,
+    "anio": "2015-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6411CA",
+      "costo": 135
+    }
+  },
+  {
+    "modelo": "X2",
+    "motor": "B38B15",
+    "litros": 1.5,
+    "anio": "2018-2024",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6411CA",
+      "costo": 135
+    }
+  },
+  {
+    "modelo": "X2",
+    "motor": "B48B20",
+    "litros": 2,
+    "anio": "2018-2024",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6411CA",
+      "costo": 135
+    }
+  },
+  {
+    "modelo": "X3",
+    "motor": "N20B20",
+    "litros": 2,
+    "anio": "2011-2017",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 110
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A22",
+      "costo": 120
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "FGI-326",
+      "costo": 95
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 140
+    }
+  },
+  {
+    "modelo": "X3",
+    "motor": "B48B20",
+    "litros": 2,
+    "anio": "2017-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 140
+    }
+  },
+  {
+    "modelo": "X3",
+    "motor": "B58B30",
+    "litros": 3,
+    "anio": "2018-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 120
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-105A79",
+      "costo": 140
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 140
+    }
+  },
+  {
+    "modelo": "X3",
+    "motor": "B46B20",
+    "litros": 2,
+    "anio": "2019-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 140
+    }
+  },
+  {
+    "modelo": "X4",
+    "motor": "N20B20",
+    "litros": 2,
+    "anio": "2014-2018",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 110
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A22",
+      "costo": 120
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "FGI-326",
+      "costo": 95
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 140
+    }
+  },
+  {
+    "modelo": "X4",
+    "motor": "B48B20",
+    "litros": 2,
+    "anio": "2018-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 140
+    }
+  },
+  {
+    "modelo": "X4",
+    "motor": "B58B30",
+    "litros": 3,
+    "anio": "2018-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 120
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-105A79",
+      "costo": 140
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 140
+    }
+  },
+  {
+    "modelo": "X5",
+    "motor": "N55B30",
+    "litros": 3,
+    "anio": "2013-2018",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 120
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-105A79",
+      "costo": 140
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 140
+    }
+  },
+  {
+    "modelo": "X5",
+    "motor": "B58B30",
+    "litros": 3,
+    "anio": "2018-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 120
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-105A79",
+      "costo": 140
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-6431",
+      "costo": 140
+    }
+  },
+  {
+    "modelo": "Z4",
+    "motor": "B48B20",
+    "litros": 2,
+    "anio": "2019-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-2425CA",
+      "costo": 130
+    }
+  },
+  {
+    "modelo": "Z4",
+    "motor": "B46B20",
+    "litros": 2,
+    "anio": "2019-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-10530",
+      "costo": 115
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-100A05",
+      "costo": 125
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-2425CA",
+      "costo": 130
+    }
+  },
+  {
+    "modelo": "Z4",
+    "motor": "B58B30",
+    "litros": 3,
+    "anio": "2019-2025",
+    "filtro_aceite": {
+      "marca": "INTERFIL",
+      "sku": "OF-9584",
+      "costo": 120
+    },
+    "filtro_aire": {
+      "marca": "INTERFIL",
+      "sku": "F-105A79",
+      "costo": 140
+    },
+    "filtro_gasolina": {
+      "marca": "INTERFIL",
+      "sku": "SELLADO",
+      "costo": 0
+    },
+    "filtro_cabina": {
+      "marca": "INTERFIL",
+      "sku": "CFI-2425CA",
+      "costo": 130
+    }
+  }
+]
