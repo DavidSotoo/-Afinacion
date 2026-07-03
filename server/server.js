@@ -12,6 +12,7 @@ const filtrosRoutes      = require('./routes/filtros');
 const balatasRoutes      = require('./routes/balatas');
 const bujiasRoutes       = require('./routes/bujias');
 const productosRoutes    = require('./routes/productos');
+const kitsRoutes         = require('./routes/kits');
 
 const helmet = require('helmet');
 
@@ -79,6 +80,7 @@ app.use('/api/filtros',      filtrosRoutes);
 app.use('/api/balatas',      balatasRoutes);
 app.use('/api/bujias',       bujiasRoutes);
 app.use('/api/productos',    productosRoutes);
+app.use('/api/kits',         kitsRoutes);
 
 const PORT = process.env.PORT || 5000;
 

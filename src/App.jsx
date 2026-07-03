@@ -78,6 +78,19 @@ function App() {
       });
   }, []);
 
+  // Load search from query parameters if present on mount (e.g. redirected from 404 page)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const marca = params.get('marca');
+    const modelo = params.get('modelo');
+    const anio = params.get('anio');
+    if (marca && modelo) {
+      handleSearch({ marca, modelo, anio: anio ? parseInt(anio, 10) : null });
+      // Clean up search query parameters so reloading doesn't lock it
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }, [handleSearch]);
+
   /** Clear results and reset UI to initial state. */
   const handleReset = useCallback(() => {
     setFilteredResults([]);

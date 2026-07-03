@@ -85,13 +85,6 @@ const SERVICES_OPTIONS = [
   }
 ];
 
-const detectCardBrand = (number) => {
-  const cleanNumber = number.replace(/\D/g, '');
-  if (cleanNumber.startsWith('4')) return 'visa';
-  if (/^5[1-5]/.test(cleanNumber) || /^2[2-7]/.test(cleanNumber)) return 'mastercard';
-  if (/^3[47]/.test(cleanNumber)) return 'amex';
-  return 'unknown';
-};
 
 /* ─── WhatsApp message builder ────────────────────────────────────────────── */
 
@@ -254,7 +247,15 @@ export default function Checkout() {
   const [selectedDelivery, setSelectedDelivery] = useState('local');
   const [selectedPayment, setSelectedPayment] = useState('tarjeta');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errorMsg, setErrorMsg] = useState(null);
+  const [errorMsg, setErrorMsg] = useState(() => {
+    if (paymentStatus === 'rejected') {
+      return `El pago de tu cotización #${paymentFolio} fue rechazado o cancelado. Por favor, intenta de nuevo.`;
+    }
+    if (paymentStatus === 'pending') {
+      return `El pago de tu cotización #${paymentFolio} está pendiente. Te confirmaremos en cuanto Mercado Pago lo procese.`;
+    }
+    return null;
+  });
 
   // Datos del cliente (obligatorios para TODOS los métodos de entrega)
   const [datosCliente, setDatosCliente] = useState({
@@ -276,22 +277,14 @@ export default function Checkout() {
   });
 
   // States for payment methods
-  const [cardName, setCardName] = useState('');
-  const [cardNumber, setCardNumber] = useState('');
-  const [cardExpiry, setCardExpiry] = useState('');
-  const [cardCvv, setCardCvv] = useState('');
   const [cashPaidWith, setCashPaidWith] = useState('');
   const [copiedStatus, setCopiedStatus] = useState(null); // 'clabe' | 'tarjeta' | null
 
   useEffect(() => {
     if (paymentStatus === 'approved') {
       clearCart();
-    } else if (paymentStatus === 'rejected') {
-      setErrorMsg(`El pago de tu cotización #${paymentFolio} fue rechazado o cancelado. Por favor, intenta de nuevo.`);
-    } else if (paymentStatus === 'pending') {
-      setErrorMsg(`El pago de tu cotización #${paymentFolio} está pendiente. Te confirmaremos en cuanto Mercado Pago lo procese.`);
     }
-  }, [paymentStatus, paymentFolio, clearCart]);
+  }, [paymentStatus, clearCart]);
 
   const handleCopy = (text, type) => {
     try {
@@ -305,28 +298,6 @@ export default function Checkout() {
     }
   };
 
-  const handleCardNumberChange = (e) => {
-    let val = e.target.value.replace(/\D/g, '');
-    if (val.length > 16) val = val.slice(0, 16);
-    const formatted = val.replace(/(\d{4})(?=\d)/g, '$1 ');
-    setCardNumber(formatted);
-  };
-
-  const handleCardExpiryChange = (e) => {
-    let val = e.target.value.replace(/\D/g, '');
-    if (val.length > 4) val = val.slice(0, 4);
-    if (val.length > 2) {
-      val = `${val.slice(0, 2)}/${val.slice(2)}`;
-    }
-    setCardExpiry(val);
-  };
-
-  const handleCardCvvChange = (e) => {
-    let val = e.target.value.replace(/\D/g, '');
-    const maxLen = detectCardBrand(cardNumber) === 'amex' ? 4 : 3;
-    if (val.length > maxLen) val = val.slice(0, maxLen);
-    setCardCvv(val);
-  };
 
   const serviceCost = useMemo(() => {
     switch (servicioTaller) {

@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ShoppingCart, Droplet, Wind } from 'lucide-react';
 import { useCart }         from '../context/CartContext';
@@ -69,7 +70,9 @@ export default function ProductCard({ bujia, tipoLinea }) {
         ⚡ BUJÍA NGK {label.toUpperCase()}
       </div>
 
-      <h3 className="card-model">{bujia.marca} {bujia.modelo}</h3>
+      <Link to={`/producto/${bujia.id}`} className="card-model-link">
+        <h3 className="card-model">{bujia.marca} {bujia.modelo}</h3>
+      </Link>
       <p className="card-engine">
         {bujia.cilindros_config} {bujia.litros}L — {bujia.motor || '—'} · {bujia.origen}
       </p>
