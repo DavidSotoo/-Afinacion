@@ -32,11 +32,13 @@ La parte más difícil del proyecto es el motor de filtrado de compatibilidad ve
 | <img width="1885" height="927" alt="image" src="https://github.com/user-attachments/assets/916fd4ab-14b7-4536-92b6-8c95a38b89b4" />
 
 
-| Carrito | Checkout |
-|---|---|
+| Carrito |
+|---|
 | <img width="1895" height="944" alt="image" src="https://github.com/user-attachments/assets/4f040a61-8b97-46a7-a2a7-31f58b6a3b4e" />
+
+| Checkout |
+|---|
  | <img width="1885" height="942" alt="image" src="https://github.com/user-attachments/assets/c24b6c2e-75db-4f87-b698-4c8895a93a76" />
- |
 
 ## Instalación
 
