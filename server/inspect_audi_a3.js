@@ -1,8 +1,9 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 const Vehiculo = require('./models/Vehiculo');
 const { enrichVehiculosWithPrices } = require('./lib/pricingHelpers');
 
-mongoose.connect("mongodb+srv://taskflowUser:REDACTED_PASSWORD@cluster0.adtp9yw.mongodb.net/?appName=Cluster0")
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGO_URI)
   .then(async () => {
     const v = await Vehiculo.findOne({ modelo: /A3/i });
     if (v) {

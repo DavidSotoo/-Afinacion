@@ -1,7 +1,8 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 const Vehiculo = require('./models/Vehiculo');
 
-mongoose.connect(process.env.MONGO_URI || "mongodb+srv://taskflowUser:REDACTED_PASSWORD@cluster0.adtp9yw.mongodb.net/?appName=Cluster0")
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGO_URI)
   .then(async () => {
     const v = await Vehiculo.findOne({ kit_afinacion: { $ne: null } });
     if (v) {
