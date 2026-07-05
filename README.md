@@ -26,7 +26,8 @@ La parte más difícil del proyecto es el motor de filtrado de compatibilidad ve
 | Catálogo | Ficha de producto |
 |---|---|
 | <img width="1889" height="936" alt="image" src="https://github.com/user-attachments/assets/9ba7ff70-988c-4798-9424-0815c21e2c26" />
- | _(agregar imagen)_ |
+ | <img width="1885" height="927" alt="image" src="https://github.com/user-attachments/assets/916fd4ab-14b7-4536-92b6-8c95a38b89b4" />
+ |
 
 | Carrito | Checkout |
 |---|---|
