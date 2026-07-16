@@ -3,76 +3,82 @@ const router = express.Router();
 const Cotizacion = require('../models/Cotizacion');
 
 // @route   POST api/webhooks/mercadopago
-// @desc    Listen to Mercado Pago notifications
+// @desc    Recibe notificaciones de Mercado Pago sobre el estado de los pagos
+// @security Mercado Pago firma las notificaciones con x-signature — validar en producción
 router.post('/mercadopago', async (req, res) => {
   try {
+    // MP envía el ID del pago en body.data.id o como query param
     const paymentId = req.body?.data?.id || req.query?.id || req.body?.id;
-    const topic = req.body?.type || req.query?.topic;
+    const topic     = req.body?.type    || req.query?.topic;
 
-    console.log(`[Webhook Mercado Pago] Recibido evento. ID Pago: ${paymentId}, Topic/Type: ${topic}`);
+    // Log de diagnóstico (sin incluir tokens ni datos sensibles)
+    console.log(`[Webhook MP] Evento recibido | ID Pago: ${paymentId} | Tipo: ${topic} | Action: ${req.body?.action}`);
 
-    if (paymentId && (topic === 'payment' || req.body?.action === 'payment.created')) {
-      const mpAccessToken = process.env.MERCADOPAGO_ACCESS_TOKEN || 'TEST-YOUR-PROD-ACCESS-TOKEN-HERE';
-      
-      let status = 'pending';
-      let folio = null;
-      let paymentData = {};
+    // Solo procesamos notificaciones de pagos
+    const isPaymentEvent = topic === 'payment' || req.body?.action === 'payment.created' || req.body?.action === 'payment.updated';
 
-      if (paymentId.toString().startsWith('TEST-')) {
-        status = req.body?.status || 'approved';
-        folio = req.body?.external_reference || req.query?.external_reference;
-        paymentData = {
-          payment_method_id: 'card',
-          payment_type_id: 'credit_card',
-          transaction_amount: 0,
-          date_approved: new Date().toISOString()
-        };
-        console.log(`[Webhook] Bypass de prueba local detectado. Estado simulado: ${status}, Folio: ${folio}`);
-      } else {
-        const mpRes = await fetch(`https://api.mercadopago.com/v1/payments/${paymentId}`, {
-          headers: {
-            'Authorization': `Bearer ${mpAccessToken}`
-          }
-        });
-
-        if (!mpRes.ok) {
-          console.error(`[Webhook] Error al consultar pago ${paymentId} en Mercado Pago: ${mpRes.statusText}`);
-          return res.status(200).send('Event received but MP API fetch failed');
-        }
-
-        paymentData = await mpRes.json();
-        status = paymentData.status; // e.g., 'approved'
-        folio = paymentData.external_reference; // We stored folio here
-      }
-
-      console.log(`[Webhook] Estado del pago ${paymentId}: ${status}. Folio cotización: ${folio}`);
-
-      if (status === 'approved' && folio) {
-        const cotizacion = await Cotizacion.findOne({ folio });
-        if (cotizacion) {
-          cotizacion.estatus = 'Pagado / Listo para surtir';
-          cotizacion.detallesPago = {
-            ...(cotizacion.detallesPago || {}),
-            statusMercadoPago: status,
-            paymentId: paymentId,
-            metodoPagoUsado: paymentData.payment_method_id,
-            tipoPagoUsado: paymentData.payment_type_id,
-            montoPagado: paymentData.transaction_amount,
-            fechaAprobacion: paymentData.date_approved
-          };
-          await cotizacion.save();
-          console.log(`[Webhook] Cotización #${folio} marcada como Pagada.`);
-        } else {
-          console.warn(`[Webhook] No se encontró la cotización con Folio #${folio}`);
-        }
-      }
+    if (!paymentId || !isPaymentEvent) {
+      // Otros tipos de notificación (suscripciones, preferencias) — ACK y seguir
+      return res.status(200).send('OK - event type not handled');
     }
 
+    const mpAccessToken = process.env.MERCADOPAGO_ACCESS_TOKEN;
+    if (!mpAccessToken) {
+      console.error('[Webhook MP] MERCADOPAGO_ACCESS_TOKEN no configurado en variables de entorno');
+      return res.status(200).send('Internal configuration error - acknowledged');
+    }
+
+    // Consultar el estado real del pago contra la API de Mercado Pago
+    const mpRes = await fetch(`https://api.mercadopago.com/v1/payments/${paymentId}`, {
+      headers: {
+        'Authorization': `Bearer ${mpAccessToken}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!mpRes.ok) {
+      console.error(`[Webhook MP] Error al consultar pago ${paymentId}: HTTP ${mpRes.status} ${mpRes.statusText}`);
+      // Respondemos 200 para que MP no reintente indefinidamente por errores transitorios
+      return res.status(200).send('MP API fetch failed - acknowledged');
+    }
+
+    const paymentData = await mpRes.json();
+    const status = paymentData.status;               // 'approved', 'rejected', 'pending', etc.
+    const folio  = paymentData.external_reference;   // folio de la cotización que guardamos al crear la preferencia
+
+    console.log(`[Webhook MP] Pago ${paymentId} | Estado: ${status} | Folio cotización: ${folio}`);
+
+    if (status === 'approved' && folio) {
+      const cotizacion = await Cotizacion.findOne({ folio });
+
+      if (cotizacion) {
+        cotizacion.estatus = 'Pagado / Listo para surtir';
+        cotizacion.detallesPago = {
+          ...(cotizacion.detallesPago || {}),
+          statusMercadoPago: status,
+          paymentId: String(paymentId),
+          metodoPagoUsado: paymentData.payment_method_id,
+          tipoPagoUsado:   paymentData.payment_type_id,
+          montoPagado:     paymentData.transaction_amount,
+          fechaAprobacion: paymentData.date_approved,
+          installments:    paymentData.installments || 1
+        };
+        await cotizacion.save();
+        console.log(`[Webhook MP] ✅ Cotización #${folio} marcada como Pagada | Monto: $${paymentData.transaction_amount}`);
+      } else {
+        console.warn(`[Webhook MP] ⚠️  No se encontró cotización con folio #${folio}`);
+      }
+    } else if (status === 'rejected') {
+      console.log(`[Webhook MP] ❌ Pago ${paymentId} rechazado — folio ${folio} sin cambios`);
+    }
+
+    // SIEMPRE responder 200 a MP para evitar reintentos innecesarios
     res.status(200).send('OK');
 
   } catch (err) {
-    console.error('[Webhook Mercado Pago] Error:', err.message);
-    res.status(200).send('Internal error but acknowledged'); // Returning 200 so MP doesn't retry infinitely on schema errors
+    console.error('[Webhook MP] Error interno:', err.message);
+    // 200 intencional: si devolvemos 5xx, MP reintentará agresivamente
+    res.status(200).send('Internal error - acknowledged');
   }
 });
 

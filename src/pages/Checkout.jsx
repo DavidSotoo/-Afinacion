@@ -27,6 +27,11 @@ import {
   Phone,
   Mail,
   FileText,
+  Store,
+  Landmark,
+  Banknote,
+  Settings,
+  Gem
 } from 'lucide-react';
 import {
   WHATSAPP_NUMBER,
@@ -235,6 +240,26 @@ function buildConsolidatedMessage(items, deliveryOpt, paymentOpt, shipping, gran
 }
 
 /* ─── Checkout Page Component ─────────────────────────────────────────────── */
+
+const DELIVERY_ICONS = {
+  local: <Store size={20} className="text-primary" />,
+  zmg: <Truck size={20} className="text-primary" />,
+  foraneo: <Truck size={20} className="text-primary" />
+};
+
+const PAYMENT_ICONS = {
+  tarjeta: <CreditCard size={20} className="text-primary" />,
+  transferencia: <Landmark size={20} className="text-primary" />,
+  deposito: <Banknote size={20} className="text-primary" />,
+  efectivo: <Banknote size={20} className="text-primary" />
+};
+
+const SERVICES_ICONS = {
+  ninguno: <Package size={20} className="text-primary" />,
+  basico: <Wrench size={20} className="text-primary" />,
+  medio: <Settings size={20} className="text-primary" />,
+  completo: <Gem size={20} className="text-primary" />
+};
 
 export default function Checkout() {
   const navigate = useNavigate();
@@ -624,8 +649,8 @@ export default function Checkout() {
             <div className="w-full flex flex-col gap-3">
               <button
                 onClick={handleSendWhatsAppSuccess}
-                className="w-full bg-[#62A81D] hover:bg-[#4e8717] text-white font-bold py-3.5 px-6 uppercase tracking-wider text-xs flex items-center justify-center gap-2.5 transition-all cursor-pointer shadow-md select-none"
-                style={{ border: 'none', clipPath: 'polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%)' }}
+                className="w-full bg-[#62A81D] hover:bg-[#4e8717] text-white font-bold py-3.5 px-6 uppercase tracking-wider text-xs flex items-center justify-center gap-2.5 transition-all cursor-pointer shadow-md select-none rounded-sm"
+                style={{ border: 'none' }}
               >
                 <MessageCircle size={16} />
                 Enviar Confirmación por WhatsApp
@@ -659,8 +684,7 @@ export default function Checkout() {
           </p>
           <button
             onClick={() => navigate('/catalogo')}
-            className="bg-[#62A81D] hover:bg-[#4e8717] text-white font-bold py-2.5 px-6 uppercase tracking-wider text-xs flex items-center gap-2 transition-all cursor-pointer shadow-md"
-            style={{ clipPath: 'polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%)' }}
+            className="bg-[#62A81D] hover:bg-[#4e8717] text-white font-bold py-2.5 px-6 uppercase tracking-wider text-xs flex items-center gap-2 transition-all cursor-pointer shadow-md rounded-sm"
           >
             Ir al catálogo
           </button>
@@ -807,7 +831,7 @@ export default function Checkout() {
                         className="sr-only"
                       />
                       
-                      <div className="text-xl flex-shrink-0">{opt.icon}</div>
+                      <div className="text-xl flex-shrink-0 flex items-center justify-center w-8 h-8">{DELIVERY_ICONS[opt.id]}</div>
                       
                       <div className="flex-1">
                         <span className="block font-bold text-sm text-[var(--text)]">{opt.label}</span>
@@ -1007,7 +1031,7 @@ export default function Checkout() {
                       />
                       
                       <div className="flex items-center gap-3">
-                        <span className="text-lg">{pm.icon}</span>
+                        <span className="text-lg flex items-center justify-center w-6 h-6">{PAYMENT_ICONS[pm.id]}</span>
                         <span className="font-bold text-xs text-[var(--text)] uppercase tracking-wider">{pm.label}</span>
                       </div>
  
@@ -1041,12 +1065,12 @@ export default function Checkout() {
                       
                       <div className="grid grid-cols-2 gap-3 pt-2">
                         <div className="p-3 bg-[var(--bg-3)] border border-[var(--border)] flex flex-col items-center justify-center text-center">
-                          <span className="text-lg">💳</span>
+                          <span className="text-lg"><CreditCard size={18} className="text-primary" /></span>
                           <span className="font-bold text-[10px] text-[var(--text)] uppercase tracking-wider mt-1">Tarjetas</span>
                           <span className="text-[9px] text-[var(--text-3)] mt-0.5">Crédito y Débito</span>
                         </div>
                         <div className="p-3 bg-[var(--bg-3)] border border-[var(--border)] flex flex-col items-center justify-center text-center">
-                          <span className="text-lg">🏪</span>
+                          <span className="text-lg"><Store size={18} className="text-primary" /></span>
                           <span className="font-bold text-[10px] text-[var(--text)] uppercase tracking-wider mt-1">Efectivo</span>
                           <span className="text-[9px] text-[var(--text-3)] mt-0.5">OXXO y Bancos</span>
                         </div>
@@ -1208,7 +1232,7 @@ export default function Checkout() {
                         className="sr-only"
                       />
                       
-                      <div className="text-xl flex-shrink-0">{opt.icon}</div>
+                      <div className="text-xl flex-shrink-0 flex items-center justify-center w-8 h-8">{SERVICES_ICONS[opt.id]}</div>
                       
                       <div className="flex-1">
                         <span className="block font-bold text-sm text-white">{opt.label}</span>
@@ -1332,8 +1356,8 @@ export default function Checkout() {
                 <button
                   disabled={isSubmitting}
                   onClick={handleConfirmarPedido}
-                  className="w-full bg-[#62A81D] hover:bg-[#4e8717] disabled:opacity-55 text-white font-bold py-3.5 px-6 uppercase tracking-wider text-sm flex items-center justify-center gap-2.5 transition-all cursor-pointer shadow-lg active:scale-[0.98] select-none"
-                  style={{ border: 'none', clipPath: 'polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%)' }}
+                  className="w-full bg-[#62A81D] hover:bg-[#4e8717] disabled:opacity-55 text-white font-bold py-3.5 px-6 uppercase tracking-wider text-sm flex items-center justify-center gap-2.5 transition-all cursor-pointer shadow-lg active:scale-[0.98] select-none rounded-sm"
+                  style={{ border: 'none' }}
                 >
                   {selectedPayment === 'tarjeta' ? <CreditCard size={16} /> : <MessageCircle size={16} />}
                   {isSubmitting 
