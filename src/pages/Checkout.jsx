@@ -597,9 +597,15 @@ export default function Checkout() {
         }
 
         const mpData = await mpRes.json();
-        
-        // Redirect user to Mercado Pago checkout
-        window.location.href = mpData.sandbox_init_point || mpData.init_point;
+
+        // Redirigir al checkout de Mercado Pago.
+        // En desarrollo usamos sandbox_init_point (tarjetas de prueba).
+        // En producción usamos init_point (cobro real).
+        // El entorno se controla desde .env con VITE_NODE_ENV — sin tocar código.
+        const isProduction = import.meta.env.VITE_NODE_ENV === 'production';
+        window.location.href = isProduction
+          ? (mpData.init_point || mpData.sandbox_init_point)
+          : (mpData.sandbox_init_point || mpData.init_point);
       } else {
         // Direct WhatsApp order for offline payments
         const targetUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -656,6 +662,71 @@ export default function Checkout() {
                 Enviar Confirmación por WhatsApp
               </button>
               
+              <button
+                onClick={() => {
+                  safeLocalStorage.removeItem('mas_afinacion_last_order_msg');
+                  navigate('/catalogo');
+                }}
+                className="w-full bg-transparent border border-gray-800 hover:border-gray-700 text-gray-500 hover:text-white font-mono text-[10px] py-2.5 uppercase tracking-wider transition-colors cursor-pointer"
+              >
+                Volver al Catálogo
+              </button>
+            </div>
+          </div>
+        </main>
+      </>
+    );
+  }
+
+  if (paymentStatus === 'pending') {
+    return (
+      <>
+        <Header />
+        <main className="page flex flex-col items-center justify-center text-center px-4 py-20" style={{ minHeight: '75vh' }}>
+          <div className="bg-[var(--bg-1)] border border-[var(--border-primary)] border-t-4 border-t-yellow-500 p-8 md:p-12 max-w-xl w-full shadow-2xl relative overflow-hidden text-center flex flex-col items-center">
+            {/* Clock icon */}
+            <div className="w-16 h-16 rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#EAB308" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+
+            <h1 className="font-display font-extrabold text-2xl md:text-3xl uppercase tracking-wider text-[var(--text)] mb-2">
+              Pago Pendiente
+            </h1>
+            <p className="text-yellow-500 font-mono text-sm font-bold uppercase tracking-wider mb-6">
+              Folio: #{paymentFolio}
+            </p>
+
+            <p className="text-[var(--text-2)] text-sm font-mono leading-relaxed mb-8">
+              Tu pago está siendo procesado por Mercado Pago. Esto puede tardar unos minutos.
+              Recibirás una confirmación en cuanto sea aprobado. No es necesario volver a pagar.
+            </p>
+
+            <div className="w-full bg-yellow-500/5 border border-yellow-500/20 p-4 mb-6 text-left">
+              <p className="text-yellow-400 font-mono text-xs leading-relaxed">
+                💡 Si pagaste con transferencia bancaria o efectivo en Oxxo, el tiempo de acreditación
+                puede ser de algunas horas. Te notificaremos por WhatsApp en cuanto se confirme.
+              </p>
+            </div>
+
+            <div className="w-full flex flex-col gap-3">
+              <button
+                onClick={() => {
+                  const lastMsg = safeLocalStorage.getItem('mas_afinacion_last_order_msg') || '';
+                  const finalMsg = `[PAGO PENDIENTE - FOLIO #${paymentFolio}]\n\n` + lastMsg;
+                  const targetUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(finalMsg)}`;
+                  window.open(targetUrl, '_blank', 'noopener,noreferrer');
+                  safeLocalStorage.removeItem('mas_afinacion_last_order_msg');
+                }}
+                className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3.5 px-6 uppercase tracking-wider text-xs flex items-center justify-center gap-2.5 transition-all cursor-pointer shadow-md select-none rounded-sm"
+                style={{ border: 'none' }}
+              >
+                <MessageCircle size={16} />
+                Notificar por WhatsApp
+              </button>
+
               <button
                 onClick={() => {
                   safeLocalStorage.removeItem('mas_afinacion_last_order_msg');

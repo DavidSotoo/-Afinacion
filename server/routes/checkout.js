@@ -62,8 +62,10 @@ router.post('/create-preference', async (req, res) => {
         failure: `${frontendUrl}/checkout?status=rejected&folio=${folioRef}`,
         pending: `${frontendUrl}/checkout?status=pending&folio=${folioRef}`
       },
-      // Redirige automáticamente al back_url de éxito sin necesidad de clic
-      auto_return: 'approved',
+      // NOTA: auto_return omitido intencionalmente.
+      // MP requiere HTTPS público para auto_return. En sandbox/localhost
+      // el usuario regresa al sitio usando el botón "Volver" de la página de MP.
+      // En producción con HTTPS real se puede re-habilitar: auto_return: 'approved'
       // Referencia interna para identificar la cotización en el webhook
       external_reference: folioRef,
       // Webhook: Mercado Pago notifica aquí aunque el usuario cierre el browser

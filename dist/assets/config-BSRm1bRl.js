@@ -1,1 +1,0 @@
-var e=`https://afinacion-backend.onrender.com`;export{e as t};
