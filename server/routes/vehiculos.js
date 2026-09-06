@@ -2062,4 +2062,5 @@ router.syncHondaAireJoe               = syncHondaAireJoe;
 router.syncToyotaAireJoe              = syncToyotaAireJoe;
 router.syncMazdaAireJoe               = syncMazdaAireJoe;
 router.invalidatePriceCache           = invalidatePriceCache;
+router.enrichVehiculosWithPrices      = enrichVehiculosWithPrices;
 module.exports = router;

@@ -542,6 +542,8 @@ export default function Checkout() {
         servicioTaller,
         metodoPago: selectedPayment,
         detallesPago,
+        rawItems: items,
+        deliveryId: selectedDelivery,
         direccionEnvio: (selectedDelivery === 'zmg' || selectedDelivery === 'foraneo') ? datosEnvio : null,
         datosCliente: {
           nombre: datosCliente.nombre.trim(),

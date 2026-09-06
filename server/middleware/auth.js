@@ -22,7 +22,9 @@ module.exports = function(req, res, next) {
     if (!secret) {
       return res.status(500).json({ ok: false, message: 'Falta configurar JWT_SECRET en las variables de entorno.' });
     }
-    const decoded = jwt.verify(token, secret);
+    // SEC-01: Force HS256 algorithm to prevent alg:none JWT attack.
+    // Without this, a forged token with alg:"none" would pass verification.
+    const decoded = jwt.verify(token, secret, { algorithms: ['HS256'] });
     req.user = decoded;
     next();
   } catch (err) {

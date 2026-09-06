@@ -15,6 +15,7 @@ const productosRoutes    = require('./routes/productos');
 const kitsRoutes         = require('./routes/kits');
 
 const helmet = require('helmet');
+const { xssMiddleware, mongoSanitizeMiddleware } = require('./middleware/security');
 
 const app = express();
 
@@ -65,6 +66,11 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use(express.json({ limit: '50mb' }));
+
+// SEC-03: Sanitize all incoming request inputs globally.
+// xss-clean strips XSS payloads; mongoSanitize blocks NoSQL operator injection.
+app.use(xssMiddleware);
+app.use(mongoSanitizeMiddleware);
 
 // Health-check endpoint — used by warm-up pings to avoid consuming API rate-limit quota
 app.get('/health', (req, res) => {

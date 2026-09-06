@@ -30,16 +30,19 @@ router.post('/create-preference', async (req, res) => {
       return res.status(400).json({ error: 'Falta el ID de la cotización' });
     }
 
-    // Validate quote against database to prevent pricing fraud
+    // SEC-02: Never trust the price sent by the client.
+    // Fetch the authoritative total from the database record.
     const cotizacion = await Cotizacion.findById(cotizacionId);
     if (!cotizacion) {
       return res.status(404).json({ error: 'Cotización no encontrada' });
     }
 
-    const total = parseFloat(totalCart);
-    if (isNaN(total) || total <= 0) {
-      return res.status(400).json({ error: 'El total de la compra no es válido' });
+    // Use the server-stored total ONLY.
+    // We removed the totalCart fallback because it allowed price manipulation.
+    if (!cotizacion.totalFinal || cotizacion.totalFinal <= 0) {
+      return res.status(400).json({ error: 'La cotización no tiene un total válido calculado por el servidor.' });
     }
+    const total = cotizacion.totalFinal;
 
     // Build dynamic URLs from environment variables — NEVER hardcoded
     const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';

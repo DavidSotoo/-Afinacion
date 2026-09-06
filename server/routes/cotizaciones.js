@@ -39,10 +39,23 @@ async function generarFolioUnico() {
 // @desc    Crear una nueva cotización y generar folio
 router.post('/', cotizacionLimiter, async (req, res) => {
   try {
-    const { vehiculo, tipoBujia, bujiaSku, piezas, aceite, servicioTaller, metodoPago, detallesPago, direccionEnvio } = req.body;
+    const { vehiculo, tipoBujia, bujiaSku, piezas, aceite, servicioTaller, metodoPago, detallesPago, direccionEnvio, rawItems, deliveryId } = req.body;
     
     if (!vehiculo || !vehiculo.marca || !vehiculo.modelo) {
       return res.status(400).json({ error: 'Falta información esencial del vehículo' });
+    }
+
+    // Calcular el precio real desde la BD, verificando el carrito
+    const { calcularTotalDesdeCartSecure } = require('../lib/pricingEngine');
+    let totalFinal = 0;
+    try {
+      if (rawItems && rawItems.length > 0) {
+        const result = await calcularTotalDesdeCartSecure(rawItems, deliveryId, servicioTaller);
+        totalFinal = result.total;
+      }
+    } catch (pricingError) {
+      console.error('Error calculando precio seguro:', pricingError.message);
+      return res.status(400).json({ error: 'Error verificando los precios del carrito. Por favor recarga la página e intenta de nuevo.' });
     }
 
     // Validate shipping address if provided
@@ -86,7 +99,8 @@ router.post('/', cotizacionLimiter, async (req, res) => {
       servicioTaller,
       metodoPago,
       detallesPago,
-      direccionEnvio
+      direccionEnvio,
+      totalFinal
     });
 
     const guardada = await nuevaCotizacion.save();
@@ -114,7 +128,7 @@ router.get('/', auth, async (req, res) => {
 router.put('/:id/status', auth, async (req, res) => {
   try {
     const { estatus } = req.body;
-    if (!['Pendiente', 'Atendida', 'Cancelada', 'Pagado / Listo para surtir'].includes(estatus)) {
+    if (!['Pendiente', 'Atendida', 'Cancelada', 'Pagado / Listo para surtir', 'Pago Pendiente (MP)', 'En Disputa (MP)'].includes(estatus)) {
       return res.status(400).json({ error: 'Estatus no válido' });
     }
 

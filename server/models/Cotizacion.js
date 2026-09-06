@@ -38,7 +38,14 @@ const CotizacionSchema = new mongoose.Schema({
   },
   estatus: {
     type: String,
-    enum: ['Pendiente', 'Atendida', 'Cancelada', 'Pagado / Listo para surtir'],
+    enum: [
+      'Pendiente',
+      'Atendida',
+      'Cancelada',
+      'Pagado / Listo para surtir',
+      'Pago Pendiente (MP)',
+      'En Disputa (MP)'
+    ],
     default: 'Pendiente'
   },
   servicioTaller: {
@@ -57,6 +64,10 @@ const CotizacionSchema = new mongoose.Schema({
   direccionEnvio: {
     type: Object,
     default: null
+  },
+  totalFinal: {
+    type: Number,
+    default: 0
   },
   fecha: {
     type: Date,
