@@ -20,11 +20,56 @@ function getMPClient() {
   return new Preference(client);
 }
 
+/**
+ * HAL-05: Verifica si una preferencia de MP existente sigue vigente.
+ * Devuelve { valid: true, preference } si no ha expirado,
+ * o { valid: false } si expiró o no se pudo leer.
+ *
+ * Notas sobre expiración:
+ * - Nuestras preferencias incluyen `expiration_date_to: +24h` al crearlas.
+ * - MP también tiene una expiración default si no se configura (normalmente 30 días),
+ *   pero nosotros siempre la configuramos explícitamente en 24h.
+ * - Este check recupera la preferencia de la API de MP y compara `expiration_date_to`
+ *   con el momento actual. Si ya pasó, se crea una preferencia nueva.
+ *
+ * @param {string} preferenceId  — ID de la preferencia guardado en la cotización
+ */
+async function checkExistingPreference(preferenceId) {
+  try {
+    const preferenceClient = getMPClient();
+    const pref = await preferenceClient.get({ preferenceId });
+
+    // Si la preferencia tiene fecha de expiración, verificarla
+    if (pref.expiration_date_to) {
+      const expiresAt = new Date(pref.expiration_date_to);
+      if (expiresAt <= new Date()) {
+        console.log(`[Checkout] Preferencia ${preferenceId} expiró el ${expiresAt.toISOString()} — se creará una nueva.`);
+        return { valid: false };
+      }
+    }
+
+    // Vigente: devolver los init_points sin crear nada nuevo
+    console.log(`[Checkout] Reutilizando preferencia existente: ${preferenceId}`);
+    return {
+      valid: true,
+      preference: {
+        preferenceId: pref.id,
+        init_point: pref.init_point,
+        sandbox_init_point: pref.sandbox_init_point,
+      }
+    };
+  } catch (err) {
+    // Si MP devuelve 404 u otro error, consideramos la preferencia inválida
+    console.warn(`[Checkout] No se pudo verificar preferencia ${preferenceId}: ${err.message} — se creará una nueva.`);
+    return { valid: false };
+  }
+}
+
 // @route   POST api/checkout/create-preference
-// @desc    Create a Mercado Pago Checkout Pro payment preference
+// @desc    Create (or reuse) a Mercado Pago Checkout Pro payment preference
 router.post('/create-preference', async (req, res) => {
   try {
-    const { cotizacionId, totalCart } = req.body;
+    const { cotizacionId } = req.body;
 
     if (!cotizacionId) {
       return res.status(400).json({ error: 'Falta el ID de la cotización' });
@@ -42,6 +87,22 @@ router.post('/create-preference', async (req, res) => {
     if (!cotizacion.totalFinal || cotizacion.totalFinal <= 0) {
       return res.status(400).json({ error: 'La cotización no tiene un total válido calculado por el servidor.' });
     }
+
+    // ── HAL-05: Idempotencia ─────────────────────────────────────────────────
+    // Si ya existe una preferencia guardada en esta cotización, verificar si
+    // sigue vigente antes de crear una nueva. Esto evita preferencias duplicadas
+    // cuando el usuario presiona "Atrás" y vuelve a intentar el pago.
+    const existingPrefId = cotizacion.detallesPago?.preferenceId;
+    if (existingPrefId) {
+      const check = await checkExistingPreference(existingPrefId);
+      if (check.valid) {
+        console.log(`[Checkout] Preferencia reutilizada para folio ${cotizacion.folio} (sin crear nueva en MP)`);
+        return res.json(check.preference);
+      }
+      // Si llegamos aquí, la preferencia expiró — continuamos a crear una nueva
+    }
+    // ── Fin HAL-05 ───────────────────────────────────────────────────────────
+
     const total = cotizacion.totalFinal;
 
     // Build dynamic URLs from environment variables — NEVER hardcoded
@@ -88,7 +149,7 @@ router.post('/create-preference', async (req, res) => {
     };
     await cotizacion.save();
 
-    console.log(`[Checkout] Preferencia MP creada: ${response.id} | Folio: ${folioRef} | Total: $${total}`);
+    console.log(`[Checkout] Nueva preferencia MP creada: ${response.id} | Folio: ${folioRef} | Total: $${total}`);
 
     res.json({
       preferenceId: response.id,
