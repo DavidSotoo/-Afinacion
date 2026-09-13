@@ -102,6 +102,10 @@ router.post('/bulk-adjust', auth, async (req, res) => {
     }
 
     const pct = Number(porcentaje);
+    if (pct <= -100) {
+      return res.status(400).json({ error: 'El porcentaje de ajuste no puede ser -100% o menor (dejaría precios en cero o negativos).' });
+    }
+
     const multiplier = 1 + (pct / 100);
 
     // Update client prices using MongoDB aggregation update pipeline to round to 2 decimal places
@@ -111,7 +115,7 @@ router.post('/bulk-adjust', auth, async (req, res) => {
         {
           $set: {
             precio_cliente: {
-              $round: [{ $multiply: ['$precio_cliente', multiplier] }, 2]
+              $max: [0, { $round: [{ $multiply: ['$precio_cliente', multiplier] }, 2] }]
             }
           }
         }

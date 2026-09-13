@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapPin, Clock, Phone, Navigation, Mail } from 'lucide-react';
 import { WHATSAPP_NUMBER, STORE_FIXED_PHONE, STORE_PUBLIC_EMAIL } from '../lib/constants';
 

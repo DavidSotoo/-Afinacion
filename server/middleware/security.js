@@ -35,17 +35,29 @@ function sanitizeObject(obj) {
  * Matches the previous behavior of express-mongo-sanitize({ replaceWith: '_' }).
  */
 function sanitizeMongoInPlace(obj) {
-  if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return;
+  if (!obj || typeof obj !== 'object') return;
+
+  // Arrays don't have injectable keys themselves, but their elements
+  // (objects or nested arrays) can — recurse into each element.
+  if (Array.isArray(obj)) {
+    for (const item of obj) {
+      if (item && typeof item === 'object') sanitizeMongoInPlace(item);
+    }
+    return;
+  }
+
   for (const key of Object.keys(obj)) {
     const value = obj[key];
+    let currentKey = key;
     if (key.startsWith('$') || key.includes('.')) {
       const safeKey = key.replace(/^\$+/, '_').replace(/\./g, '_');
       console.warn(`[SEC-03] NoSQL injection attempt blocked: key "${key}" → "${safeKey}"`);
       obj[safeKey] = value;
       delete obj[key];
+      currentKey = safeKey;
     }
-    // Recurse into nested objects (including the potentially renamed value)
-    const currentValue = obj[key.startsWith('$') || key.includes('.') ? key.replace(/^\$+/, '_').replace(/\./g, '_') : key];
+    // Recurse into nested objects/arrays (including the potentially renamed value)
+    const currentValue = obj[currentKey];
     if (currentValue && typeof currentValue === 'object') {
       sanitizeMongoInPlace(currentValue);
     }

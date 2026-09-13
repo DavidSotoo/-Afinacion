@@ -1,21 +1,14 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  ShoppingBag, 
-  Zap, 
-  Filter, 
-  Droplet, 
-  Wind, 
-  Fuel, 
-  AirVent, 
-  CheckCircle, 
-  ChevronRight, 
-  ArrowLeft, 
-  ShieldAlert, 
-  Clock, 
-  RotateCcw, 
-  CreditCard 
+import {
+  ShoppingBag,
+  CheckCircle,
+  ArrowLeft,
+  ShieldAlert,
+  Clock,
+  RotateCcw,
+  CreditCard
 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import Header from '../components/Header';
@@ -366,7 +359,7 @@ export default function ProductPage() {
                         }
                       }
 
-                      let skuText = 'N/D';
+                      let skuText;
                       let qtyText = '1 pza';
                       
                       if (isSellado) {

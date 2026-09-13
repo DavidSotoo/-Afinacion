@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { recomendarAceiteDefault, calculateOilPrice } from '../lib/kitHelpers';
@@ -33,12 +33,9 @@ export default function KitCard({ bujia }) {
     }
 
     // Default recommended oil cost
-    let oilCost = 0;
-    if (recomendacionAceite) {
-      oilCost = calculateOilPrice(bujia.anio_inicio, recomendacionAceite.tecnologia, recomendacionAceite.capacidad_litros);
-    } else {
-      oilCost = calculateOilPrice(bujia.anio_inicio, 'Sintético', 4);
-    }
+    const oilCost = recomendacionAceite
+      ? calculateOilPrice(bujia.anio_inicio, recomendacionAceite.tecnologia, recomendacionAceite.litros)
+      : calculateOilPrice(bujia.anio_inicio, 'Sintético', 4);
 
     return filtersCost + plugsCost + oilCost;
   }, [kit, noBujias, bujia, recomendacionAceite]);

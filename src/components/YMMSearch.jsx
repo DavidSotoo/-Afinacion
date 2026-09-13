@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Search, RefreshCw } from 'lucide-react';
 import { API_BASE } from '../lib/config';
 import { safeSessionStorage } from '../lib/storage';
@@ -30,7 +30,7 @@ function getCachedItem(key) {
       return null;
     }
     return item.data;
-  } catch (e) {
+  } catch {
     return null;
   }
 }
