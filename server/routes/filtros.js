@@ -141,4 +141,42 @@ router.post('/bulk-adjust', auth, async (req, res) => {
   }
 });
 
+// POST /api/filtros/import - Actualización masiva de precios desde un CSV (requiere auth)
+// Body: { updates: [{ _id, precio }] } — el matching (clave/marca -> _id) se hace en el cliente
+// contra el catálogo ya cargado, así que aquí solo se aplica el cambio de precio por _id.
+router.post('/import', auth, async (req, res) => {
+  try {
+    const { updates } = req.body;
+    if (!Array.isArray(updates) || updates.length === 0) {
+      return res.status(400).json({ error: 'No se recibieron actualizaciones para importar.' });
+    }
+
+    const ops = updates
+      .filter(u => u && u._id && !isNaN(u.precio) && Number(u.precio) >= 0)
+      .map(u => ({
+        updateOne: {
+          filter: { _id: u._id },
+          update: { $set: { precio: Number(u.precio) } }
+        }
+      }));
+
+    if (ops.length === 0) {
+      return res.status(400).json({ error: 'Ninguna fila tiene un precio válido (>= 0) o un ID reconocido.' });
+    }
+
+    const result = await PrecioFiltro.bulkWrite(ops, { ordered: false });
+    vehiculosRouter.invalidatePriceCache();
+
+    res.json({
+      ok: true,
+      message: `${result.modifiedCount} filtro(s) actualizados desde el archivo importado.`,
+      modifiedCount: result.modifiedCount,
+      matchedCount: result.matchedCount
+    });
+  } catch (err) {
+    console.error('Error importing filtro prices:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 module.exports = router;

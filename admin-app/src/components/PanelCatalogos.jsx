@@ -2,7 +2,8 @@ import { useState, useEffect, useCallback } from 'react';
 import api from '../services/api';
 import {
   Search, Plus, Pencil, Trash2, X, Save, Loader2, CheckCircle2,
-  AlertTriangle, ChevronLeft, ChevronRight, Percent, TrendingUp
+  AlertTriangle, ChevronLeft, ChevronRight, Percent, TrendingUp,
+  Upload, FileSpreadsheet, ArrowRight, Info
 } from 'lucide-react';
 
 const PAGE_SIZE = 25;
@@ -12,6 +13,7 @@ const MARCAS_FILTROS_SUGERIDAS = ['UNIFIL', 'INTERFIL', 'JOE', 'FRAM', 'GONHER',
 export default function PanelCatalogos() {
   const [activeSubTab, setActiveSubTab] = useState('filtros'); // 'filtros' | 'balatas' | 'bujias'
   const [bulkAdjustType, setBulkAdjustType] = useState(null); // 'filtro' | 'bujia' | null
+  const [importType, setImportType] = useState(null); // 'filtro' | 'bujia' | null
   
   // States para Filtros
   const [filtros, setFiltros] = useState([]);
@@ -272,6 +274,14 @@ export default function PanelCatalogos() {
             </div>
             <div className="flex items-center gap-2">
               <button
+                onClick={() => setImportType('filtro')}
+                title="Actualizar precios en lote desde un archivo CSV"
+                className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all cursor-pointer"
+              >
+                <Upload className="w-4 h-4 text-emerald-400" />
+                Importar Precios (CSV)
+              </button>
+              <button
                 onClick={() => setBulkAdjustType('filtro')}
                 title="Ajustar todos los precios de una marca mediante un porcentaje"
                 className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all cursor-pointer"
@@ -519,6 +529,14 @@ export default function PanelCatalogos() {
             </div>
             <div className="flex items-center gap-2">
               <button
+                onClick={() => setImportType('bujia')}
+                title="Actualizar precios en lote desde un archivo CSV"
+                className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all cursor-pointer"
+              >
+                <Upload className="w-4 h-4 text-emerald-400" />
+                Importar Precios (CSV)
+              </button>
+              <button
                 onClick={() => setBulkAdjustType('bujia')}
                 title="Ajustar todos los precios de bujías mediante un porcentaje"
                 className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all cursor-pointer"
@@ -651,6 +669,20 @@ export default function PanelCatalogos() {
           onClose={() => setBulkAdjustType(null)}
           onSuccess={(msg) => {
             setBulkAdjustType(null);
+            fetchData();
+            showToastMsg(msg);
+          }}
+        />
+      )}
+
+      {/* ─── MODAL IMPORTAR PRECIOS (CSV) ─────────────────────────────────────── */}
+      {importType && (
+        <ModalImportarPrecios
+          type={importType}
+          catalogItems={importType === 'filtro' ? filtros : bujias}
+          onClose={() => setImportType(null)}
+          onSuccess={(msg) => {
+            setImportType(null);
             fetchData();
             showToastMsg(msg);
           }}
@@ -1308,6 +1340,229 @@ function ModalBalata({ mode, item, sugerenciasModelos = [], onClose, onSuccess }
             <option key={m} value={m} />
           ))}
         </datalist>
+      </div>
+    </div>
+  );
+}
+
+// ─── SUB-COMPONENTE: IMPORTAR PRECIOS EN LOTE DESDE CSV ──────────────────────
+/**
+ * Parsea un CSV simple (sin comillas escapadas / celdas multilínea) en un
+ * arreglo de objetos usando la primera fila como encabezado.
+ */
+function parseSimpleCsv(text) {
+  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+  if (lines.length < 2) return { header: [], rows: [] };
+  const header = lines[0].split(',').map(h => h.trim().toLowerCase());
+  const rows = lines.slice(1).map(line => line.split(',').map(c => c.trim()));
+  return { header, rows };
+}
+
+function ModalImportarPrecios({ type, catalogItems, onClose, onSuccess }) {
+  const isFiltro = type === 'filtro';
+  const keyColumn = isFiltro ? 'clave' : 'sku';
+
+  const [fileName, setFileName] = useState('');
+  const [matches, setMatches] = useState(null); // null = aún no se cargó archivo
+  const [parseError, setParseError] = useState('');
+  const [saving, setSaving] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
+
+  const handleFile = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setFileName(file.name);
+    setMatches(null);
+    setParseError('');
+    setErrorMsg('');
+
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      const { header, rows } = parseSimpleCsv(String(ev.target.result || ''));
+      const idxKey = header.indexOf(keyColumn);
+      const idxPrecio = header.indexOf('precio');
+      const idxMarca = header.indexOf('marca');
+
+      if (idxKey === -1 || idxPrecio === -1) {
+        setParseError(`El encabezado del CSV debe incluir las columnas "${keyColumn}" y "precio"${isFiltro ? ' (opcionalmente "marca" si hay claves repetidas entre marcas)' : ''}.`);
+        return;
+      }
+
+      const results = rows.map((cols) => {
+        const rawKey = (cols[idxKey] || '').toUpperCase();
+        const rawMarca = idxMarca !== -1 ? (cols[idxMarca] || '').toUpperCase() : '';
+        const precio = Number(String(cols[idxPrecio] || '').replace(/[^0-9.-]/g, ''));
+
+        let candidates;
+        if (isFiltro) {
+          candidates = catalogItems.filter(f => (f.clave || '').toUpperCase() === rawKey);
+          if (candidates.length > 1 && rawMarca) {
+            candidates = candidates.filter(f => (f.marca || 'UNIFIL').toUpperCase() === rawMarca);
+          }
+        } else {
+          candidates = catalogItems.filter(b => (b.sku || '').toUpperCase() === rawKey);
+        }
+
+        const match = candidates.length === 1 ? candidates[0] : null;
+        const currentPrice = match ? Number(isFiltro ? match.precio : match.precio_cliente) : null;
+
+        let status;
+        if (!rawKey) status = 'fila-vacia';
+        else if (candidates.length > 1) status = 'ambiguo';
+        else if (!match) status = 'no-encontrado';
+        else if (isNaN(precio) || precio < 0) status = 'precio-invalido';
+        else if (currentPrice === precio) status = 'sin-cambio';
+        else status = 'cambiara';
+
+        return { key: rawKey, marca: rawMarca, precio, matchId: match?._id || null, currentPrice, status };
+      }).filter(r => r.key);
+
+      setMatches(results);
+    };
+    reader.readAsText(file);
+  };
+
+  const toApply = matches ? matches.filter(m => m.status === 'cambiara') : [];
+  const noEncontrados = matches ? matches.filter(m => m.status === 'no-encontrado' || m.status === 'ambiguo') : [];
+
+  const handleApply = async () => {
+    if (toApply.length === 0) return;
+    setSaving(true);
+    setErrorMsg('');
+    try {
+      const url = isFiltro ? '/filtros/import' : '/bujias/import';
+      const updates = toApply.map(m => isFiltro
+        ? { _id: m.matchId, precio: m.precio }
+        : { _id: m.matchId, precio_cliente: m.precio });
+      const res = await api.post(url, { updates });
+      if (res.data?.ok) {
+        onSuccess(res.data.message);
+      } else {
+        setErrorMsg('Error al aplicar la importación.');
+      }
+    } catch (err) {
+      setErrorMsg(err.response?.data?.error || err.message || 'Error de conexión.');
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const STATUS_LABEL = {
+    'cambiara': { text: 'Cambiará', cls: 'text-emerald-400' },
+    'sin-cambio': { text: 'Sin cambio', cls: 'text-slate-500' },
+    'no-encontrado': { text: 'No encontrado', cls: 'text-red-400' },
+    'ambiguo': { text: `Ambiguo (agrega "marca")`, cls: 'text-amber-400' },
+    'precio-invalido': { text: 'Precio inválido', cls: 'text-red-400' },
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+      <div className="relative w-full max-w-3xl max-h-[90vh] bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600" />
+        <div className="flex items-center justify-between p-5 border-b border-slate-800 shrink-0">
+          <div className="flex items-center gap-2">
+            <FileSpreadsheet className="w-5 h-5 text-emerald-500" />
+            <h3 className="text-lg font-bold text-white">
+              Importar Precios de {isFiltro ? 'Filtros' : 'Bujías'} (CSV)
+            </h3>
+          </div>
+          <button onClick={onClose} className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="flex-grow overflow-y-auto p-5 space-y-4">
+          <div className="bg-slate-950/40 border border-slate-850 rounded-xl p-3.5 text-xs text-slate-400 flex gap-2.5">
+            <Info className="w-4 h-4 shrink-0 text-emerald-400 mt-0.5" />
+            <div>
+              El archivo CSV debe tener una fila de encabezado con las columnas{' '}
+              <code className="text-white bg-slate-950 border border-slate-800 px-1 rounded">{keyColumn}</code> y{' '}
+              <code className="text-white bg-slate-950 border border-slate-800 px-1 rounded">precio</code>
+              {isFiltro && <> (opcionalmente <code className="text-white bg-slate-950 border border-slate-800 px-1 rounded">marca</code> si una clave se repite entre marcas)</>}.
+              Exporta tu lista de Excel como CSV (Archivo → Guardar como → CSV) e impórtala aquí.
+            </div>
+          </div>
+
+          {errorMsg && (
+            <div className="flex items-center gap-2 text-xs text-red-400 bg-red-500/5 border border-red-500/10 rounded-lg p-3">
+              <AlertTriangle className="w-4 h-4 shrink-0" />
+              <span>{errorMsg}</span>
+            </div>
+          )}
+          {parseError && (
+            <div className="flex items-center gap-2 text-xs text-red-400 bg-red-500/5 border border-red-500/10 rounded-lg p-3">
+              <AlertTriangle className="w-4 h-4 shrink-0" />
+              <span>{parseError}</span>
+            </div>
+          )}
+
+          <label className="flex items-center justify-center gap-2 border-2 border-dashed border-slate-800 hover:border-emerald-500/40 rounded-xl p-6 cursor-pointer transition-colors text-sm text-slate-400 hover:text-white">
+            <Upload className="w-4 h-4" />
+            <span>{fileName || 'Selecciona un archivo .csv'}</span>
+            <input type="file" accept=".csv,text/csv" onChange={handleFile} className="hidden" />
+          </label>
+
+          {matches && (
+            <div className="space-y-3">
+              <div className="flex items-center gap-4 text-xs">
+                <span className="text-emerald-400 font-bold">{toApply.length} cambiarán</span>
+                <span className="text-slate-500">{matches.filter(m => m.status === 'sin-cambio').length} sin cambio</span>
+                {noEncontrados.length > 0 && (
+                  <span className="text-red-400 font-bold">{noEncontrados.length} sin coincidencia</span>
+                )}
+              </div>
+
+              <div className="max-h-[280px] overflow-y-auto border border-slate-800 rounded-xl">
+                <table className="w-full text-left border-collapse text-xs">
+                  <thead className="sticky top-0 bg-slate-950">
+                    <tr className="text-[10px] uppercase tracking-wider text-slate-500 border-b border-slate-800">
+                      <th className="py-2 px-3">{isFiltro ? 'Clave' : 'SKU'}</th>
+                      {isFiltro && <th className="py-2 px-3">Marca</th>}
+                      <th className="py-2 px-3">Precio Actual</th>
+                      <th className="py-2 px-3"></th>
+                      <th className="py-2 px-3">Precio Nuevo</th>
+                      <th className="py-2 px-3">Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-800/60">
+                    {matches.map((m, i) => (
+                      <tr key={i} className="text-slate-300">
+                        <td className="py-1.5 px-3 font-mono">{m.key}</td>
+                        {isFiltro && <td className="py-1.5 px-3 font-mono text-slate-500">{m.marca || '—'}</td>}
+                        <td className="py-1.5 px-3 font-mono">{m.currentPrice !== null ? `$${m.currentPrice.toFixed(2)}` : '—'}</td>
+                        <td className="py-1.5 px-3 text-slate-600">
+                          {m.status === 'cambiara' && <ArrowRight className="w-3 h-3" />}
+                        </td>
+                        <td className="py-1.5 px-3 font-mono">{!isNaN(m.precio) ? `$${m.precio.toFixed(2)}` : '—'}</td>
+                        <td className={`py-1.5 px-3 font-semibold ${STATUS_LABEL[m.status]?.cls || 'text-slate-500'}`}>
+                          {STATUS_LABEL[m.status]?.text || m.status}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div className="p-5 border-t border-slate-800 flex items-center justify-end gap-3 shrink-0 bg-slate-900/40">
+          <button
+            type="button"
+            onClick={onClose}
+            className="px-4 py-2.5 rounded-xl text-xs text-slate-400 hover:text-white bg-slate-950 border border-slate-800 hover:border-slate-700 transition-colors cursor-pointer"
+          >
+            Cancelar
+          </button>
+          <button
+            onClick={handleApply}
+            disabled={saving || toApply.length === 0}
+            className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white transition-all cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            {saving ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Save className="w-3.5 h-3.5" />}
+            <span>{saving ? 'Aplicando...' : `Aplicar ${toApply.length} cambio(s)`}</span>
+          </button>
+        </div>
       </div>
     </div>
   );

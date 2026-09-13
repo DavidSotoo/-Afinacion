@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import api from '../services/api';
 import {
   Search, RotateCcw, Filter, AlertTriangle, Pencil, CheckCircle2,
-  ChevronLeft, ChevronRight, Plus, Trash2
+  ChevronLeft, ChevronRight, Plus, Trash2, Link2, X, Save, Loader2, Eye
 } from 'lucide-react';
 import ModalEditarVehiculo from './ModalEditarVehiculo';
 
@@ -84,6 +84,7 @@ export default function InventarioMaestro() {
   // Modal & toast state
   const [editVehiculo, setEditVehiculo] = useState(null);
   const [showCreateModal, setShowCreateModal] = useState(false);
+  const [showLinkModal, setShowLinkModal] = useState(false);
   const [toast,        setToast]        = useState('');
 
   // ── Debouncing Search Inputs ───────────────────────────────────────────────
@@ -211,6 +212,14 @@ export default function InventarioMaestro() {
             className="text-xs text-slate-400 hover:text-white bg-slate-900 border border-slate-800 hover:border-slate-700 px-3.5 py-2.5 rounded-xl transition-colors cursor-pointer"
           >
             Recargar
+          </button>
+          <button
+            onClick={() => setShowLinkModal(true)}
+            title="Vincular un filtro/bujía a todos los vehículos que coincidan con marca, modelo y años"
+            className="flex items-center gap-1.5 text-xs font-semibold bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white px-4 py-2.5 rounded-xl transition-all cursor-pointer"
+          >
+            <Link2 className="w-3.5 h-3.5 text-emerald-400" />
+            Vincular Filtro a Vehículos
           </button>
           <button
             onClick={() => setShowCreateModal(true)}
@@ -458,8 +467,266 @@ export default function InventarioMaestro() {
         />
       )}
 
+      {showLinkModal && (
+        <ModalVincularFiltro
+          brands={brands}
+          onClose={() => setShowLinkModal(false)}
+          onSuccess={(msg) => {
+            setShowLinkModal(false);
+            fetchData();
+            setToast(`✅ ${msg}`);
+          }}
+        />
+      )}
+
       {/* ── Toast notification ──────────────────────────────────────────────── */}
       {toast && <Toast message={toast} onDone={() => setToast('')} />}
+    </div>
+  );
+}
+
+// ─── SUB-COMPONENTE: VINCULAR UN FILTRO A MÚLTIPLES VEHÍCULOS ────────────────
+const FILTRO_KEY_OPTIONS = [
+  { value: 'filtro_aceite',   label: 'Filtro de Aceite' },
+  { value: 'filtro_aire',     label: 'Filtro de Aire' },
+  { value: 'filtro_gasolina', label: 'Filtro de Gasolina' },
+  { value: 'filtro_cabina',   label: 'Filtro de Cabina' },
+];
+const MARCAS_FILTRO_SUGERIDAS = ['UNIFIL', 'INTERFIL', 'JOE', 'FRAM', 'GONHER', 'PURFLUX'];
+
+function ModalVincularFiltro({ brands, onClose, onSuccess }) {
+  const [marca, setMarca] = useState(brands[0] || '');
+  const [modelo, setModelo] = useState('');
+  const [anioInicio, setAnioInicio] = useState('');
+  const [anioFin, setAnioFin] = useState('');
+  const [filtroKey, setFiltroKey] = useState('filtro_aceite');
+  const [filtroMarca, setFiltroMarca] = useState('UNIFIL');
+  const [filtroSku, setFiltroSku] = useState('');
+
+  const [preview, setPreview] = useState(null); // { matchedCount, sample } | null
+  const [checking, setChecking] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
+
+  // Cualquier cambio en los criterios invalida la vista previa ya calculada
+  const invalidatePreview = (setter) => (value) => {
+    setPreview(null);
+    setter(value);
+  };
+
+  const buildPayload = (dryRun) => ({
+    marca,
+    modelo: modelo.trim() || undefined,
+    anioInicio: anioInicio || undefined,
+    anioFin: anioFin || undefined,
+    filtroKey,
+    filtroMarca,
+    filtroSku: filtroSku.trim(),
+    dryRun,
+  });
+
+  const handlePreview = async () => {
+    if (!marca || !filtroSku.trim()) {
+      setErrorMsg('La marca del vehículo y el SKU del filtro son obligatorios.');
+      return;
+    }
+    setChecking(true);
+    setErrorMsg('');
+    setPreview(null);
+    try {
+      const res = await api.post('/vehiculos/bulk-assign-filtro', buildPayload(true));
+      setPreview(res.data);
+    } catch (err) {
+      setErrorMsg(err.response?.data?.error || 'Error al calcular la vista previa.');
+    } finally {
+      setChecking(false);
+    }
+  };
+
+  const handleApply = async () => {
+    setSaving(true);
+    setErrorMsg('');
+    try {
+      const res = await api.post('/vehiculos/bulk-assign-filtro', buildPayload(false));
+      if (res.data?.ok) {
+        onSuccess(res.data.message);
+      } else {
+        setErrorMsg('Error al aplicar la vinculación.');
+      }
+    } catch (err) {
+      setErrorMsg(err.response?.data?.error || 'Error al aplicar la vinculación.');
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+      <div className="relative w-full max-w-lg bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600" />
+        <div className="flex items-center justify-between p-5 border-b border-slate-800">
+          <div className="flex items-center gap-2">
+            <Link2 className="w-5 h-5 text-emerald-500" />
+            <h3 className="text-lg font-bold text-white">Vincular Filtro a Vehículos</h3>
+          </div>
+          <button onClick={onClose} className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer">
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="p-5 space-y-4">
+          <p className="text-xs text-slate-400">
+            Asigna una marca + SKU de filtro a <strong className="text-white">todos</strong> los vehículos que coincidan
+            con los criterios de abajo, sin editarlos uno por uno. Modelo y años son opcionales.
+          </p>
+
+          {errorMsg && (
+            <div className="flex items-center gap-2 text-xs text-red-400 bg-red-500/5 border border-red-500/10 rounded-lg p-3">
+              <AlertTriangle className="w-4 h-4 shrink-0" />
+              <span>{errorMsg}</span>
+            </div>
+          )}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                Marca del Vehículo <span className="text-red-500">*</span>
+              </label>
+              <select
+                value={marca}
+                onChange={e => invalidatePreview(setMarca)(e.target.value)}
+                className="w-full bg-slate-950 border border-slate-800 focus:border-violet-500 rounded-lg px-3 py-2 text-xs text-slate-200 outline-none cursor-pointer appearance-none"
+              >
+                {brands.map(b => <option key={b} value={b}>{b}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                Modelo (opcional — deja vacío para toda la marca)
+              </label>
+              <input
+                type="text"
+                value={modelo}
+                onChange={e => invalidatePreview(setModelo)(e.target.value)}
+                placeholder="Ej: Corolla"
+                className="w-full bg-slate-950 border border-slate-800 focus:border-violet-500 rounded-lg px-3 py-2 text-xs text-slate-200 outline-none"
+              />
+            </div>
+            <div>
+              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                Año Desde (opcional)
+              </label>
+              <input
+                type="number"
+                value={anioInicio}
+                onChange={e => invalidatePreview(setAnioInicio)(e.target.value)}
+                placeholder="Ej: 2015"
+                className="w-full bg-slate-950 border border-slate-800 focus:border-violet-500 rounded-lg px-3 py-2 text-xs text-slate-200 outline-none font-mono"
+              />
+            </div>
+            <div>
+              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                Año Hasta (opcional)
+              </label>
+              <input
+                type="number"
+                value={anioFin}
+                onChange={e => invalidatePreview(setAnioFin)(e.target.value)}
+                placeholder="Ej: 2019"
+                className="w-full bg-slate-950 border border-slate-800 focus:border-violet-500 rounded-lg px-3 py-2 text-xs text-slate-200 outline-none font-mono"
+              />
+            </div>
+          </div>
+
+          <div className="border-t border-slate-850 pt-3 grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                Tipo de Filtro <span className="text-red-500">*</span>
+              </label>
+              <select
+                value={filtroKey}
+                onChange={e => invalidatePreview(setFiltroKey)(e.target.value)}
+                className="w-full bg-slate-950 border border-slate-800 focus:border-violet-500 rounded-lg px-3 py-2 text-xs text-slate-200 outline-none cursor-pointer appearance-none"
+              >
+                {FILTRO_KEY_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                Marca del Filtro
+              </label>
+              <select
+                value={filtroMarca}
+                onChange={e => invalidatePreview(setFiltroMarca)(e.target.value)}
+                className="w-full bg-slate-950 border border-slate-800 focus:border-violet-500 rounded-lg px-3 py-2 text-xs text-slate-200 outline-none cursor-pointer appearance-none"
+              >
+                {MARCAS_FILTRO_SUGERIDAS.map(m => <option key={m} value={m}>{m}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                SKU <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                value={filtroSku}
+                onChange={e => invalidatePreview(setFiltroSku)(e.target.value)}
+                placeholder="Ej: FO-6607"
+                className="w-full bg-slate-950 border border-slate-800 focus:border-violet-500 rounded-lg px-3 py-2 text-xs text-slate-200 outline-none font-mono"
+              />
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onClick={handlePreview}
+            disabled={checking}
+            className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold bg-slate-950 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all cursor-pointer disabled:opacity-50"
+          >
+            {checking ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Eye className="w-3.5 h-3.5" />}
+            <span>{checking ? 'Buscando coincidencias...' : 'Ver Cuántos Vehículos Coinciden'}</span>
+          </button>
+
+          {preview && (
+            <div className={`rounded-xl p-4 border text-xs space-y-2 ${
+              preview.matchedCount > 0 ? 'bg-emerald-500/5 border-emerald-500/20' : 'bg-amber-500/5 border-amber-500/20'
+            }`}>
+              <p className={`font-bold ${preview.matchedCount > 0 ? 'text-emerald-400' : 'text-amber-400'}`}>
+                {preview.matchedCount} vehículo(s) coinciden con estos criterios.
+              </p>
+              {preview.sample?.length > 0 && (
+                <ul className="text-slate-400 space-y-0.5">
+                  {preview.sample.map(v => (
+                    <li key={v._id}>• {v.marca} {v.modelo} ({v.anio_inicio}–{v.anio_fin})</li>
+                  ))}
+                  {preview.matchedCount > preview.sample.length && (
+                    <li className="text-slate-600">... y {preview.matchedCount - preview.sample.length} más</li>
+                  )}
+                </ul>
+              )}
+            </div>
+          )}
+        </div>
+
+        <div className="p-5 border-t border-slate-800 flex items-center justify-end gap-3 bg-slate-900/40">
+          <button
+            type="button"
+            onClick={onClose}
+            className="px-4 py-2.5 rounded-xl text-xs text-slate-400 hover:text-white bg-slate-950 border border-slate-800 hover:border-slate-700 transition-colors cursor-pointer"
+          >
+            Cancelar
+          </button>
+          <button
+            onClick={handleApply}
+            disabled={saving || !preview || preview.matchedCount === 0}
+            title={!preview ? 'Primero calcula la vista previa' : undefined}
+            className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white transition-all cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            {saving ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Save className="w-3.5 h-3.5" />}
+            <span>{saving ? 'Aplicando...' : preview ? `Vincular a ${preview.matchedCount} Vehículo(s)` : 'Vincular'}</span>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

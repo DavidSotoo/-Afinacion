@@ -137,4 +137,42 @@ router.post('/bulk-adjust', auth, async (req, res) => {
   }
 });
 
+// POST /api/bujias/import - Actualización masiva de precios desde un CSV (requiere auth)
+// Body: { updates: [{ _id, precio_cliente }] } — el matching (sku -> _id) se hace en el
+// cliente contra el catálogo ya cargado.
+router.post('/import', auth, async (req, res) => {
+  try {
+    const { updates } = req.body;
+    if (!Array.isArray(updates) || updates.length === 0) {
+      return res.status(400).json({ error: 'No se recibieron actualizaciones para importar.' });
+    }
+
+    const ops = updates
+      .filter(u => u && u._id && !isNaN(u.precio_cliente) && Number(u.precio_cliente) >= 0)
+      .map(u => ({
+        updateOne: {
+          filter: { _id: u._id },
+          update: { $set: { precio_cliente: Number(u.precio_cliente) } }
+        }
+      }));
+
+    if (ops.length === 0) {
+      return res.status(400).json({ error: 'Ninguna fila tiene un precio válido (>= 0) o un ID reconocido.' });
+    }
+
+    const result = await PrecioBujia.bulkWrite(ops, { ordered: false });
+    vehiculosRouter.invalidatePriceCache();
+
+    res.json({
+      ok: true,
+      message: `${result.modifiedCount} bujía(s) actualizadas desde el archivo importado.`,
+      modifiedCount: result.modifiedCount,
+      matchedCount: result.matchedCount
+    });
+  } catch (err) {
+    console.error('Error importing bujia prices:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 module.exports = router;
