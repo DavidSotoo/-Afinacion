@@ -122,7 +122,7 @@ export default function Dashboard({ setActiveTab }) {
   const circumference = 226.19;
   const strokeDashoffset = circumference - (ratio / 100) * circumference;
 
-  const currentApiUrl = localStorage.getItem('api_base_url') || 'http://localhost:5000/api';
+  const currentApiUrl = localStorage.getItem('api_base_url') || 'https://afinacion-backend.onrender.com/api';
 
   return (
     <div className="space-y-8 animate-fadeIn select-none">

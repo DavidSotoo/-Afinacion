@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://afinacion-backend.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -10,7 +10,7 @@ const api = axios.create({
 // Request interceptor to add JWT token and dynamic API baseURL
 api.interceptors.request.use(
   (config) => {
-    config.baseURL = localStorage.getItem('api_base_url') || 'http://localhost:5000/api';
+    config.baseURL = localStorage.getItem('api_base_url') || 'https://afinacion-backend.onrender.com/api';
     const token = localStorage.getItem('admin_token');
     if (token) {
       config.headers['Authorization'] = `Bearer ${token}`;

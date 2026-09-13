@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -58,7 +58,8 @@ const STYLE_CONFIRM_BTN = { border: 'none', clipPath: 'polygon(6px 0%, 100% 0%, 
 
 /* ─── KitDrawerItem ───────────────────────────────────────────────────────── */
 
-function KitDrawerItem({ item, onRemove, onTogglePart }) {
+// PERF-01: React.memo prevents re-render of this item when unrelated cart state changes.
+const KitDrawerItem = React.memo(function KitDrawerItem({ item, onRemove, onTogglePart }) {
   const { bujia, tipoLinea, kit_afinacion, excludedParts = [] } = item;
   const label   = NGK_LINE_LABELS[tipoLinea] || tipoLinea;
   const skuData = getSkuData(bujia, tipoLinea);
@@ -213,11 +214,13 @@ function KitDrawerItem({ item, onRemove, onTogglePart }) {
       </div>
     </li>
   );
-}
+});
+KitDrawerItem.displayName = 'KitDrawerItem';
 
 /* ─── PiezaDrawerItem ─────────────────────────────────────────────────────── */
 
-function PiezaDrawerItem({ item, onRemove }) {
+// PERF-01: Memoized to avoid re-renders when other cart items change.
+const PiezaDrawerItem = React.memo(function PiezaDrawerItem({ item, onRemove }) {
   const { bujia, tipoLinea } = item;
   const label   = NGK_LINE_LABELS[tipoLinea] || tipoLinea;
   const skuData = getSkuData(bujia, tipoLinea);
@@ -251,11 +254,12 @@ function PiezaDrawerItem({ item, onRemove }) {
       </div>
     </li>
   );
-}
-
+});
+PiezaDrawerItem.displayName = 'PiezaDrawerItem';
 /* ─── FiltroDrawerItem ────────────────────────────────────────────────────── */
 
-function FiltroDrawerItem({ item, onRemove }) {
+// PERF-01: Memoized to avoid re-renders when other cart items change.
+const FiltroDrawerItem = React.memo(function FiltroDrawerItem({ item, onRemove }) {
   const { bujia, filterKey } = item;
   const f = bujia.kit_afinacion?.[filterKey];
   const labelTxt = filterKey === 'filtro_aceite' ? 'Aceite' : filterKey === 'filtro_aire' ? 'Aire' : filterKey === 'filtro_gasolina' ? 'Gasolina' : 'Cabina';
@@ -295,8 +299,8 @@ function FiltroDrawerItem({ item, onRemove }) {
       </div>
     </li>
   );
-}
-
+});
+FiltroDrawerItem.displayName = 'FiltroDrawerItem';
 /* ─── CartDrawer ──────────────────────────────────────────────────────────── */
 
 export default function CartDrawer() {
@@ -361,6 +365,16 @@ export default function CartDrawer() {
       element.removeEventListener('keydown', handleTab);
     };
   }, [isOpen]);
+
+  // PERF-01: Stable callback refs so React.memo on child items works correctly.
+  const handleRemoveKit = useCallback(
+    (id) => removeKit(id),
+    [removeKit]
+  );
+  const handleRemoveItem = useCallback(
+    (id) => removeItem(id),
+    [removeItem]
+  );
 
   const handleProceedToCheckout = () => {
     closeCart();

@@ -27,7 +27,7 @@ function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [showSettingsModal, setShowSettingsModal] = useState(false);
-  const [apiUrlInput, setApiUrlInput] = useState(() => localStorage.getItem('api_base_url') || 'http://localhost:5000/api');
+  const [apiUrlInput, setApiUrlInput] = useState(() => localStorage.getItem('api_base_url') || 'https://afinacion-backend.onrender.com/api');
   const [currentDate] = useState(() => {
     const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
     return new Date().toLocaleDateString('es-MX', options);
@@ -248,7 +248,7 @@ function App() {
                   required
                   value={apiUrlInput}
                   onChange={(e) => setApiUrlInput(e.target.value)}
-                  placeholder="http://localhost:5000/api"
+                  placeholder="https://afinacion-backend.onrender.com/api"
                   className="w-full bg-slate-950 border border-slate-850 focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 rounded-xl px-4 py-3 text-sm text-white font-mono transition-all outline-none"
                 />
               </div>

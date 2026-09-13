@@ -135,11 +135,14 @@ export default function ProductCard({ bujia, tipoLinea }) {
           COTIZAR BUJÍA
         </a>
 
+        {/* UX-01: min 44×44px touch target per WCAG 2.5.5.
+              touch-manipulation removes the 300ms tap delay on iOS. */}
         <button
           className={`btn-cart${inCart ? ' btn-cart--added' : ''}`}
           onClick={() => addItem(bujia, tipoLinea)}
           aria-label={inCart ? `${bujia.marca} ${bujia.modelo} ya en carrito` : `Agregar ${bujia.marca} ${bujia.modelo} al carrito`}
           aria-pressed={inCart}
+          style={{ minHeight: '44px', minWidth: '44px', touchAction: 'manipulation' }}
         >
           <ShoppingCart size={14} aria-hidden="true" />
           {inCart ? '✓' : '+'}
