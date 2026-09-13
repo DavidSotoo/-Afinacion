@@ -7,6 +7,7 @@ let priceCache = {
   preciosMap: null,
   bujiasMap: null,
   balatasList: null,
+  balatasByModelKey: null,
   lastUpdated: 0
 };
 const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
@@ -45,15 +46,31 @@ async function enrichVehiculosWithPrices(vehiculos) {
         }
       });
 
+      // Index balatas by compatible model name so per-vehicle matching below is
+      // a map lookup instead of a full scan of every balata (PERF-05: this used
+      // to re-scan the entire balatas collection — twice — for every single
+      // vehicle in the result set, making brands with many vehicles, e.g.
+      // Chevrolet with 642, take 13+ seconds to respond).
+      const balatasByModelKey = new Map();
+      balatasList.forEach(b => {
+        (b.vehiculos_compatibles || []).forEach(vc => {
+          const key = (vc.modelo || '').toUpperCase().trim();
+          if (!key) return;
+          if (!balatasByModelKey.has(key)) balatasByModelKey.set(key, []);
+          balatasByModelKey.get(key).push({ balata: b, vc });
+        });
+      });
+
       priceCache = {
         preciosMap,
         bujiasMap,
         balatasList,
+        balatasByModelKey,
         lastUpdated: now
       };
     }
 
-    const { preciosMap, bujiasMap, balatasList } = priceCache;
+    const { preciosMap, bujiasMap, balatasByModelKey } = priceCache;
     const DEFAULT_COST = 80;
 
     // Deduplicate vehicle results list before enrichment
@@ -77,24 +94,24 @@ async function enrichVehiculosWithPrices(vehiculos) {
       // Build all candidate search keys including aliases
       const candidateKeys = getFullModelSearchKeys(vehicleBrandUpper, vehicleModelUpper);
 
-      const matchingBalatas = balatasList.filter(b => {
-        return b.vehiculos_compatibles.some(vc => {
-          const vcModelUpper = (vc.modelo || '').toUpperCase().trim();
-          const isModelMatch = candidateKeys.includes(vcModelUpper);
-          if (!isModelMatch) return false;
-
-          const yearOverlap = !(vObj.anio_fin < vc.anio_inicio || vObj.anio_inicio > vc.anio_fin);
-          return yearOverlap;
-        });
+      // Look up only the balatas whose compatible-model entries match one of
+      // this vehicle's candidate keys, via the precomputed index — instead of
+      // scanning every balata in the catalog for every vehicle.
+      const candidateEntries = [];
+      candidateKeys.forEach(key => {
+        const entries = balatasByModelKey.get(key);
+        if (entries) candidateEntries.push(...entries);
       });
 
-      // Flag vehicles whose model is known but all year ranges are exhausted
-      const nameOnlyMatches = balatasList.filter(b =>
-        b.vehiculos_compatibles.some(vc =>
-          candidateKeys.includes((vc.modelo || '').toUpperCase().trim())
-        )
-      );
-      const hasNameMatch = nameOnlyMatches.length > 0;
+      const nameOnlyBalatasSet = new Set(candidateEntries.map(e => e.balata));
+      const hasNameMatch = nameOnlyBalatasSet.size > 0;
+
+      const matchingBalatasSet = new Set();
+      candidateEntries.forEach(({ balata, vc }) => {
+        const yearOverlap = !(vObj.anio_fin < vc.anio_inicio || vObj.anio_inicio > vc.anio_fin);
+        if (yearOverlap) matchingBalatasSet.add(balata);
+      });
+      const matchingBalatas = Array.from(matchingBalatasSet);
       const hasYearMatch = matchingBalatas.length > 0;
 
       vObj.balatas = matchingBalatas.map(b => ({
