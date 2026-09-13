@@ -43,3 +43,6 @@ public/data/2025 CATALOGO page 5 listo version 14-05.pdf
 
 # Deployment ZIP archives (large files, not needed in repo)
 *.zip
+
+# Manual database backups — contain real customer data (names, phones, addresses)
+server/backups/
