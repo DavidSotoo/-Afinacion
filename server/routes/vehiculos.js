@@ -2046,6 +2046,76 @@ router.delete('/:id', auth, async (req, res) => {
   }
 });
 
+// POST /api/vehiculos/bulk-assign-filtro — PROTEGIDO (JWT requerido)
+// Vincula una marca+SKU de filtro a todos los vehículos que coincidan con
+// marca (obligatoria), y opcionalmente modelo y rango de años.
+// Con dryRun:true solo cuenta/muestra los vehículos que coincidirían, sin escribir.
+const FILTRO_KEYS_VALIDOS = ['filtro_aceite', 'filtro_aire', 'filtro_gasolina', 'filtro_cabina'];
+
+router.post('/bulk-assign-filtro', auth, async (req, res) => {
+  try {
+    const { marca, modelo, anioInicio, anioFin, filtroKey, filtroMarca, filtroSku, dryRun } = req.body;
+
+    if (!marca || !marca.trim()) {
+      return res.status(400).json({ error: 'La marca del vehículo es obligatoria.' });
+    }
+    if (!FILTRO_KEYS_VALIDOS.includes(filtroKey)) {
+      return res.status(400).json({ error: 'filtroKey inválido. Debe ser uno de: ' + FILTRO_KEYS_VALIDOS.join(', ') });
+    }
+    if (!filtroSku || !filtroSku.trim()) {
+      return res.status(400).json({ error: 'El SKU del filtro es obligatorio.' });
+    }
+
+    const filter = { marca: { $regex: new RegExp(`^${escapeRegExp(marca.trim())}$`, 'i') } };
+
+    if (modelo && modelo.trim()) {
+      filter.modelo = { $regex: new RegExp(`^${escapeRegExp(modelo.trim())}$`, 'i') };
+    }
+
+    const yearFrom = anioInicio !== undefined && anioInicio !== '' ? parseInt(anioInicio, 10) : null;
+    const yearTo   = anioFin    !== undefined && anioFin    !== '' ? parseInt(anioFin, 10)    : null;
+    if (yearFrom !== null && !isNaN(yearFrom)) filter.anio_fin = { $gte: yearFrom };
+    if (yearTo   !== null && !isNaN(yearTo))   filter.anio_inicio = { $lte: yearTo };
+
+    const matchedCount = await Vehiculo.countDocuments(filter);
+
+    if (dryRun) {
+      const sample = await Vehiculo.find(filter)
+        .select('marca modelo anio_inicio anio_fin')
+        .sort({ modelo: 1, anio_inicio: 1 })
+        .limit(8);
+      return res.json({ ok: true, dryRun: true, matchedCount, sample });
+    }
+
+    if (matchedCount === 0) {
+      return res.status(400).json({ error: 'Ningún vehículo coincide con los criterios indicados.' });
+    }
+
+    const skuUpper = filtroSku.trim().toUpperCase();
+    const marcaUpper = (filtroMarca || 'UNIFIL').trim().toUpperCase();
+
+    const result = await Vehiculo.updateMany(filter, {
+      $set: {
+        [`kit_afinacion.${filtroKey}.marca`]: marcaUpper,
+        [`kit_afinacion.${filtroKey}.sku`]: skuUpper,
+        [`kit_afinacion.${filtroKey}.hasData`]: true,
+      }
+    });
+
+    invalidatePriceCache();
+
+    res.json({
+      ok: true,
+      message: `Filtro ${marcaUpper} ${skuUpper} vinculado a ${result.modifiedCount} vehículo(s).`,
+      matchedCount: result.matchedCount,
+      modifiedCount: result.modifiedCount
+    });
+  } catch (err) {
+    console.error('Error in bulk-assign-filtro:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 router.syncVwFiltersInDatabase        = syncVwFiltersInDatabase;
 router.syncChevroletFiltersInDatabase = syncChevroletFiltersInDatabase;
 router.syncFordFiltersInDatabase      = syncFordFiltersInDatabase;
