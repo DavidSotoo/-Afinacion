@@ -8,8 +8,10 @@ export default defineConfig([
   // `server/` is a separate CommonJS Node.js project (require/module/process),
   // not part of this Vite/React app — linting it with browser+ESM globals
   // produced ~830 false-positive no-undef errors. `admin-app/` has its own
-  // eslint.config.js and lint script.
-  globalIgnores(['dist', 'server', 'admin-app']),
+  // eslint.config.js and lint script. `panel/` is admin-app's built output,
+  // published as a static site under masafinacion.com/panel/ — same reason
+  // `dist/` is ignored.
+  globalIgnores(['dist', 'server', 'admin-app', 'panel']),
   {
     files: ['**/*.{js,jsx}'],
     extends: [
