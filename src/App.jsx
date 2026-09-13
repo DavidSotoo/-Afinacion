@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect } from 'react';
 import Header      from './components/Header';
 import YMMSearch   from './components/YMMSearch';
 import ResultsGrid from './components/ResultsGrid';
+import StoreSection from './components/StoreSection';
 import CartDrawer  from './components/CartDrawer';
 import { STORE_PUBLIC_EMAIL } from './lib/constants';
 import { API_BASE } from './lib/config';
@@ -150,6 +151,8 @@ function App() {
           isLoading={isLoadingResults}
           error={searchError}
         />
+
+        <StoreSection />
       </main>
 
       <footer className="site-footer" aria-label="Pie de página">
