@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from '../components/Header';
@@ -14,12 +14,7 @@ import {
   ShoppingBag,
   Zap,
   Filter,
-  Droplet,
-  Wind,
-  Fuel,
-  AirVent,
   ArrowLeft,
-  ChevronRight,
   Package,
   Wrench,
   Copy,
@@ -118,7 +113,7 @@ function buildConsolidatedMessage(items, deliveryOpt, paymentOpt, shipping, gran
   // ── Kits ──────────────────────────────────────────────────────────────────
   if (kits.length > 0) {
     kits.forEach((item) => {
-      const { bujia, tipoLinea, kit_afinacion, excludedParts = [], aceite_motor } = item;
+      const { bujia, tipoLinea, excludedParts = [], aceite_motor } = item;
       const label      = NGK_LINE_LABELS[tipoLinea] || tipoLinea;
       const skuData    = getSkuData(bujia, tipoLinea);
       const anios      = `${bujia.anio_inicio}–${bujia.anio_fin}`;

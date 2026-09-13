@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { Lock, AlertCircle, Eye, EyeOff, Delete, ArrowRight } from 'lucide-react';
 
+const MAX_PIN_LENGTH = 8;
+
 export default function Login() {
   const { login, loading } = useAuth();
   const [pin, setPin] = useState('');
@@ -33,7 +35,7 @@ export default function Login() {
   };
 
   const handleKeyPress = (num) => {
-    if (pin.length < 8) {
+    if (pin.length < MAX_PIN_LENGTH) {
       setPin(prev => prev + num);
     }
   };
@@ -83,7 +85,7 @@ export default function Login() {
           ref={inputRef}
           type={showPin ? 'text' : 'password'}
           value={pin}
-          onChange={(e) => setPin(e.target.value.replace(/\D/g, '').slice(0, 8))}
+          onChange={(e) => setPin(e.target.value.replace(/\D/g, '').slice(0, MAX_PIN_LENGTH))}
           onKeyDown={handleKeyDown}
           className="absolute opacity-0 pointer-events-none w-0 h-0"
           disabled={loading}
@@ -102,7 +104,7 @@ export default function Login() {
             
             {/* Visual Dot Indicators */}
             <div className="flex items-center justify-center gap-4 py-3">
-              {[...Array(6)].map((_, index) => {
+              {[...Array(MAX_PIN_LENGTH)].map((_, index) => {
                 const isFilled = pin.length > index;
                 const isCurrent = pin.length === index;
                 return (

@@ -35,9 +35,9 @@ export function recomendarAceiteDefault(bujia) {
   const anio = parseInt(bujia.anio_inicio, 10) || 2015;
   const cilindros = (bujia.cilindros_config || '').toUpperCase();
 
-  let viscosidad = '5W-30';
-  let tecnologia = 'Semisintético';
-  let litros = 4;
+  let viscosidad;
+  let tecnologia;
+  let litros;
 
   // 1. Viscosidad y tecnología inteligente por año
   if (anio >= 2010) {

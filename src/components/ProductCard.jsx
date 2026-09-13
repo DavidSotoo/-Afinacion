@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ShoppingCart, Droplet, Wind } from 'lucide-react';
@@ -17,19 +17,20 @@ export default function ProductCard({ bujia, tipoLinea }) {
   const { addItem, items } = useCart();
 
   const config = LINE_CONFIG[tipoLinea];
-  if (!config) return null;
-
-  const { label, field, badge } = config;
-  const data = bujia[field];
-  if (!data?.tipo) return null;
+  const data = config ? bujia[config.field] : null;
+  // Hooks must run on every render (Rules of Hooks) — the invalid-config/no-data
+  // cases bail out via `isValid` below and render nothing, but only *after* hooks.
+  const isValid = Boolean(config && data?.tipo);
 
   // ── Derived values (memoized) ─────────────────────────────────────────────
   const inCart = useMemo(
-    () => items.some(i => i.id === `pieza-${bujia.id}-${tipoLinea}`),
-    [items, bujia.id, tipoLinea],
+    () => isValid && items.some(i => i.id === `pieza-${bujia.id}-${tipoLinea}`),
+    [isValid, items, bujia.id, tipoLinea],
   );
 
   const whatsappUrl = useMemo(() => {
+    if (!isValid) return '';
+    const label = config.label;
     const msg = [
       `🔧 *Cotización +AFINACIÓN*`,
       ``,
@@ -45,7 +46,11 @@ export default function ProductCard({ bujia, tipoLinea }) {
       `Por favor, confirmen disponibilidad y precio. ¡Gracias!`,
     ].join('\n');
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-  }, [bujia, label, data]);
+  }, [isValid, bujia, config, data]);
+
+  if (!isValid) return null;
+
+  const { label, badge } = config;
 
   const aspiracionLabel =
     bujia.aspiracion === 'T'  ? '⬡ TURBO' :

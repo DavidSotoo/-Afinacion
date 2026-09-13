@@ -1,0 +1,1 @@
+var e=`masafinacion.com`,t=`https://afinacion-backend.onrender.com`,n=(()=>{if(typeof window<`u`){let{hostname:n}=window.location;if(n===e||n.endsWith(`.${e}`))return t;if(n!==`localhost`&&n!==`127.0.0.1`)return`http://${n}:5000`}return`http://localhost:5000`})();export{n as t};

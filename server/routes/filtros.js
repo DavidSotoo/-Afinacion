@@ -104,8 +104,12 @@ router.post('/bulk-adjust', auth, async (req, res) => {
       return res.status(400).json({ error: 'La marca y el porcentaje son obligatorios.' });
     }
 
-    const brandUpper = marca.trim().toUpperCase();
     const pct = Number(porcentaje);
+    if (pct <= -100) {
+      return res.status(400).json({ error: 'El porcentaje de ajuste no puede ser -100% o menor (dejaría precios en cero o negativos).' });
+    }
+
+    const brandUpper = marca.trim().toUpperCase();
     const multiplier = 1 + (pct / 100);
 
     // Update prices using MongoDB aggregation update pipeline to round to 2 decimal places
@@ -115,7 +119,7 @@ router.post('/bulk-adjust', auth, async (req, res) => {
         {
           $set: {
             precio: {
-              $round: [{ $multiply: ['$precio', multiplier] }, 2]
+              $max: [0, { $round: [{ $multiply: ['$precio', multiplier] }, 2] }]
             }
           }
         }

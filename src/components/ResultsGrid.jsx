@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SearchX, LayoutGrid, Package, ShieldAlert } from 'lucide-react';
 import ProductCard from './ProductCard';

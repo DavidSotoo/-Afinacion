@@ -1112,7 +1112,7 @@ function ModalBalata({ mode, item, sugerenciasModelos = [], onClose, onSuccess }
           </button>
         </div>
 
-        <form onSubmit={handleSave} className="flex-grow overflow-y-auto p-5 space-y-5">
+        <form id="balata-form" onSubmit={handleSave} className="flex-grow overflow-y-auto p-5 space-y-5">
           {errorMsg && (
             <div className="flex items-center gap-2 text-xs text-red-400 bg-red-500/5 border border-red-500/10 rounded-lg p-3">
               <AlertTriangle className="w-4 h-4 shrink-0" />
@@ -1293,7 +1293,8 @@ function ModalBalata({ mode, item, sugerenciasModelos = [], onClose, onSuccess }
             Cancelar
           </button>
           <button
-            onClick={handleSave}
+            type="submit"
+            form="balata-form"
             disabled={saving}
             className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-xs font-semibold bg-violet-600 hover:bg-violet-500 text-white transition-all cursor-pointer disabled:opacity-40"
           >

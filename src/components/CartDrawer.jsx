@@ -64,7 +64,7 @@ const KitDrawerItem = React.memo(function KitDrawerItem({ item, onRemove, onTogg
   const label   = NGK_LINE_LABELS[tipoLinea] || tipoLinea;
   const skuData = getSkuData(bujia, tipoLinea);
 
-  const isExcluded = (key) => excludedParts.includes(key);
+  const isExcluded = React.useCallback((key) => excludedParts.includes(key), [excludedParts]);
 
   const filtros = [
     { key: 'filtro_aceite',   label: 'Aceite',   num: '2️⃣', Icon: Droplet },
@@ -97,7 +97,7 @@ const KitDrawerItem = React.memo(function KitDrawerItem({ item, onRemove, onTogg
     }
 
     return price;
-  }, [bujia, excludedParts, item.aceite_motor, tipoLinea]);
+  }, [bujia, isExcluded, item.aceite_motor, tipoLinea]);
 
   return (
     <li className="drawer-item drawer-item--kit" role="listitem">
@@ -128,7 +128,7 @@ const KitDrawerItem = React.memo(function KitDrawerItem({ item, onRemove, onTogg
             </span>
             <button
               className="drawer-item-remove"
-              onClick={onRemove}
+              onClick={() => onRemove(item.id)}
               aria-label={`Eliminar kit ${bujia.marca} ${bujia.modelo}`}
             >
               <Trash2 size={14} />
@@ -233,7 +233,7 @@ const PiezaDrawerItem = React.memo(function PiezaDrawerItem({ item, onRemove }) 
           <span className="drawer-item-vehicle">{bujia.marca} {bujia.modelo}</span>
           <button
             className="drawer-item-remove"
-            onClick={onRemove}
+            onClick={() => onRemove(item.id)}
             aria-label={`Eliminar ${bujia.marca} ${bujia.modelo}`}
           >
             <Trash2 size={14} />
@@ -273,7 +273,7 @@ const FiltroDrawerItem = React.memo(function FiltroDrawerItem({ item, onRemove }
           <span className="drawer-item-vehicle">{bujia.marca} {bujia.modelo}</span>
           <button
             className="drawer-item-remove"
-            onClick={onRemove}
+            onClick={() => onRemove(item.id)}
             aria-label={`Eliminar filtro de ${labelTxt} para ${bujia.marca} ${bujia.modelo}`}
           >
             <Trash2 size={14} />
@@ -459,7 +459,7 @@ export default function CartDrawer() {
                           <KitDrawerItem
                             key={item.id}
                             item={item}
-                            onRemove={() => removeKit(item.id)}
+                            onRemove={handleRemoveKit}
                             onTogglePart={toggleKitPart}
                           />
                         ))}
@@ -479,7 +479,7 @@ export default function CartDrawer() {
                           <PiezaDrawerItem
                             key={item.id}
                             item={item}
-                            onRemove={() => removeItem(item.id)}
+                            onRemove={handleRemoveItem}
                           />
                         ))}
                     </>
@@ -498,7 +498,7 @@ export default function CartDrawer() {
                           <FiltroDrawerItem
                             key={item.id}
                             item={item}
-                            onRemove={() => removeItem(item.id)}
+                            onRemove={handleRemoveItem}
                           />
                         ))}
                     </>
