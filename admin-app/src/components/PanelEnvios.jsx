@@ -192,7 +192,7 @@ export default function PanelEnvios() {
       setCotizaciones(prev => prev.map(q => q._id === id ? { ...q, estatus: newStatus } : q));
     } catch (err) {
       console.error("Error updating status:", err);
-      alert('No se pudo actualizar el estatus.');
+      setError('No se pudo actualizar el estatus.');
     } finally {
       setActionLoading(false);
     }
@@ -208,7 +208,7 @@ export default function PanelEnvios() {
       setCotizaciones(prev => prev.filter(q => q._id !== id));
     } catch (err) {
       console.error("Error deleting quote:", err);
-      alert('No se pudo eliminar el pedido.');
+      setError('No se pudo eliminar el pedido.');
     } finally {
       setActionLoading(false);
     }

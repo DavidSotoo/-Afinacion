@@ -114,7 +114,7 @@ export default function PanelCatalogos() {
       setFiltros(prev => prev.filter(f => f._id !== id));
       showToastMsg(`Filtro "${clave}" (${brandName}) eliminado correctamente.`);
     } catch (err) {
-      alert(err.response?.data?.error || 'Error al eliminar el filtro.');
+      showToastMsg(err.response?.data?.error || 'Error al eliminar el filtro.');
     }
   };
 
@@ -125,7 +125,7 @@ export default function PanelCatalogos() {
       setBujias(prev => prev.filter(b => b._id !== id));
       showToastMsg(`Bujía "${sku}" eliminada correctamente.`);
     } catch (err) {
-      alert(err.response?.data?.error || 'Error al eliminar la bujía.');
+      showToastMsg(err.response?.data?.error || 'Error al eliminar la bujía.');
     }
   };
 
@@ -136,7 +136,7 @@ export default function PanelCatalogos() {
       setBalatas(prev => prev.filter(b => b._id !== id));
       showToastMsg(`Balata "${sku_dynamic}" eliminada correctamente.`);
     } catch (err) {
-      alert(err.response?.data?.error || 'Error al eliminar la balata.');
+      showToastMsg(err.response?.data?.error || 'Error al eliminar la balata.');
     }
   };
 
