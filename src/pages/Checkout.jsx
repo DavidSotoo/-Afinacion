@@ -330,7 +330,7 @@ export default function Checkout() {
 
   // Recalculate shipping based on selected option and subtotal
   const shipping = useMemo(() => computeShipping(selectedDelivery), [computeShipping, selectedDelivery]);
-  const grandTotal = subtotal + shipping.cost + serviceCost;
+  const grandTotal = Math.round((subtotal + shipping.cost + serviceCost) * 100) / 100;
 
   const changeAmount = useMemo(() => {
     if (!cashPaidWith) return 0;
