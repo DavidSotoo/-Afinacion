@@ -211,6 +211,36 @@ export default function PanelCotizaciones() {
 
                 {/* Actions Column */}
                 <div className="flex flex-col justify-between items-start md:items-end gap-4">
+                  {q.datosCliente?.nombre && (
+                    <div className="w-full bg-slate-950/40 border border-slate-800/80 rounded-xl p-3 space-y-1.5 text-xs text-left">
+                      <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Cliente</h4>
+                      <div className="font-bold text-white text-sm">{q.datosCliente.nombre}</div>
+                      {q.datosCliente.telefono && (
+                        <a
+                          href={`https://wa.me/52${q.datosCliente.telefono.replace(/\D/g, '')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block font-mono text-emerald-400 hover:underline"
+                        >
+                          {q.datosCliente.telefono}
+                        </a>
+                      )}
+                      {q.datosCliente.email && (
+                        <a href={`mailto:${q.datosCliente.email}`} className="block text-sky-400 hover:underline break-all">
+                          {q.datosCliente.email}
+                        </a>
+                      )}
+                      {q.datosCliente.notas && (
+                        <div className="text-slate-400 italic">“{q.datosCliente.notas}”</div>
+                      )}
+                      {q.totalFinal > 0 && (
+                        <div className="pt-1.5 mt-1.5 border-t border-slate-800 flex justify-between font-bold text-white">
+                          <span>Total</span>
+                          <span>${Number(q.totalFinal).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
                   <div className="w-full sm:w-auto">
                     <label className="text-xs font-semibold uppercase tracking-wider text-slate-400 block mb-2 md:text-right">
                       Cambiar Estatus
