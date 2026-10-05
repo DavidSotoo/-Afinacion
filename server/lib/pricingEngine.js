@@ -30,6 +30,8 @@ const SERVICE_COSTS = {
   completo: 600,
 };
 
+const round2 = (n) => Math.round(n * 100) / 100;
+
 // ── calculateOilPrice — réplica exacta de src/lib/kitHelpers.js ──────────────
 function calculateOilPrice(anioInicio, tecnologia, litros) {
   const anio = parseInt(anioInicio, 10) || 2015;
@@ -139,13 +141,13 @@ async function calcularTotalDesdeCartSecure(rawItems, deliveryId, servicioTaller
 
   const shippingCost = computeShipping(deliveryId || 'local', hasKit, subtotal);
   const serviceCost  = SERVICE_COSTS[servicioTaller] || 0;
-  const total        = subtotal + shippingCost + serviceCost;
+  const total        = round2(subtotal + shippingCost + serviceCost);
 
   if (total <= 0 || total > 9999999) {
     throw new Error(`Total calculado fuera de rango: $${total} MXN.`);
   }
 
-  return { subtotal, shipping: shippingCost, serviceCost, total };
+  return { subtotal: round2(subtotal), shipping: shippingCost, serviceCost, total };
 }
 
 module.exports = { calcularTotalDesdeCartSecure, calculateOilPrice, computeShipping };
