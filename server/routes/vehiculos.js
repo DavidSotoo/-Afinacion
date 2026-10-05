@@ -12,6 +12,25 @@ const Balata = require('../models/Balata');
 const { getFullModelSearchKeys } = require('../models/modelNormalizer');
 
 const escapeRegExp = (string) => string ? string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') : '';
+
+async function resolverMarca(marca) {
+  const limpia = marca.trim();
+  const existentes = await Vehiculo.distinct('marca');
+  const coincidencia = existentes.find(m => m.trim().toLowerCase() === limpia.toLowerCase());
+  return coincidencia || limpia;
+}
+
+async function buscarVehiculoDuplicado({ marca, modelo, anio_inicio, anio_fin, motor }, excluirId) {
+  const filtro = {
+    marca: { $regex: `^${escapeRegExp(marca.trim())}$`, $options: 'i' },
+    modelo: { $regex: `^${escapeRegExp(modelo.trim())}$`, $options: 'i' },
+    anio_inicio: Number(anio_inicio),
+    anio_fin: Number(anio_fin),
+    motor: (motor || '').trim()
+  };
+  if (excluirId) filtro._id = { $ne: excluirId };
+  return Vehiculo.findOne(filtro);
+}
 const YEAR_HORIZON = 2035;
 
 const TIPO_FILTRO = {
@@ -1895,7 +1914,7 @@ router.put('/:id', auth, async (req, res) => {
     }
 
     // Update standard fields
-    if (marca !== undefined) vehiculo.marca = marca;
+    if (marca !== undefined) vehiculo.marca = await resolverMarca(marca);
     if (modelo !== undefined) vehiculo.modelo = modelo;
     if (anio_inicio !== undefined) vehiculo.anio_inicio = Number(anio_inicio);
     if (anio_fin !== undefined) vehiculo.anio_fin = Number(anio_fin);
@@ -1956,6 +1975,12 @@ router.put('/:id', auth, async (req, res) => {
       vehiculo.markModified('referencias_alternas');
     }
 
+    const cambiaIdentidad = [marca, modelo, anio_inicio, anio_fin, motor].some(v => v !== undefined);
+    const duplicado = cambiaIdentidad && await buscarVehiculoDuplicado(vehiculo, vehiculo._id);
+    if (duplicado) {
+      return res.status(409).json({ error: `Ya existe otro vehículo ${vehiculo.marca} ${vehiculo.modelo} (${vehiculo.anio_inicio}–${vehiculo.anio_fin}${vehiculo.motor ? ', ' + vehiculo.motor : ''}) en el catálogo.` });
+    }
+
     await vehiculo.save();
 
     // Enrich the updated vehicle to return the full calculated fields
@@ -1987,6 +2012,12 @@ router.post('/', auth, async (req, res) => {
       return res.status(400).json({ error: 'Marca, modelo, anio_inicio y anio_fin son obligatorios.' });
     }
 
+    const marcaFinal = await resolverMarca(marca);
+    const duplicado = await buscarVehiculoDuplicado({ marca: marcaFinal, modelo, anio_inicio, anio_fin, motor }, null);
+    if (duplicado) {
+      return res.status(409).json({ error: `Ya existe un vehículo ${marcaFinal} ${modelo.trim()} (${anio_inicio}–${anio_fin}${motor ? ', ' + motor.trim() : ''}) en el catálogo.` });
+    }
+
     const defaultFiltro = () => ({ tipo: null, marca: null, sku: null, hasData: false, alternos: [] });
     const finalKit = kit_afinacion || {
       filtro_aceite: defaultFiltro(),
@@ -1996,7 +2027,7 @@ router.post('/', auth, async (req, res) => {
     };
 
     const nuevoVehiculo = new Vehiculo({
-      marca: marca.trim(),
+      marca: marcaFinal,
       modelo: modelo.trim(),
       anio_inicio: Number(anio_inicio),
       anio_fin: Number(anio_fin),
