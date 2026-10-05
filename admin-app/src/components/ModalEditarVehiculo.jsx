@@ -149,14 +149,15 @@ function FiltroField({ label, color, fieldKey, values, onChange }) {
 }
 
 // Main Tabbed Modal
-export default function ModalEditarVehiculo({ vehiculo, onClose, onSaved }) {
+export default function ModalEditarVehiculo({ vehiculo, plantilla, onClose, onSaved }) {
   const isEdit = !!vehiculo;
+  const base = vehiculo || plantilla;
 
   // Active Tab
   const [activeTab, setActiveTab] = useState('specs'); // 'specs' | 'kit'
 
   // Specifications Form State (Initialized directly from props)
-  const [marca, setMarca] = useState(vehiculo?.marca || '');
+  const [marca, setMarca] = useState(base?.marca || '');
   const [marcaNueva, setMarcaNueva] = useState(false);
   const [brandOptions, setBrandOptions] = useState([]);
 
@@ -169,23 +170,23 @@ export default function ModalEditarVehiculo({ vehiculo, onClose, onSaved }) {
   const [anioInicio, setAnioInicio] = useState(vehiculo?.anio_inicio ? String(vehiculo.anio_inicio) : '');
   const [anioFin, setAnioFin] = useState(vehiculo?.anio_fin ? String(vehiculo.anio_fin) : '');
   const [motor, setMotor] = useState(vehiculo?.motor || '');
-  const [litros, setLitros] = useState(vehiculo?.litros !== null && vehiculo?.litros !== undefined ? String(vehiculo.litros) : '');
-  const [cilindrosConfig, setCilindrosConfig] = useState(vehiculo?.cilindros_config || 'L4');
-  const [aspiracion, setAspiracion] = useState(vehiculo?.aspiracion || 'Aspiración Natural');
-  const [calibracionMm, setCalibracionMm] = useState(vehiculo?.calibracion_mm !== null && vehiculo?.calibracion_mm !== undefined ? String(vehiculo.calibracion_mm) : '');
+  const [litros, setLitros] = useState(base?.litros !== null && base?.litros !== undefined ? String(base.litros) : '');
+  const [cilindrosConfig, setCilindrosConfig] = useState(base?.cilindros_config || 'L4');
+  const [aspiracion, setAspiracion] = useState(base?.aspiracion || 'Aspiración Natural');
+  const [calibracionMm, setCalibracionMm] = useState(base?.calibracion_mm !== null && base?.calibracion_mm !== undefined ? String(base.calibracion_mm) : '');
 
   // Spark Plugs State
-  const [bujiaStockType, setBujiaStockType] = useState(vehiculo?.bujia_stock?.tipo || '');
-  const [bujiaStockCode, setBujiaStockCode] = useState(vehiculo?.bujia_stock?.codigo || '');
-  const [bujiaIriType, setBujiaIriType] = useState(vehiculo?.bujia_iridium_ix?.tipo || '');
-  const [bujiaIriCode, setBujiaIriCode] = useState(vehiculo?.bujia_iridium_ix?.codigo || '');
-  const [bujiaGPowerType, setBujiaGPowerType] = useState(vehiculo?.bujia_g_power?.tipo || '');
-  const [bujiaGPowerCode, setBujiaGPowerCode] = useState(vehiculo?.bujia_g_power?.codigo || '');
-  const [bujiaVPowerType, setBujiaVPowerType] = useState(vehiculo?.bujia_v_power?.tipo || '');
-  const [bujiaVPowerCode, setBujiaVPowerCode] = useState(vehiculo?.bujia_v_power?.codigo || '');
+  const [bujiaStockType, setBujiaStockType] = useState(base?.bujia_stock?.tipo || '');
+  const [bujiaStockCode, setBujiaStockCode] = useState(base?.bujia_stock?.codigo || '');
+  const [bujiaIriType, setBujiaIriType] = useState(base?.bujia_iridium_ix?.tipo || '');
+  const [bujiaIriCode, setBujiaIriCode] = useState(base?.bujia_iridium_ix?.codigo || '');
+  const [bujiaGPowerType, setBujiaGPowerType] = useState(base?.bujia_g_power?.tipo || '');
+  const [bujiaGPowerCode, setBujiaGPowerCode] = useState(base?.bujia_g_power?.codigo || '');
+  const [bujiaVPowerType, setBujiaVPowerType] = useState(base?.bujia_v_power?.tipo || '');
+  const [bujiaVPowerCode, setBujiaVPowerCode] = useState(base?.bujia_v_power?.codigo || '');
 
   // Kit Form State
-  const [kitFormState, setKitFormState] = useState(() => buildKitFormState(vehiculo));
+  const [kitFormState, setKitFormState] = useState(() => buildKitFormState(base));
 
   // Saving states
   const [saving, setSaving] = useState(false);

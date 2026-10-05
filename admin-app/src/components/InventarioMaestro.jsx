@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import api from '../services/api';
 import {
   Search, RotateCcw, Filter, AlertTriangle, Pencil, CheckCircle2,
-  ChevronLeft, ChevronRight, Plus, Trash2, Link2, X, Save, Loader2, Eye
+  ChevronLeft, ChevronRight, Plus, Trash2, Link2, X, Save, Loader2, Eye, Copy
 } from 'lucide-react';
 import ModalEditarVehiculo from './ModalEditarVehiculo';
 
@@ -83,6 +83,7 @@ export default function InventarioMaestro() {
 
   // Modal & toast state
   const [editVehiculo, setEditVehiculo] = useState(null);
+  const [plantillaVehiculo, setPlantillaVehiculo] = useState(null);
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showLinkModal, setShowLinkModal] = useState(false);
   const [toast,        setToast]        = useState('');
@@ -163,6 +164,7 @@ export default function InventarioMaestro() {
   const handleSaved = useCallback((savedVehiculo) => {
     fetchData(); // Reload current page
     setEditVehiculo(null);
+    setPlantillaVehiculo(null);
     setShowCreateModal(false);
     setToast(`✅ ${savedVehiculo.marca} ${savedVehiculo.modelo} guardado en Atlas.`);
     
@@ -391,6 +393,27 @@ export default function InventarioMaestro() {
                             Editar
                           </button>
                           <button
+                            onClick={() => {
+                              setPlantillaVehiculo({
+                                marca: v.marca,
+                                litros: v.litros,
+                                cilindros_config: v.cilindros_config,
+                                aspiracion: v.aspiracion,
+                                calibracion_mm: v.calibracion_mm,
+                                bujia_stock: v.bujia_stock,
+                                bujia_iridium_ix: v.bujia_iridium_ix,
+                                bujia_g_power: v.bujia_g_power,
+                                bujia_v_power: v.bujia_v_power,
+                                kit_afinacion: v.kit_afinacion,
+                              });
+                            }}
+                            title="Crear un vehículo nuevo copiando marca, bujías y kit de este"
+                            className="inline-flex items-center justify-center gap-1 px-2.5 py-1.5 text-xs font-medium rounded-lg bg-slate-950 border border-slate-700 hover:border-emerald-500/60 hover:text-emerald-400 text-slate-400 transition-all cursor-pointer"
+                          >
+                            <Copy className="w-3.5 h-3.5" />
+                            Duplicar
+                          </button>
+                          <button
                             onClick={() => handleDeleteVehiculo(v._id, `${v.marca} ${v.modelo}`)}
                              title="Eliminar este vehículo"
                             className="inline-flex items-center justify-center p-1.5 rounded-lg bg-slate-950 border border-slate-700 hover:border-red-500/60 hover:text-red-400 text-slate-400 transition-all cursor-pointer"
@@ -456,6 +479,14 @@ export default function InventarioMaestro() {
         <ModalEditarVehiculo
           vehiculo={editVehiculo}
           onClose={() => setEditVehiculo(null)}
+          onSaved={handleSaved}
+        />
+      )}
+
+      {plantillaVehiculo && (
+        <ModalEditarVehiculo
+          plantilla={plantillaVehiculo}
+          onClose={() => setPlantillaVehiculo(null)}
           onSaved={handleSaved}
         />
       )}
