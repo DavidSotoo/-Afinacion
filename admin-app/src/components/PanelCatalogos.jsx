@@ -42,19 +42,23 @@ export default function PanelCatalogos() {
   const [editingItem, setEditingItem] = useState(null);
 
   // ─── Fetch de Datos ────────────────────────────────────────────────────────
-  const fetchData = useCallback(async () => {
+  const fetchTab = useCallback(async (tab) => {
     setLoading(true);
     try {
-      const [filtrosRes, bujiasRes, balatasRes, autocompleteRes] = await Promise.all([
-        api.get('/filtros'),
-        api.get('/bujias'),
-        api.get('/balatas'),
-        api.get('/vehiculos/models-autocomplete')
-      ]);
-      setFiltros(filtrosRes.data || []);
-      setBujias(bujiasRes.data || []);
-      setBalatas(balatasRes.data || []);
-      setSugerenciasModelos(autocompleteRes.data || []);
+      if (tab === 'filtros') {
+        const res = await api.get('/filtros');
+        setFiltros(res.data || []);
+      } else if (tab === 'bujias') {
+        const res = await api.get('/bujias');
+        setBujias(res.data || []);
+      } else {
+        const [balatasRes, autocompleteRes] = await Promise.all([
+          api.get('/balatas'),
+          api.get('/vehiculos/models-autocomplete')
+        ]);
+        setBalatas(balatasRes.data || []);
+        setSugerenciasModelos(autocompleteRes.data || []);
+      }
       setError('');
     } catch (err) {
       console.error('Error loading catalogs:', err);
@@ -69,16 +73,36 @@ export default function PanelCatalogos() {
     const load = async () => {
       await new Promise(resolve => setTimeout(resolve, 0));
       if (active) {
-        fetchData();
+        fetchTab(activeSubTab);
       }
     };
     load();
     return () => { active = false; };
-  }, [fetchData]);
+  }, [activeSubTab, fetchTab]);
 
   // Mostrar Notificación Toast
   const showToastMsg = (msg) => {
     setToast(msg);
+  };
+
+  const guardarPrecioFiltro = async (f, nuevo) => {
+    try {
+      await api.put(`/filtros/${f._id}`, { precio: nuevo });
+      setFiltros(prev => prev.map(x => x._id === f._id ? { ...x, precio: nuevo } : x));
+      showToastMsg(`Precio de ${f.clave} actualizado a $${nuevo.toFixed(2)}.`);
+    } catch (err) {
+      showToastMsg(err.response?.data?.error || 'No se pudo actualizar el precio.');
+    }
+  };
+
+  const guardarPrecioBujia = async (b, nuevo) => {
+    try {
+      await api.put(`/bujias/${b._id}`, { precio_cliente: nuevo });
+      setBujias(prev => prev.map(x => x._id === b._id ? { ...x, precio_cliente: nuevo } : x));
+      showToastMsg(`Precio de ${b.sku} actualizado a $${nuevo.toFixed(2)}.`);
+    } catch (err) {
+      showToastMsg(err.response?.data?.error || 'No se pudo actualizar el precio.');
+    }
   };
 
   // ─── Handlers de Eliminación ────────────────────────────────────────────────
@@ -207,7 +231,7 @@ export default function PanelCatalogos() {
           <p className="text-slate-400 mt-1">Gestione precios, referencias y compatibilidades de productos.</p>
         </div>
         <button
-          onClick={fetchData}
+          onClick={() => fetchTab(activeSubTab)}
           className="text-xs text-slate-400 hover:text-white bg-slate-900 border border-slate-800 hover:border-slate-700 px-4 py-2.5 rounded-xl transition-colors cursor-pointer self-start sm:self-auto"
         >
           Recargar Catálogos
@@ -328,7 +352,7 @@ export default function PanelCatalogos() {
                         </td>
                         <td className="py-3.5 px-6 font-mono font-bold text-slate-200">{f.clave}</td>
                         <td className="py-3.5 px-6 text-slate-300">{f.descripcion || '—'}</td>
-                        <td className="py-3.5 px-6 font-mono font-bold text-white">${f.precio.toFixed(2)}</td>
+                        <td className="py-3.5 px-6"><PrecioEditable valor={f.precio} onGuardar={(n) => guardarPrecioFiltro(f, n)} /></td>
                         <td className="py-3.5 px-6 text-center">
                           <div className="flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                             <button
@@ -577,7 +601,7 @@ export default function PanelCatalogos() {
                       <tr key={b._id} className="hover:bg-slate-950/20 transition-colors group">
                         <td className="py-3.5 px-6 font-mono font-bold text-violet-400">{b.sku}</td>
                         <td className="py-3.5 px-6 text-slate-300">{b.descripcion || '—'}</td>
-                        <td className="py-3.5 px-6 font-mono font-bold text-white">${b.precio_cliente.toFixed(2)}</td>
+                        <td className="py-3.5 px-6"><PrecioEditable valor={b.precio_cliente} onGuardar={(n) => guardarPrecioBujia(b, n)} /></td>
                         <td className="py-3.5 px-6 text-center">
                           <div className="flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                             <button
@@ -669,7 +693,7 @@ export default function PanelCatalogos() {
           onClose={() => setBulkAdjustType(null)}
           onSuccess={(msg) => {
             setBulkAdjustType(null);
-            fetchData();
+            fetchTab(activeSubTab);
             showToastMsg(msg);
           }}
         />
@@ -683,7 +707,7 @@ export default function PanelCatalogos() {
           onClose={() => setImportType(null)}
           onSuccess={(msg) => {
             setImportType(null);
-            fetchData();
+            fetchTab(activeSubTab);
             showToastMsg(msg);
           }}
         />
@@ -699,8 +723,33 @@ function ModalAjusteMasivo({ type, onClose, onSuccess }) {
   const [confirmText, setConfirmText] = useState('');
   const [saving, setSaving] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
+  const [preview, setPreview] = useState(null);
+  const [checking, setChecking] = useState(false);
 
   const isFiltro = type === 'filtro';
+  const signature = `${marca}|${porcentaje}`;
+  const previewValida = preview !== null && preview.signature === signature;
+
+  const handlePreview = async () => {
+    if (!porcentaje.trim() || isNaN(porcentaje)) {
+      setErrorMsg('Por favor ingresa un porcentaje numérico válido.');
+      return;
+    }
+    setChecking(true);
+    setErrorMsg('');
+    try {
+      const payload = { porcentaje: Number(porcentaje), dryRun: true };
+      if (isFiltro) payload.marca = marca;
+      const url = isFiltro ? '/filtros/bulk-adjust' : '/bujias/bulk-adjust';
+      const res = await api.post(url, payload);
+      setPreview({ ...res.data, signature });
+    } catch (err) {
+      setPreview(null);
+      setErrorMsg(err.response?.data?.error || err.message || 'Error de conexión.');
+    } finally {
+      setChecking(false);
+    }
+  };
 
   const handleApply = async (e) => {
     e.preventDefault();
@@ -813,6 +862,27 @@ function ModalAjusteMasivo({ type, onClose, onSuccess }) {
             </p>
           </div>
 
+          {previewValida && (
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-3.5 space-y-2 text-xs">
+              <div className="text-slate-300">
+                Se modificarán <span className="font-bold text-white">{preview.matchedCount}</span> {isFiltro ? 'filtros' : 'bujías'}.
+              </div>
+              {preview.sample?.length > 0 && (
+                <div className="space-y-1 font-mono text-[11px]">
+                  {preview.sample.map(s => (
+                    <div key={s.clave} className="flex justify-between gap-3 text-slate-400">
+                      <span className="truncate">{s.clave}</span>
+                      <span>${s.precio} → <span className="text-amber-400">${s.nuevo}</span></span>
+                    </div>
+                  ))}
+                  {preview.matchedCount > preview.sample.length && (
+                    <div className="text-slate-600">…y {preview.matchedCount - preview.sample.length} más</div>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+
           <div className="border-t border-slate-800/60 pt-3 space-y-2">
             <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
               Escribe <span className="font-mono text-amber-400">"AJUSTAR"</span> para confirmar
@@ -836,8 +906,17 @@ function ModalAjusteMasivo({ type, onClose, onSuccess }) {
               Cancelar
             </button>
             <button
+              type="button"
+              onClick={handlePreview}
+              disabled={checking || saving || !porcentaje.trim()}
+              className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-semibold bg-slate-950 border border-slate-800 hover:border-amber-500/40 text-slate-300 hover:text-white transition-all cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              {checking && <Loader2 className="w-3.5 h-3.5 animate-spin" />}
+              <span>Ver vista previa</span>
+            </button>
+            <button
               type="submit"
-              disabled={saving || confirmText.toUpperCase() !== 'AJUSTAR'}
+              disabled={saving || !previewValida || preview.matchedCount === 0 || confirmText.toUpperCase() !== 'AJUSTAR'}
               className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-xs font-semibold bg-amber-600 hover:bg-amber-500 text-white transition-all cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
             >
               {saving ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Save className="w-3.5 h-3.5" />}
@@ -1350,6 +1429,55 @@ function ModalBalata({ mode, item, sugerenciasModelos = [], onClose, onSuccess }
  * Parsea un CSV simple (sin comillas escapadas / celdas multilínea) en un
  * arreglo de objetos usando la primera fila como encabezado.
  */
+function PrecioEditable({ valor, onGuardar }) {
+  const [editando, setEditando] = useState(false);
+  const [draft, setDraft] = useState('');
+  const [guardando, setGuardando] = useState(false);
+
+  const terminar = async () => {
+    const n = Number(draft);
+    setEditando(false);
+    if (draft.trim() === '' || !Number.isFinite(n) || n < 0 || n === Number(valor)) return;
+    setGuardando(true);
+    await onGuardar(n);
+    setGuardando(false);
+  };
+
+  if (editando) {
+    return (
+      <input
+        autoFocus
+        type="number"
+        step="0.01"
+        min="0"
+        value={draft}
+        onChange={e => setDraft(e.target.value)}
+        onBlur={terminar}
+        onKeyDown={e => {
+          if (e.key === 'Enter') e.currentTarget.blur();
+          if (e.key === 'Escape') {
+            setDraft(String(valor));
+            e.currentTarget.blur();
+          }
+        }}
+        className="w-28 bg-slate-950 border border-violet-500 rounded px-2 py-1 font-mono text-white outline-none"
+      />
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={() => { setDraft(String(valor)); setEditando(true); }}
+      disabled={guardando}
+      title="Clic para editar el precio"
+      className="font-mono font-bold text-white hover:text-violet-300 underline decoration-dotted underline-offset-4 cursor-pointer disabled:opacity-50"
+    >
+      ${Number(valor).toFixed(2)}
+    </button>
+  );
+}
+
 function parseSimpleCsv(text) {
   const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
   if (lines.length < 2) return { header: [], rows: [] };
@@ -1367,6 +1495,21 @@ function ModalImportarPrecios({ type, catalogItems, onClose, onSuccess }) {
   const [parseError, setParseError] = useState('');
   const [saving, setSaving] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
+
+  const exportarCsv = () => {
+    const limpia = (v) => String(v ?? '').replace(/,/g, ' ');
+    const columnas = isFiltro ? ['clave', 'marca', 'precio'] : ['sku', 'precio'];
+    const filas = catalogItems.map(item => isFiltro
+      ? [item.clave, item.marca || 'UNIFIL', item.precio]
+      : [item.sku, item.precio_cliente]);
+    const csv = [columnas.join(','), ...filas.map(f => f.map(limpia).join(','))].join('\r\n');
+    const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = isFiltro ? 'precios_filtros.csv' : 'precios_bujias.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
   const handleFile = (e) => {
     const file = e.target.files[0];
@@ -1495,6 +1638,15 @@ function ModalImportarPrecios({ type, catalogItems, onClose, onSuccess }) {
               <span>{parseError}</span>
             </div>
           )}
+
+          <button
+            type="button"
+            onClick={exportarCsv}
+            disabled={catalogItems.length === 0}
+            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-slate-950 border border-slate-800 hover:border-emerald-500/40 text-slate-300 hover:text-white transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            <span>Descargar precios actuales ({catalogItems.length}) como CSV</span>
+          </button>
 
           <label className="flex items-center justify-center gap-2 border-2 border-dashed border-slate-800 hover:border-emerald-500/40 rounded-xl p-6 cursor-pointer transition-colors text-sm text-slate-400 hover:text-white">
             <Upload className="w-4 h-4" />

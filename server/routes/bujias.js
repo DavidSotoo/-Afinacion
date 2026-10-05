@@ -67,8 +67,14 @@ router.put('/:id', auth, async (req, res) => {
       }
     }
 
+    if (precio_cliente !== undefined) {
+      const nuevoPrecio = Number(precio_cliente);
+      if (!Number.isFinite(nuevoPrecio) || nuevoPrecio < 0) {
+        return res.status(400).json({ error: 'El precio debe ser un número mayor o igual a cero.' });
+      }
+      bujia.precio_cliente = nuevoPrecio;
+    }
     if (descripcion !== undefined) bujia.descripcion = descripcion;
-    if (precio_cliente !== undefined) bujia.precio_cliente = Number(precio_cliente);
 
     await bujia.save();
     vehiculosRouter.invalidatePriceCache();
@@ -107,6 +113,23 @@ router.post('/bulk-adjust', auth, async (req, res) => {
     }
 
     const multiplier = 1 + (pct / 100);
+
+    if (req.body.dryRun === true) {
+      const [matchedCount, muestra] = await Promise.all([
+        PrecioBujia.countDocuments({}),
+        PrecioBujia.find({}).sort({ sku: 1 }).limit(5).lean()
+      ]);
+      return res.json({
+        ok: true,
+        dryRun: true,
+        matchedCount,
+        sample: muestra.map(b => ({
+          clave: b.sku,
+          precio: b.precio_cliente,
+          nuevo: Math.max(0, Math.round(b.precio_cliente * multiplier * 100) / 100)
+        }))
+      });
+    }
 
     // Update client prices using MongoDB aggregation update pipeline to round to 2 decimal places
     const result = await PrecioBujia.updateMany(
