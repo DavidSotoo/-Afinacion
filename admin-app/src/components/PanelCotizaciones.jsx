@@ -1,17 +1,63 @@
 import { useState, useEffect, useCallback } from 'react';
 import api from '../services/api';
-import { Calendar, Trash2, CheckCircle2, XCircle, AlertCircle } from 'lucide-react';
+import { Calendar, Trash2, CheckCircle2, XCircle, AlertCircle, Search, ChevronLeft, ChevronRight } from 'lucide-react';
+
+const ESTATUS_TABS = [
+  { value: '', label: 'Todas', key: 'total' },
+  { value: 'Pendiente', label: 'Pendientes', key: 'pendientes' },
+  { value: 'Atendida', label: 'Atendidas', key: 'atendidas' },
+  { value: 'Pagado / Listo para surtir', label: 'Pagadas', key: 'pagadas' },
+  { value: 'Cancelada', label: 'Canceladas', key: 'canceladas' },
+];
+
+const PAGE_SIZE = 20;
+
+const buildWhatsappUrl = (q) => {
+  const digits = (q.datosCliente?.telefono || '').replace(/\D/g, '');
+  const nombre = q.datosCliente?.nombre?.split(' ')[0] || '';
+  const vehiculo = `${q.vehiculo?.marca || ''} ${q.vehiculo?.modelo || ''}`.trim();
+  const total = Number(q.totalFinal || 0).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const texto = `Hola${nombre ? ' ' + nombre : ''}, le escribimos de +AFINACIÓN sobre su cotización ${q.folio} (${vehiculo}). Total: $${total} MXN. ¿Le confirmamos su pedido?`;
+  return `https://wa.me/52${digits}?text=${encodeURIComponent(texto)}`;
+};
 
 export default function PanelCotizaciones() {
-  const [cotizaciones, setCotizaciones] = useState([]);
+  const [data, setData] = useState({ items: [], total: 0, totalPages: 1 });
+  const [stats, setStats] = useState(null);
+  const [estatus, setEstatus] = useState('');
+  const [search, setSearch] = useState('');
+  const [debouncedSearch, setDebouncedSearch] = useState('');
+  const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [actionLoading, setActionLoading] = useState(false);
+  const [toast, setToast] = useState('');
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      setDebouncedSearch(search.trim());
+      setPage(1);
+    }, 300);
+    return () => clearTimeout(t);
+  }, [search]);
+
+  useEffect(() => {
+    if (!toast) return;
+    const t = setTimeout(() => setToast(''), 3000);
+    return () => clearTimeout(t);
+  }, [toast]);
 
   const fetchQuotes = useCallback(async () => {
     try {
-      const res = await api.get('/cotizaciones');
-      setCotizaciones(res.data || []);
+      const params = { page, limit: PAGE_SIZE };
+      if (estatus) params.estatus = estatus;
+      if (debouncedSearch) params.q = debouncedSearch;
+      const [listRes, statsRes] = await Promise.all([
+        api.get('/cotizaciones/buscar', { params }),
+        api.get('/cotizaciones/stats'),
+      ]);
+      setData(listRes.data);
+      setStats(statsRes.data);
       setError('');
     } catch (err) {
       console.error("Error loading quotes:", err);
@@ -19,7 +65,7 @@ export default function PanelCotizaciones() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [page, estatus, debouncedSearch]);
 
   useEffect(() => {
     let active = true;
@@ -33,14 +79,16 @@ export default function PanelCotizaciones() {
     return () => { active = false; };
   }, [fetchQuotes]);
 
+  const cotizaciones = data.items;
+
   const handleStatusChange = async (id, newStatus) => {
     setActionLoading(true);
     try {
       await api.put(`/cotizaciones/${id}/status`, { estatus: newStatus });
-      setCotizaciones(prev => prev.map(q => q._id === id ? { ...q, estatus: newStatus } : q));
+      await fetchQuotes();
     } catch (err) {
       console.error("Error updating quote status:", err);
-      alert('No se pudo actualizar el estatus de la cotización.');
+      setToast('No se pudo actualizar el estatus de la cotización.');
     } finally {
       setActionLoading(false);
     }
@@ -53,10 +101,11 @@ export default function PanelCotizaciones() {
     setActionLoading(true);
     try {
       await api.delete(`/cotizaciones/${id}`);
-      setCotizaciones(prev => prev.filter(q => q._id !== id));
+      setToast('Cotización eliminada.');
+      await fetchQuotes();
     } catch (err) {
       console.error("Error deleting quote:", err);
-      alert('No se pudo eliminar la cotización.');
+      setToast('No se pudo eliminar la cotización.');
     } finally {
       setActionLoading(false);
     }
@@ -90,20 +139,77 @@ export default function PanelCotizaciones() {
     }
   };
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-[400px]">
-        <div className="w-8 h-8 border-2 border-violet-500/20 border-t-violet-500 rounded-full animate-spin" />
-      </div>
-    );
-  }
-
-  return (
-    <div className="space-y-6">
+  const header = (
+    <div className="space-y-4">
       <div>
         <h1 className="text-3xl font-extrabold tracking-tight text-white">Solicitudes de Cotización</h1>
         <p className="text-slate-400 mt-1">Gestión de cotizaciones solicitadas por clientes a través de la web pública.</p>
       </div>
+
+      <div className="flex flex-col md:flex-row md:items-center gap-3">
+        <div className="flex flex-wrap gap-2">
+          {ESTATUS_TABS.map(tab => (
+            <button
+              key={tab.value || 'todas'}
+              onClick={() => { setEstatus(tab.value); setPage(1); }}
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-colors cursor-pointer ${
+                estatus === tab.value
+                  ? 'bg-violet-500/15 text-violet-300 border-violet-500/40'
+                  : 'bg-slate-900 text-slate-400 border-slate-800 hover:text-slate-200'
+              }`}
+            >
+              {tab.label}
+              {stats && <span className="ml-1.5 font-mono text-slate-500">{stats[tab.key] ?? 0}</span>}
+            </button>
+          ))}
+        </div>
+        <div className="relative md:ml-auto md:w-72">
+          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
+          <input
+            type="text"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            placeholder="Buscar folio, cliente, teléfono o vehículo…"
+            className="w-full bg-slate-900 border border-slate-800 focus:border-violet-500 rounded-lg pl-9 pr-3 py-2 text-xs text-slate-200 outline-none"
+          />
+        </div>
+      </div>
+    </div>
+  );
+
+  const pagination = data.totalPages > 1 && (
+    <div className="flex items-center justify-between text-xs text-slate-400">
+      <span>Página {data.page ?? page} de {data.totalPages} · {data.total} cotizaciones</span>
+      <div className="flex gap-2">
+        <button
+          onClick={() => setPage(p => Math.max(1, p - 1))}
+          disabled={page <= 1 || loading}
+          className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:text-white disabled:opacity-30 cursor-pointer"
+          aria-label="Página anterior"
+        >
+          <ChevronLeft className="w-4 h-4" />
+        </button>
+        <button
+          onClick={() => setPage(p => Math.min(data.totalPages, p + 1))}
+          disabled={page >= data.totalPages || loading}
+          className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:text-white disabled:opacity-30 cursor-pointer"
+          aria-label="Página siguiente"
+        >
+          <ChevronRight className="w-4 h-4" />
+        </button>
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="space-y-6">
+      {header}
+
+      {toast && (
+        <div className="bg-slate-900 border border-violet-500/30 rounded-xl px-4 py-3 text-sm text-violet-200">
+          {toast}
+        </div>
+      )}
 
       {error && (
         <div className="bg-red-500/5 border border-red-500/10 rounded-xl p-4 text-sm text-red-400">
@@ -111,9 +217,13 @@ export default function PanelCotizaciones() {
         </div>
       )}
 
-      {cotizaciones.length === 0 ? (
+      {loading ? (
+        <div className="flex items-center justify-center min-h-[300px]">
+          <div className="w-8 h-8 border-2 border-violet-500/20 border-t-violet-500 rounded-full animate-spin" />
+        </div>
+      ) : cotizaciones.length === 0 ? (
         <div className="bg-slate-900 border border-slate-800 rounded-2xl p-12 text-center text-slate-500">
-          No hay cotizaciones registradas actualmente en el sistema.
+          {debouncedSearch || estatus ? 'No hay cotizaciones que coincidan con el filtro.' : 'No hay cotizaciones registradas actualmente en el sistema.'}
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-6">
@@ -217,7 +327,7 @@ export default function PanelCotizaciones() {
                       <div className="font-bold text-white text-sm">{q.datosCliente.nombre}</div>
                       {q.datosCliente.telefono && (
                         <a
-                          href={`https://wa.me/52${q.datosCliente.telefono.replace(/\D/g, '')}`}
+                          href={buildWhatsappUrl(q)}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block font-mono text-emerald-400 hover:underline"
@@ -285,6 +395,7 @@ export default function PanelCotizaciones() {
               </div>
             </div>
           ))}
+          {pagination}
         </div>
       )}
     </div>
