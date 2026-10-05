@@ -7,7 +7,7 @@ const rateLimit = require('express-rate-limit');
 // Rate limiter specifically for creating quotes
 const cotizacionLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 10, // Max 10 requests per window per IP
+  max: 60, // Max 60 requests per window per IP
   message: { error: 'Demasiadas cotizaciones creadas desde esta IP. Por favor intente más tarde.' },
   standardHeaders: true,
   legacyHeaders: false,
@@ -87,9 +87,9 @@ router.post('/', cotizacionLimiter, async (req, res) => {
       }
     }
 
-    const folio = await generarFolioUnico();
+    let folio = await generarFolioUnico();
 
-    const nuevaCotizacion = new Cotizacion({
+    const construirCotizacion = () => new Cotizacion({
       folio,
       vehiculo,
       tipoBujia,
@@ -109,7 +109,16 @@ router.post('/', cotizacionLimiter, async (req, res) => {
       totalFinal
     });
 
-    const guardada = await nuevaCotizacion.save();
+    let guardada;
+    for (let intento = 1; ; intento++) {
+      try {
+        guardada = await construirCotizacion().save();
+        break;
+      } catch (err) {
+        if (err.code !== 11000 || intento >= 5) throw err;
+        folio = await generarFolioUnico();
+      }
+    }
     res.status(201).json(guardada);
   } catch (err) {
     console.error('Error al guardar cotización:', err.message);
