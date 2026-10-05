@@ -117,6 +117,64 @@ router.post('/', cotizacionLimiter, async (req, res) => {
   }
 });
 
+const ESTATUS_VALIDOS = ['Pendiente', 'Atendida', 'Cancelada', 'Pagado / Listo para surtir', 'Pago Pendiente (MP)', 'En Disputa (MP)'];
+const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+// @route   GET api/cotizaciones/stats
+// @desc    Conteos por estatus para el dashboard, sin descargar las cotizaciones
+router.get('/stats', auth, async (req, res) => {
+  try {
+    const grupos = await Cotizacion.aggregate([{ $group: { _id: '$estatus', n: { $sum: 1 } } }]);
+    const conteo = Object.fromEntries(grupos.map(g => [g._id, g.n]));
+    res.json({
+      total: grupos.reduce((sum, g) => sum + g.n, 0),
+      pendientes: conteo['Pendiente'] || 0,
+      atendidas: conteo['Atendida'] || 0,
+      pagadas: conteo['Pagado / Listo para surtir'] || 0,
+      canceladas: conteo['Cancelada'] || 0
+    });
+  } catch (err) {
+    console.error('Error al calcular estadísticas de cotizaciones:', err.message);
+    res.status(500).json({ error: 'Error del servidor al calcular estadísticas' });
+  }
+});
+
+// @route   GET api/cotizaciones/buscar?q=&estatus=&page=&limit=
+// @desc    Cotizaciones paginadas, con filtro por estatus y búsqueda por folio, cliente, teléfono o vehículo
+router.get('/buscar', auth, async (req, res) => {
+  try {
+    const page = Math.max(parseInt(req.query.page, 10) || 1, 1);
+    const limit = Math.min(Math.max(parseInt(req.query.limit, 10) || 20, 1), 50);
+    const filtro = {};
+
+    if (ESTATUS_VALIDOS.includes(req.query.estatus)) {
+      filtro.estatus = req.query.estatus;
+    }
+
+    const q = typeof req.query.q === 'string' ? req.query.q.trim().slice(0, 100) : '';
+    if (q) {
+      const rx = new RegExp(escapeRegExp(q), 'i');
+      filtro.$or = [
+        { folio: rx },
+        { 'datosCliente.nombre': rx },
+        { 'datosCliente.telefono': rx },
+        { 'vehiculo.marca': rx },
+        { 'vehiculo.modelo': rx }
+      ];
+    }
+
+    const [items, total] = await Promise.all([
+      Cotizacion.find(filtro).sort({ fecha: -1 }).skip((page - 1) * limit).limit(limit),
+      Cotizacion.countDocuments(filtro)
+    ]);
+
+    res.json({ items, total, page, totalPages: Math.max(1, Math.ceil(total / limit)) });
+  } catch (err) {
+    console.error('Error al buscar cotizaciones:', err.message);
+    res.status(500).json({ error: 'Error del servidor al buscar cotizaciones' });
+  }
+});
+
 // @route   GET api/cotizaciones
 // @desc    Obtener todas las cotizaciones ordenadas por fecha (recientes primero)
 router.get('/', auth, async (req, res) => {

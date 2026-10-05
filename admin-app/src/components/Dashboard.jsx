@@ -28,31 +28,23 @@ export default function Dashboard({ setActiveTab }) {
   async function fetchStatsAndQuotes() {
     try {
       setError('');
-      const [vehiclesRes, quotesRes] = await Promise.all([
+      const [vehiclesRes, quotesStatsRes, recentRes] = await Promise.all([
         api.get('/vehiculos/stats'),
-        api.get('/cotizaciones')
+        api.get('/cotizaciones/stats'),
+        api.get('/cotizaciones/buscar', { params: { limit: 5 } })
       ]);
-      
-      const quotes = quotesRes.data || [];
-      const pending = quotes.filter(q => q.estatus === 'Pendiente').length;
-      const attended = quotes.filter(q => q.estatus === 'Atendida').length;
-      const paid = quotes.filter(q => q.estatus === 'Pagado / Listo para surtir').length;
-      const cancelled = quotes.filter(q => q.estatus === 'Cancelada').length;
 
+      const counts = quotesStatsRes.data;
       setStats({
         totalVehicles: vehiclesRes.data?.total || 0,
-        totalQuotes: quotes.length,
-        pendingQuotes: pending,
-        attendedQuotes: attended,
-        paidQuotes: paid,
-        cancelledQuotes: cancelled,
+        totalQuotes: counts.total,
+        pendingQuotes: counts.pendientes,
+        attendedQuotes: counts.atendidas,
+        paidQuotes: counts.pagadas,
+        cancelledQuotes: counts.canceladas,
       });
 
-      // Sort by date descending and take top 5
-      const sorted = [...quotes]
-        .sort((a, b) => new Date(b.fecha) - new Date(a.fecha))
-        .slice(0, 5);
-      setRecentQuotes(sorted);
+      setRecentQuotes(recentRes.data.items || []);
     } catch (err) {
       console.error("Error fetching stats:", err);
       setError('Error de conexión. Verifica la dirección del servidor API.');
