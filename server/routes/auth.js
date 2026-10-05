@@ -64,7 +64,7 @@ async function getAdminPin() {
  */
 router.post('/login', async (req, res) => {
   try {
-    const ip = req.headers['x-forwarded-for']?.split(',')[0].trim() || req.ip || 'unknown';
+    const ip = req.ip || 'unknown';
     const estado = getEstadoIP(ip);
 
     // ── Verificar si la IP está bloqueada ─────────────────────────────────────

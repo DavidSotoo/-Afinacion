@@ -39,7 +39,7 @@ async function generarFolioUnico() {
 // @desc    Crear una nueva cotización y generar folio
 router.post('/', cotizacionLimiter, async (req, res) => {
   try {
-    const { vehiculo, tipoBujia, bujiaSku, piezas, aceite, servicioTaller, metodoPago, detallesPago, direccionEnvio, rawItems, deliveryId } = req.body;
+    const { vehiculo, tipoBujia, bujiaSku, piezas, aceite, servicioTaller, metodoPago, detallesPago, direccionEnvio, datosCliente, rawItems, deliveryId } = req.body;
     
     if (!vehiculo || !vehiculo.marca || !vehiculo.modelo) {
       return res.status(400).json({ error: 'Falta información esencial del vehículo' });
@@ -100,6 +100,12 @@ router.post('/', cotizacionLimiter, async (req, res) => {
       metodoPago,
       detallesPago,
       direccionEnvio,
+      datosCliente: datosCliente ? {
+        nombre: String(datosCliente.nombre || '').slice(0, 120),
+        telefono: String(datosCliente.telefono || '').slice(0, 30),
+        email: String(datosCliente.email || '').slice(0, 120),
+        notas: String(datosCliente.notas || '').slice(0, 500)
+      } : undefined,
       totalFinal
     });
 

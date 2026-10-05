@@ -86,7 +86,7 @@ async function calcularTotalDesdeCartSecure(rawItems, deliveryId, servicioTaller
   let hasKit = false;
 
   for (const item of rawItems) {
-    const qty = parseInt(item.qty, 10) || 1;
+    const qty = Math.min(Math.max(parseInt(item.qty, 10) || 1, 1), 50);
     
     // Obtenemos el vehículo de la BD y lo enriquecemos para tener los costos reales
     const vehiculoBase = await Vehiculo.findById(item.bujia?._id || item.bujia?.id);

@@ -65,6 +65,12 @@ const CotizacionSchema = new mongoose.Schema({
     type: Object,
     default: null
   },
+  datosCliente: {
+    nombre: { type: String, default: '' },
+    telefono: { type: String, default: '' },
+    email: { type: String, default: '' },
+    notas: { type: String, default: '' }
+  },
   totalFinal: {
     type: Number,
     default: 0
