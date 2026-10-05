@@ -157,6 +157,14 @@ export default function ModalEditarVehiculo({ vehiculo, onClose, onSaved }) {
 
   // Specifications Form State (Initialized directly from props)
   const [marca, setMarca] = useState(vehiculo?.marca || '');
+  const [marcaNueva, setMarcaNueva] = useState(false);
+  const [brandOptions, setBrandOptions] = useState([]);
+
+  useEffect(() => {
+    api.get('/vehiculos/brands')
+      .then(res => setBrandOptions(Array.isArray(res.data) ? res.data : []))
+      .catch(() => setBrandOptions([]));
+  }, []);
   const [modelo, setModelo] = useState(vehiculo?.modelo || '');
   const [anioInicio, setAnioInicio] = useState(vehiculo?.anio_inicio ? String(vehiculo.anio_inicio) : '');
   const [anioFin, setAnioFin] = useState(vehiculo?.anio_fin ? String(vehiculo.anio_fin) : '');
@@ -332,14 +340,36 @@ export default function ModalEditarVehiculo({ vehiculo, onClose, onSaved }) {
                   <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
                     Marca <span className="text-red-500">*</span>
                   </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Ej: Chevrolet"
-                    value={marca}
-                    onChange={e => setMarca(e.target.value)}
+                  <select
+                    required={!marcaNueva}
+                    value={marcaNueva ? '__nueva__' : marca}
+                    onChange={e => {
+                      if (e.target.value === '__nueva__') {
+                        setMarcaNueva(true);
+                        setMarca('');
+                      } else {
+                        setMarcaNueva(false);
+                        setMarca(e.target.value);
+                      }
+                    }}
                     className="w-full bg-slate-950 border border-slate-800 focus:border-violet-500 rounded-lg px-3 py-2 text-xs text-slate-200 outline-none"
-                  />
+                  >
+                    <option value="">Selecciona una marca</option>
+                    {brandOptions.map(m => <option key={m} value={m}>{m}</option>)}
+                    {marca && !marcaNueva && !brandOptions.includes(marca) && <option value={marca}>{marca}</option>}
+                    <option value="__nueva__">+ Nueva marca…</option>
+                  </select>
+                  {marcaNueva && (
+                    <input
+                      type="text"
+                      required
+                      autoFocus
+                      placeholder="Nombre de la nueva marca"
+                      value={marca}
+                      onChange={e => setMarca(e.target.value)}
+                      className="mt-2 w-full bg-slate-950 border border-slate-800 focus:border-violet-500 rounded-lg px-3 py-2 text-xs text-slate-200 outline-none"
+                    />
+                  )}
                 </div>
                 <div className="sm:col-span-2">
                   <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
