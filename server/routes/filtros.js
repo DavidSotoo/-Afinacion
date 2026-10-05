@@ -70,8 +70,14 @@ router.put('/:id', auth, async (req, res) => {
       filtro.marca = nextMarca;
     }
 
+    if (precio !== undefined) {
+      const nuevoPrecio = Number(precio);
+      if (!Number.isFinite(nuevoPrecio) || nuevoPrecio < 0) {
+        return res.status(400).json({ error: 'El precio debe ser un número mayor o igual a cero.' });
+      }
+      filtro.precio = nuevoPrecio;
+    }
     if (descripcion !== undefined) filtro.descripcion = descripcion;
-    if (precio !== undefined) filtro.precio = Number(precio);
 
     await filtro.save();
     vehiculosRouter.invalidatePriceCache();
@@ -111,6 +117,23 @@ router.post('/bulk-adjust', auth, async (req, res) => {
 
     const brandUpper = marca.trim().toUpperCase();
     const multiplier = 1 + (pct / 100);
+
+    if (req.body.dryRun === true) {
+      const [matchedCount, muestra] = await Promise.all([
+        PrecioFiltro.countDocuments({ marca: brandUpper }),
+        PrecioFiltro.find({ marca: brandUpper }).sort({ clave: 1 }).limit(5).lean()
+      ]);
+      return res.json({
+        ok: true,
+        dryRun: true,
+        matchedCount,
+        sample: muestra.map(f => ({
+          clave: f.clave,
+          precio: f.precio,
+          nuevo: Math.max(0, Math.round(f.precio * multiplier * 100) / 100)
+        }))
+      });
+    }
 
     // Update prices using MongoDB aggregation update pipeline to round to 2 decimal places
     const result = await PrecioFiltro.updateMany(
