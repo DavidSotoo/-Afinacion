@@ -595,14 +595,8 @@ export default function Checkout() {
 
         const mpData = await mpRes.json();
 
-        // Redirigir al checkout de Mercado Pago.
-        // En desarrollo usamos sandbox_init_point (tarjetas de prueba).
-        // En producción usamos init_point (cobro real).
-        // El entorno se controla desde .env con VITE_NODE_ENV — sin tocar código.
-        const isProduction = import.meta.env.VITE_NODE_ENV === 'production';
-        window.location.href = isProduction
-          ? (mpData.init_point || mpData.sandbox_init_point)
-          : (mpData.sandbox_init_point || mpData.init_point);
+        // init_point es el checkout real; el token del servidor decide si cobra en prueba o en vivo.
+        window.location.href = mpData.init_point || mpData.sandbox_init_point;
       } else {
         // Direct WhatsApp order for offline payments
         const targetUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
