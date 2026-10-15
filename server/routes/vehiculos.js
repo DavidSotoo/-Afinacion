@@ -1720,6 +1720,21 @@ async function syncMazdaAireJoe() {
  */
 const { enrichVehiculosWithPrices } = require('../lib/pricingHelpers');
 
+// Parts tracked by the "solo incompletos" inventory filter, and how to tell
+// a vehicle is missing each one on an already-enriched vehicle object.
+const FALTANTES_CHECKS = [
+  ['aceite', v => !v.kit_afinacion?.filtro_aceite?.sku],
+  ['aire', v => !v.kit_afinacion?.filtro_aire?.sku],
+  ['gasolina', v => !v.kit_afinacion?.filtro_gasolina?.sku],
+  ['cabina', v => !v.kit_afinacion?.filtro_cabina?.sku],
+  ['bujia', v => !(v.bujia_stock?.tipo || v.bujia_iridium_ix?.tipo || v.bujia_g_power?.tipo || v.bujia_v_power?.tipo)],
+  ['balata', v => !(Array.isArray(v.balatas) && v.balatas.length > 0)],
+];
+
+function computeFaltantes(vObj) {
+  return FALTANTES_CHECKS.filter(([, isMissing]) => isMissing(vObj)).map(([key]) => key);
+}
+
 // Rate limiter specifically for catalog stats (BUG API-04)
 const statsLimiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
@@ -1780,10 +1795,11 @@ router.get('/brand/:marca', antiscaping, async (req, res) => {
 // GET /api/vehiculos
 router.get('/', antiscaping, async (req, res) => {
   try {
-    const { marca, modelo, filterBrand, anio } = req.query;
+    const { marca, modelo, filterBrand, anio, soloIncompletos, parteFaltante } = req.query;
     const page = req.query.page ? parseInt(req.query.page, 10) : null;
     const limit = req.query.limit ? parseInt(req.query.limit, 10) : null;
-    
+    const wantsIncompleteOnly = soloIncompletos === 'true' || soloIncompletos === '1';
+
     const filter = {};
     
     if (marca) {
@@ -1812,7 +1828,32 @@ router.get('/', antiscaping, async (req, res) => {
       filter.anio_fin = { $gte: a };
     }
 
-    if (page && limit) {
+    if (wantsIncompleteOnly) {
+      // Completeness (filters, spark plugs, balatas) is only known after
+      // enrichment, so this path enriches every matching vehicle first and
+      // paginates the filtered result in memory instead of at the DB level.
+      const allMatching = await Vehiculo.find(filter).sort({ modelo: 1, anio_inicio: 1 });
+      const enrichedAll = await enrichVehiculosWithPrices(allMatching);
+      const withFaltantes = enrichedAll.map(v => ({ ...v, _faltantes: computeFaltantes(v) }));
+      const incompletos = withFaltantes.filter(v => (
+        parteFaltante && parteFaltante !== 'cualquiera'
+          ? v._faltantes.includes(parteFaltante)
+          : v._faltantes.length > 0
+      ));
+
+      if (page && limit) {
+        const skip = (page - 1) * limit;
+        res.json({
+          ok: true,
+          vehiculos: incompletos.slice(skip, skip + limit),
+          totalCount: incompletos.length,
+          totalPages: Math.ceil(incompletos.length / limit),
+          currentPage: page
+        });
+      } else {
+        res.json(incompletos);
+      }
+    } else if (page && limit) {
       const skip = (page - 1) * limit;
       const totalCount = await Vehiculo.countDocuments(filter);
       const vehiculos = await Vehiculo.find(filter)
@@ -1821,7 +1862,7 @@ router.get('/', antiscaping, async (req, res) => {
         .limit(limit);
 
       const enriched = await enrichVehiculosWithPrices(vehiculos);
-      
+
       res.json({
         ok: true,
         vehiculos: enriched,

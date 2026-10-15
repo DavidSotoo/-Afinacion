@@ -44,6 +44,30 @@ function FilterCell({ filtro }) {
   return <span className="text-amber-600/70 text-[10px] font-mono">Verificando…</span>;
 }
 
+// ─── Helper: render the dynamically-matched balata(s) for a vehicle ──────────
+function BalataCell({ balatas, meta }) {
+  if (balatas && balatas.length > 0) {
+    return (
+      <div className="flex flex-col gap-0.5">
+        {balatas.map((b, i) => (
+          <div key={i} className="flex items-center gap-1">
+            <span className="text-[9px] font-bold text-white bg-sky-950/60 border border-sky-800/50 px-1 rounded uppercase">
+              {b.posicion === 'Delantero' ? 'Del' : b.posicion === 'Trasero' ? 'Tras' : '?'}
+            </span>
+            <span className="font-mono text-[11px] text-sky-300">{b.sku_dynamic || b.sku_equivalente_wagner}</span>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (meta?.tiene_nombre_en_catalogo) {
+    return <span className="text-amber-600/70 text-[10px] font-mono" title="El modelo existe en el catálogo de balatas pero ningún rango de años coincide">Sin año</span>;
+  }
+
+  return <span className="text-amber-600/70 text-[10px] font-mono">Verificando…</span>;
+}
+
 // ─── Toast notification ───────────────────────────────────────────────────────
 function Toast({ message, onDone }) {
   useEffect(() => {
@@ -75,6 +99,10 @@ export default function InventarioMaestro() {
   
   const [filterBrand,  setFilterBrand]  = useState('all');
   const [brands,       setBrands]       = useState([]);
+
+  // Data-completeness filter ("solo incompletos")
+  const [soloIncompletos, setSoloIncompletos] = useState(false);
+  const [parteFaltante,   setParteFaltante]   = useState('cualquiera');
   
   // Pagination State
   const [page,         setPage]         = useState(1);
@@ -128,7 +156,8 @@ export default function InventarioMaestro() {
           modelo: searchModelo,
           filterBrand,
           page,
-          limit: PAGE_SIZE
+          limit: PAGE_SIZE,
+          ...(soloIncompletos ? { soloIncompletos: 'true', parteFaltante } : {})
         }
       });
       setVehiculos(res.data.vehiculos || []);
@@ -141,7 +170,7 @@ export default function InventarioMaestro() {
     } finally {
       setLoading(false);
     }
-  }, [searchMarca, searchModelo, filterBrand, page]);
+  }, [searchMarca, searchModelo, filterBrand, page, soloIncompletos, parteFaltante]);
 
   // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { fetchData(); }, [fetchData]);
@@ -153,6 +182,8 @@ export default function InventarioMaestro() {
     setSearchMarca('');
     setSearchModelo('');
     setFilterBrand('all');
+    setSoloIncompletos(false);
+    setParteFaltante('cualquiera');
     setPage(1);
   };
 
@@ -276,7 +307,34 @@ export default function InventarioMaestro() {
             </select>
           </div>
         </div>
-        <div className="flex justify-end mt-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-4">
+          <div className="flex items-center gap-3">
+            <label className="flex items-center gap-2 text-xs text-slate-300 cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={soloIncompletos}
+                onChange={e => { setSoloIncompletos(e.target.checked); setPage(1); }}
+                className="w-3.5 h-3.5 accent-amber-500 cursor-pointer"
+              />
+              <AlertTriangle className="w-3.5 h-3.5 text-amber-500" />
+              Solo incompletos
+            </label>
+            {soloIncompletos && (
+              <select
+                value={parteFaltante}
+                onChange={e => { setParteFaltante(e.target.value); setPage(1); }}
+                className="bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl px-3 py-2 text-xs text-slate-200 outline-none transition-all cursor-pointer"
+              >
+                <option value="cualquiera">Falta cualquier parte</option>
+                <option value="aceite">Falta filtro de aceite</option>
+                <option value="aire">Falta filtro de aire</option>
+                <option value="gasolina">Falta filtro de gasolina</option>
+                <option value="cabina">Falta filtro de cabina</option>
+                <option value="bujia">Falta bujía</option>
+                <option value="balata">Falta balata</option>
+              </select>
+            )}
+          </div>
           <button
             onClick={handleReset}
             className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-white bg-slate-950 border border-slate-800 hover:border-slate-700 px-4 py-2 rounded-xl transition-colors cursor-pointer"
@@ -300,6 +358,7 @@ export default function InventarioMaestro() {
                 <th className="py-3.5 px-3">F. Aire</th>
                 <th className="py-3.5 px-3">F. Gasolina</th>
                 <th className="py-3.5 px-3">F. Cabina</th>
+                <th className="py-3.5 px-3">Balata</th>
                 <th className="py-3.5 px-3">Costo Kit</th>
                 <th className="py-3.5 px-4 text-center">Acciones</th>
               </tr>
@@ -307,7 +366,7 @@ export default function InventarioMaestro() {
             <tbody className="divide-y divide-slate-800 text-sm text-slate-300">
               {vehiculos.length === 0 ? (
                 <tr>
-                  <td colSpan="9" className="text-center py-10 text-slate-500 text-sm">
+                  <td colSpan="10" className="text-center py-10 text-slate-500 text-sm">
                     No se encontraron vehículos con los filtros actuales.
                   </td>
                 </tr>
@@ -369,7 +428,10 @@ export default function InventarioMaestro() {
                       <td className="py-3 px-3"><FilterCell filtro={v.kit_afinacion?.filtro_aire} /></td>
                       <td className="py-3 px-3"><FilterCell filtro={v.kit_afinacion?.filtro_gasolina} /></td>
                       <td className="py-3 px-3"><FilterCell filtro={v.kit_afinacion?.filtro_cabina} /></td>
-                      
+
+                      {/* Balata (coincidencia dinámica por modelo/años, no editable aquí) */}
+                      <td className="py-3 px-3"><BalataCell balatas={v.balatas} meta={v.balatas_meta} /></td>
+
                       {/* Costo Kit */}
                       <td className="py-3 px-3">
                         {v.kit_afinacion?.costo_total ? (
