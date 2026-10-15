@@ -1,0 +1,228 @@
+// Generic version of backfill_chevrolet_master.js / backfill_chevrolet_interfil.js:
+// fills missing kit_afinacion fields for a given brand from two verified
+// Interfil sources — a curated per-brand JSON (public/data/*_interfil_*.json
+// or interfil_<brand>.json, when one exists) and the master catalog's
+// vehicle-application tables (master_aceite_rows_all.json /
+// master_cabina_rows_all.json, produced by extract_master_catalog.js).
+//
+// Same conservative rules throughout: only fills EMPTY fields, requires an
+// exact engine-displacement match plus year overlap, and skips (reports)
+// any field where sources disagree instead of guessing.
+//
+// Usage:
+//   node backfill_brand_filtros.js --brand=Ford [--curated=ford_interfil_catalogo.json] [--apply]
+
+const path = require('path');
+const fs = require('fs');
+const mongoose = require('mongoose');
+require('dotenv').config({ path: path.join(__dirname, '.env') });
+
+const Vehiculo = require('./models/Vehiculo');
+
+const args = Object.fromEntries(process.argv.slice(2)
+  .filter(a => a.startsWith('--'))
+  .map(a => { const [k, v] = a.slice(2).split('='); return [k, v ?? true]; }));
+
+const APPLY = !!args.apply;
+const BRAND = args.brand;
+if (!BRAND) {
+  console.error('Uso: node backfill_brand_filtros.js --brand=Ford [--curated=archivo.json] [--apply]');
+  process.exit(1);
+}
+const BRAND_UPPER = BRAND.toUpperCase();
+
+function normalize(s) {
+  return (s || '').toUpperCase().replace(/[^A-Z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+function tokens(s) { return normalize(s).split(' ').filter(Boolean); }
+function isPrefixMatch(a, b) {
+  const ta = tokens(a), tb = tokens(b);
+  const len = Math.min(ta.length, tb.length);
+  if (len === 0) return false;
+  for (let i = 0; i < len; i++) if (ta[i] !== tb[i]) return false;
+  return true;
+}
+function splitAlternatives(modelo) {
+  return (modelo || '').split(/[\/,]/).map(s => s.trim()).filter(Boolean);
+}
+function cleanSku(v) {
+  if (!v) return null;
+  const t = String(v).trim();
+  return (!t || t === '.') ? null : t;
+}
+function parseLitros(motorStr) {
+  if (!motorStr) return null;
+  const m = motorStr.match(/(\d+(?:\.\d+)?)\s*L/i);
+  return m ? parseFloat(m[1]) : null;
+}
+function parseYearRange(anioStr) {
+  if (!anioStr) return null;
+  if (String(anioStr).toUpperCase() === 'ALL') return { start: 0, end: 9999 };
+  const m = String(anioStr).match(/(\d{4})(?:-(\d{4}))?/);
+  if (!m) return null;
+  const start = parseInt(m[1], 10);
+  const end = m[2] ? parseInt(m[2], 10) : start;
+  return { start, end };
+}
+
+function loadCuratedCandidates(filename) {
+  if (!filename) return [];
+  const fp = path.join(__dirname, '../public/data', filename);
+  if (!fs.existsSync(fp)) {
+    console.warn(`(aviso: no existe ${filename}, se omite esa fuente)`);
+    return [];
+  }
+  const raw = JSON.parse(fs.readFileSync(fp, 'utf8'));
+  const list = Array.isArray(raw) ? raw : (raw[BRAND_UPPER] || raw[BRAND] || []);
+  return list.map(r => {
+    const litros = parseLitros(r.motor);
+    const yearRange = parseYearRange(r.anio);
+    if (litros == null || !yearRange) return null;
+    return {
+      model: r.modelo,
+      litros,
+      anioInicio: yearRange.start,
+      anioFin: yearRange.end,
+      filtro_aceite: cleanSku(r.filtro_aceite?.sku) || cleanSku(r.filtro_aceite_cartucho?.sku),
+      filtro_aire: cleanSku(r.filtro_aire?.sku),
+      filtro_gasolina: cleanSku(r.filtro_gasolina?.sku),
+      filtro_cabina: cleanSku(r.filtro_cabina?.sku),
+    };
+  }).filter(Boolean);
+}
+
+function loadMasterCandidates() {
+  const aceitePath = path.join(__dirname, 'master_aceite_rows_all.json');
+  const cabinaPath = path.join(__dirname, 'master_cabina_rows_all.json');
+  const aceiteRows = fs.existsSync(aceitePath) ? JSON.parse(fs.readFileSync(aceitePath, 'utf8')) : [];
+  const cabinaRows = fs.existsSync(cabinaPath) ? JSON.parse(fs.readFileSync(cabinaPath, 'utf8')) : [];
+
+  const aceite = aceiteRows
+    .filter(r => r.brand === BRAND_UPPER && r.model && r.litros != null)
+    .map(r => ({
+      model: r.model, litros: r.litros, anioInicio: r.anioInicio, anioFin: r.anioFin,
+      filtro_aceite: cleanSku(r.values.aceite_spin) || cleanSku(r.values.aceite_cart),
+      filtro_aire: cleanSku(r.values.aire),
+      filtro_gasolina: cleanSku(r.values.combustible),
+    }));
+
+  const cabina = cabinaRows
+    .filter(r => r.brand === BRAND_UPPER && r.model && r.litros != null)
+    .map(r => ({
+      model: r.model, litros: r.litros, anioInicio: r.anioInicio, anioFin: r.anioFin,
+      filtro_cabina: cleanSku(r.values.particulas) || cleanSku(r.values.carbon_activado),
+    }));
+
+  return { aceite, cabina };
+}
+
+async function main() {
+  await mongoose.connect(process.env.MONGO_URI);
+  console.log(`Connected (${APPLY ? 'APPLY MODE — will write to DB' : 'DRY RUN — no writes'}) — marca: ${BRAND}`);
+
+  const curated = loadCuratedCandidates(args.curated);
+  const { aceite: masterAceite, cabina: masterCabina } = loadMasterCandidates();
+
+  // aceite/aire/gasolina candidates: curated + master aceite table
+  const aceiteGasPool = [...curated, ...masterAceite];
+  // cabina candidates: curated (has filtro_cabina too) + master cabina table
+  const cabinaPool = [...curated, ...masterCabina];
+
+  console.log(`Candidatos — curado: ${curated.length}, maestro aceite/aire/gasolina: ${masterAceite.length}, maestro cabina: ${masterCabina.length}`);
+
+  const vehicles = await Vehiculo.find({ marca: new RegExp(`^${BRAND}$`, 'i') });
+  console.log(`Vehículos ${BRAND} en DB: ${vehicles.length}`);
+
+  function findCandidates(pool, vehiculo) {
+    const dbLitros = vehiculo.litros != null ? parseFloat(vehiculo.litros) : null;
+    if (dbLitros == null) return [];
+    return pool.filter(c => {
+      const modelOk = splitAlternatives(c.model).some(alt => isPrefixMatch(vehiculo.modelo, alt))
+        || splitAlternatives(vehiculo.modelo).some(alt => isPrefixMatch(alt, c.model));
+      if (!modelOk) return false;
+      if (Math.abs(dbLitros - c.litros) > 0.05) return false;
+      const yearsOverlap = !(vehiculo.anio_fin < c.anioInicio || vehiculo.anio_inicio > c.anioFin);
+      return yearsOverlap;
+    });
+  }
+
+  let vehiclesWithMissing = 0;
+  let vehiclesTouched = 0;
+  let fieldsFilledTotal = 0;
+  let fieldsAmbiguousTotal = 0;
+  const perField = { filtro_aceite: 0, filtro_aire: 0, filtro_gasolina: 0, filtro_cabina: 0 };
+  const sampleFilled = [];
+  const sampleAmbiguous = [];
+
+  for (const v of vehicles) {
+    const kit = v.kit_afinacion || {};
+    const missingFields = ['filtro_aceite', 'filtro_aire', 'filtro_gasolina', 'filtro_cabina']
+      .filter(f => !kit[f]?.sku);
+    if (missingFields.length === 0) continue;
+    vehiclesWithMissing++;
+
+    const gasMatches = findCandidates(aceiteGasPool, v);
+    const cabMatches = findCandidates(cabinaPool, v);
+
+    const updates = {};
+    const ambiguousFields = [];
+
+    for (const field of missingFields) {
+      const pool = field === 'filtro_cabina' ? cabMatches : gasMatches;
+      const values = new Set();
+      pool.forEach(c => { if (c[field]) values.add(c[field]); });
+      if (values.size === 1) {
+        updates[field] = [...values][0];
+      } else if (values.size > 1) {
+        ambiguousFields.push(field);
+      }
+    }
+
+    if (Object.keys(updates).length > 0) {
+      vehiclesTouched++;
+      fieldsFilledTotal += Object.keys(updates).length;
+      Object.keys(updates).forEach(f => perField[f]++);
+      if (sampleFilled.length < 25) {
+        sampleFilled.push(`${v.marca} ${v.modelo} ${v.litros}L ${v.anio_inicio}-${v.anio_fin}: ` +
+          Object.entries(updates).map(([f, sku]) => `${f}=${sku}`).join(', '));
+      }
+      if (APPLY) {
+        const setOps = {};
+        for (const [field, sku] of Object.entries(updates)) {
+          setOps[`kit_afinacion.${field}`] = {
+            tipo: kit[field]?.tipo || null,
+            sku,
+            marca: 'Interfil',
+            hasData: true,
+            alternos: kit[field]?.alternos || [],
+          };
+        }
+        await Vehiculo.updateOne({ _id: v._id }, { $set: setOps });
+      }
+    }
+
+    if (ambiguousFields.length > 0) {
+      fieldsAmbiguousTotal += ambiguousFields.length;
+      if (sampleAmbiguous.length < 15) {
+        sampleAmbiguous.push(`${v.marca} ${v.modelo} ${v.litros}L ${v.anio_inicio}-${v.anio_fin}: ${ambiguousFields.join(',')}`);
+      }
+    }
+  }
+
+  console.log('\n=== REPORTE ===');
+  console.log(`Vehículos ${BRAND} con algún filtro faltante (antes de este paso): ${vehiclesWithMissing}`);
+  console.log(`Vehículos a los que se les llenó al menos 1 campo: ${vehiclesTouched}`);
+  console.log(`Total de campos llenados: ${fieldsFilledTotal}`);
+  console.log(`  aceite: ${perField.filtro_aceite}, aire: ${perField.filtro_aire}, gasolina: ${perField.filtro_gasolina}, cabina: ${perField.filtro_cabina}`);
+  console.log(`Campos ambiguos (valores en conflicto, no se tocan): ${fieldsAmbiguousTotal}`);
+
+  console.log('\n--- Muestra de campos llenados (25) ---');
+  sampleFilled.forEach(s => console.log(' ', s));
+
+  console.log('\n--- Muestra de campos ambiguos ---');
+  sampleAmbiguous.forEach(s => console.log(' ', s));
+
+  await mongoose.disconnect();
+}
+
+main().catch(err => { console.error(err); process.exit(1); });
