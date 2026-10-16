@@ -50,6 +50,16 @@ function cleanSku(v) {
   const t = String(v).trim();
   return (!t || t === '.') ? null : t;
 }
+// A matched filter candidate always carries its source brand (Interfil,
+// UNIFIL, ...) alongside the SKU — different catalog brands can share a
+// SKU-looking string, and the price lookup is keyed by brand+SKU, so the
+// brand must travel with the match, never be assumed.
+function mkField(sku, marca) {
+  return sku ? { sku, marca: (marca || 'Interfil').trim() } : null;
+}
+function fieldKey(f) {
+  return `${f.marca.toUpperCase()}|${f.sku.toUpperCase()}`;
+}
 function parseLitros(motorStr) {
   if (!motorStr) return null;
   const m = motorStr.match(/(\d+(?:\.\d+)?)\s*L/i);
@@ -65,30 +75,52 @@ function parseYearRange(anioStr) {
   return { start, end };
 }
 
-function loadCuratedCandidates(filename) {
-  if (!filename) return [];
+// Curated per-brand JSON files come in a few shapes depending on who/when
+// they were built:
+//   - a bare array of records
+//   - { "<BRAND>": [...] }                      (e.g. interfil_chevrolet.json)
+//   - { registros: [...] }                      (e.g. vw_filtros_interfil_2020_2021.json)
+// and each record's filters are either { marca, sku } objects, or a flat
+// { filtros: { filtro_aceite: "FO-123", ... } } map of plain SKU strings
+// (e.g. volkswagen_unifil_filtros.json — UNIFIL brand, implied by the file).
+function loadOneCuratedFile(filename) {
   const fp = path.join(__dirname, '../public/data', filename);
   if (!fs.existsSync(fp)) {
     console.warn(`(aviso: no existe ${filename}, se omite esa fuente)`);
     return [];
   }
   const raw = JSON.parse(fs.readFileSync(fp, 'utf8'));
-  const list = Array.isArray(raw) ? raw : (raw[BRAND_UPPER] || raw[BRAND] || []);
+  const list = Array.isArray(raw) ? raw
+    : Array.isArray(raw.registros) ? raw.registros
+    : (raw[BRAND_UPPER] || raw[BRAND] || []);
+
   return list.map(r => {
     const litros = parseLitros(r.motor);
     const yearRange = parseYearRange(r.anio);
     if (litros == null || !yearRange) return null;
+
+    const flat = r.filtros; // { filtro_aceite: "FO-123", ... } plain-string shape — UNIFIL, implied by the file
+    const field = (objKey, flatKey) => flat
+      ? mkField(cleanSku(flat[flatKey]), 'UNIFIL')
+      : mkField(cleanSku(r[objKey]?.sku), r[objKey]?.marca);
+
     return {
       model: r.modelo,
       litros,
       anioInicio: yearRange.start,
       anioFin: yearRange.end,
-      filtro_aceite: cleanSku(r.filtro_aceite?.sku) || cleanSku(r.filtro_aceite_cartucho?.sku),
-      filtro_aire: cleanSku(r.filtro_aire?.sku),
-      filtro_gasolina: cleanSku(r.filtro_gasolina?.sku),
-      filtro_cabina: cleanSku(r.filtro_cabina?.sku),
+      filtro_aceite: field('filtro_aceite', 'filtro_aceite') || field('filtro_aceite_cartucho', 'filtro_aceite'),
+      filtro_aire: field('filtro_aire', 'filtro_aire'),
+      filtro_gasolina: field('filtro_gasolina', 'filtro_gasolina'),
+      filtro_cabina: field('filtro_cabina', 'filtro_cabina'),
     };
   }).filter(Boolean);
+}
+
+function loadCuratedCandidates(filenames) {
+  if (!filenames) return [];
+  return String(filenames).split(',').map(s => s.trim()).filter(Boolean)
+    .flatMap(loadOneCuratedFile);
 }
 
 function loadMasterCandidates() {
@@ -97,20 +129,22 @@ function loadMasterCandidates() {
   const aceiteRows = fs.existsSync(aceitePath) ? JSON.parse(fs.readFileSync(aceitePath, 'utf8')) : [];
   const cabinaRows = fs.existsSync(cabinaPath) ? JSON.parse(fs.readFileSync(cabinaPath, 'utf8')) : [];
 
+  // The master catalog PDF is exclusively Interfil's own, so every field
+  // extracted from it is unambiguously Interfil-branded.
   const aceite = aceiteRows
     .filter(r => r.brand === BRAND_UPPER && r.model && r.litros != null)
     .map(r => ({
       model: r.model, litros: r.litros, anioInicio: r.anioInicio, anioFin: r.anioFin,
-      filtro_aceite: cleanSku(r.values.aceite_spin) || cleanSku(r.values.aceite_cart),
-      filtro_aire: cleanSku(r.values.aire),
-      filtro_gasolina: cleanSku(r.values.combustible),
+      filtro_aceite: mkField(cleanSku(r.values.aceite_spin) || cleanSku(r.values.aceite_cart), 'Interfil'),
+      filtro_aire: mkField(cleanSku(r.values.aire), 'Interfil'),
+      filtro_gasolina: mkField(cleanSku(r.values.combustible), 'Interfil'),
     }));
 
   const cabina = cabinaRows
     .filter(r => r.brand === BRAND_UPPER && r.model && r.litros != null)
     .map(r => ({
       model: r.model, litros: r.litros, anioInicio: r.anioInicio, anioFin: r.anioFin,
-      filtro_cabina: cleanSku(r.values.particulas) || cleanSku(r.values.carbon_activado),
+      filtro_cabina: mkField(cleanSku(r.values.particulas) || cleanSku(r.values.carbon_activado), 'Interfil'),
     }));
 
   return { aceite, cabina };
@@ -169,11 +203,11 @@ async function main() {
 
     for (const field of missingFields) {
       const pool = field === 'filtro_cabina' ? cabMatches : gasMatches;
-      const values = new Set();
-      pool.forEach(c => { if (c[field]) values.add(c[field]); });
-      if (values.size === 1) {
-        updates[field] = [...values][0];
-      } else if (values.size > 1) {
+      const byKey = new Map();
+      pool.forEach(c => { if (c[field]) byKey.set(fieldKey(c[field]), c[field]); });
+      if (byKey.size === 1) {
+        updates[field] = [...byKey.values()][0];
+      } else if (byKey.size > 1) {
         ambiguousFields.push(field);
       }
     }
@@ -184,15 +218,15 @@ async function main() {
       Object.keys(updates).forEach(f => perField[f]++);
       if (sampleFilled.length < 25) {
         sampleFilled.push(`${v.marca} ${v.modelo} ${v.litros}L ${v.anio_inicio}-${v.anio_fin}: ` +
-          Object.entries(updates).map(([f, sku]) => `${f}=${sku}`).join(', '));
+          Object.entries(updates).map(([f, val]) => `${f}=${val.marca} ${val.sku}`).join(', '));
       }
       if (APPLY) {
         const setOps = {};
-        for (const [field, sku] of Object.entries(updates)) {
+        for (const [field, val] of Object.entries(updates)) {
           setOps[`kit_afinacion.${field}`] = {
             tipo: kit[field]?.tipo || null,
-            sku,
-            marca: 'Interfil',
+            sku: val.sku,
+            marca: val.marca,
             hasData: true,
             alternos: kit[field]?.alternos || [],
           };
