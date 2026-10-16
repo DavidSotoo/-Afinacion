@@ -1,6 +1,6 @@
 # Reporte de Análisis del Catálogo: Marcas, Vehículos y Cobertura de Autopartes
 
-**Fecha de generación:** 16/10/2026, 10:21:39 a.m.
+**Fecha de generación:** 16/10/2026, 10:23:11 a.m.
 **Total de Vehículos en DB:** 1683
 **Total de Filtros en Catálogo:** 1826 (709 vinculados, 1117 huérfanos)
 **Total de Bujías en Catálogo:** 99 (47 vinculados, 52 huérfanas)
@@ -35,7 +35,7 @@
 | **CHEVROLET** | 642 | 557 | 472 | 575 | 287 | 252 |
 | **DODGE** | 33 | 33 | 33 | 33 | 17 | 17 |
 | **FORD** | 272 | 240 | 241 | 242 | 134 | 122 |
-| **HONDA** | 113 | 112 | 108 | 113 | 103 | 97 |
+| **HONDA** | 113 | 112 | 108 | 113 | 104 | 98 |
 | **MAZDA** | 84 | 77 | 71 | 80 | 51 | 47 |
 | **MITSUBISHI** | 13 | 13 | 12 | 13 | 12 | 11 |
 | **NISSAN** | 53 | 52 | 52 | 53 | 37 | 35 |
