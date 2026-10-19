@@ -97,12 +97,19 @@ async function extractRows({ firstPage, lastPage, columns }) {
     pageRows.forEach(r => r.items.sort((a, b) => a.x - b.x));
 
     for (const row of pageRows) {
-      const texts = row.items.map(i => i.text.trim());
-      // Header/title rows & table column headers to ignore outright
       // Section running-title text repeated on every page of its table
       // (e.g. "Cabina" atop every page of the cabin-filter application
-      // table) — never a vehicle model, so it must never reset currentModel.
-      if (texts.some(t => /^(Aplicaciones|Cil \/ Cyl|Año \/ Year|CATÁLOGO|INTERFIL|Aceite|Aire|Combustible|Cabina)$/i.test(t))) continue;
+      // table, or "Aplicaciones") — never a vehicle model or brand. Strip
+      // just these tokens rather than discarding the whole row: a real
+      // brand/model header can land in the same y-cluster as one of these
+      // (e.g. "MERCEDES BENZ" shares a row with "Aplicaciones" on some
+      // pages), and dropping the row would silently erase that header,
+      // leaving every row under it mis-attributed to whatever brand/model
+      // came before.
+      const isPageHeaderToken = t => /^(Aplicaciones|Cil \/ Cyl|Año \/ Year|CATÁLOGO|INTERFIL|Aceite|Aire|Combustible|Cabina)$/i.test(t);
+      row.items = row.items.filter(i => !isPageHeaderToken(i.text.trim()));
+      if (row.items.length === 0) continue;
+      const texts = row.items.map(i => i.text.trim());
       // Bare page number in the corner — matched against the actual page being
       // parsed (not just "any lone digit string") so a numeric model/trim
       // label like "2500" or "3500" is never mistaken for a page number.

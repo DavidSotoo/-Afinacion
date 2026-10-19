@@ -34,8 +34,21 @@ const BRAND_UPPER = BRAND.toUpperCase();
 function normalize(s) {
   return (s || '').toUpperCase().replace(/[^A-Z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
 }
-function tokens(s) { return normalize(s).split(' ').filter(Boolean); }
+// Catalog model strings sometimes repeat the brand name (e.g. Mazda's master
+// catalog uses "Mazda 3" / "Mazda 5" for the DB's bare "3" / "5") — strip a
+// leading brand token before tokenizing so the real model lines up.
+function tokens(s) {
+  const t = normalize(s).split(' ').filter(Boolean);
+  if (t[0] === BRAND_UPPER) return t.slice(1);
+  return t;
+}
+function compact(s) { return normalize(s).replace(/\s+/g, ''); }
 function isPrefixMatch(a, b) {
+  // Same model, written with/without an internal separator the other side
+  // dropped (e.g. DB "CX-5" vs catalog "CX5" — normalize() turns the hyphen
+  // into a space, so these tokenize differently even though they're the
+  // same model).
+  if (compact(a) === compact(b)) return true;
   const ta = tokens(a), tb = tokens(b);
   const len = Math.min(ta.length, tb.length);
   if (len === 0) return false;
@@ -95,7 +108,11 @@ function loadOneCuratedFile(filename) {
     : (raw[BRAND_UPPER] || raw[BRAND] || []);
 
   return list.map(r => {
-    const litros = parseLitros(r.motor);
+    // Most sources only give displacement embedded in a "motor" string like
+    // "2.0L"; some (e.g. bmw_interfil.json, whose "motor" is an engine code
+    // like "N20/CABA" with no displacement in it) provide a numeric litros
+    // field directly — prefer that when present.
+    const litros = typeof r.litros === 'number' ? r.litros : parseLitros(r.motor);
     const yearRange = parseYearRange(r.anio);
     if (litros == null || !yearRange) return null;
 
