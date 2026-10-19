@@ -1,8 +1,8 @@
 # Reporte de Análisis del Catálogo: Marcas, Vehículos y Cobertura de Autopartes
 
-**Fecha de generación:** 16/10/2026, 10:11:04 a.m.
+**Fecha de generación:** 16/10/2026, 10:21:39 a.m.
 **Total de Vehículos en DB:** 1683
-**Total de Filtros en Catálogo:** 1826 (708 vinculados, 1118 huérfanos)
+**Total de Filtros en Catálogo:** 1826 (709 vinculados, 1117 huérfanos)
 **Total de Bujías en Catálogo:** 99 (47 vinculados, 52 huérfanas)
 **Total de Balatas en Catálogo:** 786 (666 vinculados, 120 huérfanas)
 
@@ -21,7 +21,7 @@
 | **NISSAN** | 53 | 100.0% | 96.2% | 30.2% | 0.0% | 50.9% | 81.1% |
 | **SEAT** | 55 | 100.0% | 100.0% | 21.8% | 3.6% | 0.0% | 25.5% |
 | **TOYOTA** | 144 | 100.0% | 88.2% | 36.8% | 2.1% | 18.1% | 56.9% |
-| **VOLKSWAGEN** | 220 | 99.5% | 80.5% | 61.4% | 3.2% | 11.8% | 76.4% |
+| **VOLKSWAGEN** | 220 | 99.5% | 84.5% | 61.4% | 3.2% | 11.8% | 76.4% |
 
 > [!NOTE]
 > Un "Kit Básico" se considera cuando el vehículo tiene asignados y vinculados al menos un filtro de aceite y un filtro de aire válidos (que no sean "SELLADO").
@@ -41,7 +41,7 @@
 | **NISSAN** | 53 | 52 | 52 | 53 | 37 | 35 |
 | **SEAT** | 55 | 55 | 55 | 55 | 55 | 55 |
 | **TOYOTA** | 144 | 138 | 133 | 144 | 115 | 98 |
-| **VOLKSWAGEN** | 220 | 181 | 185 | 189 | 145 | 136 |
+| **VOLKSWAGEN** | 220 | 190 | 191 | 194 | 172 | 165 |
 
 ## 3. Desglose Detallado de Bujías por Marca
 
@@ -86,7 +86,7 @@ Total de balatas huérfanas: **120**
 | DNK7155D233CK | WD233 | 7155-D233 | Delantero | NISSAN HIKARI (1988-1992), NISSAN TSURU (1984-1991) |
 
 ### 4.2. Filtros Huérfanos (Muestra de los primeros 15)
-Total de filtros huérfanos en lista de precios: **1118**
+Total de filtros huérfanos en lista de precios: **1117**
 
 | SKU | Marca | Precio |
 | :--- | :--- | :--- |
