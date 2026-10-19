@@ -1,8 +1,8 @@
 # Reporte de Análisis del Catálogo: Marcas, Vehículos y Cobertura de Autopartes
 
-**Fecha de generación:** 14/10/2026, 8:03:14 a.m.
+**Fecha de generación:** 15/10/2026, 7:38:24 a.m.
 **Total de Vehículos en DB:** 1683
-**Total de Filtros en Catálogo:** 1826 (698 vinculados, 1128 huérfanos)
+**Total de Filtros en Catálogo:** 1826 (707 vinculados, 1119 huérfanos)
 **Total de Bujías en Catálogo:** 99 (47 vinculados, 52 huérfanas)
 **Total de Balatas en Catálogo:** 786 (666 vinculados, 120 huérfanas)
 
@@ -12,7 +12,7 @@
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **AUDI** | 18 | 100.0% | 100.0% | 27.8% | 0.0% | 55.6% | 83.3% |
 | **BMW** | 36 | 100.0% | 100.0% | 19.4% | 0.0% | 8.3% | 27.8% |
-| **CHEVROLET** | 642 | 99.5% | 63.6% | 24.0% | 0.5% | 42.2% | 66.7% |
+| **CHEVROLET** | 642 | 99.5% | 71.0% | 24.0% | 0.5% | 42.2% | 66.7% |
 | **DODGE** | 33 | 100.0% | 100.0% | 36.4% | 0.0% | 60.6% | 97.0% |
 | **FORD** | 272 | 100.0% | 67.6% | 53.7% | 0.0% | 12.5% | 66.2% |
 | **HONDA** | 113 | 100.0% | 94.7% | 54.9% | 0.9% | 15.0% | 70.8% |
@@ -32,7 +32,7 @@
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **AUDI** | 18 | 18 | 18 | 18 | 18 | 18 |
 | **BMW** | 36 | 36 | 36 | 36 | 36 | 36 |
-| **CHEVROLET** | 642 | 522 | 423 | 549 | 255 | 226 |
+| **CHEVROLET** | 642 | 557 | 472 | 575 | 287 | 252 |
 | **DODGE** | 33 | 33 | 33 | 33 | 17 | 17 |
 | **FORD** | 272 | 189 | 190 | 195 | 117 | 108 |
 | **HONDA** | 113 | 112 | 108 | 113 | 103 | 97 |
@@ -86,7 +86,7 @@ Total de balatas huérfanas: **120**
 | DNK7155D233CK | WD233 | 7155-D233 | Delantero | NISSAN HIKARI (1988-1992), NISSAN TSURU (1984-1991) |
 
 ### 4.2. Filtros Huérfanos (Muestra de los primeros 15)
-Total de filtros huérfanos en lista de precios: **1128**
+Total de filtros huérfanos en lista de precios: **1119**
 
 | SKU | Marca | Precio |
 | :--- | :--- | :--- |

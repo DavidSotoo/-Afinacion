@@ -1,0 +1,2237 @@
+[
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V8",
+    "litros": 4.8,
+    "anioInicio": 2001,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "4.8 L",
+      "anio": "2001-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2000,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2000-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2000,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2000-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2001,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2001-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "2500 Flex Fuel",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2002,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2007,
+    "anioFin": 2007,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2007",
+      "particulas": "CFI-9318",
+      "carbon_activado": "CFI-9318CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2001,
+    "anioFin": 2003,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2001-2003",
+      "particulas": "CFI-9318",
+      "carbon_activado": "CFI-9318CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2002,
+    "anioFin": 2006,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2002-2006",
+      "particulas": "CFI-9318",
+      "carbon_activado": "CFI-9318CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2003-2004",
+      "particulas": "CFI-9052",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2004,
+    "anioFin": 2004,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2004",
+      "particulas": "CFI-9318",
+      "carbon_activado": "CFI-9318CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2006,
+    "anioFin": 2006,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L Turbo",
+      "anio": "2006",
+      "particulas": "CFI-9052",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra Station Wagon",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2003-2004",
+      "particulas": "CFI-9052",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra Wagon",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2004,
+    "anioFin": 2004,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2004",
+      "particulas": "CFI-9318",
+      "carbon_activado": "CFI-9318CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Avalanche",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2002,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Avalanche",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2003,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2003-2006",
+      "particulas": "CFI-8898",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Avalanche",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2002,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Avalanche 1500-2500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2002,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Aveo",
+    "cil": "4 Cil.",
+    "litros": 1.5,
+    "anioInicio": 2018,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.5 L",
+      "anio": "2018-2020",
+      "particulas": "CFI-11176",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Aveo",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2004,
+    "anioFin": 2011,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2004-2011",
+      "particulas": "CFI-9696",
+      "carbon_activado": "CFI-10546CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Aveo",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2012,
+    "anioFin": 2017,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2012-2017",
+      "particulas": "CFI-9812",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Beat",
+    "cil": "4 Cil.",
+    "litros": 1.2,
+    "anioInicio": 2018,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.2 L",
+      "anio": "2018-2020",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2020,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 2019,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "2019-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2019,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2019-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2017,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2017-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2009,
+    "anioFin": 2015,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2009-2015",
+      "particulas": "CFI-3471",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2016,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2016-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V6",
+    "litros": 6.2,
+    "anioInicio": 2010,
+    "anioFin": 2015,
+    "values": {
+      "cil": "V6",
+      "litros": "6.2 L",
+      "anio": "2010-2015",
+      "particulas": "CFI-3471",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": 6.2,
+    "anioInicio": 2016,
+    "anioFin": 2018,
+    "values": {
+      "cil": "V8",
+      "litros": "6.2 L",
+      "anio": "2016-2018",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Captiva",
+    "cil": "V6",
+    "litros": 3,
+    "anioInicio": 2012,
+    "anioFin": 2015,
+    "values": {
+      "cil": "V6",
+      "litros": "3.0 L",
+      "anio": "2012-2015",
+      "particulas": "CFI-10742",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cavalier",
+    "cil": "4 Cil.",
+    "litros": 1.5,
+    "anioInicio": 2018,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.5 L",
+      "anio": "2018-2020",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy C2",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2007,
+    "anioFin": 2007,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2007",
+      "particulas": "CFI-9318",
+      "carbon_activado": "CFI-9318CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy C2",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2004,
+    "anioFin": 2008,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2004-2008",
+      "particulas": "CFI-1808",
+      "carbon_activado": "CFI-1808CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy Monza",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2002,
+    "anioFin": 2003,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L",
+      "anio": "2002-2003",
+      "particulas": "CFI-1808",
+      "carbon_activado": "CFI-1808CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy Monza",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2003,
+    "anioFin": 2003,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2003",
+      "particulas": "CFI-1808",
+      "carbon_activado": "CFI-1808CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy Pick Up",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2003,
+    "anioFin": 2003,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2003",
+      "particulas": "CFI-1808",
+      "carbon_activado": "CFI-1808CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy Pop",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2002,
+    "anioFin": 2003,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L",
+      "anio": "2002-2003",
+      "particulas": "CFI-1808",
+      "carbon_activado": "CFI-1808CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy Pop",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2003,
+    "anioFin": 2003,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2003",
+      "particulas": "CFI-1808",
+      "carbon_activado": "CFI-1808CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy Swing",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2002,
+    "anioFin": 2003,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L",
+      "anio": "2002-2003",
+      "particulas": "CFI-1808",
+      "carbon_activado": "CFI-1808CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy Swing",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2003,
+    "anioFin": 2003,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2003",
+      "particulas": "CFI-1808",
+      "carbon_activado": "CFI-1808CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cheyenne",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2015,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2015-2020",
+      "particulas": "CFI-2280",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cobalt",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2005,
+    "anioFin": 2010,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2005-2010",
+      "particulas": "CFI-5249",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cobalt",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2005,
+    "anioFin": 2010,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2005-2010",
+      "particulas": "CFI-5249",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cobalt",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2006,
+    "anioFin": 2008,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2006-2008",
+      "particulas": "CFI-5249",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Colorado",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 2015,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "2015-2020",
+      "particulas": "CFI-5206 /CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Colorado",
+    "cil": "4 Cil.",
+    "litros": 2.8,
+    "anioInicio": 2016,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.8 L Diesel",
+      "anio": "2016-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Colorado",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2015,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2015-2020",
+      "particulas": "CFI-5206 /CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corsa",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2002,
+    "anioFin": 2008,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2002-2008",
+      "particulas": "CFI-1808",
+      "carbon_activado": "CFI-1808CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cruze",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2011,
+    "anioFin": 2016,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L Turbo",
+      "anio": "2011-2016",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cruze",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2017,
+    "anioFin": 2019,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L Turbo",
+      "anio": "2017-2019",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cruze",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2011,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2011-2015",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cruze",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2014,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L Turbo Diesel",
+      "anio": "2014-2015",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Epica",
+    "cil": "6 Cil.",
+    "litros": 2.5,
+    "anioInicio": 2004,
+    "anioFin": 2008,
+    "values": {
+      "cil": "6 Cil.",
+      "litros": "2.5 L",
+      "anio": "2004-2008",
+      "particulas": "CFI-9629",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Equinox",
+    "cil": "4 Cil.",
+    "litros": 1.5,
+    "anioInicio": 2018,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.5 L Turbo",
+      "anio": "2018-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Equinox",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2018,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2018-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Equinox",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2018,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2018-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Equinox",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2010,
+    "anioFin": 2017,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2010-2017",
+      "particulas": "CFI-10742",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Equinox",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 2004,
+    "anioFin": 2009,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L",
+      "anio": "2004-2009",
+      "particulas": "CFI-2272",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Equinox",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2008,
+    "anioFin": 2009,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2008-2009",
+      "particulas": "CFI-2272",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "HHR",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2008,
+    "anioFin": 2010,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2008-2010",
+      "particulas": "CFI-5249",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "HHR",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2006,
+    "anioFin": 2011,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2006-2011",
+      "particulas": "CFI-5249",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "HHR",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2006,
+    "anioFin": 2011,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2006-2011",
+      "particulas": "CFI-5249",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2014,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2014-2015",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 2014,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "2014-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2014,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2014-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 2000,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L",
+      "anio": "2000-2005",
+      "particulas": "CFI-1026",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V6",
+    "litros": 3.5,
+    "anioInicio": 2006,
+    "anioFin": 2011,
+    "values": {
+      "cil": "V6",
+      "litros": "3.5 L",
+      "anio": "2006-2011",
+      "particulas": "CFI-1026",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 2000,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "2000-2005",
+      "particulas": "CFI-1026",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V6",
+    "litros": 3.9,
+    "anioInicio": 2006,
+    "anioFin": 2011,
+    "values": {
+      "cil": "V6",
+      "litros": "3.9 L",
+      "anio": "2006-2011",
+      "particulas": "CFI-1026",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2006,
+    "anioFin": 2009,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2006-2009",
+      "particulas": "CFI-1026",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala Limited / Impala",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2012,
+    "anioFin": 2016,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2012-2016",
+      "particulas": "CFI-1026",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2018,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L Turbo / 2.0 L Turbo",
+      "anio": "2018-2020",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "4 Cil.",
+    "litros": 1.5,
+    "anioInicio": 2016,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.5 L",
+      "anio": "2016-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2016,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2016-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2013,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L Turbo",
+      "anio": "2013-2015",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2016,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L Turbo",
+      "anio": "2016-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 2013,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "2013-2015",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu Hibrido",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2013,
+    "anioFin": 2014,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2013-2014",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Matiz",
+    "cil": "4 Cil.",
+    "litros": 1,
+    "anioInicio": 2003,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.0 L",
+      "anio": "2003-2015",
+      "particulas": "CFI-9642",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Meriva",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2003,
+    "anioFin": 2007,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2003-2007",
+      "particulas": "CFI-1808",
+      "carbon_activado": "CFI-1808CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Meriva",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2003,
+    "anioFin": 2010,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2003-2010",
+      "particulas": ".",
+      "carbon_activado": "CFI-9904CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Monte Carlo",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 2000,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L",
+      "anio": "2000-2005",
+      "particulas": "CFI-1026",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Monte Carlo",
+    "cil": "V6",
+    "litros": 3.5,
+    "anioInicio": 2006,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V6",
+      "litros": "3.5 L",
+      "anio": "2006-2007",
+      "particulas": "CFI-1026",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Monte Carlo",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1998,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1998-2005",
+      "particulas": "CFI-1026",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Monte Carlo",
+    "cil": "V6",
+    "litros": 3.9,
+    "anioInicio": 2006,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V6",
+      "litros": "3.9 L",
+      "anio": "2006",
+      "particulas": "CFI-1026",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Monte Carlo",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2006,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2006-2007",
+      "particulas": "CFI-1026",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Optra",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2007,
+    "anioFin": 2010,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2007-2010",
+      "particulas": "CFI-9655",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Orlando",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2012,
+    "anioFin": 2014,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2012-2014",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 2015,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "2015-2020",
+      "particulas": "CFI-5210",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2015,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2015-2020",
+      "particulas": "CFI-5210",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado",
+    "cil": "V8",
+    "litros": 4.3,
+    "anioInicio": 2015,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V8",
+      "litros": "4.3 L",
+      "anio": "2015-2020",
+      "particulas": "CFI-2280",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2015,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2015-2020",
+      "particulas": "CFI-2280",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500",
+    "cil": "4 Cil.",
+    "litros": 2.7,
+    "anioInicio": 2019,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.7 L",
+      "anio": "2019-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2019,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2019-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 1999,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "1999-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2019,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2019-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2000,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2000-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500",
+    "cil": "V8",
+    "litros": 6.2,
+    "anioInicio": 2019,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V8",
+      "litros": "6.2 L",
+      "anio": "2019-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 Pickup",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1999,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1999-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 Pickup",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2003-2004",
+      "particulas": "CFI-8898",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 Pickup",
+    "cil": "V6",
+    "litros": 4.8,
+    "anioInicio": 1999,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V6",
+      "litros": "4.8 L",
+      "anio": "1999-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 Pickup",
+    "cil": "V8",
+    "litros": 4.8,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "4.8 L",
+      "anio": "2003-2004",
+      "particulas": "CFI-8898",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 Pickup",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2002,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 Pickup",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2003-2004",
+      "particulas": "CFI-8898",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 Pickup",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2001,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2001-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 SS Pickup",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2003-2004",
+      "particulas": "CFI-8898",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 2500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 1999,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "1999-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 2500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2000,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2000-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 2500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2003-2004",
+      "particulas": "CFI-8898",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 2500 HD",
+    "cil": "V8",
+    "litros": 6.6,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "6.6 L Turbo diesel",
+      "anio": "2003-2004",
+      "particulas": "CFI-8898",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 2500 HD",
+    "cil": "V8",
+    "litros": 6.6,
+    "anioInicio": 2020,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V8",
+      "litros": "6.6 L",
+      "anio": "2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 2500 HD",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2003-2004",
+      "particulas": "CFI-8898",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 2500 Pickup",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2003-2004",
+      "particulas": "CFI-8898",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 2500 Pickup",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2001,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2001-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 3500 Pickup",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2003-2004",
+      "particulas": "CFI-8898",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 3500 Pickup",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2001,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2001-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 3500 Pickup",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2003-2004",
+      "particulas": "CFI-8898",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 3500 HD",
+    "cil": "V8",
+    "litros": 6.6,
+    "anioInicio": 2020,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V8",
+      "litros": "6.6 L",
+      "anio": "2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sonic",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2012,
+    "anioFin": 2018,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2012-2018",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sonic",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2012,
+    "anioFin": 2018,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2012-2018",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sonic RS",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2013,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L Turbo",
+      "anio": "2013-2020",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Spark",
+    "cil": "4 Cil.",
+    "litros": 1.2,
+    "anioInicio": 2013,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.2 L",
+      "anio": "2013-2015",
+      "particulas": "CFI-9538",
+      "carbon_activado": "CFI-9538CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Spark",
+    "cil": "4 Cil.",
+    "litros": 1.2,
+    "anioInicio": 2014,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.2 L",
+      "anio": "2014-2015",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Spark",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2016,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L",
+      "anio": "2016-2020",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2000,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2000-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2015,
+    "anioFin": 2017,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2015-2017",
+      "particulas": "CFI-2280",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 2001,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "2001-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tahoe",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2000,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2000-2002",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tahoe",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2015,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2015-2020",
+      "particulas": "CFI-2280",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tahoe",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 2000,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "2000",
+      "particulas": "CFI-9910",
+      "carbon_activado": "CFI-9910CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tornado",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2004,
+    "anioFin": 2006,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2004-2006",
+      "particulas": "CFI-1808",
+      "carbon_activado": "CFI-1808CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tracker",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 1999,
+    "anioFin": 2002,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "1999-2002",
+      "particulas": "CFI-8726",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tracker",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 1999,
+    "anioFin": 2003,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "1999-2003",
+      "particulas": "CFI-8726",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tracker",
+    "cil": "V6",
+    "litros": 2.5,
+    "anioInicio": 2001,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V6",
+      "litros": "2.5 L",
+      "anio": "2001-2004",
+      "particulas": "CFI-8726",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Traverse",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2018,
+    "anioFin": 2019,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2018-2019",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Traverse",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2009,
+    "anioFin": 2017,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2009-2017",
+      "particulas": "CFI-11663",
+      "carbon_activado": "CFI-7984CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Traverse",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2018,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2018-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Trax",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2013,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L",
+      "anio": "2013-2020",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Trax",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2013,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2013-2020",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Uplander",
+    "cil": "V6",
+    "litros": 3.5,
+    "anioInicio": 2004,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V6",
+      "litros": "3.5 L",
+      "anio": "2004-2006",
+      "particulas": "CFI-1030",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Uplander",
+    "cil": "V6",
+    "litros": 3.9,
+    "anioInicio": 2006,
+    "anioFin": 2009,
+    "values": {
+      "cil": "V6",
+      "litros": "3.9 L",
+      "anio": "2006-2009",
+      "particulas": "CFI-1030",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Vectra",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2003,
+    "anioFin": 2006,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2003-2006",
+      "particulas": "CFI-1808",
+      "carbon_activado": "CFI-1808CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Vectra",
+    "cil": "V6",
+    "litros": 3.2,
+    "anioInicio": 2003,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V6",
+      "litros": "3.2 L",
+      "anio": "2003-2006",
+      "particulas": "CFI-1808",
+      "carbon_activado": "CFI-1808CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Venture",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 2001,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L",
+      "anio": "2001-2005",
+      "particulas": "CFI-5248",
+      "carbon_activado": "CFI-5248CA"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Volt",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2011,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L",
+      "anio": "2011-2015",
+      "particulas": "CFI-1327",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Volt",
+    "cil": "4 Cil.",
+    "litros": 1.5,
+    "anioInicio": 2016,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.5 L",
+      "anio": "2016-2020",
+      "particulas": "CFI-1350",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Zafira",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2002,
+    "anioFin": 2005,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2002-2005",
+      "particulas": "CFI-2436 / CFI-9052",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Zafira",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2002,
+    "anioFin": 2005,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2002-2005",
+      "particulas": "CFI-2436",
+      "carbon_activado": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Zafira",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2002,
+    "anioFin": 2002,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2002",
+      "particulas": "CFI-9052",
+      "carbon_activado": "."
+    }
+  }
+]

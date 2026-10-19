@@ -1,0 +1,8516 @@
+[
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2007,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2007",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V8",
+    "litros": 4.8,
+    "anioInicio": 2001,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "4.8 L",
+      "anio": "2001-2002",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V8",
+    "litros": 4.8,
+    "anioInicio": 2007,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "4.8 L",
+      "anio": "2007",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2000,
+    "anioFin": 2003,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2000-2003",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2004,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2004",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-137"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2005,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2005-2006",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2007,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2007",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2000,
+    "anioFin": 2003,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2000-2003",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2004,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2004-2006",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "2500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2007,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2007",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Acadian",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 1985,
+    "anioFin": 1987,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "1985-1987",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Achieva",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 1996,
+    "anioFin": 1998,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "1996-1998",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-75A98",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2000,
+    "anioFin": 2001,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2000-2001",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-8806",
+      "aire": "F-33A59",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2002,
+    "anioFin": 2003,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2002-2003",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-33A59",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2005,
+    "anioFin": 2005,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2005",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-8806",
+      "aire": "F-19A35",
+      "combustible": "FGI-165"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2007,
+    "anioFin": 2008,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2007-2008",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-10246",
+      "aire": "F-33A59",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2002,
+    "anioFin": 2006,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2002-2006",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-19A35",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2004,
+    "anioFin": 2004,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2004",
+      "aceite_spin": "OF-2933",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-19A35",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astra/Astra Wagon",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2002,
+    "anioFin": 2004,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L / 2.2 L",
+      "anio": "2002-2004",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-19A35",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astro",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 1986,
+    "anioFin": 1991,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "1986-1991",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-36A47",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astro",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1993,
+    "anioFin": 1996,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1993-1996",
+      "aceite_spin": "OF-3535",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-126 / FGI-106"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Astro",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2001,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2001-2005",
+      "aceite_spin": "OF-3387 / OF-3980",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Aurora",
+    "cil": "V8",
+    "litros": 4,
+    "anioInicio": 1995,
+    "anioFin": 1999,
+    "values": {
+      "cil": "V8",
+      "litros": "4.0 L",
+      "anio": "1995-1999",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-64A79",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Avalanche",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2007,
+    "anioFin": 2013,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2007-2013",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Avalanche",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2007,
+    "anioFin": 2009,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2007-2009",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Avalanche 1500-2500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2002,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2002-2006",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Avalanche 1500-2500",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2002,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2002-2006",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Aveo",
+    "cil": "4 Cil.",
+    "litros": 1.5,
+    "anioInicio": 2018,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.5 L",
+      "anio": "2018-2020",
+      "aceite_spin": "OF-2518",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-90A79",
+      "combustible": "FGI-366"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Aveo",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2009,
+    "anioFin": 2017,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2009-2017",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-99A02",
+      "combustible": "FGI-227 / FGI-247"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Beat",
+    "cil": "4 Cil.",
+    "litros": 1.2,
+    "anioInicio": 2018,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.2 L",
+      "anio": "2018-2020",
+      "aceite_spin": "OF-2518",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-96A23",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Beretta",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 1990,
+    "anioFin": 1991,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "1990-1991",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-36A47",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Beretta",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 1992,
+    "anioFin": 1993,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "1992-1993",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Beretta",
+    "cil": "4 Cil.",
+    "litros": 2.3,
+    "anioInicio": 1990,
+    "anioFin": 1993,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.3 L",
+      "anio": "1990-1993",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Beretta",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1987,
+    "anioFin": 1988,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1987-1988",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-63A70",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2020,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2020",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-107A18",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2000,
+    "anioFin": 2001,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2000-2001",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-299A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 2019,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "2019-2020",
+      "aceite_spin": "OF-10060",
+      "aceite_sint": "OF-10060STX",
+      "aceite_cart": ".",
+      "aire": "F-107A18",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "V6",
+    "litros": 3.1,
+    "anioInicio": 1991,
+    "anioFin": 1994,
+    "values": {
+      "cil": "V6",
+      "litros": "3.1 L",
+      "anio": "1991-1994",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-35A88",
+      "combustible": "FGI-23A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2019,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2019-2020",
+      "aceite_spin": "OF-10575",
+      "aceite_sint": "OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-107A18",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "V6",
+    "litros": 4.2,
+    "anioInicio": 2002,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V6",
+      "litros": "4.2 L",
+      "anio": "2002-2004",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-137"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1991,
+    "anioFin": 1994,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1991-1994",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-137"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1997,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1997-2005",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-137"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "V8",
+    "litros": null,
+    "anioInicio": 1969,
+    "anioFin": 1973,
+    "values": {
+      "cil": "V8",
+      "litros": "307 CID",
+      "anio": "1969-1973",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-192A",
+      "combustible": "FGI-123"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "V8",
+    "litros": null,
+    "anioInicio": 1978,
+    "anioFin": 1978,
+    "values": {
+      "cil": "V8",
+      "litros": "350 CID Diesel",
+      "anio": "1978",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-60"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1988,
+    "anioFin": 1990,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1988-1990",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Blazer",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1991,
+    "anioFin": 1994,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1991-1994",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Bonneville",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1992,
+    "anioFin": 1999,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1992-1999",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-64A79",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Bonneville",
+    "cil": "V6",
+    "litros": 4.1,
+    "anioInicio": 1982,
+    "anioFin": 1982,
+    "values": {
+      "cil": "V6",
+      "litros": "4.1 L",
+      "anio": "1982",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-327A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Bonneville",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1985,
+    "anioFin": 1986,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1985-1986",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-327A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Bonneville",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1985,
+    "anioFin": 1986,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1985-1986",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C & K Series",
+    "cil": "6 Cil.",
+    "litros": 4.8,
+    "anioInicio": 1985,
+    "anioFin": 1985,
+    "values": {
+      "cil": "6 Cil.",
+      "litros": "4.8 L",
+      "anio": "1985",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C & K Series",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1985,
+    "anioFin": 1990,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1985-1990",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C&k 1500 / 2500 Series",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1996,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1996-2000",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A37",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C&k 2500",
+    "cil": "V8",
+    "litros": 6.5,
+    "anioInicio": 2000,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "6.5 L Turbo",
+      "anio": "2000",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A37",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C&k 2500 Series Pickups",
+    "cil": "V8",
+    "litros": 7.4,
+    "anioInicio": 1996,
+    "anioFin": 1998,
+    "values": {
+      "cil": "V8",
+      "litros": "7.4 L",
+      "anio": "1996-1998",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A38",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C&k 2500 Series Pickups",
+    "cil": "V8",
+    "litros": 7.4,
+    "anioInicio": 1999,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "7.4 L",
+      "anio": "1999-2000",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A37",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C&k 3500",
+    "cil": "V8",
+    "litros": 6.5,
+    "anioInicio": 1997,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "6.5 L Turbo",
+      "anio": "1997-2000",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A38",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C&k 3500 Series Pickups",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1996,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1996-2000",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A37",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C&k 3500 Series Pickups",
+    "cil": "V8",
+    "litros": 7.4,
+    "anioInicio": 1996,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "7.4 L",
+      "anio": "1996-2000",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A37",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C&k Series Pickups",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1988,
+    "anioFin": 1995,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1988-1995",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C&k Series Pickups",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1988,
+    "anioFin": 1995,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1988-1995",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C&k Series Pickups",
+    "cil": "V8",
+    "litros": 7.4,
+    "anioInicio": 1992,
+    "anioFin": 1995,
+    "values": {
+      "cil": "V8",
+      "litros": "7.4 L",
+      "anio": "1992-1995",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C&L 1500 Series Pickups",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1996,
+    "anioFin": 1998,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1996-1998",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A37",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C&L 1500 Series Pickups",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1996,
+    "anioFin": 1999,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1996-1999",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A37",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C&L 2500 Series Pickups",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1996,
+    "anioFin": 1998,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1996-1998",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A37",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-1500",
+    "cil": "V6",
+    "litros": 4.1,
+    "anioInicio": 1995,
+    "anioFin": 1998,
+    "values": {
+      "cil": "V6",
+      "litros": "4.1 L",
+      "anio": "1995-1998",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-35A88",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-1500",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2000,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2000",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-1500",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2001,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2001",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-1500",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2002,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2002",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-96A69",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-1500",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1995,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1995-2000",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A38",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-2500",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1988,
+    "anioFin": 1994,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1988-1994",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-2500",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1999,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1999-2001",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-2500, C-3500, 400 SS",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1985,
+    "anioFin": 1991,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1985-1991",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-57"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-3500",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1988,
+    "anioFin": 1993,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1988-1993",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-3500",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1985,
+    "anioFin": 1985,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1985",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-3500",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1997,
+    "anioFin": 1999,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1997-1999",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-3500",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 2000,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "2000-2001",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-3500 HD Chassis Cab",
+    "cil": "V8",
+    "litros": 6.5,
+    "anioInicio": 2001,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "6.5 L Turbo",
+      "anio": "2001-2002",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A37",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-3500 HD Chassis Cab",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2001,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2001-2002",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A37",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "C-3500 Heavy Duty",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1999,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1999-2000",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A37",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2017,
+    "anioFin": 2019,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L Turbo",
+      "anio": "2017-2019",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-20A85",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 1982,
+    "anioFin": 1983,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "1982-1983",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-23A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1985,
+    "anioFin": 1989,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1985-1989",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A15",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V6",
+    "litros": 3.1,
+    "anioInicio": 1990,
+    "anioFin": 1992,
+    "values": {
+      "cil": "V6",
+      "litros": "3.1 L",
+      "anio": "1990-1992",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A02",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2010,
+    "anioFin": 2015,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2010-2015",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-8765",
+      "aire": "F-106A90",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2016,
+    "anioFin": 2019,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2016-2019",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-20A85",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1995,
+    "anioFin": 1997,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1995-1997",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1998,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1998-2002",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": null,
+    "anioInicio": 1976,
+    "anioFin": 1983,
+    "values": {
+      "cil": "V8",
+      "litros": "350 CID",
+      "anio": "1976-1983",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-60"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1968,
+    "anioFin": 1970,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1968-1970",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-136A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1982,
+    "anioFin": 1983,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1982-1983",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1985,
+    "anioFin": 1992,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1985-1992",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A15",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": 5.4,
+    "anioInicio": 1987,
+    "anioFin": 1987,
+    "values": {
+      "cil": "V8",
+      "litros": "5.4 L",
+      "anio": "1987",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-136A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1975,
+    "anioFin": 1975,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1975",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-59"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1971,
+    "anioFin": 1974,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1971-1974",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A15",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1980,
+    "anioFin": 1981,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1980-1981",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1987,
+    "anioFin": 1992,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1987-1992",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A15",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1995,
+    "anioFin": 1997,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1995-1997",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1998,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1998-2002",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": 6.2,
+    "anioInicio": 2010,
+    "anioFin": 2016,
+    "values": {
+      "cil": "V8",
+      "litros": "6.2 L",
+      "anio": "2010-2016",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-106A90",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro",
+    "cil": "V8",
+    "litros": 6.2,
+    "anioInicio": 2016,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V8",
+      "litros": "6.2 L",
+      "anio": "2016-2020",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-23A32",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro Iroc Z, RS, Z28",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 1993,
+    "anioFin": 1995,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L",
+      "anio": "1993-1995",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro Z-28",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1998,
+    "anioFin": 1998,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1998",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro Z-28",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1993,
+    "anioFin": 1997,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1993-1997",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Camaro Z-28",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1998,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1998-2002",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Caprice",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2012,
+    "anioFin": 2017,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2012-2017",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-8765",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Caprice",
+    "cil": "V8",
+    "litros": 4.3,
+    "anioInicio": 1994,
+    "anioFin": 1996,
+    "values": {
+      "cil": "V8",
+      "litros": "4.3 L",
+      "anio": "1994-1996",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-64A79",
+      "combustible": "FGI-20"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Caprice",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1986,
+    "anioFin": 1990,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1986-1990",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Caprice",
+    "cil": "V8",
+    "litros": 5.4,
+    "anioInicio": 1966,
+    "anioFin": 1967,
+    "values": {
+      "cil": "V8",
+      "litros": "5.4 L",
+      "anio": "1966-1967",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-136A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Caprice",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1994,
+    "anioFin": 1996,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1994-1996",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-64A79",
+      "combustible": "FGI-20"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Caprice",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2011,
+    "anioFin": 2017,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2011-2017",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Caprice",
+    "cil": "V8",
+    "litros": 7,
+    "anioInicio": 1966,
+    "anioFin": 1967,
+    "values": {
+      "cil": "V8",
+      "litros": "7.0 L",
+      "anio": "1966-1967",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-136A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Caprice, Bel-Air, Biscayne",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1992,
+    "anioFin": 1993,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1992-1993",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-70A17",
+      "combustible": "FGI-20"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Caprice, Bel-Air, Biscayne",
+    "cil": "V8",
+    "litros": 4.3,
+    "anioInicio": 1994,
+    "anioFin": 1996,
+    "values": {
+      "cil": "V8",
+      "litros": "4.3 L / 5.7 L",
+      "anio": "1994-1996",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-64A79",
+      "combustible": "FGI-20"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Caprice, Bel-Air, Biscayne",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1986,
+    "anioFin": 1990,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L / 5.7 L",
+      "anio": "1986-1990",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Caprice, Bel-Air, Biscayne",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1991,
+    "anioFin": 1993,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L / 5.7 L",
+      "anio": "1991-1993",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-70A17",
+      "combustible": "FGI-20"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Captiva",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2008,
+    "anioFin": 2010,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2008-2010",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-101A15",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Captiva",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2008,
+    "anioFin": 2010,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2008-2010",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-101A15",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Captiva Flex Fuel",
+    "cil": "V6",
+    "litros": 3,
+    "anioInicio": 2012,
+    "anioFin": 2015,
+    "values": {
+      "cil": "V6",
+      "litros": "3.0 L",
+      "anio": "2012-2015",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-101A15",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Captiva Sport",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2011,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2011-2015",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-101A15",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cavalier",
+    "cil": "4 Cil.",
+    "litros": 1.5,
+    "anioInicio": 2018,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.5 L",
+      "anio": "2018-2020",
+      "aceite_spin": "OF-2518",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-26A67",
+      "combustible": "FGI-366"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cavalier",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 1995,
+    "anioFin": 2005,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "1995-2005",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cavalier",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 1997,
+    "anioFin": 1999,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "1997-1999",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cavalier",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1990,
+    "anioFin": 1994,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L / 3.0 L",
+      "anio": "1990-1994",
+      "aceite_spin": "OF-3387 / OF-3980",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A24",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cavalier",
+    "cil": "V6",
+    "litros": 3.1,
+    "anioInicio": 1990,
+    "anioFin": 1994,
+    "values": {
+      "cil": "V6",
+      "litros": "3.1 L",
+      "anio": "1990-1994",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A24",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cavalier",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 1987,
+    "anioFin": 1989,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "1987-1989",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A03",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cavalier",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1990,
+    "anioFin": 1994,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1990-1994",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A24",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cavalier Z-24",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 1995,
+    "anioFin": 1996,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "1995-1996",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cavalier Z-24",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 1997,
+    "anioFin": 2000,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "1997-2000",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cavalier, Cadet, Z-24",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 1992,
+    "anioFin": 2001,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "1992-2001",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cavalier, Cadet, Z-24",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 1999,
+    "anioFin": 2001,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "1999-2001",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cavalier, Cadet, Z-24",
+    "cil": "V6",
+    "litros": 3.1,
+    "anioInicio": 1993,
+    "anioFin": 1994,
+    "values": {
+      "cil": "V6",
+      "litros": "3.1 L",
+      "anio": "1993-1994",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A02",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Celebrity",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 1983,
+    "anioFin": 1983,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "1983",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-23A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Celebrity",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1985,
+    "anioFin": 1985,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1985",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-23A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Celebrity",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1982,
+    "anioFin": 1986,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1982-1986",
+      "aceite_spin": "OF-3387 / OF-3980",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-35A37A",
+      "combustible": "FGI-04 / FGI-24"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Celebrity",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1985,
+    "anioFin": 1989,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1985-1989",
+      "aceite_spin": "OF-3387 / OF-3980",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-65A76",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Celebrity",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1987,
+    "anioFin": 1989,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1987-1989",
+      "aceite_spin": "OF-3387 / OF-3980",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A24 / F-39A24A",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Celebrity",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 1982,
+    "anioFin": 1982,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "1982",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Celebrity",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1982,
+    "anioFin": 1985,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1982-1985",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-35A37A",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Celebrity",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1982,
+    "anioFin": 1988,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1982-1988",
+      "aceite_spin": "OF-3535",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-35A37A",
+      "combustible": "FGI-57"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Century",
+    "cil": "V6",
+    "litros": 2.3,
+    "anioInicio": 1990,
+    "anioFin": 1996,
+    "values": {
+      "cil": "V6",
+      "litros": "2.3 L",
+      "anio": "1990-1996",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A24 / F-39A24A",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Century",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1982,
+    "anioFin": 1986,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1982-1986",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-35A37A",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Century",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1987,
+    "anioFin": 1989,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1987-1989",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A24 / F-39A24A",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Century Limited",
+    "cil": "V6",
+    "litros": 3,
+    "anioInicio": 1991,
+    "anioFin": 1992,
+    "values": {
+      "cil": "V6",
+      "litros": "3.0 L",
+      "anio": "1991-1992",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A24",
+      "combustible": "FGI-30"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevette",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 1985,
+    "anioFin": 1987,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "1985-1987",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 1994,
+    "anioFin": 2012,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L / 1.6 L",
+      "anio": "1994-2012",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-54A96",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2001,
+    "anioFin": 2012,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2001-2012",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-54A96",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy 1500 / 2500 / 3500 Van",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1997,
+    "anioFin": 1998,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1997-1998",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy 2500 / 3500 Van",
+    "cil": "V8",
+    "litros": 6.5,
+    "anioInicio": 1997,
+    "anioFin": 1998,
+    "values": {
+      "cil": "V8",
+      "litros": "6.5 L Turbo",
+      "anio": "1997-1998",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy 3500 Van",
+    "cil": "V8",
+    "litros": 7.4,
+    "anioInicio": 1997,
+    "anioFin": 1998,
+    "values": {
+      "cil": "V8",
+      "litros": "7.4 L",
+      "anio": "1997-1998",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy Nova",
+    "cil": "6 Cil.",
+    "litros": null,
+    "anioInicio": 1997,
+    "anioFin": 1998,
+    "values": {
+      "cil": "6 Cil.",
+      "litros": "250 CID",
+      "anio": "1997-1998",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-189A",
+      "combustible": "FGI-57"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy pickup",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 1994,
+    "anioFin": 2003,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L / 1.6 L",
+      "anio": "1994-2003",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-54A96",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Chevy Van",
+    "cil": "V6",
+    "litros": 4.1,
+    "anioInicio": 1995,
+    "anioFin": 1996,
+    "values": {
+      "cil": "V6",
+      "litros": "4.1 L",
+      "anio": "1995-1996",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-192A",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cheyenne",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2003,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2003-2007",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cheyenne",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2008,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2008-2020",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cheyenne",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1991,
+    "anioFin": 1998,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1991-1998",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-57"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cheyenne 400 SS",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1999,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1999-2001",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Citation",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 1982,
+    "anioFin": 1982,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "1982",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Citation",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 1983,
+    "anioFin": 1983,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "1983",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-23A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Citation",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1985,
+    "anioFin": 1985,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1985",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-23A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Citation",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1982,
+    "anioFin": 1986,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1982-1986",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-35A37A",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "City Express",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2015,
+    "anioFin": 2019,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2015-2019",
+      "aceite_spin": "OF-6607",
+      "aceite_sint": "OF-6607STX",
+      "aceite_cart": ".",
+      "aire": "F-60A00",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Classic",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2004,
+    "anioFin": 2005,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2004-2005",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-82A21",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cobalt",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2005,
+    "anioFin": 2007,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2005-2007",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-107A84",
+      "combustible": "FGI-294"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cobalt",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2005,
+    "anioFin": 2010,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2005-2010",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-29A56",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cobalt SS",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2006,
+    "anioFin": 2007,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2006-2007",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-29A56",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Colorado",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 2015,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "2015-2020",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-6CA11 / F-52A04",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Colorado",
+    "cil": "4 Cil.",
+    "litros": 2.9,
+    "anioInicio": 2007,
+    "anioFin": 2007,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.9 L",
+      "anio": "2007",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-24A08",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Colorado",
+    "cil": "4 Cil.",
+    "litros": 2.9,
+    "anioInicio": 2008,
+    "anioFin": 2012,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.9 L",
+      "anio": "2008-2012",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-104A66",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Colorado",
+    "cil": "5 Cil.",
+    "litros": 3.7,
+    "anioInicio": 2008,
+    "anioFin": 2012,
+    "values": {
+      "cil": "5 Cil.",
+      "litros": "3.7 L",
+      "anio": "2008-2012",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-104A66",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Colorado",
+    "cil": "5 Cil.",
+    "litros": 3.7,
+    "anioInicio": 2007,
+    "anioFin": 2007,
+    "values": {
+      "cil": "5 Cil.",
+      "litros": "3.7 L",
+      "anio": "2007",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-24A08",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Colorado",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2015,
+    "anioFin": 2017,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2015-2017",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-8765",
+      "aire": "F-6CA11 / F-52A04",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Colorado",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2018,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2018-2020",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-10246",
+      "aire": "F-6CA11 / F-52A04",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Colorado",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2009,
+    "anioFin": 2012,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2009-2012",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corsa",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2002,
+    "anioFin": 2002,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L",
+      "anio": "2002",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-56A26",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corsa",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2002,
+    "anioFin": 2008,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2002-2008",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-56A26",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corsica",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 1987,
+    "anioFin": 1989,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "1987-1989",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A03",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corsica",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 1990,
+    "anioFin": 1990,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "1990",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-36A47",
+      "combustible": "FGI-166"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corsica",
+    "cil": "4 Cil.",
+    "litros": 2.8,
+    "anioInicio": 1987,
+    "anioFin": 1988,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.8 L",
+      "anio": "1987-1988",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-63A70",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corsica",
+    "cil": "V6",
+    "litros": 3.1,
+    "anioInicio": 1990,
+    "anioFin": 1992,
+    "values": {
+      "cil": "V6",
+      "litros": "3.1 L",
+      "anio": "1990-1992",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-166"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corvette",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1982,
+    "anioFin": 1984,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1982-1984",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corvette",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1990,
+    "anioFin": 1991,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1990-1991",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-70A07",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corvette",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1992,
+    "anioFin": 1996,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1992-1996",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-70A07",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corvette",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1999,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1999-2005",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corvette",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2006,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2006-2007",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-110A03",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corvette",
+    "cil": "V8",
+    "litros": 6.2,
+    "anioInicio": 2008,
+    "anioFin": 2019,
+    "values": {
+      "cil": "V8",
+      "litros": "6.2 L",
+      "anio": "2008-2019",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Corvette",
+    "cil": "V8",
+    "litros": 7,
+    "anioInicio": 2006,
+    "anioFin": 2013,
+    "values": {
+      "cil": "V8",
+      "litros": "7.0 L",
+      "anio": "2006-2013",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cruze",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2011,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L Turbo",
+      "anio": "2011-2015",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-10246",
+      "aire": "F-27A10",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cruze",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2016,
+    "anioFin": 2019,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L Turbo",
+      "anio": "2016-2019",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-13A36",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cruze",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2011,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2011-2015",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-10246",
+      "aire": "F-13A27",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cruze",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2014,
+    "anioFin": 2016,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2014-2016",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-27A10",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Custom C-10, C-15, C-3500",
+    "cil": "6 Cil.",
+    "litros": 4.8,
+    "anioInicio": 1981,
+    "anioFin": 1989,
+    "values": {
+      "cil": "6 Cil.",
+      "litros": "4.8 L",
+      "anio": "1981-1989",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-189A",
+      "combustible": "FGI-57"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cutlass Eurosport",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1987,
+    "anioFin": 1989,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1987-1989",
+      "aceite_spin": "OF-3387 / OF-3980",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A24 / F-39A24A",
+      "combustible": "FGI-13 / FGI-30"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Cutlass, Cutlass Supreme",
+    "cil": "V6",
+    "litros": 3.1,
+    "anioInicio": 1988,
+    "anioFin": 1997,
+    "values": {
+      "cil": "V6",
+      "litros": "3.1 L",
+      "anio": "1988-1997",
+      "aceite_spin": "OF-3535",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A24",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Electra Park Avenue, Ultra",
+    "cil": "V6",
+    "litros": 3,
+    "anioInicio": 1985,
+    "anioFin": 1985,
+    "values": {
+      "cil": "V6",
+      "litros": "3.0 L",
+      "anio": "1985",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Epica",
+    "cil": "6 Cil.",
+    "litros": 2.5,
+    "anioInicio": 2004,
+    "anioFin": 2009,
+    "values": {
+      "cil": "6 Cil.",
+      "litros": "2.5 L",
+      "anio": "2004-2009",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-102A55",
+      "combustible": "FGI-227 / FGI-247"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Equinox",
+    "cil": "4 Cil.",
+    "litros": 1.5,
+    "anioInicio": 2018,
+    "anioFin": 2019,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.5 L Turbo",
+      "anio": "2018-2019",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-23A27",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Equinox",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2010,
+    "anioFin": 2017,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2010-2017",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-104A65",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Equinox",
+    "cil": "V6",
+    "litros": 3,
+    "anioInicio": 2010,
+    "anioFin": 2010,
+    "values": {
+      "cil": "V6",
+      "litros": "3.0 L",
+      "anio": "2010",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-104A65",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Equinox",
+    "cil": "V6",
+    "litros": 3,
+    "anioInicio": 2011,
+    "anioFin": 2012,
+    "values": {
+      "cil": "V6",
+      "litros": "3.0 L",
+      "anio": "2011-2012",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-104A65",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Equinox",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 2004,
+    "anioFin": 2010,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L",
+      "anio": "2004-2010",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-94A92",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Equinox",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2008,
+    "anioFin": 2009,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2008-2009",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-94A92",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Equinox",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2013,
+    "anioFin": 2015,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2013-2015",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Estate Wagon",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1980,
+    "anioFin": 1998,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1980-1998",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 1500 / 2500 / 3500 Van",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1999,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1999-2000",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 1500 / 2500 / 3500 Van",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 2001,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "2001-2004",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 1500 / 2500 Van",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1999,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1999-2000",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 1500 Van",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2011,
+    "anioFin": 2014,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2011-2014",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 1500 Van",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2003,
+    "anioFin": 2010,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2003-2010",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 1500-3500",
+    "cil": "V6",
+    "litros": 6.7,
+    "anioInicio": 2006,
+    "anioFin": 2015,
+    "values": {
+      "cil": "V6",
+      "litros": "6.7 L Turbo Diesel",
+      "anio": "2006-2015",
+      "aceite_spin": "OF-9100",
+      "aceite_sint": "OF-9100STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 1500-3500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2007,
+    "anioFin": 2014,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2007-2014",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 1500-3500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2007,
+    "anioFin": 2019,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2007-2019",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 2500 / 3500 Van",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2005,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2005-2006",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 2500 / 3500 Van",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2007,
+    "anioFin": 2012,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2007-2012",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 2500 Van",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2001,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2001-2002",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 2500/3500 Van",
+    "cil": "V8",
+    "litros": 6.5,
+    "anioInicio": 1997,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "6.5 L Turbo",
+      "anio": "1997-2002",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 3500 Van",
+    "cil": "V8",
+    "litros": 4.8,
+    "anioInicio": 2003,
+    "anioFin": 2008,
+    "values": {
+      "cil": "V8",
+      "litros": "4.8 L",
+      "anio": "2003-2008",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 3500 Van",
+    "cil": "V8",
+    "litros": 4.8,
+    "anioInicio": 2009,
+    "anioFin": 2015,
+    "values": {
+      "cil": "V8",
+      "litros": "4.8 L",
+      "anio": "2009-2015",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 3500 Van",
+    "cil": "V8",
+    "litros": 7.4,
+    "anioInicio": 1997,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "7.4 L",
+      "anio": "1997-2000",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 3500 Van",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2001,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2001-2002",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 4500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2009,
+    "anioFin": 2014,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2009-2014",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express 4500",
+    "cil": "V8",
+    "litros": 6.7,
+    "anioInicio": 2009,
+    "anioFin": 2015,
+    "values": {
+      "cil": "V8",
+      "litros": "6.7 L Turbo Diesel",
+      "anio": "2009-2015",
+      "aceite_spin": "OF-9100",
+      "aceite_sint": "OF-9100STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express Van",
+    "cil": "V8",
+    "litros": 6.5,
+    "anioInicio": 2001,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V8",
+      "litros": "6.5 L Turbo",
+      "anio": "2001",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A38",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express Van C",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2006,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2006-2007",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Express Van L",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2006,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2006-2007",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-92A69",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Firebird",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 1993,
+    "anioFin": 1999,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L / 3.8 L",
+      "anio": "1993-1999",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Firebird",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1978,
+    "anioFin": 1992,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1978-1992",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-327A",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Firebird",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1993,
+    "anioFin": 1997,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1993-1997",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Firebird",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1998,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1998-2000",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Firebird, Trans Am",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1994,
+    "anioFin": 1998,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1994-1998",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "G Express Van",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1999,
+    "anioFin": 1999,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1999",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "G-30 Cargo Van",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2000,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2000-2001",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "G-30 Cargo Van",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1999,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1999-2000",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "G-Express, G-3500",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 2001,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "2001",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Grand Prix",
+    "cil": "V6",
+    "litros": 4.1,
+    "anioInicio": 1982,
+    "anioFin": 1982,
+    "values": {
+      "cil": "V6",
+      "litros": "4.1 L",
+      "anio": "1982",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-327A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Grand Prix",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1986,
+    "anioFin": 1987,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1986-1987",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-327A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "HHR",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2008,
+    "anioFin": 2010,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L Turbo",
+      "anio": "2008-2010",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "HHR",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2006,
+    "anioFin": 2011,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2006-2011",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-30A54",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "HHR",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2006,
+    "anioFin": 2011,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2006-2011",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-30A54",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 2014,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "2014-2015",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-112A51",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 2000,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L",
+      "anio": "2000-2005",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-87A54",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V6",
+    "litros": 3.5,
+    "anioInicio": 2006,
+    "anioFin": 2011,
+    "values": {
+      "cil": "V6",
+      "litros": "3.5 L",
+      "anio": "2006-2011",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-100A14",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2012,
+    "anioFin": 2013,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2012-2013",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-112A27",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2014,
+    "anioFin": 2015,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2014-2015",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-112A51",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 2000,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "2000-2005",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-87A54",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V6",
+    "litros": 3.9,
+    "anioInicio": 2006,
+    "anioFin": 2011,
+    "values": {
+      "cil": "V6",
+      "litros": "3.9 L",
+      "anio": "2006-2011",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-100A14",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V8",
+    "litros": null,
+    "anioInicio": 1977,
+    "anioFin": 1978,
+    "values": {
+      "cil": "V8",
+      "litros": "305 CID",
+      "anio": "1977-1978",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-60"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2007,
+    "anioFin": 2010,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2007-2010",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-100A14",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala hibrido",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2014,
+    "anioFin": 2014,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2014",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Impala SS",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1994,
+    "anioFin": 1996,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1994-1996",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-64A79",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Intrigue",
+    "cil": "V6",
+    "litros": 3.5,
+    "anioInicio": 1999,
+    "anioFin": 1999,
+    "values": {
+      "cil": "V6",
+      "litros": "3.5 L",
+      "anio": "1999",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-64A79",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Intrigue",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1999,
+    "anioFin": 1999,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1999",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-75A97",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Ipanema",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 1991,
+    "anioFin": 1997,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "1991-1997",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Jimmy",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 1994,
+    "anioFin": 1996,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "1994-1996",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Jimmy",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1991,
+    "anioFin": 1993,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L Turbo",
+      "anio": "1991-1993",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Jimmy",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1993,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1993-2000",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Jimmy",
+    "cil": "V8",
+    "litros": null,
+    "anioInicio": 1978,
+    "anioFin": 1978,
+    "values": {
+      "cil": "V8",
+      "litros": "350 CID Diesel",
+      "anio": "1978",
+      "aceite_spin": "OF-25",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "K10, K20, K30, 4WD (1/2-3/4-1 Ton.)",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1986,
+    "anioFin": 1986,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1986",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "K10, K20, K30, 4WD (1/2-3/4-1 Ton.)",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1975,
+    "anioFin": 1977,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L / 5.7 L / 7.4 L",
+      "anio": "1975-1977",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-58"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Kadett",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 1991,
+    "anioFin": 1997,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "1991-1997",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Kodiak",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 1995,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L / 7.0 L",
+      "anio": "1995-2001",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Kodiak C4500,C5500",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2002,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2002-2006",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Lesabre",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1977,
+    "anioFin": 1985,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1977-1985",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Lesabre",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 2001,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "2001",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-64A79",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Limited",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 2001,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "2001",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-64A79",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Lumina",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 1990,
+    "anioFin": 1993,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "1990-1993",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A24",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Lumina",
+    "cil": "V6",
+    "litros": 3.1,
+    "anioInicio": 1996,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V6",
+      "litros": "3.1 L / 3.8 L",
+      "anio": "1996-2000",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-75A97",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Lumina",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 1994,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L / 3.8 L",
+      "anio": "1994-2001",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-75A97",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Lumina APV",
+    "cil": "V6",
+    "litros": 3.1,
+    "anioInicio": 1990,
+    "anioFin": 1995,
+    "values": {
+      "cil": "V6",
+      "litros": "3.1 L",
+      "anio": "1990-1995",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-35A88",
+      "combustible": "FGI-166"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Lumina APV",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1992,
+    "anioFin": 1993,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1992-1993",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-193A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Luv",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2002,
+    "anioFin": 2006,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2002-2006",
+      "aceite_spin": "OF-3593",
+      "aceite_sint": "OF-3593STX",
+      "aceite_cart": ".",
+      "aire": "F-74A17 / F-74A27",
+      "combustible": "FGI-165"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Luv",
+    "cil": "4 Cil.",
+    "litros": 2.3,
+    "anioInicio": 1997,
+    "anioFin": 1998,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.3 L",
+      "anio": "1997-1998",
+      "aceite_spin": "OF-3593",
+      "aceite_sint": "OF-3593STX",
+      "aceite_cart": ".",
+      "aire": "F-49A39 / F-65A60",
+      "combustible": "FGI-193A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Luv",
+    "cil": "4 Cil.",
+    "litros": 2.3,
+    "anioInicio": 1999,
+    "anioFin": 2001,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.3 L",
+      "anio": "1999-2001",
+      "aceite_spin": "OF-3593",
+      "aceite_sint": "OF-3593STX",
+      "aceite_cart": ".",
+      "aire": "F-74A17 / F-74A27",
+      "combustible": "FGI-165"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "4 Cil.",
+    "litros": 1.5,
+    "anioInicio": 2016,
+    "anioFin": 2019,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.5 L Turbo",
+      "anio": "2016-2019",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-23A43",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2013,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L Turbo",
+      "anio": "2013-2015",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-112A51",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2016,
+    "anioFin": 2019,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L Turbo",
+      "anio": "2016-2019",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-104A19",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2004,
+    "anioFin": 2008,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2004-2008",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-75A97",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 1997,
+    "anioFin": 1999,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "1997-1999",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-82A21",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2008,
+    "anioFin": 2012,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2008-2012",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-94A92",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 2013,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "2013-2015",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-112A51",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "V6",
+    "litros": null,
+    "anioInicio": 1976,
+    "anioFin": 1981,
+    "values": {
+      "cil": "V6",
+      "litros": "231 CID",
+      "anio": "1976-1981",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-189A",
+      "combustible": "FGI-57"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "V6",
+    "litros": 3.1,
+    "anioInicio": 1997,
+    "anioFin": 2003,
+    "values": {
+      "cil": "V6",
+      "litros": "3.1 L",
+      "anio": "1997-2003",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-82A21",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "V6",
+    "litros": 3.5,
+    "anioInicio": 2004,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V6",
+      "litros": "3.5 L",
+      "anio": "2004-2006",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-75A97",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "V6",
+    "litros": 3.5,
+    "anioInicio": 2007,
+    "anioFin": 2008,
+    "values": {
+      "cil": "V6",
+      "litros": "3.5 L",
+      "anio": "2007-2008",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-99A48",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "V6",
+    "litros": 3.5,
+    "anioInicio": 2009,
+    "anioFin": 2010,
+    "values": {
+      "cil": "V6",
+      "litros": "3.5 L",
+      "anio": "2009-2010",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-94A92",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2008,
+    "anioFin": 2012,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2008-2012",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-94A92",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "V6",
+    "litros": 3.9,
+    "anioInicio": 2006,
+    "anioFin": 2008,
+    "values": {
+      "cil": "V6",
+      "litros": "3.9 L",
+      "anio": "2006-2008",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-99A48",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "V8",
+    "litros": null,
+    "anioInicio": 1973,
+    "anioFin": 1975,
+    "values": {
+      "cil": "V8",
+      "litros": "350 CID",
+      "anio": "1973-1975",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-57"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu",
+    "cil": "V8",
+    "litros": 5.4,
+    "anioInicio": 1966,
+    "anioFin": 1967,
+    "values": {
+      "cil": "V8",
+      "litros": "5.4 L",
+      "anio": "1966-1967",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-136A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu Hibrido",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2016,
+    "anioFin": 2019,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2016-2019",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-23A43",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu Hibrido",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2008,
+    "anioFin": 2011,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2008-2011",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-94A92",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Malibu Hibrido",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2013,
+    "anioFin": 2014,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2013-2014",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-71A76",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Matiz",
+    "cil": "4 Cil.",
+    "litros": 1,
+    "anioInicio": 2011,
+    "anioFin": 2016,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.0 L",
+      "anio": "2011-2016",
+      "aceite_spin": "OF-4967",
+      "aceite_sint": "OF-4967STX",
+      "aceite_cart": ".",
+      "aire": "F-14A85",
+      "combustible": "FGI-227 / FGI-247"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Meriva",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2004,
+    "anioFin": 2008,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2004-2008",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-56A26",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Metro",
+    "cil": "3 Cil.",
+    "litros": 1,
+    "anioInicio": 1989,
+    "anioFin": 2000,
+    "values": {
+      "cil": "3 Cil.",
+      "litros": "1.0 L",
+      "anio": "1989-2000",
+      "aceite_spin": "OF-3614",
+      "aceite_sint": "OF-3614STX",
+      "aceite_cart": ".",
+      "aire": "F-63A76",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Metro",
+    "cil": "4 Cil.",
+    "litros": 1.3,
+    "anioInicio": 1992,
+    "anioFin": 2001,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.3 L",
+      "anio": "1992-2001",
+      "aceite_spin": "OF-3614",
+      "aceite_sint": "OF-3614STX",
+      "aceite_cart": ".",
+      "aire": "F-63A77",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Monte Carlo",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 1995,
+    "anioFin": 1997,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L",
+      "anio": "1995-1997",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-75A97",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Monte Carlo",
+    "cil": "V6",
+    "litros": 3.5,
+    "anioInicio": 2006,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V6",
+      "litros": "3.5 L",
+      "anio": "2006-2007",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-100A14",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Monte Carlo",
+    "cil": "V6",
+    "litros": 3.9,
+    "anioInicio": 2006,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V6",
+      "litros": "3.9 L",
+      "anio": "2006",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-100A14",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Monte Carlo",
+    "cil": "V6",
+    "litros": 5.3,
+    "anioInicio": 2006,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V6",
+      "litros": "5.3 L",
+      "anio": "2006-2007",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-100A14",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Monte Carlo",
+    "cil": "V8",
+    "litros": null,
+    "anioInicio": 1975,
+    "anioFin": 1975,
+    "values": {
+      "cil": "V8",
+      "litros": "350 CID Diesel",
+      "anio": "1975",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-59"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Monte Carlo LS",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 2001,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L / 3.8 L",
+      "anio": "2001",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Montecarlo, Caprice",
+    "cil": "V8",
+    "litros": 4.4,
+    "anioInicio": 1981,
+    "anioFin": 1984,
+    "values": {
+      "cil": "V8",
+      "litros": "4.4 L",
+      "anio": "1981-1984",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Nova",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 1985,
+    "anioFin": 1988,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "1985-1988",
+      "aceite_spin": "OF-2951",
+      "aceite_sint": "OF-2951STX",
+      "aceite_cart": ".",
+      "aire": "F-35A66",
+      "combustible": "FGI-72"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Nova",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1975,
+    "anioFin": 1979,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1975-1979",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-59"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Oldsmobile 88th",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1992,
+    "anioFin": 1996,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1992-1996",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-64A79",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Optra",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2007,
+    "anioFin": 2010,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2007-2010",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-34A50",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Optra Sudamerica",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2004,
+    "anioFin": 2006,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2004-2006",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-34A50",
+      "combustible": "FGI-247"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Orlando",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 2012,
+    "anioFin": 2016,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "2012-2016",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-27A10",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "P20",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1985,
+    "anioFin": 1990,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1985-1990",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-61 / FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "P25",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1985,
+    "anioFin": 1990,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1985-1990",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-61 / FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "P30",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1985,
+    "anioFin": 1990,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1985-1990",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-61 / FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "P35",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1985,
+    "anioFin": 1990,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1985-1990",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-61 / FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Park Avenue, Ultra",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 2001,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "2001",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-64A79",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Pick-Up C-35, C10, C15 1/2 Ton., C20-25 3/4 Ton.",
+    "cil": "6 Cil.",
+    "litros": 4.8,
+    "anioInicio": 1975,
+    "anioFin": 1991,
+    "values": {
+      "cil": "6 Cil.",
+      "litros": "4.8 L",
+      "anio": "1975-1991",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-58"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Prizm",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 1998,
+    "anioFin": 1998,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "1998",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A10",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Prizm",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 1994,
+    "anioFin": 1997,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "1994-1997",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-76A17",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Prizm",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 1994,
+    "anioFin": 1997,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "1994-1997",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-76A17",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Prizm",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 1999,
+    "anioFin": 2002,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "1999-2002",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-54A66",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "R&v series pickups",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1989,
+    "anioFin": 1991,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1989-1991",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "R1500 2WD-1/2T, R2500 3/4T, R3500-1T",
+    "cil": "V8",
+    "litros": 7.4,
+    "anioInicio": 1989,
+    "anioFin": 1989,
+    "values": {
+      "cil": "V8",
+      "litros": "7.4 L",
+      "anio": "1989",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Raider",
+    "cil": "V6",
+    "litros": 3,
+    "anioInicio": 1989,
+    "anioFin": 1989,
+    "values": {
+      "cil": "V6",
+      "litros": "3.0 L",
+      "anio": "1989",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-63A62",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Reatta",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1988,
+    "anioFin": 1991,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1988-1991",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-165"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Regal GS, LS",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 2001,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "2001",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Regal, Regal Gran Sport",
+    "cil": "V6",
+    "litros": 3.1,
+    "anioInicio": 1994,
+    "anioFin": 1999,
+    "values": {
+      "cil": "V6",
+      "litros": "3.1 L / 3.8 L",
+      "anio": "1994-1999",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-75A97",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Riviera (FWD)",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1980,
+    "anioFin": 1985,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1980-1985",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Riviera (FWD)",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1996,
+    "anioFin": 1999,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1996-1999",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-64A79",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Riviera (FWD)",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1991,
+    "anioFin": 1991,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1991",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-70A17",
+      "combustible": "FGI-20"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Royale LS Bonneville SSE",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1994,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1994-2000",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-64A79",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 1995,
+    "anioFin": 1998,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "1995-1998",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2000,
+    "anioFin": 2003,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2000-2003",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-299A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2004,
+    "anioFin": 2005,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2004-2005",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 2016,
+    "anioFin": 2018,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "2016-2018",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-52A04",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1986,
+    "anioFin": 1991,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1986-1991",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-35A88",
+      "combustible": "FGI-23A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 1991,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L",
+      "anio": "1991-2001",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10 Blazer",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 1986,
+    "anioFin": 1993,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L",
+      "anio": "1986-1993",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-35A88",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10 Blazer",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1995,
+    "anioFin": 2003,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1995-2003",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-23A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10 Pickup",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 1994,
+    "anioFin": 2001,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "1994-2001",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "FGI-137"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10 Pickup",
+    "cil": "4 Cil.",
+    "litros": 2.5,
+    "anioInicio": 1991,
+    "anioFin": 1993,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.5 L",
+      "anio": "1991-1993",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-36A47",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10 Pickup",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1988,
+    "anioFin": 1995,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1988-1995",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-35A88",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10 Pickup",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1996,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1996-2000",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "S-10 Pickup",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1997,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1997-2004",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-137"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Safari",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1985,
+    "anioFin": 1994,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1985-1994",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-35A88",
+      "combustible": "FGI-126 / FGI-106"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sierra 1500-3500",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2014,
+    "anioFin": 2014,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2014",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sierra 1500-3500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2014,
+    "anioFin": 2014,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2014",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sierra 1500-3500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2014,
+    "anioFin": 2014,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2014",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silhouette",
+    "cil": "V6",
+    "litros": 3.1,
+    "anioInicio": 1991,
+    "anioFin": 1993,
+    "values": {
+      "cil": "V6",
+      "litros": "3.1 L",
+      "anio": "1991-1993",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-35A88",
+      "combustible": "FGI-166"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silhouette",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 1990,
+    "anioFin": 1996,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L",
+      "anio": "1990-1996",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-193A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silhouette",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1992,
+    "anioFin": 1996,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1992-1996",
+      "aceite_spin": "OF-3387 / OF-3980",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-166"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1995,
+    "anioFin": 1998,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1995-1998",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1999,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1999-2000",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A38",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado",
+    "cil": "V8",
+    "litros": 6.5,
+    "anioInicio": 1999,
+    "anioFin": 1999,
+    "values": {
+      "cil": "V8",
+      "litros": "6.5 L Turbo",
+      "anio": "1999",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A38",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2003,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L Turbo",
+      "anio": "2003-2006",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2004,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2004-2005",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-137"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 / 2500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 1999,
+    "anioFin": 2008,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "1999-2008",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 / 2500 / 3500 HD Pickup",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2001,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2001-2007",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 Classic Pickup",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2007,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L / 4.8 L",
+      "anio": "2007",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 Pickup",
+    "cil": "V8",
+    "litros": 4.8,
+    "anioInicio": 1999,
+    "anioFin": 2008,
+    "values": {
+      "cil": "V8",
+      "litros": "4.8 L",
+      "anio": "1999-2008",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 Pickup",
+    "cil": "V8",
+    "litros": 4.8,
+    "anioInicio": 2007,
+    "anioFin": 2013,
+    "values": {
+      "cil": "V8",
+      "litros": "4.8 L",
+      "anio": "2007-2013",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 Pickup",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2002,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2002-2006",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 Pickup",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2007,
+    "anioFin": 2012,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2007-2012",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500 SS Pickup",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2003,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2003-2006",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1999,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1999-2001",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2002,
+    "anioFin": 2013,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2002-2013",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 2014,
+    "anioFin": 2019,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "2014-2019",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V8",
+    "litros": 4.8,
+    "anioInicio": 1999,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V8",
+      "litros": "4.8 L",
+      "anio": "1999-2005",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V6",
+    "litros": 4.8,
+    "anioInicio": 2010,
+    "anioFin": 2013,
+    "values": {
+      "cil": "V6",
+      "litros": "4.8 L",
+      "anio": "2010-2013",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2002,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2002-2004",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-137"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2007,
+    "anioFin": 2019,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2007-2019",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 2007,
+    "anioFin": 2013,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "2007-2013",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 1999,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "1999-2005",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2007,
+    "anioFin": 2016,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2007-2016",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2010,
+    "anioFin": 2013,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2010-2013",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V8",
+    "litros": 6.2,
+    "anioInicio": 2007,
+    "anioFin": 2015,
+    "values": {
+      "cil": "V8",
+      "litros": "6.2 L",
+      "anio": "2007-2015",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V8",
+    "litros": 6.2,
+    "anioInicio": 2014,
+    "anioFin": 2015,
+    "values": {
+      "cil": "V8",
+      "litros": "6.2 L",
+      "anio": "2014-2015",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 1500-3500",
+    "cil": "V8",
+    "litros": 6.7,
+    "anioInicio": 2004,
+    "anioFin": 2015,
+    "values": {
+      "cil": "V8",
+      "litros": "6.7 L Turbo Diesel",
+      "anio": "2004-2015",
+      "aceite_spin": "OF-9100",
+      "aceite_sint": "OF-9100STX",
+      "aceite_cart": ".",
+      "aire": "F-110A33",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 2500 Pickup,HD",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2001,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2001-2007",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 2500 / 3500 Pickup",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2003-2004",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 2500 4X2",
+    "cil": "V8",
+    "litros": 4.8,
+    "anioInicio": 2003,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V8",
+      "litros": "4.8 L",
+      "anio": "2003-2005",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 2500 HD Pickup",
+    "cil": "V8",
+    "litros": 6.2,
+    "anioInicio": 2007,
+    "anioFin": 2009,
+    "values": {
+      "cil": "V8",
+      "litros": "6.2 L",
+      "anio": "2007-2009",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 3500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 1999,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "1999-2005",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 3500",
+    "cil": "V8",
+    "litros": 6.7,
+    "anioInicio": 2001,
+    "anioFin": 2011,
+    "values": {
+      "cil": "V8",
+      "litros": "6.7 L Turbo Diesel",
+      "anio": "2001-2011",
+      "aceite_spin": "OF-9100",
+      "aceite_sint": "OF-9100STX",
+      "aceite_cart": ".",
+      "aire": "F-110A33",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 3500 Chassis Cab",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2001,
+    "anioFin": 2003,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2001-2003",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 3500 Chassis Cab",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2001,
+    "anioFin": 2003,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2001-2003",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 3500 Heavy Duty",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 2003,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "2003-2005",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-115"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 3500 Pickup",
+    "cil": "V8",
+    "litros": 6.2,
+    "anioInicio": 2007,
+    "anioFin": 2009,
+    "values": {
+      "cil": "V8",
+      "litros": "6.2 L",
+      "anio": "2007-2009",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado 3500 Pickup, Classic",
+    "cil": "V8",
+    "litros": 8.1,
+    "anioInicio": 2001,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "8.1 L",
+      "anio": "2001-2006",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado Hibrido",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2004,
+    "anioFin": 2013,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2004-2013",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Silverado Hibrido",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2009,
+    "anioFin": 2013,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2009-2013",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Skylark",
+    "cil": "4 Cil.",
+    "litros": 2.3,
+    "anioInicio": 1994,
+    "anioFin": 1998,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.3 L",
+      "anio": "1994-1998",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-75A98",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Skylark",
+    "cil": "4 Cil.",
+    "litros": 2.4,
+    "anioInicio": 1994,
+    "anioFin": 1998,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.4 L",
+      "anio": "1994-1998",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-75A98",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Skylark",
+    "cil": "V6",
+    "litros": 3.1,
+    "anioInicio": 1995,
+    "anioFin": 1997,
+    "values": {
+      "cil": "V6",
+      "litros": "3.1 L",
+      "anio": "1995-1997",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-75A98",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sonic",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2016,
+    "anioFin": 2017,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2016-2017",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-12246",
+      "aire": "F-96A90",
+      "combustible": "FGI-227 / FGI-247"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sonic",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 2012,
+    "anioFin": 2017,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "2012-2017",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-10246",
+      "aire": "F-96A90",
+      "combustible": "FGI-227 / FGI-247"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sonic",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2012,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2012-2015",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-10246",
+      "aire": "F-96A90",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sonic RS",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2012,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L Turbo",
+      "anio": "2012-2020",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-10246 / OF-12246",
+      "aire": "F-96A90",
+      "combustible": "FGI-227 / FGI-247"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sonora",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 2001,
+    "anioFin": 2001,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "2001",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sonora B, C",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2003,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2003-2006",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Spark",
+    "cil": "4 Cil.",
+    "litros": 1.2,
+    "anioInicio": 2011,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.2 L",
+      "anio": "2011-2015",
+      "aceite_spin": "OF-2518",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-96A23",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Spark",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2016,
+    "anioFin": 2020,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L",
+      "anio": "2016-2020",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-95A23",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sprint",
+    "cil": "3 Cil.",
+    "litros": 1,
+    "anioInicio": 1987,
+    "anioFin": 1988,
+    "values": {
+      "cil": "3 Cil.",
+      "litros": "1.0 L Turbo",
+      "anio": "1987-1988",
+      "aceite_spin": "OF-3614",
+      "aceite_sint": "OF-3614STX",
+      "aceite_cart": ".",
+      "aire": "F-63A77",
+      "combustible": "FGI-87"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "SS",
+    "cil": "V8",
+    "litros": 6.2,
+    "anioInicio": 2014,
+    "anioFin": 2017,
+    "values": {
+      "cil": "V8",
+      "litros": "6.2 L",
+      "anio": "2014-2017",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "SSR",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2003,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2003-2004",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "FGI-206A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "SSR",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2005,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2005-2006",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-39A14",
+      "combustible": "FGI-206A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": null,
+    "anioInicio": 1978,
+    "anioFin": 1978,
+    "values": {
+      "cil": "V8",
+      "litros": "350 CID Diesel",
+      "anio": "1978",
+      "aceite_spin": "OF-25",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 4.8,
+    "anioInicio": 2008,
+    "anioFin": 2008,
+    "values": {
+      "cil": "V8",
+      "litros": "4.8 L",
+      "anio": "2008",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1986,
+    "anioFin": 1986,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1986",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2000,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2000-2007",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2008,
+    "anioFin": 2019,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2008-2019",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2020,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2020",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1987,
+    "anioFin": 1989,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1987-1989",
+      "aceite_spin": "OF-13",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-04 / FGI-24"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1990,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1990-2000",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A38",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 2001,
+    "anioFin": 2002,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "2001-2002",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2008,
+    "anioFin": 2013,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2008-2013",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 6.5,
+    "anioInicio": 1999,
+    "anioFin": 1999,
+    "values": {
+      "cil": "V8",
+      "litros": "6.5 L",
+      "anio": "1999",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 7.4,
+    "anioInicio": 1970,
+    "anioFin": 1970,
+    "values": {
+      "cil": "V8",
+      "litros": "7.4 L",
+      "anio": "1970",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-136A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban",
+    "cil": "V8",
+    "litros": 7.4,
+    "anioInicio": 1992,
+    "anioFin": 1995,
+    "values": {
+      "cil": "V8",
+      "litros": "7.4 L",
+      "anio": "1992-1995",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban 1500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2002,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2002-2004",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-137"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban 1500",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2007,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2007",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Suburban 1500",
+    "cil": "V8",
+    "litros": 6,
+    "anioInicio": 2007,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V8",
+      "litros": "6.0 L",
+      "anio": "2007",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Sunbird",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 1992,
+    "anioFin": 1994,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "1992-1994",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-26"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "T10 Blazer",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 1994,
+    "anioFin": 1996,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "1994-1996",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "T10 Blazer",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1991,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1991-2000",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-74A21",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tahoe",
+    "cil": "V8",
+    "litros": 4.8,
+    "anioInicio": 2007,
+    "anioFin": 2009,
+    "values": {
+      "cil": "V8",
+      "litros": "4.8 L",
+      "anio": "2007-2009",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tahoe",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2000,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2000-2006",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tahoe",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2002,
+    "anioFin": 2003,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2002-2003",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "FGI-137"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tahoe",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2007,
+    "anioFin": 2019,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2007-2019",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tahoe",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2020,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2020",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tahoe",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1995,
+    "anioFin": 1995,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1995",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tahoe",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1996,
+    "anioFin": 2000,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1996-2000",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A37",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tahoe",
+    "cil": "V8",
+    "litros": 6.2,
+    "anioInicio": 2008,
+    "anioFin": 2009,
+    "values": {
+      "cil": "V8",
+      "litros": "6.2 L",
+      "anio": "2008-2009",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-87A55",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tornado",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2004,
+    "anioFin": 2010,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2004-2010",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-56A26",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tornado",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2011,
+    "anioFin": 2018,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2011-2018",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-107A39 / F-56A26",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tornado, Trofeo",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1981,
+    "anioFin": 1985,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1981-1985",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "FGI-61"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Towncar Lumina",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1990,
+    "anioFin": 1997,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1990-1997",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-166"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tracker",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 1989,
+    "anioFin": 1991,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "1989-1991",
+      "aceite_spin": "OF-3614",
+      "aceite_sint": "OF-3614STX",
+      "aceite_cart": ".",
+      "aire": "F-66A64",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tracker",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 1992,
+    "anioFin": 1993,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "1992-1993",
+      "aceite_spin": "OF-3614",
+      "aceite_sint": "OF-3614STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tracker",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 1994,
+    "anioFin": 1998,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "1994-1998",
+      "aceite_spin": "OF-3614",
+      "aceite_sint": "OF-3614STX",
+      "aceite_cart": ".",
+      "aire": "F-76A17",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tracker",
+    "cil": "4 Cil.",
+    "litros": 1.6,
+    "anioInicio": 1999,
+    "anioFin": 2001,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.6 L",
+      "anio": "1999-2001",
+      "aceite_spin": "OF-3614",
+      "aceite_sint": "OF-3614STX",
+      "aceite_cart": ".",
+      "aire": "F-80A69",
+      "combustible": "FGI-194"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tracker",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 1999,
+    "anioFin": 2008,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "1999-2008",
+      "aceite_spin": "OF-4386",
+      "aceite_sint": "OF-4386STX",
+      "aceite_cart": ".",
+      "aire": "F-80A69",
+      "combustible": "FGI-194 / FGI-261"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tracker",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2007,
+    "anioFin": 2007,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2007",
+      "aceite_spin": "OF-4386",
+      "aceite_sint": "OF-4386STX",
+      "aceite_cart": ".",
+      "aire": "F-80A69",
+      "combustible": "FGI-19"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Tracker",
+    "cil": "V6",
+    "litros": 2.5,
+    "anioInicio": 2001,
+    "anioFin": 2004,
+    "values": {
+      "cil": "V6",
+      "litros": "2.5 L",
+      "anio": "2001-2004",
+      "aceite_spin": "OF-2951",
+      "aceite_sint": "OF-2951STX",
+      "aceite_cart": ".",
+      "aire": "F-80A69",
+      "combustible": "FGI-194 / FGI-261"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Trail Blazer",
+    "cil": "6 Cil.",
+    "litros": 4.2,
+    "anioInicio": 2002,
+    "anioFin": 2008,
+    "values": {
+      "cil": "6 Cil.",
+      "litros": "4.2 L",
+      "anio": "2002-2008",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-93A45",
+      "combustible": "FGI-206A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Trail Blazer",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2003,
+    "anioFin": 2008,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2003-2008",
+      "aceite_spin": "OF-3506",
+      "aceite_sint": "OF-3506STX",
+      "aceite_cart": ".",
+      "aire": "F-93A45",
+      "combustible": "FGI-206A"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Trail Blazer",
+    "cil": "V8",
+    "litros": 5.3,
+    "anioInicio": 2009,
+    "anioFin": 2009,
+    "values": {
+      "cil": "V8",
+      "litros": "5.3 L",
+      "anio": "2009",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-93A45",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Trans Sport APV",
+    "cil": "V6",
+    "litros": 3.1,
+    "anioInicio": 1990,
+    "anioFin": 1995,
+    "values": {
+      "cil": "V6",
+      "litros": "3.1 L",
+      "anio": "1990-1995",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-35A88",
+      "combustible": "FGI-166"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Trans Sport APV",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 1992,
+    "anioFin": 1995,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L",
+      "anio": "1992-1995",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-166"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Trans Sport APV",
+    "cil": "V6",
+    "litros": 3.8,
+    "anioInicio": 1992,
+    "anioFin": 1995,
+    "values": {
+      "cil": "V6",
+      "litros": "3.8 L",
+      "anio": "1992-1995",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-39A16",
+      "combustible": "FGI-166"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Traverse",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2009,
+    "anioFin": 2017,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2009-2017",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-101A10",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Traverse",
+    "cil": "V6",
+    "litros": 3.6,
+    "anioInicio": 2018,
+    "anioFin": 2020,
+    "values": {
+      "cil": "V6",
+      "litros": "3.6 L",
+      "anio": "2018-2020",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": "F-107A18",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Trax",
+    "cil": "4 Cil.",
+    "litros": 1.4,
+    "anioInicio": 2013,
+    "anioFin": 2015,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.4 L Turbo",
+      "anio": "2013-2015",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-10246 / OF-12246",
+      "aire": "F-115A01",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Trax",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2012,
+    "anioFin": 2013,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2012-2013",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-10246",
+      "aire": "F-13A27",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Trax",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2014,
+    "anioFin": 2019,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2014-2019",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-10246",
+      "aire": "F-115A01",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Uplander",
+    "cil": "V6",
+    "litros": 3.5,
+    "anioInicio": 2005,
+    "anioFin": 2007,
+    "values": {
+      "cil": "V6",
+      "litros": "3.5 L",
+      "anio": "2005-2007",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-75A97",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Uplander",
+    "cil": "V6",
+    "litros": 3.9,
+    "anioInicio": 2006,
+    "anioFin": 2009,
+    "values": {
+      "cil": "V6",
+      "litros": "3.9 L",
+      "anio": "2006-2009",
+      "aceite_spin": "OF-3675",
+      "aceite_sint": "OF-3675STX",
+      "aceite_cart": ".",
+      "aire": "F-75A97",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Van G Series",
+    "cil": "6 Cil.",
+    "litros": 4.1,
+    "anioInicio": 1980,
+    "anioFin": 1984,
+    "values": {
+      "cil": "6 Cil.",
+      "litros": "4.1 L",
+      "anio": "1980-1984",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Van G Series",
+    "cil": "6 Cil.",
+    "litros": 4.8,
+    "anioInicio": 1988,
+    "anioFin": 1989,
+    "values": {
+      "cil": "6 Cil.",
+      "litros": "4.8 L",
+      "anio": "1988-1989",
+      "aceite_spin": "OF-30",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Van G Series",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1990,
+    "anioFin": 1990,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1990",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Van G Series",
+    "cil": "V6",
+    "litros": 4.3,
+    "anioInicio": 1990,
+    "anioFin": 1992,
+    "values": {
+      "cil": "V6",
+      "litros": "4.3 L",
+      "anio": "1990-1992",
+      "aceite_spin": "OF-3980",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Van G Series",
+    "cil": "V8",
+    "litros": 5,
+    "anioInicio": 1983,
+    "anioFin": 1990,
+    "values": {
+      "cil": "V8",
+      "litros": "5.0 L",
+      "anio": "1983-1990",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Van G Series",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1988,
+    "anioFin": 1990,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1988-1990",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Van G Series",
+    "cil": "V8",
+    "litros": 7.4,
+    "anioInicio": 1987,
+    "anioFin": 1997,
+    "values": {
+      "cil": "V8",
+      "litros": "7.4 L",
+      "anio": "1987-1997",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Van G Series",
+    "cil": "V8",
+    "litros": 7.4,
+    "anioInicio": 1989,
+    "anioFin": 1996,
+    "values": {
+      "cil": "V8",
+      "litros": "7.4 L",
+      "anio": "1989-1996",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Van G Series",
+    "cil": "V8",
+    "litros": 7.4,
+    "anioInicio": 1998,
+    "anioFin": 1999,
+    "values": {
+      "cil": "V8",
+      "litros": "7.4 L",
+      "anio": "1998-1999",
+      "aceite_spin": "OF-5",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-80A37",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Vectra",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2003,
+    "anioFin": 2006,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2003-2006",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-24A61",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Vectra",
+    "cil": "V6",
+    "litros": 2.8,
+    "anioInicio": 2007,
+    "anioFin": 2008,
+    "values": {
+      "cil": "V6",
+      "litros": "2.8 L Turbo",
+      "anio": "2007-2008",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-96A46",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Vectra",
+    "cil": "V6",
+    "litros": 3.2,
+    "anioInicio": 2003,
+    "anioFin": 2006,
+    "values": {
+      "cil": "V6",
+      "litros": "3.2 L",
+      "anio": "2003-2006",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-24A61",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Venture",
+    "cil": "V6",
+    "litros": 3.4,
+    "anioInicio": 1997,
+    "anioFin": 2005,
+    "values": {
+      "cil": "V6",
+      "litros": "3.4 L",
+      "anio": "1997-2005",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-75A97",
+      "combustible": "FGI-176"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Volt",
+    "cil": "4 Cil.",
+    "litros": 1.5,
+    "anioInicio": 2016,
+    "anioFin": 2019,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.5 L",
+      "anio": "2016-2019",
+      "aceite_spin": "OF-10060 / OF-10575",
+      "aceite_sint": "OF-10060STX / OF-10575STX",
+      "aceite_cart": ".",
+      "aire": ".",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "W4 Tilt Cab",
+    "cil": "V8",
+    "litros": 5.7,
+    "anioInicio": 1993,
+    "anioFin": 1995,
+    "values": {
+      "cil": "V8",
+      "litros": "5.7 L",
+      "anio": "1993-1995",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": ".",
+      "aire": "F-326A",
+      "combustible": "."
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Zafira",
+    "cil": "4 Cil.",
+    "litros": 1.8,
+    "anioInicio": 2002,
+    "anioFin": 2006,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "1.8 L",
+      "anio": "2002-2006",
+      "aceite_spin": "OF-3387",
+      "aceite_sint": "OF-3387STX",
+      "aceite_cart": ".",
+      "aire": "F-33A59",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Zafira",
+    "cil": "4 Cil.",
+    "litros": 2,
+    "anioInicio": 2002,
+    "anioFin": 2005,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.0 L",
+      "anio": "2002-2005",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-19A35",
+      "combustible": "FGI-12"
+    }
+  },
+  {
+    "brand": "CHEVROLET",
+    "model": "Zafira",
+    "cil": "4 Cil.",
+    "litros": 2.2,
+    "anioInicio": 2002,
+    "anioFin": 2007,
+    "values": {
+      "cil": "4 Cil.",
+      "litros": "2.2 L",
+      "anio": "2002-2007",
+      "aceite_spin": ".",
+      "aceite_sint": ".",
+      "aceite_cart": "OF-9018",
+      "aire": "F-19A35",
+      "combustible": "FGI-12"
+    }
+  }
+]
