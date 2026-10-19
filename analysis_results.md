@@ -1,8 +1,8 @@
 # Reporte de Análisis del Catálogo: Marcas, Vehículos y Cobertura de Autopartes
 
-**Fecha de generación:** 15/10/2026, 7:46:49 a.m.
+**Fecha de generación:** 16/10/2026, 10:11:04 a.m.
 **Total de Vehículos en DB:** 1683
-**Total de Filtros en Catálogo:** 1826 (707 vinculados, 1119 huérfanos)
+**Total de Filtros en Catálogo:** 1826 (708 vinculados, 1118 huérfanos)
 **Total de Bujías en Catálogo:** 99 (47 vinculados, 52 huérfanas)
 **Total de Balatas en Catálogo:** 786 (666 vinculados, 120 huérfanas)
 
@@ -40,7 +40,7 @@
 | **MITSUBISHI** | 13 | 13 | 12 | 13 | 12 | 11 |
 | **NISSAN** | 53 | 52 | 52 | 53 | 37 | 35 |
 | **SEAT** | 55 | 55 | 55 | 55 | 55 | 55 |
-| **TOYOTA** | 144 | 138 | 133 | 144 | 109 | 92 |
+| **TOYOTA** | 144 | 138 | 133 | 144 | 115 | 98 |
 | **VOLKSWAGEN** | 220 | 181 | 185 | 189 | 145 | 136 |
 
 ## 3. Desglose Detallado de Bujías por Marca
@@ -86,7 +86,7 @@ Total de balatas huérfanas: **120**
 | DNK7155D233CK | WD233 | 7155-D233 | Delantero | NISSAN HIKARI (1988-1992), NISSAN TSURU (1984-1991) |
 
 ### 4.2. Filtros Huérfanos (Muestra de los primeros 15)
-Total de filtros huérfanos en lista de precios: **1119**
+Total de filtros huérfanos en lista de precios: **1118**
 
 | SKU | Marca | Precio |
 | :--- | :--- | :--- |
