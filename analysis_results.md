@@ -1,6 +1,6 @@
 # Reporte de Análisis del Catálogo: Marcas, Vehículos y Cobertura de Autopartes
 
-**Fecha de generación:** 16/10/2026, 10:31:00 a.m.
+**Fecha de generación:** 19/10/2026, 9:45:32 a.m.
 **Total de Vehículos en DB:** 1683
 **Total de Filtros en Catálogo:** 1826 (709 vinculados, 1117 huérfanos)
 **Total de Bujías en Catálogo:** 99 (47 vinculados, 52 huérfanas)
