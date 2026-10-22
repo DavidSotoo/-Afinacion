@@ -8,6 +8,13 @@
  * Strategy: maintain an explicit alias map per brand.
  * The normalizer is applied to the VEHICLE model name before comparison.
  * The balata vc.modelo is already in the canonical form.
+ *
+ * Only alias two names when they are the SAME vehicle with the same brakes.
+ * Never alias a performance trim (RS, R, GLI, GTI, Nismo, ...) to its base
+ * model, or a model to a different vehicle sharing part of its name
+ * (Corolla vs Corolla Cross, Outlander Sport vs Outlander): an alias makes
+ * the store sell the other vehicle's brake pads, which is worse than showing
+ * no pad at all.
  */
 
 /** @type {Record<string, Record<string, string | string[]>>} brand → { alias → canonical } */
@@ -31,24 +38,17 @@ const MODEL_ALIASES = {
     'K1500':                    'C1500',
     'K2500':                    'C2500',
     'K3500':                    'C3500',
-    // Avalanche variants
-    'AVALANCHE 2500':           'AVALANCHE 1500',
     // Express variants (catalog uses Express 1500/2500/3500)
     'EXPRESS CARGO':            'EXPRESS 1500',    // most common body
     'EXPRESS PASAJEROS':        'EXPRESS 1500',
-    // Sonic trim
-    'SONIC RS':                 'SONIC',
     // Impala trim
     'IMPALA LIMITED':           'IMPALA',
-    // Lumina / Chevy
-    'LUMINA':                   'LUMINA VAN',
+    // Lumina APV is the minivan the catalog calls "Lumina Van" (the Lumina
+    // sedan is a different vehicle and is deliberately NOT aliased)
     'LUMINA APV':               'LUMINA VAN',
     'CHEVY':                    ['CHEVY MONZA', 'CHEVY PICKUP'],
   },
   NISSAN: {
-    // Nismo trims collapse to base
-    '370Z NISMO':               '370Z',
-    'SENTRA NISMO':             'SENTRA',
     // Kicks e-Power is same base platform
     'KICKS E-POWER':            'KICKS',
     // X-Trail e-Power
@@ -57,16 +57,9 @@ const MODEL_ALIASES = {
     'FRONTIER':                 'NP300 FRONTIER',
   },
   VOLKSWAGEN: {
-    // GLI variants → base model
-    'JETTA GLI':                'JETTA',
-    'BORA GLI':                 'BORA',
-    'CLASICO GLI':              'CLASICO',
     // Golf sub-models
     'GOLF GTI':                 'GTI',             // catalog lists GTI separately
-    'GOLF R':                   'GOLF',
     'GOLF SPORTWAGEN':          'GOLF',
-    // Polo GTI → Polo
-    'POLO GTI':                 'POLO',
     // Touareg Hybrid → Touareg
     'TOUAREG HYBRID':           'TOUAREG',
     // Passat CC → CC (catalog uses "CC" directly)
@@ -88,15 +81,12 @@ const MODEL_ALIASES = {
     // Toyota Truck prefix — catalog uses "Toyota Truck" for SUVs/pickups
     // Model names stored as plain in vehiculos
     'RAV4 HYBRID':              'RAV4',
-    'YARIS R':                  'YARIS',
     'YARIS HB':                 'YARIS',
     'COROLLA HYBRID':           'COROLLA',
     'CAMRY HYBRID':             'CAMRY',
     'HIGHLANDER HYBRID':        'HIGHLANDER',
     '4RUNNER':                  '4RUNNER',
     'FJ CRUISER':               'FJ CRUISER',
-    // Corolla
-    'COROLLA':                  'COROLLA CROSS',
   },
   MAZDA: {
     // Numeric model names in vehiculos DB ('3', '6', '5') map to
@@ -112,21 +102,19 @@ const MODEL_ALIASES = {
     'CX3':                      'CX-3',
     'CX7':                      'CX-7',
     'CX9':                      'CX-9',
+    'MX-5 MIATA':               'MX-5',
   },
   FORD: {
     'E-150 ECONOLINE':          'ECONOLINE',
-    'RANGER':                   'F-100 RANGER',
+    'ECONOLINE VAN':            'ECONOLINE',
+    'ECONOLINE WAGON':          'ECONOLINE',
   },
   DODGE: {
     'GRAND CARAVAN':            'CARAVAN',
     'H100 VAN':                 'H100',
     'RAM 1500':                 'RAM',
   },
-  MITSUBISHI: {
-    'ECLIPSE CROSS':            'ECLIPSE',
-    'OUTLANDER SPORT':          'OUTLANDER',
-    'MONTERO SPORT':            'MONTERO',
-  },
+  MITSUBISHI: {},
 };
 
 /**
@@ -137,9 +125,15 @@ const MODEL_ALIASES = {
  * @returns {string[]}   – List of candidate names to check (upper-cased).
  *                         Always includes the original normalized + aliases.
  */
+// The balatas catalog stores names without accents ("SEAT LEON"), while
+// vehicles may carry them ("León").
+function stripAccents(s) {
+  return s.normalize('NFD').replace(/[̀-ͯ]/g, '');
+}
+
 function getCandidateModels(brand, model) {
-  const brandUpper = (brand || '').toUpperCase().trim();
-  const modelUpper = (model || '').toUpperCase().trim();
+  const brandUpper = stripAccents((brand || '').toUpperCase().trim());
+  const modelUpper = stripAccents((model || '').toUpperCase().trim());
 
   const candidates = new Set([modelUpper]);
 
@@ -153,11 +147,11 @@ function getCandidateModels(brand, model) {
     }
   }
 
-  // Secondary strip: remove common trailing descriptors
-  // e.g. "SILVERADO 3500 HD" → already handled above,
-  // but as a generic fallback strip " HD", " CLASSIC", " NISMO", " GLI"
+  // Secondary strip: remove common trailing descriptors that don't change
+  // the brake hardware. Performance suffixes (RS, R, GLI, GTI, NISMO, ST, ...)
+  // are intentionally absent — see the note at the top of this file.
   const genericStrip = modelUpper
-    .replace(/\s+(HD|CLASSIC|NISMO|RS|GLI|R|LIMITED|HYBRID|CARGO|PASAJEROS|E-POWER)$/, '')
+    .replace(/\s+(HD|CLASSIC|LIMITED|HYBRID|CARGO|PASAJEROS|E-POWER)$/, '')
     .trim();
   if (genericStrip && genericStrip !== modelUpper) {
     candidates.add(genericStrip);
@@ -174,7 +168,7 @@ function getCandidateModels(brand, model) {
  * @returns {string[]}  e.g. ["CHEVROLET SILVERADO 2500 HD", "CHEVROLET SILVERADO 2500"]
  */
 function getFullModelSearchKeys(brand, model) {
-  const brandUpper = (brand || '').toUpperCase().trim();
+  const brandUpper = stripAccents((brand || '').toUpperCase().trim());
   const candidates = getCandidateModels(brand, model);
   // Return both "BRAND MODEL" and bare "MODEL" forms
   const keys = new Set();
