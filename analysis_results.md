@@ -1,27 +1,27 @@
 # Reporte de Análisis del Catálogo: Marcas, Vehículos y Cobertura de Autopartes
 
-**Fecha de generación:** 19/10/2026, 9:45:32 a.m.
+**Fecha de generación:** 22/10/2026, 12:47:41 a.m.
 **Total de Vehículos en DB:** 1683
 **Total de Filtros en Catálogo:** 1826 (709 vinculados, 1117 huérfanos)
 **Total de Bujías en Catálogo:** 99 (47 vinculados, 52 huérfanas)
-**Total de Balatas en Catálogo:** 786 (666 vinculados, 120 huérfanas)
+**Total de Balatas en Catálogo:** 786 (676 vinculados, 110 huérfanas)
 
 ## 1. Cobertura General por Marca
 
 | Marca | Vehículos | Con Bujía % | Con Kit Básico % (Aceite+Aire) | Con Balata Del. % | Con Balata Tras. % | Con Ambas Balatas % | Con Alguna Balata % |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **AUDI** | 18 | 100.0% | 100.0% | 27.8% | 0.0% | 55.6% | 83.3% |
+| **AUDI** | 18 | 100.0% | 100.0% | 11.1% | 0.0% | 72.2% | 83.3% |
 | **BMW** | 36 | 100.0% | 100.0% | 19.4% | 0.0% | 8.3% | 27.8% |
-| **CHEVROLET** | 642 | 99.5% | 71.0% | 24.0% | 0.5% | 42.2% | 66.7% |
-| **DODGE** | 33 | 100.0% | 100.0% | 36.4% | 0.0% | 60.6% | 97.0% |
-| **FORD** | 272 | 100.0% | 85.7% | 53.7% | 0.0% | 12.5% | 66.2% |
-| **HONDA** | 113 | 100.0% | 94.7% | 54.9% | 0.9% | 15.0% | 70.8% |
-| **MAZDA** | 84 | 89.3% | 86.9% | 48.8% | 0.0% | 0.0% | 48.8% |
-| **MITSUBISHI** | 13 | 100.0% | 92.3% | 46.2% | 0.0% | 38.5% | 84.6% |
-| **NISSAN** | 53 | 100.0% | 98.1% | 30.2% | 0.0% | 50.9% | 81.1% |
-| **SEAT** | 55 | 100.0% | 100.0% | 21.8% | 3.6% | 0.0% | 25.5% |
-| **TOYOTA** | 144 | 100.0% | 88.2% | 36.8% | 2.1% | 18.1% | 56.9% |
-| **VOLKSWAGEN** | 220 | 99.5% | 84.5% | 61.4% | 3.2% | 11.8% | 76.4% |
+| **CHEVROLET** | 642 | 99.5% | 71.0% | 8.3% | 0.6% | 57.6% | 66.5% |
+| **DODGE** | 33 | 100.0% | 100.0% | 21.2% | 0.0% | 75.8% | 97.0% |
+| **FORD** | 272 | 100.0% | 85.7% | 13.6% | 1.5% | 57.4% | 72.4% |
+| **HONDA** | 113 | 100.0% | 94.7% | 13.3% | 5.3% | 59.3% | 77.9% |
+| **MAZDA** | 84 | 89.3% | 86.9% | 0.0% | 1.2% | 56.0% | 57.1% |
+| **MITSUBISHI** | 13 | 100.0% | 92.3% | 15.4% | 0.0% | 69.2% | 84.6% |
+| **NISSAN** | 53 | 100.0% | 98.1% | 5.7% | 1.9% | 69.8% | 77.4% |
+| **SEAT** | 55 | 100.0% | 100.0% | 23.6% | 3.6% | 30.9% | 58.2% |
+| **TOYOTA** | 144 | 100.0% | 88.2% | 5.6% | 2.8% | 59.7% | 68.1% |
+| **VOLKSWAGEN** | 220 | 99.5% | 84.5% | 23.6% | 5.0% | 44.1% | 72.7% |
 
 > [!NOTE]
 > Un "Kit Básico" se considera cuando el vehículo tiene asignados y vinculados al menos un filtro de aceite y un filtro de aire válidos (que no sean "SELLADO").
@@ -65,7 +65,7 @@
 Estas son piezas registradas en las listas de precios / catálogos generales, pero que no están siendo referenciadas por ningún vehículo en la colección `Vehiculo`.
 
 ### 4.1. Balatas Huérfanas (Muestra de las primeras 15)
-Total de balatas huérfanas: **120**
+Total de balatas huérfanas: **110**
 
 | SKU Dynamic | Equivalente Wagner | FMSI | Posición | Compatibilidad declarada en catálogo (Wagner) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -74,7 +74,6 @@ Total de balatas huérfanas: **120**
 | DNK7924D1020CK | WD1020 | 7924-D1020 | Trasero | CHEVROLET SRX (2004-2006) |
 | DNK7922D1019CK | WD1019 | 7922-D1019 | Delantero | CHEVROLET SRX (2004-2006) |
 | DNK728D52CK | WD52 | 728-D52 | Delantero | CHEVROLET CAPRICE (1979-1982), CHEVROLET MALIBU (1975-1975), CHEVROLET NOVA (1975-1978)... |
-| DNK7081RD149 | WZ449R | 7081R-D149 | Trasero | CHEVROLET C35 (1983-1986) |
 | DNK9003D1640CK | WC1640B | 9003-D1640 | Delantero | CHEVROLET ZAFIRA (2016-2016) |
 | DNK8958D1734CK | WC1734 | 8958-D1734 | Trasero | CHEVROLET ZAFIRA (2016-2016) |
 | DNK8982D1640CK | WC1640A | 8982-D1640 | Delantero | CHEVROLET ZAFIRA (2016-2016) |
@@ -84,6 +83,7 @@ Total de balatas huérfanas: **120**
 | DNK8256D1146CK | WC1146 | 8256-D1146 | Delantero | NISSAN APRIO (2008-2009), NISSAN PLATINA (2002-2010) |
 | DNK7155D233LM | WX233 | 7155-D233 | Delantero | NISSAN HIKARI (1988-1992), NISSAN TSURU (1992-1992), NISSAN TSURU (1984-1991) |
 | DNK7155D233CK | WD233 | 7155-D233 | Delantero | NISSAN HIKARI (1988-1992), NISSAN TSURU (1984-1991) |
+| DNK8757D1548CK | WC1548 | 8757-D1548 | Delantero | NISSAN LEAF (2014-2015), NISSAN LEAF (2012-2013) |
 
 ### 4.2. Filtros Huérfanos (Muestra de los primeros 15)
 Total de filtros huérfanos en lista de precios: **1117**
